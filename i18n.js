@@ -116,7 +116,7 @@ const translations = {
         "footer.privacy": "Privacy Policy",
         "footer.terms": "Terms of Service",
         "footer.gdpr": "GDPR",
-        "footer.rights": "All rights reserved. Hakan Aydin LLC."
+        "footer.rights": "All rights reserved."
     },
 
     tr: {
@@ -231,7 +231,7 @@ const translations = {
         "footer.privacy": "Gizlilik Politikası",
         "footer.terms": "Kullanım Koşulları",
         "footer.gdpr": "KVKK",
-        "footer.rights": "Tüm hakları saklıdır. Hakan Aydin LLC."
+        "footer.rights": "Tüm hakları saklıdır."
     },
 
     ru: {
@@ -346,7 +346,7 @@ const translations = {
         "footer.privacy": "Политика конфиденциальности",
         "footer.terms": "Условия использования",
         "footer.gdpr": "GDPR",
-        "footer.rights": "Все права защищены. Hakan Aydin LLC."
+        "footer.rights": "Все права защищены."
     },
 
     ar: {
@@ -461,7 +461,7 @@ const translations = {
         "footer.privacy": "سياسة الخصوصية",
         "footer.terms": "شروط الخدمة",
         "footer.gdpr": "GDPR",
-        "footer.rights": "جميع الحقوق محفوظة. Hakan Aydin LLC."
+        "footer.rights": "جميع الحقوق محفوظة."
     },
 
     zh: {
@@ -576,7 +576,7 @@ const translations = {
         "footer.privacy": "隐私政策",
         "footer.terms": "服务条款",
         "footer.gdpr": "GDPR",
-        "footer.rights": "保留所有权利。Hakan Aydin LLC."
+        "footer.rights": "保留所有权利。"
     }
 };
 

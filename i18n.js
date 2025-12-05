@@ -100,7 +100,7 @@ const translations = {
         "faq.q4": "How can I cancel my subscription?",
         "faq.a4": "You can cancel your subscription anytime from App Store settings. After cancellation, your premium features continue until the end of the current period. If you cancel within the first 3 days, no charges apply.",
         "faq.q5": "Which countries is it available in?",
-        "faq.a5": "EliteLoop is currently active in Turkey with global expansion plans in progress. The app supports Turkish, English, Russian, Arabic, and Chinese languages.",
+        "faq.a5": "EliteLoop is active worldwide! The app supports English, Chinese, Russian, Arabic, and Turkish languages.",
 
         // CTA
         "cta.title": "Start Now",
@@ -116,7 +116,7 @@ const translations = {
         "footer.privacy": "Privacy Policy",
         "footer.terms": "Terms of Service",
         "footer.gdpr": "GDPR",
-        "footer.rights": "All rights reserved."
+        "footer.rights": "All rights reserved. Hakan Aydin LLC."
     },
 
     tr: {
@@ -215,7 +215,7 @@ const translations = {
         "faq.q4": "Aboneliği nasıl iptal edebilirim?",
         "faq.a4": "App Store ayarlarından istediğiniz zaman aboneliğinizi iptal edebilirsiniz. İptal sonrası mevcut dönem sonuna kadar premium özellikleriniz devam eder. İlk 3 gün içinde iptal ederseniz herhangi bir ücret yansıtılmaz.",
         "faq.q5": "Hangi ülkelerde kullanılabilir?",
-        "faq.a5": "EliteLoop şu anda Türkiye'de aktiftir ve global genişleme planlarımız devam etmektedir. Uygulama Türkçe, İngilizce, Rusça, Arapça ve Çince dillerini desteklemektedir.",
+        "faq.a5": "EliteLoop tüm dünyada aktiftir! Uygulama İngilizce, Çince, Rusça, Arapça ve Türkçe dillerini desteklemektedir.",
 
         // CTA
         "cta.title": "Şimdi Başla",
@@ -231,7 +231,7 @@ const translations = {
         "footer.privacy": "Gizlilik Politikası",
         "footer.terms": "Kullanım Koşulları",
         "footer.gdpr": "KVKK",
-        "footer.rights": "Tüm hakları saklıdır."
+        "footer.rights": "Tüm hakları saklıdır. Hakan Aydin LLC."
     },
 
     ru: {
@@ -330,7 +330,7 @@ const translations = {
         "faq.q4": "Как отменить подписку?",
         "faq.a4": "Через настройки App Store. Премиум работает до конца периода.",
         "faq.q5": "В каких странах доступно?",
-        "faq.a5": "Сейчас в Турции. Планируется глобальное расширение.",
+        "faq.a5": "EliteLoop активен по всему миру! Приложение поддерживает английский, китайский, русский, арабский и турецкий языки.",
 
         // CTA
         "cta.title": "Начать сейчас",
@@ -346,7 +346,7 @@ const translations = {
         "footer.privacy": "Политика конфиденциальности",
         "footer.terms": "Условия использования",
         "footer.gdpr": "GDPR",
-        "footer.rights": "Все права защищены."
+        "footer.rights": "Все права защищены. Hakan Aydin LLC."
     },
 
     ar: {
@@ -445,7 +445,7 @@ const translations = {
         "faq.q4": "كيف يمكنني إلغاء الاشتراك؟",
         "faq.a4": "من إعدادات App Store. المميزات تستمر حتى نهاية الفترة.",
         "faq.q5": "في أي دول متاح؟",
-        "faq.a5": "حالياً في تركيا. التوسع العالمي قيد التخطيط.",
+        "faq.a5": "EliteLoop نشط في جميع أنحاء العالم! يدعم التطبيق الإنجليزية والصينية والروسية والعربية والتركية.",
 
         // CTA
         "cta.title": "ابدأ الآن",
@@ -461,7 +461,7 @@ const translations = {
         "footer.privacy": "سياسة الخصوصية",
         "footer.terms": "شروط الخدمة",
         "footer.gdpr": "GDPR",
-        "footer.rights": "جميع الحقوق محفوظة."
+        "footer.rights": "جميع الحقوق محفوظة. Hakan Aydin LLC."
     },
 
     zh: {
@@ -560,7 +560,7 @@ const translations = {
         "faq.q4": "如何取消订阅？",
         "faq.a4": "通过App Store设置。高级功能持续到当前周期结束。",
         "faq.q5": "在哪些国家可用？",
-        "faq.a5": "目前在土耳其。全球扩展计划进行中。",
+        "faq.a5": "EliteLoop 在全球范围内活跃！应用支持英语、中文、俄语、阿拉伯语和土耳其语。",
 
         // CTA
         "cta.title": "立即开始",
@@ -576,7 +576,7 @@ const translations = {
         "footer.privacy": "隐私政策",
         "footer.terms": "服务条款",
         "footer.gdpr": "GDPR",
-        "footer.rights": "保留所有权利。"
+        "footer.rights": "保留所有权利。Hakan Aydin LLC."
     }
 };
 

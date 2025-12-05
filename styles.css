@@ -116,6 +116,7 @@ img {
 .logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-size: 1.5rem;
   font-weight: 700;
@@ -1231,6 +1232,9 @@ section {
   width: 36px;
   height: 36px;
   border-radius: 8px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
 }
 
 .app-logo {

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteLoop - Exclusive Connections, Special Moments</title>
+    <meta name="description"
+        content="Plan exclusive events and meet distinguished individuals with EliteLoop. Privacy-focused activity matching platform.">
+    <meta property="og:title" content="EliteLoop - Exclusive Connections, Special Moments">
+    <meta property="og:description"
+        content="Plan exclusive events with distinguished individuals. Privacy-first activity matching.">
+    <meta property="og:image" content="assets/icon-512.png">
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#C9A02F">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="assets/icon-192.png" alt="EliteLoop" class="logo-img">
+                <span class="logo-text">EliteLoop</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features" data-i18n="nav.features">Features</a>
+                <a href="#how-it-works" data-i18n="nav.howItWorks">How It Works</a>
+                <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+                <a href="#faq" data-i18n="nav.faq">FAQ</a>
+            </div>
+            <div class="nav-buttons">
+                <button class="lang-btn" id="langBtn" aria-label="Change Language">
+                    <span class="lang-icon">🌐</span>
+                    <span class="lang-text">EN</span>
+                </button>
+                <a href="#download" class="btn btn-primary" data-i18n="nav.download">Download App</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Language Modal -->
+    <div class="modal-overlay" id="langModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>🌐 <span data-i18n="modal.selectLanguage">Select Language</span></h3>
+                <button class="modal-close" id="closeLangModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="lang-grid">
+                    <button class="lang-option" data-lang="en">
+                        <span class="lang-flag">🇬🇧</span>
+                        <span class="lang-name">English</span>
+                    </button>
+                    <button class="lang-option" data-lang="tr">
+                        <span class="lang-flag">🇹🇷</span>
+                        <span class="lang-name">Türkçe</span>
+                    </button>
+                    <button class="lang-option" data-lang="ru">
+                        <span class="lang-flag">🇷🇺</span>
+                        <span class="lang-name">Русский</span>
+                    </button>
+                    <button class="lang-option" data-lang="ar">
+                        <span class="lang-flag">🇸🇦</span>
+                        <span class="lang-name">العربية</span>
+                    </button>
+                    <button class="lang-option" data-lang="zh">
+                        <span class="lang-flag">🇨🇳</span>
+                        <span class="lang-name">中文</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-icon">✨</span>
+                <span data-i18n="hero.badge">For Distinguished Individuals</span>
+            </div>
+            <h1 class="hero-title animate-fade-in-up">
+                <span data-i18n="hero.title1">Live the Moment,</span><br>
+                <span class="gradient-text" data-i18n="hero.title2">With Who You Want.</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up delay-1" data-i18n="hero.subtitle">
+                Meet distinguished individuals with shared interests, plan exclusive events.
+                Privacy-first, badge-based matching system.
+            </p>
+            <div class="hero-buttons animate-fade-in-up delay-2">
+                <a href="#download" class="btn btn-primary btn-lg">
+                    <span class="btn-icon">📱</span>
+                    <span data-i18n="hero.downloadBtn">Download on App Store</span>
+                </a>
+                <a href="#how-it-works" class="btn btn-secondary btn-lg">
+                    <span data-i18n="hero.learnMore">How It Works?</span>
+                </a>
+            </div>
+            <div class="hero-stats animate-fade-in-up delay-3">
+                <div class="stat-item">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label" data-i18n="hero.stats.members">Active Members</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label" data-i18n="hero.stats.events">Events</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">4.9★</span>
+                    <span class="stat-label">App Store</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-phone animate-float">
+            <div class="phone-mockup">
+                <div class="phone-screen">
+                    <div class="app-preview">
+                        <div class="app-header">
+                            <img src="assets/icon-192.png" alt="" class="app-logo">
+                            <span>🗺️ Map</span>
+                        </div>
+                        <div class="app-pins">
+                            <div class="pin gold">🥇</div>
+                            <div class="pin silver">🥈</div>
+                            <div class="pin bronze">🥉</div>
+                        </div>
+                        <div class="app-card">
+                            <div class="card-title">Coffee Break ☕</div>
+                            <div class="card-info">Today • 2 people</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="features.badge">Features</span>
+                <h2 class="section-title" data-i18n="features.title">Why EliteLoop?</h2>
+                <p class="section-subtitle" data-i18n="features.subtitle">More than ordinary social media. Real
+                    connections, real moments.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">🔒</div>
+                    <h3 data-i18n="features.privacy.title">Privacy First</h3>
+                    <p data-i18n="features.privacy.desc">Your location is shown approximately. Your identity is
+                        protected with the badge system.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">🏅</div>
+                    <h3 data-i18n="features.badges.title">Badge System</h3>
+                    <p data-i18n="features.badges.desc">Reflect your status with Bronze, Silver, and Gold badges. Access
+                        events matching your level.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">🗺️</div>
+                    <h3 data-i18n="features.location.title">Location Based</h3>
+                    <p data-i18n="features.location.desc">See nearby events on the map. Make plans instantly, meet right
+                        away.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">💬</div>
+                    <h3 data-i18n="features.chat.title">Instant Messaging</h3>
+                    <p data-i18n="features.chat.desc">Start chatting right when the host approves. Real-time
+                        communication.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">✨</div>
+                    <h3 data-i18n="features.events.title">Special Events</h3>
+                    <p data-i18n="features.events.desc">Coffee, dinner, sports, travel... Plan or join any activity you
+                        want.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">🌍</div>
+                    <h3 data-i18n="features.multilang.title">Multi-language</h3>
+                    <p data-i18n="features.multilang.desc">Turkish, English, Russian, Arabic, and Chinese support.
+                        Global community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="howItWorks.badge">How It Works</span>
+                <h2 class="section-title" data-i18n="howItWorks.title">Get Started in 3 Steps</h2>
+                <p class="section-subtitle" data-i18n="howItWorks.subtitle">Create your first event or join one within
+                    minutes.</p>
+            </div>
+            <div class="steps-container">
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">📱</div>
+                        <h3 data-i18n="howItWorks.step1.title">Download the App</h3>
+                        <p data-i18n="howItWorks.step1.desc">Download EliteLoop from App Store and sign in with Apple
+                            ID. Your personal information is secure.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-card">
+                            <div class="visual-icon">🍎</div>
+                            <span data-i18n="howItWorks.step1.cta">Sign in with Apple</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-left">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">🎯</div>
+                        <h3 data-i18n="howItWorks.step2.title">Create Your Profile</h3>
+                        <p data-i18n="howItWorks.step2.desc">Add your hobbies, languages you speak, and about yourself.
+                            Choose your badge.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-card">
+                            <div class="badge-stack">
+                                <span class="mini-badge gold">🥇 Gold</span>
+                                <span class="mini-badge silver">🥈 Silver</span>
+                                <span class="mini-badge bronze">🥉 Bronze</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">🚀</div>
+                        <h3 data-i18n="howItWorks.step3.title">Discover & Connect</h3>
+                        <p data-i18n="howItWorks.step3.desc">See events on the map, apply to ones you like, or create
+                            your own event!</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-card map-card">
+                            <div class="map-pins">
+                                <span class="map-pin" style="top: 20%; left: 30%;">☕</span>
+                                <span class="map-pin" style="top: 50%; left: 60%;">🎾</span>
+                                <span class="map-pin" style="top: 70%; left: 40%;">🍽️</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="pricing.badge">Pricing</span>
+                <h2 class="section-title" data-i18n="pricing.title">Choose Your Plan</h2>
+                <p class="section-subtitle" data-i18n="pricing.subtitle">Try free for 3 days. Cancel anytime.</p>
+            </div>
+            <div class="pricing-toggle">
+                <span class="toggle-label active" data-i18n="pricing.monthly">Monthly</span>
+                <label class="toggle">
+                    <input type="checkbox" id="pricing-toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label"><span data-i18n="pricing.yearly">Yearly</span> <span class="save-badge"
+                        data-i18n="pricing.save">50% OFF</span></span>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card" data-aos="fade-up">
+                    <div class="card-header">
+                        <span class="card-badge bronze">🥉</span>
+                        <h3>Bronze</h3>
+                        <p data-i18n="pricing.bronze.desc">Perfect to start</p>
+                    </div>
+                    <div class="card-price">
+                        <span class="price" data-i18n="pricing.free">Free</span>
+                    </div>
+                    <ul class="card-features">
+                        <li><span class="check">✓</span> <span data-i18n="pricing.bronze.f1">View Bronze events</span>
+                        </li>
+                        <li><span class="check">✓</span> <span data-i18n="pricing.bronze.f2">3 daily applications</span>
+                        </li>
+                        <li><span class="check">✓</span> <span data-i18n="pricing.bronze.f3">Basic profile</span></li>
+                        <li class="disabled"><span class="x">✗</span> <span data-i18n="pricing.bronze.f4">Create
+                                events</span></li>
+                        <li class="disabled"><span class="x">✗</span> <span data-i18n="pricing.bronze.f5">Premium
+                                events</span></li>
+                    </ul>
+                    <a href="#download" class="btn btn-outline" data-i18n="pricing.startFree">Start Free</a>
+                </div>
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="featured-badge">⚡ <span data-i18n="pricing.popular">Most Popular</span></div>
+                    <div class="card-header">
+                        <span class="card-badge silver">🥈</span>
+                        <h3>Silver</h3>
+                        <p data-i18n="pricing.silver.desc">For active users</p>
+                    </div>
+                    <div class="card-price">
+                        <span class="price monthly-price">$4.99</span>
+                        <span class="price yearly-price" style="display:none;">$29.99</span>
+                        <span class="period monthly-period" data-i18n="pricing.perMonth">/month</span>
+                        <span class="period yearly-period" style="display:none;"
+                            data-i18n="pricing.perYear">/year</span>
+                    </div>
+                    <ul class="card-features">
+                        <li><span class="check">✓</span> <span data-i18n="pricing.silver.f1">Bronze + Silver
+                                events</span></li>
+                        <li><span class="check">✓</span> <span data-i18n="pricing.silver.f2">10 daily
+                                applications</span></li>
+                        <li><span class="check">✓</span> <span data-i18n="pricing.silver.f3">Create 3
+                                events/month</span></li>
+                        <li><span class="check">✓</span> <span data-i18n="pricing.silver.f4">2x profile
+                                visibility</span></li>
+                        <li class="disabled"><span class="x">✗</span> <span data-i18n="pricing.silver.f5">Gold
+                                events</span></li>
+                    </ul>
+                    <a href="#download" class="btn btn-primary" data-i18n="pricing.tryFree">Try 3 Days Free</a>
+                </div>
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-header">
+                        <span class="card-badge gold">🥇</span>
+                        <h3>Gold</h3>
+                        <p data-i18n="pricing.gold.desc">Premium experience</p>
+                    </div>
+                    <div class="card-price">
+                        <span class="price monthly-price">$9.99</span>
+                        <span class="price yearly-price" style="display:none;">$59.99</span>
+                        <span class="period monthly-period" data-i18n="pricing.perMonth">/month</span>
+                        <span class="period yearly-period" style="display:none;"
+                            data-i18n="pricing.perYear">/year</span>
+                    </div>
+                    <ul class="card-features">
+                        <li><span class="check">✓</span> <span data-i18n="pricing.gold.f1">Access ALL events</span></li>
+                        <li><span class="check">✓</span> <span data-i18n="pricing.gold.f2">Unlimited applications</span>
+                        </li>
+                        <li><span class="check">✓</span> <span data-i18n="pricing.gold.f3">Unlimited event
+                                creation</span></li>
+                        <li><span class="check">✓</span> <span data-i18n="pricing.gold.f4">5x profile visibility</span>
+                        </li>
+                        <li><span class="check">✓</span> <span data-i18n="pricing.gold.f5">24/7 premium support</span>
+                        </li>
+                    </ul>
+                    <a href="#download" class="btn btn-gold" data-i18n="pricing.getGold">Get Gold</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="faq.badge">FAQ</span>
+                <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+                <p class="section-subtitle" data-i18n="faq.subtitle">Everything you need to know about EliteLoop.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q1">What is EliteLoop?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a1">EliteLoop is an activity matching platform designed for distinguished
+                            individuals. It allows you to meet people with shared interests, plan exclusive events, and
+                            create unforgettable moments. With our privacy-focused approach, your identity is protected
+                            while you build quality connections.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q2">How does the badge system work?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a2">EliteLoop has 3 badge levels: Bronze, Silver, and Gold. Bronze is free and
+                            provides access to basic features. Silver and Gold badges offer premium features like more
+                            event access, event creation rights, and increased profile visibility.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q3">How is privacy ensured?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a3">Your location is shown approximately (fuzzy), not exactly. Your personal
+                            information is protected with Apple Sign-In. Only your badge level and information you
+                            choose to share is visible. You can use "invisible mode" anytime.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q4">How can I cancel my subscription?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a4">You can cancel your subscription anytime from App Store settings. After
+                            cancellation, your premium features continue until the end of the current period. If you
+                            cancel within the first 3 days, no charges apply.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q5">Which countries is it available in?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a5">EliteLoop is currently active in Turkey with global expansion plans in
+                            progress. The app supports Turkish, English, Russian, Arabic, and Chinese languages.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA Section -->
+    <section id="download" class="download-cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <img src="assets/icon-192.png" alt="EliteLoop" class="cta-logo">
+                <h2 data-i18n="cta.title">Start Now</h2>
+                <p data-i18n="cta.subtitle">First 3 days free. Join our exclusive community.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="store-btn">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                            alt="Download on App Store">
+                    </a>
+                </div>
+                <div class="cta-stats">
+                    <span>⭐ 4.9 <span data-i18n="cta.rating">rating</span></span>
+                    <span>•</span>
+                    <span>10,000+ <span data-i18n="cta.downloads">downloads</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="assets/icon-192.png" alt="EliteLoop" class="logo-img">
+                        <span class="logo-text">EliteLoop</span>
+                    </a>
+                    <p data-i18n="footer.desc">Exclusive connections, special moments. Privacy-first activity matching
+                        platform.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.product">Product</h4>
+                    <a href="#features" data-i18n="nav.features">Features</a>
+                    <a href="#how-it-works" data-i18n="nav.howItWorks">How It Works</a>
+                    <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.legal">Legal</h4>
+                    <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="/terms" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="/gdpr" data-i18n="footer.gdpr">GDPR</a>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <a href="mailto:info@eliteloop.app">info@eliteloop.app</a>
+                    <a href="https://instagram.com/eliteloop" target="_blank">Instagram</a>
+                    <a href="https://tiktok.com/@eliteloop" target="_blank">TikTok</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 EliteLoop. <span data-i18n="footer.rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

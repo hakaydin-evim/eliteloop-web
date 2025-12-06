@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteLoop - Elit Sosyal Deneyim</title>
+    <meta name="description"
+        content="EliteLoop ile özel etkinlikler oluştur, elit üyelerle tanış ve premium deneyimler yaşa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy-dark: #0a1628;
+            --navy-mid: #1a2744;
+            --navy-light: #243656;
+            --gold: #FFD700;
+            --gold-dark: #FFA500;
+            --gold-gradient: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--navy-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(255, 165, 0, 0.06) 0%, transparent 50%);
+            animation: slowRotate 60s linear infinite;
+        }
+
+        @keyframes slowRotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 600px;
+            height: 600px;
+            background: var(--gold);
+            top: -200px;
+            right: -200px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--gold-dark);
+            bottom: -100px;
+            left: -100px;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -30px) scale(1.05);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.95);
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(20px);
+            background: rgba(10, 22, 40, 0.8);
+            border-bottom: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--gold-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .btn-primary {
+            background: var(--gold-gradient);
+            border: none;
+            color: var(--navy-dark);
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 60px 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 650px;
+            z-index: 10;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            color: var(--gold);
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-badge span {
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease 0.1s backwards;
+        }
+
+        .hero h1 .highlight {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 500px;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            animation: fadeInUp 0.8s ease 0.3s backwards;
+        }
+
+        .btn-large {
+            padding: 18px 40px;
+            font-size: 16px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Phone Mockup */
+        .hero-visual {
+            position: absolute;
+            right: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+        }
+
+        .phone-mockup {
+            width: 320px;
+            height: 650px;
+            background: linear-gradient(145deg, var(--navy-mid), var(--navy-dark));
+            border-radius: 50px;
+            padding: 12px;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 0 30px rgba(255, 215, 0, 0.05);
+            animation: floatPhone 6s ease-in-out infinite;
+            position: relative;
+        }
+
+        @keyframes floatPhone {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(-3deg);
+            }
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy-mid) 100%);
+            border-radius: 40px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 28px;
+            background: #000;
+            border-radius: 20px;
+            z-index: 10;
+        }
+
+        .phone-content {
+            padding: 60px 24px 24px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .app-logo-small {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 3px;
+        }
+
+        .app-tagline {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        .preview-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        .preview-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .preview-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gold-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .preview-info h4 {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .preview-info span {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .preview-badge {
+            margin-left: auto;
+            background: var(--gold-gradient);
+            color: var(--navy-dark);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .preview-text {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: flex;
+            gap: 60px;
+            padding: 80px 60px;
+            justify-content: center;
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 700;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 120px 60px;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 80px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 .highlight {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--text-secondary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 215, 0, 0.3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gold-gradient);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Membership Tiers */
+        .membership {
+            padding: 120px 60px;
+            background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy-mid) 50%, var(--navy-dark) 100%);
+        }
+
+        .tiers-container {
+            display: flex;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .tier-card {
+            flex: 1;
+            max-width: 340px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 28px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .tier-card.featured {
+            background: linear-gradient(145deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05));
+            border-color: rgba(255, 215, 0, 0.3);
+            transform: scale(1.05);
+        }
+
+        .tier-card.featured::before {
+            content: 'EN POPÜLER';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold-gradient);
+            color: var(--navy-dark);
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .tier-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .tier-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .tier-card.featured .tier-name {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tier-price {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .tier-price span {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .tier-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .tier-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .tier-features li::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .tier-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 120px 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .cta p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .app-store-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .store-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 14px 28px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .store-btn:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.15);
+        }
+
+        .store-btn svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .store-info {
+            text-align: left;
+        }
+
+        .store-info span {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .store-info strong {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px;
+            border-top: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--gold-gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .footer-logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero-visual {
+                display: none;
+            }
+
+            .hero {
+                padding: 120px 40px 80px;
+            }
+
+            .hero h1 {
+                font-size: 56px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tiers-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tier-card.featured {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 16px 24px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 100px 24px 60px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 40px;
+                padding: 60px 24px;
+            }
+
+            .stat-number {
+                font-size: 40px;
+            }
+
+            .features {
+                padding: 80px 24px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 36px;
+            }
+
+            .membership {
+                padding: 80px 24px;
+            }
+
+            .cta {
+                padding: 80px 24px;
+            }
+
+            .cta h2 {
+                font-size: 36px;
+            }
+
+            .app-store-buttons {
+                flex-direction: column;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">
+            <div class="logo-icon">💎</div>
+            <span class="logo-text">ELITELOOP</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#features">Özellikler</a></li>
+            <li><a href="#membership">Üyelik</a></li>
+            <li><a href="#download">İndir</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="#" class="btn btn-outline">Giriş Yap</a>
+            <a href="#download" class="btn btn-primary">Uygulamayı İndir</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span></span>
+                Şimdi App Store'da
+            </div>
+            <h1>Elit Sosyal<br><span class="highlight">Deneyim</span></h1>
+            <p>Özel etkinlikler oluştur, seçkin üyelerle tanış ve benzersiz anlar yaşa. EliteLoop ile sosyalleşmenin
+                yeni standartını keşfet.</p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn btn-primary btn-large">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                    </svg>
+                    App Store'dan İndir
+                </a>
+                <a href="#features" class="btn btn-outline btn-large">Daha Fazla Bilgi</a>
+            </div>
+        </div>
+
+        <!-- Phone Mockup -->
+        <div class="hero-visual">
+            <div class="phone-mockup">
+                <div class="phone-screen">
+                    <div class="phone-notch"></div>
+                    <div class="phone-content">
+                        <div class="app-header">
+                            <div class="app-logo-small">ELITELOOP</div>
+                            <div class="app-tagline">Elit Sosyal Deneyim</div>
+                        </div>
+                        <div class="preview-card">
+                            <div class="preview-card-header">
+                                <div class="preview-avatar">👤</div>
+                                <div class="preview-info">
+                                    <h4>Ahmet Y.</h4>
+                                    <span>2 km uzakta</span>
+                                </div>
+                                <div class="preview-badge">GOLD</div>
+                            </div>
+                            <p class="preview-text">Akşam yemeği için elit bir grup arıyorum 🍷</p>
+                        </div>
+                        <div class="preview-card">
+                            <div class="preview-card-header">
+                                <div class="preview-avatar">👤</div>
+                                <div class="preview-info">
+                                    <h4>Elif K.</h4>
+                                    <span>5 km uzakta</span>
+                                </div>
+                                <div class="preview-badge">SILVER</div>
+                            </div>
+                            <p class="preview-text">Tenis partneri arıyorum 🎾</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stat-item">
+            <div class="stat-number">10K+</div>
+            <div class="stat-label">Elit Üye</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">5K+</div>
+            <div class="stat-label">Etkinlik</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Şehir</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">4.9</div>
+            <div class="stat-label">App Store ⭐</div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2>Neden <span class="highlight">EliteLoop?</span></h2>
+            <p>Kaliteli insanlarla anlamlı bağlantılar kur, özel deneyimler yaşa.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Seçkin Topluluk</h3>
+                <p>Sadece onaylanan üyeler katılabilir. Kaliteli ve güvenilir bir sosyal çevre.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📍</div>
+                <h3>Yakınındaki Elitler</h3>
+                <p>Konumuna göre yakınındaki elit üyeleri keşfet ve anında bağlantı kur.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎪</div>
+                <h3>Özel Etkinlikler</h3>
+                <p>Yemek, spor, seyahat ve daha fazlası için özel etkinlikler oluştur veya katıl.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>Anlık Sohbet</h3>
+                <p>Etkinlik katılımcılarıyla gerçek zamanlı mesajlaş, planları detaylandır.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h3>Maksimum Gizlilik</h3>
+                <p>Konumun sadece izin verdiğin kişilere gösterilir. Tam kontrol sende.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3>Rozet Sistemi</h3>
+                <p>Bronze, Silver ve Gold rozetlerle farklı ayrıcalıklar ve özel erişimler kazan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Tiers -->
+    <section class="membership" id="membership">
+        <div class="section-header">
+            <h2>Üyelik <span class="highlight">Seviyeleri</span></h2>
+            <p>İhtiyaçlarına uygun planı seç, elit deneyime başla.</p>
+        </div>
+        <div class="tiers-container">
+            <div class="tier-card">
+                <div class="tier-icon">🥉</div>
+                <h3 class="tier-name">Bronze</h3>
+                <div class="tier-price">Ücretsiz</div>
+                <ul class="tier-features">
+                    <li>Bronze ilanlarını görüntüle</li>
+                    <li>Yakındaki üyeleri keşfet</li>
+                    <li>Temel profil özellikleri</li>
+                    <li>Sınırlı mesajlaşma</li>
+                </ul>
+                <a href="#download" class="btn btn-outline" style="width: 100%; justify-content: center;">Başla</a>
+            </div>
+            <div class="tier-card featured">
+                <div class="tier-icon">🥈</div>
+                <h3 class="tier-name">Silver</h3>
+                <div class="tier-price">₺149<span>/ay</span></div>
+                <ul class="tier-features">
+                    <li>Bronze + Silver ilanları gör</li>
+                    <li>Etkinlik oluşturabilme</li>
+                    <li>Sınırsız mesajlaşma</li>
+                    <li>Profil öne çıkarma</li>
+                    <li>Öncelikli destek</li>
+                </ul>
+                <a href="#download" class="btn btn-primary" style="width: 100%; justify-content: center;">Silver Ol</a>
+            </div>
+            <div class="tier-card">
+                <div class="tier-icon">🥇</div>
+                <h3 class="tier-name">Gold</h3>
+                <div class="tier-price">₺299<span>/ay</span></div>
+                <ul class="tier-features">
+                    <li>Tüm ilanları görüntüle</li>
+                    <li>VIP etkinlik erişimi</li>
+                    <li>Profil fotoğraflarını gör</li>
+                    <li>İsim değişikliği ayrıcalığı</li>
+                    <li>7/24 özel destek</li>
+                </ul>
+                <a href="#download" class="btn btn-outline" style="width: 100%; justify-content: center;">Gold Ol</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="download">
+        <div class="cta-content">
+            <h2>Elit Deneyime<br>Hazır mısın?</h2>
+            <p>Hemen indir, ücretsiz hesabını oluştur ve binlerce elit üyeyle tanışmaya başla.</p>
+            <div class="app-store-buttons">
+                <a href="#" class="store-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                    </svg>
+                    <div class="store-info">
+                        <span>App Store'dan İndir</span>
+                        <strong>iOS için</strong>
+                    </div>
+                </a>
+                <a href="#" class="store-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                    </svg>
+                    <div class="store-info">
+                        <span>Google Play'den İndir</span>
+                        <strong>Android için</strong>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <div class="footer-logo-icon">💎</div>
+            <span class="footer-logo-text">ELITELOOP</span>
+        </div>
+        <div class="footer-links">
+            <a href="#">Gizlilik Politikası</a>
+            <a href="#">Kullanım Şartları</a>
+            <a href="#">Topluluk Kuralları</a>
+            <a href="#">İletişim</a>
+        </div>
+        <div class="footer-social">
+            <a href="#">📸</a>
+            <a href="#">🎵</a>
+            <a href="#">✉️</a>
+        </div>
+    </footer>
+</body>
+
+</html>
+</CodeContent>
+<parameter name="Description">Alternatif EliteLoop web sitesi tasarımı - premium dark navy + gold estetiği, phone
+    mockup, floating orbs, glassmorphism

@@ -20,12 +20,25 @@
             color: #fff;
             min-height: 100vh;
             line-height: 1.8;
+            transition: direction 0.3s ease;
+        }
+
+        body.rtl {
+            direction: rtl;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 60px 24px;
+            position: relative;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
         }
 
         h1 {
@@ -59,108 +72,506 @@
             margin-bottom: 20px;
         }
 
+        body.rtl ul {
+            margin-left: 0;
+            margin-right: 24px;
+        }
+
         a {
             color: #FFD700;
         }
 
         .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
             color: #FFD700;
             text-decoration: none;
+        }
+
+        /* Language Button */
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #FFD700;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: #1a2744;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 400px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            animation: modalSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            padding: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover {
+            color: #fff;
+        }
+
+        .modal-body {
+            padding: 24px;
+        }
+
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .lang-option {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 16px;
+            border-radius: 16px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-option:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 215, 0, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .lang-option.active {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: #FFD700;
+        }
+
+        .lang-flag {
+            font-size: 24px;
+        }
+
+        .lang-name {
+            color: #fff;
+            font-weight: 500;
+            font-size: 14px;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <a href="/" class="back-link">← Home</a>
-        <h1>Terms of Service</h1>
-        <p class="updated">Last updated: February 22, 2026</p>
+        <div class="header-top">
+            <a href="/" class="back-link" data-i18n="back">← Home</a>
+            <button class="lang-btn" id="langBtn">
+                <span class="lang-text">EN</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </button>
+        </div>
 
-        <p>By using the EliteLoop mobile application ("App"), you agree to these Terms of Service.</p>
-
-        <h2>1. Service Description</h2>
-        <p>EliteLoop is a social networking application that allows users to create exclusive events, connect with
-            nearby users, and plan social activities.</p>
-
-        <h2>2. Eligibility</h2>
-        <p>To use the App, you must:</p>
-        <ul>
-            <li>Be at least 18 years old</li>
-            <li>Have a valid Apple ID</li>
-            <li>Agree to these Terms of Service</li>
-        </ul>
-
-        <h2>3. Account Responsibilities</h2>
-        <ul>
-            <li>You must provide accurate and up-to-date information</li>
-            <li>You are responsible for your account security</li>
-            <li>You may not share your account with others</li>
-            <li>You may not create multiple accounts</li>
-        </ul>
-
-        <h2>4. Acceptable Use</h2>
-        <p>The following behaviors are strictly prohibited:</p>
-        <ul>
-            <li>Illegal activities</li>
-            <li>Harassment, bullying, or threats</li>
-            <li>Hate speech or discrimination</li>
-            <li>Spam or unsolicited messages</li>
-            <li>Creating fake profiles</li>
-            <li>Violating others' privacy</li>
-            <li>Sexual or obscene content</li>
-            <li>Unauthorized commercial advertising</li>
-            <li>Attempting to compromise app security</li>
-        </ul>
-
-        <h2>5. User Content</h2>
-        <p>You are responsible for the content you share on the App (photos, messages, event descriptions).
-            Your uploaded content must:</p>
-        <ul>
-            <li>Belong to you or you must have permission to share it</li>
-            <li>Comply with applicable laws</li>
-            <li>Not infringe on the rights of others</li>
-        </ul>
-        <p>EliteLoop reserves the right to remove inappropriate content without prior notice.</p>
-
-        <h2>6. Reporting and Blocking</h2>
-        <p>When you encounter inappropriate content or behavior:</p>
-        <ul>
-            <li>You can block users</li>
-            <li>You can report content or users</li>
-            <li>Reports are reviewed within 24 hours</li>
-        </ul>
-
-        <h2>7. Subscriptions and Payments</h2>
-        <ul>
-            <li>Bronze membership is free</li>
-            <li>Silver and Gold memberships are paid subscriptions</li>
-            <li>Payments are processed through Apple App Store</li>
-            <li>For cancellation policy, refer to Apple's terms</li>
-        </ul>
-
-        <h2>8. Intellectual Property</h2>
-        <p>The EliteLoop name, logo, and app content belong to our company. Unauthorized use is prohibited.</p>
-
-        <h2>9. Disclaimer</h2>
-        <p>The App is provided "as is". EliteLoop cannot be held responsible for user-to-user interactions.
-            Participation in events is at your own risk.</p>
-
-        <h2>10. Account Termination</h2>
-        <p>Accounts that violate these terms may be suspended or terminated without warning.</p>
-
-        <h2>11. Changes</h2>
-        <p>We reserve the right to modify these terms. Significant changes will be announced via in-app
-            notification.</p>
-
-        <h2>12. Governing Law</h2>
-        <p>These terms are subject to the laws of the jurisdiction where EliteLoop operates.</p>
-
-        <h2>13. Contact</h2>
-        <p>For questions: <a href="mailto:support@eliteloop.app">support@eliteloop.app</a></p>
-        <p>Website: <a href="https://eliteloop.app">https://eliteloop.app</a></p>
+        <div id="content-area"></div>
     </div>
+
+    <!-- Language Modal -->
+    <div class="modal-overlay" id="langModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 data-i18n="selectLanguage">Select Language</h3>
+                <button class="modal-close" id="closeLangModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="lang-grid">
+                    <button class="lang-option" data-lang="en">
+                        <span class="lang-flag">🇬🇧</span>
+                        <span class="lang-name">English</span>
+                    </button>
+                    <button class="lang-option" data-lang="tr">
+                        <span class="lang-flag">🇹🇷</span>
+                        <span class="lang-name">Türkçe</span>
+                    </button>
+                    <button class="lang-option" data-lang="ru">
+                        <span class="lang-flag">🇷🇺</span>
+                        <span class="lang-name">Русский</span>
+                    </button>
+                    <button class="lang-option" data-lang="ar">
+                        <span class="lang-flag">🇸🇦</span>
+                        <span class="lang-name">العربية</span>
+                    </button>
+                    <button class="lang-option" data-lang="zh">
+                        <span class="lang-flag">🇨🇳</span>
+                        <span class="lang-name">中文</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const texts = {
+            en: {
+                title: "Terms of Service - EliteLoop",
+                back: "← Home",
+                selectLanguage: "Select Language",
+                content: `
+                    <h1>Terms of Service</h1>
+                    <p class="updated">Last updated: February 22, 2026</p>
+                    <p>By using the EliteLoop mobile application ("App"), you agree to these Terms of Service.</p>
+                    <h2>1. Service Description</h2>
+                    <p>EliteLoop is a social networking application that allows users to create exclusive events, connect with nearby users, and plan social activities.</p>
+                    <h2>2. Eligibility</h2>
+                    <p>To use the App, you must:</p>
+                    <ul>
+                        <li>Be at least 18 years old</li>
+                        <li>Have a valid Apple ID</li>
+                        <li>Agree to these Terms of Service</li>
+                    </ul>
+                    <h2>3. Account Responsibilities</h2>
+                    <ul>
+                        <li>You must provide accurate and up-to-date information</li>
+                        <li>You are responsible for your account security</li>
+                        <li>You may not share your account with others</li>
+                        <li>You may not create multiple accounts</li>
+                    </ul>
+                    <h2>4. Acceptable Use</h2>
+                    <p>The following behaviors are strictly prohibited:</p>
+                    <ul>
+                        <li>Illegal activities</li>
+                        <li>Harassment, bullying, or threats</li>
+                        <li>Hate speech or discrimination</li>
+                        <li>Spam or unsolicited messages</li>
+                        <li>Creating fake profiles</li>
+                        <li>Violating others' privacy</li>
+                        <li>Sexual or obscene content</li>
+                        <li>Unauthorized commercial advertising</li>
+                        <li>Attempting to compromise app security</li>
+                    </ul>
+                    <h2>5. User Content</h2>
+                    <p>You are responsible for the content you share on the App (photos, messages, event descriptions). Your uploaded content must:</p>
+                    <ul>
+                        <li>Belong to you or you must have permission to share it</li>
+                        <li>Comply with applicable laws</li>
+                        <li>Not infringe on the rights of others</li>
+                    </ul>
+                    <p>EliteLoop reserves the right to remove inappropriate content without prior notice.</p>
+                    <h2>6. Reporting and Blocking</h2>
+                    <p>When you encounter inappropriate content or behavior:</p>
+                    <ul>
+                        <li>You can block users</li>
+                        <li>You can report content or users</li>
+                        <li>Reports are reviewed within 24 hours</li>
+                    </ul>
+                    <h2>7. Subscriptions and Payments</h2>
+                    <ul>
+                        <li>Bronze membership is free</li>
+                        <li>Silver and Gold memberships are paid subscriptions</li>
+                        <li>Payments are processed through Apple App Store</li>
+                        <li>For cancellation policy, refer to Apple's terms</li>
+                    </ul>
+                    <h2>8. Intellectual Property</h2>
+                    <p>The EliteLoop name, logo, and app content belong to our company. Unauthorized use is prohibited.</p>
+                    <h2>9. Disclaimer</h2>
+                    <p>The App is provided "as is". EliteLoop cannot be held responsible for user-to-user interactions. Participation in events is at your own risk.</p>
+                    <h2>10. Account Termination</h2>
+                    <p>Accounts that violate these terms may be suspended or terminated without warning.</p>
+                    <h2>11. Changes</h2>
+                    <p>We reserve the right to modify these terms. Significant changes will be announced via in-app notification.</p>
+                    <h2>12. Governing Law</h2>
+                    <p>These terms are subject to the laws of the jurisdiction where EliteLoop operates.</p>
+                    <h2>13. Contact</h2>
+                    <p>For questions: <a href="mailto:support@eliteloop.app">support@eliteloop.app</a></p>
+                    <p>Website: <a href="https://eliteloop.app">https://eliteloop.app</a></p>
+                `
+            },
+            tr: {
+                title: "Kullanım Koşulları - EliteLoop",
+                back: "← Ana Sayfa",
+                selectLanguage: "Dil Seçin",
+                content: `
+                    <h1>Kullanım Koşulları</h1>
+                    <p class="updated">Son güncelleme: 22 Şubat 2026</p>
+                    <p>EliteLoop mobil uygulamasını ("Uygulama") kullanarak bu Kullanım Koşullarını kabul etmiş olursunuz.</p>
+                    <h2>1. Hizmet Tanımı</h2>
+                    <p>EliteLoop, kullanıcıların özel etkinlikler oluşturmasına, yakındaki kullanıcılarla bağlantı kurmasına ve sosyal aktiviteler planlamasına olanak tanıyan bir sosyal ağ uygulamasıdır.</p>
+                    <h2>2. Uygunluk</h2>
+                    <p>Uygulamayı kullanmak için:</p>
+                    <ul>
+                        <li>En az 18 yaşında olmalısınız</li>
+                        <li>Geçerli bir Apple ID'ye sahip olmalısınız</li>
+                        <li>Bu Kullanım Koşullarını kabul etmelisiniz</li>
+                    </ul>
+                    <h2>3. Hesap Sorumlulukları</h2>
+                    <ul>
+                        <li>Doğru ve güncel bilgi vermelisiniz</li>
+                        <li>Hesap güvenliğinizden siz sorumlusunuz</li>
+                        <li>Hesabınızı başkalarıyla paylaşamazsınız</li>
+                        <li>Birden fazla hesap oluşturamazsınız</li>
+                    </ul>
+                    <h2>4. Kabul Edilebilir Kullanım</h2>
+                    <p>Aşağıdaki davranışlar kesinlikle yasaktır:</p>
+                    <ul>
+                        <li>Yasadışı faaliyetler</li>
+                        <li>Taciz, zorbalık veya tehditler</li>
+                        <li>Nefret söylemi veya ayrımcılık</li>
+                        <li>Spam veya istenmeyen mesajlar</li>
+                        <li>Sahte profiller oluşturma</li>
+                        <li>Başkalarının gizliliğini ihlal etme</li>
+                        <li>Cinsel veya müstehcen içerik</li>
+                        <li>İzinsiz ticari reklamcılık</li>
+                        <li>Uygulama güvenliğini tehlikeye atmaya çalışma</li>
+                    </ul>
+                    <h2>5. Kullanıcı İçeriği</h2>
+                    <p>Uygulamada paylaştığınız içerikten (fotoğraflar, mesajlar, etkinlik açıklamaları) siz sorumlusunuz. Yüklediğiniz içerik şunları sağlamalıdır:</p>
+                    <ul>
+                        <li>Size ait olmalı veya paylaşma izniniz olmalı</li>
+                        <li>Geçerli yasalara uygun olmalı</li>
+                        <li>Başkalarının haklarını ihlal etmemeli</li>
+                    </ul>
+                    <p>EliteLoop, uygunsuz içeriği önceden bildirimde bulunmaksızın kaldırma hakkını saklı tutar.</p>
+                    <h2>6. Bildirme ve Engelleme</h2>
+                    <p>Uygunsuz içerik veya davranışla karşılaştığınızda:</p>
+                    <ul>
+                        <li>Kullanıcıları engelleyebilirsiniz</li>
+                        <li>İçeriği veya kullanıcıları şikayet edebilirsiniz</li>
+                        <li>Şikayetler 24 saat içinde incelenir</li>
+                    </ul>
+                    <h2>7. Abonelikler ve Ödemeler</h2>
+                    <ul>
+                        <li>Bronze üyelik ücretsizdir</li>
+                        <li>Silver ve Gold üyelikler ücretli aboneliklerdir</li>
+                        <li>Ödemeler Apple App Store üzerinden işlenir</li>
+                        <li>İptal politikası için Apple'ın şartlarına bakın</li>
+                    </ul>
+                    <h2>8. Fikri Mülkiyet</h2>
+                    <p>EliteLoop adı, logosu ve uygulama içeriği şirketimize aittir. İzinsiz kullanım yasaktır.</p>
+                    <h2>9. Sorumluluk Reddi</h2>
+                    <p>Uygulama "olduğu gibi" sağlanır. EliteLoop, kullanıcılar arası etkileşimlerden sorumlu tutulamaz. Etkinliklere katılımın riski size aittir.</p>
+                    <h2>10. Hesabın Feshi</h2>
+                    <p>Bu koşulları ihlal eden hesaplar uyarı yapılmaksızın askıya alınabilir veya sonlandırılabilir.</p>
+                    <h2>11. Değişiklikler</h2>
+                    <p>Bu koşulları değiştirme hakkımızı saklı tutuyoruz. Önemli değişiklikler uygulama içi bildirimle duyurulacaktır.</p>
+                    <h2>12. Geçerli Hukuk</h2>
+                    <p>Bu koşullar, EliteLoop'un faaliyet gösterdiği yargı bölgesinin yasalarına tabidir.</p>
+                    <h2>13. İletişim</h2>
+                    <p>Sorularınız için: <a href="mailto:support@eliteloop.app">support@eliteloop.app</a></p>
+                    <p>Web sitesi: <a href="https://eliteloop.app">https://eliteloop.app</a></p>
+                `
+            },
+            ru: {
+                title: "Условия использования - EliteLoop",
+                back: "← Главная",
+                selectLanguage: "Выберите язык",
+                content: `
+                    <h1>Условия использования</h1>
+                    <p class="updated">Последнее обновление: 22 февраля 2026 г.</p>
+                    <p>Используя приложение EliteLoop, вы соглашаетесь с настоящими Условиями.</p>
+                    <h2>1. Описание сервиса</h2>
+                    <p>EliteLoop — это социальная сеть для создания эксклюзивных мероприятий, связи с пользователями поблизости и планирования социальной активности.</p>
+                    <h2>2. Требования к пользователям</h2>
+                    <p>Для использования приложения:</p>
+                    <ul>
+                        <li>Вам должно быть не менее 18 лет</li>
+                        <li>У вас должен быть действительный Apple ID</li>
+                        <li>Вы должны согласиться с этими Условиями</li>
+                    </ul>
+                    <h2>3. Правила поведения</h2>
+                    <p>Категорически запрещается:</p>
+                    <ul>
+                        <li>Незаконная деятельность</li>
+                        <li>Домогательства, запугивание или угрозы</li>
+                        <li>Разжигание ненависти или дискриминация</li>
+                        <li>Спам</li>
+                        <li>Создание фейковых профилей</li>
+                    </ul>
+                    <h2>4. Контакты</h2>
+                    <p>Вопросы: <a href="mailto:support@eliteloop.app">support@eliteloop.app</a></p>
+                `
+            },
+            ar: {
+                title: "شروط الخدمة - EliteLoop",
+                back: "← الرئيسية",
+                selectLanguage: "اختر اللغة",
+                content: `
+                    <h1>شروط الخدمة</h1>
+                    <p class="updated">آخر تحديث: 22 فبراير 2026</p>
+                    <p>باستخدامك لتطبيق EliteLoop، فإنك توافق على شروط الخدمة هذه.</p>
+                    <h2>1. وصف الخدمة</h2>
+                    <p>EliteLoop هو تطبيق تواصل اجتماعي يتيح للمستخدمين إنشاء فعاليات حصرية والتواصل مع المستخدمين القريبين.</p>
+                    <h2>2. الأهلية</h2>
+                    <p>لاستخدام التطبيق، يجب:</p>
+                    <ul>
+                        <li>أن لا يقل عمرك عن 18 عامًا</li>
+                        <li>أن تمتلك حساب Apple ID صالحًا</li>
+                        <li>الموافقة على شروط الخدمة هذه</li>
+                    </ul>
+                    <h2>3. الاستخدام المقبول</h2>
+                    <p>يُمنع منعًا باتًا ما يلي:</p>
+                    <ul>
+                        <li>الأنشطة غير القانونية</li>
+                        <li>المضايقة أو التنمر أو التهديد</li>
+                        <li>خطاب الكراهية أو التمييز</li>
+                        <li>البريد العشوائي</li>
+                        <li>إنشاء ملفات شخصية وهمية</li>
+                    </ul>
+                    <h2>4. اتصل بنا</h2>
+                    <p>للأسئلة: <a href="mailto:support@eliteloop.app">support@eliteloop.app</a></p>
+                `
+            },
+            zh: {
+                title: "服务条款 - EliteLoop",
+                back: "← 首页",
+                selectLanguage: "选择语言",
+                content: `
+                    <h1>服务条款</h1>
+                    <p class="updated">最后更新：2026年2月22日</p>
+                    <p>使用EliteLoop应用程序即表示您同意这些服务条款。</p>
+                    <h2>1. 服务说明</h2>
+                    <p>EliteLoop是一个社交网络应用程序，允许用户创建独家活动，联系附近的用户，并计划社交活动。</p>
+                    <h2>2. 资格</h2>
+                    <p>要使用该应用程序，您必须：</p>
+                    <ul>
+                        <li>年满18岁</li>
+                        <li>拥有有效的Apple ID</li>
+                        <li>同意这些服务条款</li>
+                    </ul>
+                    <h2>3. 可接受的使用</h2>
+                    <p>严禁以下行为：</p>
+                    <ul>
+                        <li>非法活动</li>
+                        <li>骚扰、欺凌或威胁</li>
+                        <li>仇恨言论或歧视</li>
+                        <li>垃圾邮件</li>
+                        <li>创建虚假资料</li>
+                    </ul>
+                    <h2>4. 联系方式</h2>
+                    <p>有问题请发邮件至：<a href="mailto:support@eliteloop.app">support@eliteloop.app</a></p>
+                `
+            }
+        };
+
+        let currentLang = localStorage.getItem('eliteloop-lang') || 'en';
+
+        function updateContent() {
+            const langData = texts[currentLang] || texts['en'];
+            
+            document.title = langData.title;
+            document.getElementById('content-area').innerHTML = langData.content;
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (langData[key]) el.textContent = langData[key];
+            });
+
+            document.querySelector('.lang-text').textContent = currentLang.toUpperCase();
+            
+            if (currentLang === 'ar') {
+                document.body.classList.add('rtl');
+                document.documentElement.dir = 'rtl';
+            } else {
+                document.body.classList.remove('rtl');
+                document.documentElement.dir = 'ltr';
+            }
+            document.documentElement.lang = currentLang;
+
+            document.querySelectorAll('.lang-option').forEach(opt => {
+                opt.classList.toggle('active', opt.dataset.lang === currentLang);
+            });
+        }
+
+        document.getElementById('langBtn').addEventListener('click', () => {
+            document.getElementById('langModal').classList.add('active');
+        });
+
+        document.getElementById('closeLangModal').addEventListener('click', () => {
+            document.getElementById('langModal').classList.remove('active');
+        });
+
+        document.getElementById('langModal').addEventListener('click', (e) => {
+            if (e.target.id === 'langModal') {
+                document.getElementById('langModal').classList.remove('active');
+            }
+        });
+
+        document.querySelectorAll('.lang-option').forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentLang = btn.dataset.lang;
+                localStorage.setItem('eliteloop-lang', currentLang);
+                updateContent();
+                document.getElementById('langModal').classList.remove('active');
+            });
+        });
+
+        // Init
+        updateContent();
+    </script>
 </body>
 
 </html>

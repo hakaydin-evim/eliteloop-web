@@ -20,12 +20,25 @@
             color: #fff;
             min-height: 100vh;
             line-height: 1.8;
+            transition: direction 0.3s ease;
+        }
+
+        body.rtl {
+            direction: rtl;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 60px 24px;
+            position: relative;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
         }
 
         h1 {
@@ -59,99 +72,461 @@
             margin-bottom: 20px;
         }
 
+        body.rtl ul {
+            margin-left: 0;
+            margin-right: 24px;
+        }
+
         a {
             color: #FFD700;
         }
 
         .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
             color: #FFD700;
             text-decoration: none;
+        }
+
+        /* Language Button */
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #FFD700;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: #1a2744;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 400px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            animation: modalSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            padding: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover {
+            color: #fff;
+        }
+
+        .modal-body {
+            padding: 24px;
+        }
+
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .lang-option {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 16px;
+            border-radius: 16px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-option:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 215, 0, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .lang-option.active {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: #FFD700;
+        }
+
+        .lang-flag {
+            font-size: 24px;
+        }
+
+        .lang-name {
+            color: #fff;
+            font-weight: 500;
+            font-size: 14px;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <a href="/" class="back-link">← Home</a>
-        <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: February 22, 2026</p>
+        <div class="header-top">
+            <a href="/" class="back-link" data-i18n="back">← Home</a>
+            <button class="lang-btn" id="langBtn">
+                <span class="lang-text">EN</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </button>
+        </div>
 
-        <p>EliteLoop ("we", "our", or "Company") respects your privacy. This Privacy Policy explains how we collect,
-            use, and protect your personal information when you use the EliteLoop mobile application ("App").</p>
-
-        <h2>1. Information We Collect</h2>
-        <p>When you use our App, we may collect the following information:</p>
-        <ul>
-            <li><strong>Account Information:</strong> Name, email address (via Apple Sign-In)</li>
-            <li><strong>Profile Information:</strong> Profile photo, interests, languages, bio</li>
-            <li><strong>Location Information:</strong> Location data to show nearby events and users</li>
-            <li><strong>User Content:</strong> Events you create, messages you send</li>
-            <li><strong>Purchase Information:</strong> Subscription status (processed by Apple)</li>
-        </ul>
-
-        <h2>2. How We Use Information</h2>
-        <p>We use the collected information for the following purposes:</p>
-        <ul>
-            <li>To create and manage your account</li>
-            <li>To show nearby events and users</li>
-            <li>To personalize your app experience</li>
-            <li>To enable messaging between users</li>
-            <li>To prevent fraud and ensure security</li>
-            <li>To provide customer support</li>
-            <li>To comply with legal obligations</li>
-        </ul>
-
-        <h2>3. Information Sharing</h2>
-        <p>We do not sell your personal information to third parties. We may share your information only in the
-            following cases:</p>
-        <ul>
-            <li>With your explicit consent</li>
-            <li>With service providers (cloud storage, payment processors)</li>
-            <li>When required by law</li>
-        </ul>
-
-        <h2>4. Location Privacy</h2>
-        <p>Your location is only collected when you grant permission. Your approximate location (fuzzy) is shown to
-            other users, but your exact address is never shared. You can disable location sharing at any time from
-            Settings.</p>
-
-        <h2>5. Data Security</h2>
-        <p>We use industry-standard security measures to protect your data:</p>
-        <ul>
-            <li>SSL/TLS encryption</li>
-            <li>Secure server infrastructure</li>
-            <li>Regular security audits</li>
-        </ul>
-
-        <h2>6. Your Rights</h2>
-        <p>You have the following rights:</p>
-        <ul>
-            <li>Request access to your data</li>
-            <li>Request correction of your data</li>
-            <li>Delete your account and data</li>
-            <li>Data portability</li>
-        </ul>
-        <p>To delete your account, go to Settings > Delete Account in the App.</p>
-
-        <h2>7. Cookies and Tracking</h2>
-        <p>We do not use cookies in our mobile app. We do not track users across apps or websites for advertising
-            purposes.</p>
-
-        <h2>8. Children's Privacy</h2>
-        <p>Our App is not intended for individuals under 18 years of age. We do not knowingly collect personal
-            information from children under 18.</p>
-
-        <h2>9. Policy Changes</h2>
-        <p>We may update this Privacy Policy from time to time. Significant changes will be announced via in-app
-            notification.</p>
-
-        <h2>10. Contact</h2>
-        <p>For privacy-related questions:</p>
-        <p>Email: <a href="mailto:support@eliteloop.app">support@eliteloop.app</a></p>
-        <p>Website: <a href="https://eliteloop.app">https://eliteloop.app</a></p>
+        <div id="content-area"></div>
     </div>
+
+    <!-- Language Modal -->
+    <div class="modal-overlay" id="langModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 data-i18n="selectLanguage">Select Language</h3>
+                <button class="modal-close" id="closeLangModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="lang-grid">
+                    <button class="lang-option" data-lang="en">
+                        <span class="lang-flag">🇬🇧</span>
+                        <span class="lang-name">English</span>
+                    </button>
+                    <button class="lang-option" data-lang="tr">
+                        <span class="lang-flag">🇹🇷</span>
+                        <span class="lang-name">Türkçe</span>
+                    </button>
+                    <button class="lang-option" data-lang="ru">
+                        <span class="lang-flag">🇷🇺</span>
+                        <span class="lang-name">Русский</span>
+                    </button>
+                    <button class="lang-option" data-lang="ar">
+                        <span class="lang-flag">🇸🇦</span>
+                        <span class="lang-name">العربية</span>
+                    </button>
+                    <button class="lang-option" data-lang="zh">
+                        <span class="lang-flag">🇨🇳</span>
+                        <span class="lang-name">中文</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const texts = {
+            en: {
+                back: "← Home",
+                selectLanguage: "Select Language",
+                content: `
+                    <h1>Privacy Policy</h1>
+                    <p class="updated">Last updated: February 22, 2026</p>
+                    <p>EliteLoop ("we", "our", or "Company") respects your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you use the EliteLoop mobile application ("App").</p>
+                    <h2>1. Information We Collect</h2>
+                    <p>When you use our App, we may collect the following information:</p>
+                    <ul>
+                        <li><strong>Account Information:</strong> Name, email address (via Apple Sign-In)</li>
+                        <li><strong>Profile Information:</strong> Profile photo, interests, languages, bio</li>
+                        <li><strong>Location Information:</strong> Location data to show nearby events and users</li>
+                        <li><strong>User Content:</strong> Events you create, messages you send</li>
+                        <li><strong>Purchase Information:</strong> Subscription status (processed by Apple)</li>
+                    </ul>
+                    <h2>2. How We Use Information</h2>
+                    <p>We use the collected information for the following purposes:</p>
+                    <ul>
+                        <li>To create and manage your account</li>
+                        <li>To show nearby events and users</li>
+                        <li>To personalize your app experience</li>
+                        <li>To enable messaging between users</li>
+                        <li>To prevent fraud and ensure security</li>
+                        <li>To provide customer support</li>
+                        <li>To comply with legal obligations</li>
+                    </ul>
+                    <h2>3. Information Sharing</h2>
+                    <p>We do not sell your personal information to third parties. We may share your information only in the following cases:</p>
+                    <ul>
+                        <li>With your explicit consent</li>
+                        <li>With service providers (cloud storage, payment processors)</li>
+                        <li>When required by law</li>
+                    </ul>
+                    <h2>4. Location Privacy</h2>
+                    <p>Your location is only collected when you grant permission. Your approximate location (fuzzy) is shown to other users, but your exact address is never shared. You can disable location sharing at any time from Settings.</p>
+                    <h2>5. Data Security</h2>
+                    <p>We use industry-standard security measures to protect your data:</p>
+                    <ul>
+                        <li>SSL/TLS encryption</li>
+                        <li>Secure server infrastructure</li>
+                        <li>Regular security audits</li>
+                    </ul>
+                    <h2>6. Your Rights</h2>
+                    <p>You have the following rights:</p>
+                    <ul>
+                        <li>Request access to your data</li>
+                        <li>Request correction of your data</li>
+                        <li>Delete your account and data</li>
+                        <li>Data portability</li>
+                    </ul>
+                    <p>To delete your account, go to Settings > Delete Account in the App.</p>
+                    <h2>7. Cookies and Tracking</h2>
+                    <p>We do not use cookies in our mobile app. We do not track users across apps or websites for advertising purposes.</p>
+                    <h2>8. Children's Privacy</h2>
+                    <p>Our App is not intended for individuals under 18 years of age. We do not knowingly collect personal information from children under 18.</p>
+                    <h2>9. Policy Changes</h2>
+                    <p>We may update this Privacy Policy from time to time. Significant changes will be announced via in-app notification.</p>
+                    <h2>10. Contact</h2>
+                    <p>For privacy-related questions:</p>
+                    <p>Email: <a href="mailto:support@eliteloop.app">support@eliteloop.app</a></p>
+                    <p>Website: <a href="https://eliteloop.app">https://eliteloop.app</a></p>
+                `
+            },
+            tr: {
+                back: "← Ana Sayfa",
+                selectLanguage: "Dil Seçin",
+                content: `
+                    <h1>Gizlilik Politikası</h1>
+                    <p class="updated">Son güncelleme: 22 Şubat 2026</p>
+                    <p>EliteLoop ("biz", "bizim" veya "Şirket") gizliliğinize saygı duyar. Bu Gizlilik Politikası, EliteLoop mobil uygulamasını ("Uygulama") kullandığınızda kişisel bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.</p>
+                    <h2>1. Topladığımız Bilgiler</h2>
+                    <p>Uygulamamızı kullandığınızda aşağıdaki bilgileri toplayabiliriz:</p>
+                    <ul>
+                        <li><strong>Hesap Bilgileri:</strong> Ad, e-posta adresi (Apple ile Giriş Yoluyla)</li>
+                        <li><strong>Profil Bilgileri:</strong> Profil fotoğrafı, ilgi alanları, diller, bio</li>
+                        <li><strong>Konum Bilgileri:</strong> Yakındaki etkinlikleri ve kullanıcıları göstermek için konum verileri</li>
+                        <li><strong>Kullanıcı İçeriği:</strong> Oluşturduğunuz etkinlikler, gönderdiğiniz mesajlar</li>
+                        <li><strong>Satın Alma Bilgileri:</strong> Abonelik durumu (Apple tarafından işlenir)</li>
+                    </ul>
+                    <h2>2. Bilgileri Nasıl Kullanıyoruz</h2>
+                    <p>Toplanan bilgileri aşağıdaki amaçlarla kullanıyoruz:</p>
+                    <ul>
+                        <li>Hesabınızı oluşturmak ve yönetmek için</li>
+                        <li>Yakındaki etkinlikleri ve kullanıcıları göstermek için</li>
+                        <li>Uygulama deneyiminizi kişiselleştirmek için</li>
+                        <li>Kullanıcılar arası mesajlaşmayı sağlamak için</li>
+                        <li>Dolandırıcılığı önlemek ve güvenliği sağlamak için</li>
+                        <li>Müşteri desteği sağlamak için</li>
+                        <li>Yasal yükümlülüklere uymak için</li>
+                    </ul>
+                    <h2>3. Bilgi Paylaşımı</h2>
+                    <p>Kişisel bilgilerinizi üçüncü taraflara satmıyoruz. Bilgilerinizi yalnızca aşağıdaki durumlarda paylaşabiliriz:</p>
+                    <ul>
+                        <li>Açık rızanızla</li>
+                        <li>Hizmet sağlayıcılarla (bulut depolama, ödeme işlemcileri)</li>
+                        <li>Yasalarca gerektiğinde</li>
+                    </ul>
+                    <h2>4. Konum Gizliliği</h2>
+                    <p>Konumunuz yalnızca izin verdiğinizde toplanır. Yaklaşık konumunuz (fuzzy) diğer kullanıcılara gösterilir, ancak kesin adresiniz asla paylaşılmaz. Konum paylaşımını istediğiniz zaman Ayarlar'dan devre dışı bırakabilirsiniz.</p>
+                    <h2>5. Veri Güvenliği</h2>
+                    <p>Verilerinizi korumak için endüstri standardı güvenlik önlemleri kullanıyoruz:</p>
+                    <ul>
+                        <li>SSL/TLS şifreleme</li>
+                        <li>Güvenli sunucu altyapısı</li>
+                        <li>Düzenli güvenlik denetimleri</li>
+                    </ul>
+                    <h2>6. Haklarınız</h2>
+                    <p>Aşağıdaki haklara sahipsiniz:</p>
+                    <ul>
+                        <li>Verilerinize erişim talep etme</li>
+                        <li>Verilerinizin düzeltilmesini talep etme</li>
+                        <li>Hesabınızı ve verilerinizi silme</li>
+                        <li>Veri taşınabilirliği</li>
+                    </ul>
+                    <p>Hesabınızı silmek için Uygulamadaki Ayarlar > Hesabı Sil bölümüne gidin.</p>
+                    <h2>7. Çerezler ve İzleme</h2>
+                    <p>Mobil uygulamamızda çerez kullanmıyoruz. Reklam amacıyla uygulamalar veya web siteleri arasında kullanıcıları izlemiyoruz.</p>
+                    <h2>8. Çocukların Gizliliği</h2>
+                    <p>Uygulamamız 18 yaşın altındaki bireyler için tasarlanmamıştır. 18 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamıyoruz.</p>
+                    <h2>9. Politika Değişiklikleri</h2>
+                    <p>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikler uygulama içi bildirimle duyurulacaktır.</p>
+                    <h2>10. İletişim</h2>
+                    <p>Gizlilikle ilgili sorularınız için:</p>
+                    <p>E-posta: <a href="mailto:support@eliteloop.app">support@eliteloop.app</a></p>
+                    <p>Web sitesi: <a href="https://eliteloop.app">https://eliteloop.app</a></p>
+                `
+            },
+            ru: {
+                back: "← Главная",
+                selectLanguage: "Выберите язык",
+                content: `
+                    <h1>Политика конфиденциальности</h1>
+                    <p class="updated">Последнее обновление: 22 февраля 2026 г.</p>
+                    <p>EliteLoop ("мы", "наш" или "Компания") уважает вашу конфиденциальность. Настоящая Политика объясняет, как мы собираем, используем и защищаем информацию.</p>
+                    <h2>1. Какую информацию мы собираем</h2>
+                    <ul>
+                        <li><strong>Данные аккаунта:</strong> Имя, email (через Apple Sign-In)</li>
+                        <li><strong>Профиль:</strong> Фото, интересы, языки, описание</li>
+                        <li><strong>Локация:</strong> Для показа событий и людей поблизости</li>
+                        <li><strong>Покупки:</strong> Статус подписки (обрабатывает Apple)</li>
+                    </ul>
+                    <h2>2. Защита данных</h2>
+                    <p>Мы используем шифрование SSL/TLS и серверы с высоким уровнем защиты. Мы не продаем ваши данные третьим лицам.</p>
+                    <h2>3. Права пользователей</h2>
+                    <p>Вы можете запросить удаление своего аккаунта и данных через Настройки > Удалить аккаунт.</p>
+                    <h2>4. Контакты</h2>
+                    <p>Email: <a href="mailto:support@eliteloop.app">support@eliteloop.app</a></p>
+                `
+            },
+            ar: {
+                back: "← الرئيسية",
+                selectLanguage: "اختر اللغة",
+                content: `
+                    <h1>سياسة الخصوصية</h1>
+                    <p class="updated">آخر تحديث: 22 فبراير 2026</p>
+                    <p>نحن في EliteLoop نحترم خصوصيتك. توضح هذه السياسة كيف نجمع بياناتك ونستخدمها ونحميها عند استخدامك لتطبيقنا.</p>
+                    <h2>1. المعلومات التي نجمعها</h2>
+                    <ul>
+                        <li><strong>بيانات الحساب:</strong> الاسم، البريد الإلكتروني (عبر تسجيل الدخول من Apple)</li>
+                        <li><strong>الملف الشخصي:</strong> الصورة، الاهتمامات، اللغات، النبذة</li>
+                        <li><strong>الموقع:</strong> لإظهار الفعاليات القريبة منك</li>
+                        <li><strong>المشتريات:</strong> حالة الاشتراك</li>
+                    </ul>
+                    <h2>2. أمن البيانات</h2>
+                    <p>نستخدم تشفير SSL/TLS وبنية تحتية آمنة. لا نبيع بياناتك الشخصية لأي طرف ثالث.</p>
+                    <h2>3. حقوقك</h2>
+                    <p>يمكنك حذف حسابك وبياناتك في أي وقت من الإعدادات > حذف الحساب.</p>
+                    <h2>4. تواصل معنا</h2>
+                    <p>البريد الإلكتروني: <a href="mailto:support@eliteloop.app">support@eliteloop.app</a></p>
+                `
+            },
+            zh: {
+                back: "← 首页",
+                selectLanguage: "选择语言",
+                content: `
+                    <h1>隐私政策</h1>
+                    <p class="updated">最后更新：2026年2月22日</p>
+                    <p>EliteLoop 尊重您的隐私。本隐私政策说明了当您使用我们的应用程序时我们如何收集、使用和保护您的个人信息。</p>
+                    <h2>1. 我们收集的信息</h2>
+                    <ul>
+                        <li><strong>账户信息：</strong> 姓名，电子邮件（通过 Apple 登录）</li>
+                        <li><strong>个人资料：</strong> 照片，兴趣，语言，简介</li>
+                        <li><strong>位置：</strong> 用于显示附近的活动和用户</li>
+                        <li><strong>购买：</strong> 订阅状态（由 Apple 处理）</li>
+                    </ul>
+                    <h2>2. 数据安全</h2>
+                    <p>我们使用 SSL/TLS 加密和安全服务器基础设施。我们绝不出售您的个人信息。</p>
+                    <h2>3. 您的权利</h2>
+                    <p>您可以随时在“设置 > 删除账户”中请求删除您的账户和数据。</p>
+                    <h2>4. 联系方式</h2>
+                    <p>电子邮件：<a href="mailto:support@eliteloop.app">support@eliteloop.app</a></p>
+                `
+            }
+        };
+
+        let currentLang = localStorage.getItem('eliteloop-lang') || 'en';
+
+        function updateContent() {
+            const langData = texts[currentLang] || texts['en'];
+            
+            document.getElementById('content-area').innerHTML = langData.content;
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (langData[key]) el.textContent = langData[key];
+            });
+
+            document.querySelector('.lang-text').textContent = currentLang.toUpperCase();
+            
+            if (currentLang === 'ar') {
+                document.body.classList.add('rtl');
+                document.documentElement.dir = 'rtl';
+            } else {
+                document.body.classList.remove('rtl');
+                document.documentElement.dir = 'ltr';
+            }
+            document.documentElement.lang = currentLang;
+
+            document.querySelectorAll('.lang-option').forEach(opt => {
+                opt.classList.toggle('active', opt.dataset.lang === currentLang);
+            });
+        }
+
+        document.getElementById('langBtn').addEventListener('click', () => {
+            document.getElementById('langModal').classList.add('active');
+        });
+
+        document.getElementById('closeLangModal').addEventListener('click', () => {
+            document.getElementById('langModal').classList.remove('active');
+        });
+
+        document.getElementById('langModal').addEventListener('click', (e) => {
+            if (e.target.id === 'langModal') {
+                document.getElementById('langModal').classList.remove('active');
+            }
+        });
+
+        document.querySelectorAll('.lang-option').forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentLang = btn.dataset.lang;
+                localStorage.setItem('eliteloop-lang', currentLang);
+                updateContent();
+                document.getElementById('langModal').classList.remove('active');
+            });
+        });
+
+        // Init
+        updateContent();
+    </script>
 </body>
 
 </html>

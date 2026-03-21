@@ -124,10 +124,10 @@ const translations = {
     "legal.support.badge": "Support",
     "legal.support.title": "Support that feels as considered as the product",
     "legal.support.subtitle": "Reach the EliteLoop team for account help, subscriptions, privacy questions, and general support.",
-    "android.badge": "Android track",
-    "android.title": "Android built with the same EliteLoop standards",
-    "android.subtitle": "Follow the Android rollout, feature parity, and premium map-led experience as EliteLoop expands across both platforms.",
-    "android.meta": "Closed testing, Google Maps parity, badge-aware access, and the same core social rules."
+    "android.badge": "Android",
+    "android.title": "EliteLoop Android is coming soon",
+    "android.subtitle": "The Android version is being built with the same product logic as iOS, adapted for Google's ecosystem and a premium mobile experience.",
+    "android.meta": "Closed testing is underway. Maps, badge-based access, and messaging rules are being aligned across both platforms."
   },
   tr: {
     "modal.selectLanguage": "Dil Seçin",
@@ -254,10 +254,10 @@ const translations = {
     "legal.support.badge": "Destek",
     "legal.support.title": "İhtiyacın olduğunda kolayca ulaşabileceğin destek sayfası",
     "legal.support.subtitle": "Hesap, abonelik, gizlilik ve genel destek konularında EliteLoop ekibine buradan ulaşabilirsin.",
-    "android.badge": "Android hattı",
-    "android.title": "Android deneyimi de aynı EliteLoop standartlarıyla hazırlanıyor",
-    "android.subtitle": "EliteLoop iki platformda da büyürken Android tarafındaki çıkış sürecini, özellik eşliğini ve premium harita deneyimini takip et.",
-    "android.meta": "Kapalı test süreci, Google Maps uyumu, rozet bazlı erişim ve aynı temel sosyal kurallar."
+    "android.badge": "Android",
+    "android.title": "EliteLoop Android yakında yayında",
+    "android.subtitle": "Android sürümü, iOS ile aynı ürün mantığını koruyarak Google ekosistemine uygun ve premium bir deneyimle hazırlanıyor.",
+    "android.meta": "Kapalı test süreci devam ediyor. Harita deneyimi, rozet erişimi ve mesajlaşma mantığı iki platformda da aynı çizgide ilerliyor."
   },
   ru: {
     "modal.selectLanguage": "Выберите язык",
@@ -984,20 +984,20 @@ const legalContent = {
   },
   android: {
     en: [
-      ["Platform intent", "Android is being rolled out with the same product standards, access logic, and premium presentation as iOS."],
-      ["What stays aligned", "Badge rules, map-based discovery, event participation, messaging logic, privacy principles, and account behavior stay aligned across iOS and Android."],
-      ["What adapts", "Android can use Google Maps, Android-safe marker rendering, safe-area aware bottom navigation, and keyboard-safe chat input while preserving the same product rules."],
-      ["Why show this on the site", "If the website only says 'Download on App Store', users assume the brand only really lives on iPhone. A visible Android track fixes that perception."],
-      ["Current rollout posture", "The Android story can be framed honestly as closed test, near-release, or rollout in motion while still looking polished and intentional."],
-      ["Design direction", "The strongest landing version is one where Android is not visually secondary: it should sit near the main CTA and share the same premium narrative as iOS."]
+      ["Our Android approach", "EliteLoop for Android is not a secondary version sitting behind iPhone. It is being built as a first-class part of the same brand and product system."],
+      ["What stays the same", "Badge levels, event rules, messaging access, friendship flows, and privacy principles stay aligned between iOS and Android."],
+      ["What changes on Android", "Maps, sign-in surfaces, bottom navigation, and chat input can adapt to Android conventions while preserving the same product decisions."],
+      ["Why this page exists", "EliteLoop should not feel like an iPhone-only brand. This page makes the Android rollout visible, intentional, and part of the same premium story."],
+      ["Current status", "Android is currently in closed testing. The focus is on shipping a stable, polished, and product-aligned experience."],
+      ["Release goal", "Our goal is not to make Android feel secondary, but to deliver an EliteLoop experience that feels native, premium, and complete on its own."]
     ],
     tr: [
-      ["Platform yaklaşımı", "Android, iPhone deneyiminin altına iliştirilmiş zayıf bir not gibi görünmemeli. Görsel dil, onu da aynı ölçüde premium ve desteklenen bir platform olarak hissettirmeli."],
-      ["Neler eşlenik kalır", "Rozet kuralları, harita tabanlı keşif, etkinlik katılımı, mesajlaşma mantığı, gizlilik ilkeleri ve hesap davranışı iOS ile Android arasında eşlenik kalır."],
-      ["Neler uyarlanır", "Android tarafı; Google Maps, Android'e uygun marker render'ı, safe area uyumlu alt menü ve klavye dostu sohbet alanı kullanabilir. Buna rağmen ürün kuralları aynı kalır."],
-      ["Bunu sitede neden gösteriyoruz", "Site sadece 'Download on App Store' diyorsa insanlar markanın gerçekte yalnızca iPhone'da yaşadığını düşünebilir. Android hattını görünür kılmak bu algıyı düzeltir."],
-      ["Mevcut yayın duruşu", "Android tarafı dürüst biçimde kapalı testte, yayına çok yakın ya da kademeli çıkış sürecinde olarak anlatılabilir; yine de özenli ve bilinçli görünebilir."],
-      ["Tasarım yönü", "En güçlü landing deneyimi, Android'in görsel olarak geri planda kalmadığı versiyondur. Ana CTA'nın yakınında durmalı ve iOS ile aynı premium anlatıyı paylaşmalıdır."]
+      ["Android yaklaşımımız", "EliteLoop Android sürümü, iOS deneyiminin gölgesinde kalan ikinci bir ürün değil; aynı markanın, aynı kalite anlayışının doğal uzantısı olarak hazırlanıyor."],
+      ["Neler aynı kalıyor", "Rozet seviyeleri, etkinlik mantığı, mesajlaşma kuralları, arkadaşlık akışları ve gizlilik yaklaşımı iOS ile Android arasında aynı kalır."],
+      ["Neler Android'e uyarlanıyor", "Harita deneyimi, giriş akışı, alt gezinme ve sohbet alanı Android kullanım alışkanlıklarına göre uyarlanır. Görünüm değişse de ürün kuralları değişmez."],
+      ["Bu sayfa neden var", "EliteLoop yalnızca App Store'da yaşayan bir marka değil. Android sürümünün de aynı ciddiyetle hazırlandığını açıkça göstermek istiyoruz."],
+      ["Şu anki durum", "Android sürümü kapalı test aşamasında. Amaç; kararlı, hızlı ve iOS ile uyumlu bir deneyimi kullanıcılarla buluşturmak."],
+      ["Yayın hedefi", "Hedefimiz Android'i ikincil göstermek değil; kendi doğasına uygun, güçlü ve premium hissettiren bir EliteLoop deneyimi sunmak."]
     ],
     ru: [
       ["Намерение платформы", "Android не должен выглядеть слабым дополнением под iPhone-продуктом. Визуальный язык должен делать его также premium и также поддерживаемым."],

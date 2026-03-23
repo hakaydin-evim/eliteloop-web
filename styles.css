@@ -353,72 +353,6 @@ a {
     linear-gradient(0deg, rgba(5, 10, 18, 0.28), transparent 24%);
 }
 
-.cookie-banner {
-  position: fixed;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  z-index: 60;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 18px;
-  align-items: center;
-  padding: 18px 20px;
-  border: 1px solid rgba(201, 160, 47, 0.18);
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(11, 19, 34, 0.94), rgba(8, 14, 26, 0.96));
-  backdrop-filter: blur(16px);
-  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.35);
-}
-
-.cookie-copy strong {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--text);
-  font-size: 0.98rem;
-}
-
-.cookie-copy p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.65;
-  font-size: 0.95rem;
-}
-
-.cookie-copy a {
-  color: var(--gold-soft);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.cookie-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-end;
-}
-
-.cookie-btn {
-  min-height: 46px;
-  padding: 0 18px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-family: var(--font-ui);
-  cursor: pointer;
-}
-
-.cookie-btn-ghost {
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
-}
-
-.cookie-btn-gold {
-  border: 1px solid transparent;
-  color: #121317;
-  background: linear-gradient(135deg, #b88919 0%, #ebcf79 50%, #b88919 100%);
-  box-shadow: 0 14px 34px rgba(201, 160, 47, 0.22);
-}
 
 .map-layer {
   position: absolute;
@@ -1111,21 +1045,6 @@ body.rtl .android-card ul {
     margin-top: 56px;
   }
 
-  .cookie-banner {
-    grid-template-columns: 1fr;
-    padding: 16px 16px 18px;
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
-  }
-
-  .cookie-actions {
-    justify-content: stretch;
-  }
-
-  .cookie-btn {
-    flex: 1 1 180px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

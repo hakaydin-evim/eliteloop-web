@@ -112,6 +112,11 @@ const translations = {
     "footer.terms": "Terms of Service",
     "footer.gdpr": "GDPR",
     "footer.rights": "All rights reserved.",
+    "cookie.title": "Cookie preferences",
+    "cookie.body": "We use analytics cookies to understand traffic and improve EliteLoop. You can accept them or continue with essential site functions only.",
+    "cookie.accept": "Accept analytics",
+    "cookie.reject": "Only essential",
+    "cookie.privacy": "Privacy Policy",
     "legal.updated": "Last updated: March 21, 2026",
     "legal.privacy.badge": "Privacy Policy",
     "legal.privacy.title": "Privacy policy designed with the same premium clarity",
@@ -242,6 +247,11 @@ const translations = {
     "footer.terms": "Kullanım Koşulları",
     "footer.gdpr": "GDPR",
     "footer.rights": "Tüm hakları saklıdır.",
+    "cookie.title": "Çerez tercihleri",
+    "cookie.body": "Trafiği anlamak ve EliteLoop'u geliştirmek için analiz çerezleri kullanıyoruz. Kabul edebilir ya da yalnızca temel site işlevleriyle devam edebilirsin.",
+    "cookie.accept": "Analitiği kabul et",
+    "cookie.reject": "Yalnızca gerekli",
+    "cookie.privacy": "Gizlilik Politikası",
     "legal.updated": "Son güncelleme: 21 Mart 2026",
     "legal.privacy.badge": "Gizlilik Politikası",
     "legal.privacy.title": "EliteLoop'un yaklaşımını net biçimde anlatan gizlilik politikası",
@@ -372,6 +382,11 @@ const translations = {
     "footer.terms": "Условия использования",
     "footer.gdpr": "GDPR",
     "footer.rights": "Все права защищены.",
+    "cookie.title": "Настройки cookie",
+    "cookie.body": "Мы используем аналитические cookie, чтобы понимать трафик и улучшать EliteLoop. Вы можете принять их или продолжить только с основными функциями сайта.",
+    "cookie.accept": "Принять аналитику",
+    "cookie.reject": "Только необходимое",
+    "cookie.privacy": "Политика конфиденциальности",
     "legal.updated": "Последнее обновление: 21 марта 2026",
     "legal.privacy.badge": "Политика конфиденциальности",
     "legal.privacy.title": "Политика конфиденциальности с тем же premium-уровнем ясности",
@@ -502,6 +517,11 @@ const translations = {
     "footer.terms": "شروط الخدمة",
     "footer.gdpr": "GDPR",
     "footer.rights": "جميع الحقوق محفوظة.",
+    "cookie.title": "تفضيلات ملفات تعريف الارتباط",
+    "cookie.body": "نستخدم ملفات تعريف ارتباط تحليلية لفهم الزيارات وتحسين EliteLoop. يمكنك قبولها أو المتابعة بالوظائف الأساسية فقط.",
+    "cookie.accept": "قبول التحليلات",
+    "cookie.reject": "الضروري فقط",
+    "cookie.privacy": "سياسة الخصوصية",
     "legal.updated": "آخر تحديث: 21 مارس 2026",
     "legal.privacy.badge": "سياسة الخصوصية",
     "legal.privacy.title": "سياسة خصوصية مصممة بالوضوح الفاخر نفسه",
@@ -632,6 +652,11 @@ const translations = {
     "footer.terms": "服务条款",
     "footer.gdpr": "GDPR",
     "footer.rights": "保留所有权利。",
+    "cookie.title": "Cookie 偏好设置",
+    "cookie.body": "我们使用分析类 Cookie 来了解流量并改进 EliteLoop。你可以接受，也可以仅保留网站必要功能。",
+    "cookie.accept": "接受分析",
+    "cookie.reject": "仅必要功能",
+    "cookie.privacy": "隐私政策",
     "legal.updated": "最后更新：2026 年 3 月 21 日",
     "legal.privacy.badge": "隐私政策",
     "legal.privacy.title": "以同样高级清晰度设计的隐私政策",
@@ -762,6 +787,11 @@ const translations = {
     "footer.terms": "利用規約",
     "footer.gdpr": "GDPR",
     "footer.rights": "All rights reserved.",
+    "cookie.title": "Cookie設定",
+    "cookie.body": "トラフィックを把握しEliteLoopを改善するために分析Cookieを使用します。承諾するか、必須機能のみで続行できます。",
+    "cookie.accept": "分析を許可",
+    "cookie.reject": "必須のみ",
+    "cookie.privacy": "プライバシーポリシー",
     "legal.updated": "最終更新: 2026年3月21日",
     "legal.privacy.badge": "プライバシーポリシー",
     "legal.privacy.title": "同じプレミアムな明快さで設計されたプライバシーポリシー",
@@ -1042,6 +1072,33 @@ function setLang(lang) {
   localStorage.setItem("democodex-lang", lang);
 }
 
+function getCookieConsent() {
+  return localStorage.getItem("eliteloop-cookie-consent");
+}
+
+function setCookieConsent(value) {
+  localStorage.setItem("eliteloop-cookie-consent", value);
+}
+
+function updateAnalyticsConsent(status) {
+  if (typeof window.gtag !== "function") return;
+
+  const granted = status === "accepted";
+  window.gtag("consent", "update", {
+    analytics_storage: granted ? "granted" : "denied",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied"
+  });
+}
+
+function syncStoredConsent() {
+  const consent = getCookieConsent();
+  if (consent === "accepted" || consent === "rejected") {
+    updateAnalyticsConsent(consent);
+  }
+}
+
 function applyTranslations() {
   const lang = getLang();
   const dict = translations[lang] || translations.en;
@@ -1090,6 +1147,46 @@ function renderLegalPage() {
   }
 }
 
+function renderCookieBanner() {
+  const existing = document.getElementById("cookieBanner");
+  if (existing) existing.remove();
+
+  const consent = getCookieConsent();
+  if (consent === "accepted" || consent === "rejected") return;
+
+  const lang = getLang();
+  const dict = translations[lang] || translations.en;
+  const privacyHref = document.body.dataset.page === "privacy" ? "#" : "privacy.html";
+
+  const banner = document.createElement("div");
+  banner.id = "cookieBanner";
+  banner.className = "cookie-banner";
+  banner.innerHTML = `
+    <div class="cookie-copy">
+      <strong>${dict["cookie.title"]}</strong>
+      <p>${dict["cookie.body"]} <a href="${privacyHref}">${dict["cookie.privacy"]}</a></p>
+    </div>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-ghost" type="button" data-cookie-action="reject">${dict["cookie.reject"]}</button>
+      <button class="cookie-btn cookie-btn-gold" type="button" data-cookie-action="accept">${dict["cookie.accept"]}</button>
+    </div>
+  `;
+
+  document.body.appendChild(banner);
+
+  banner.querySelector('[data-cookie-action="accept"]').addEventListener("click", () => {
+    setCookieConsent("accepted");
+    updateAnalyticsConsent("accepted");
+    banner.remove();
+  });
+
+  banner.querySelector('[data-cookie-action="reject"]').addEventListener("click", () => {
+    setCookieConsent("rejected");
+    updateAnalyticsConsent("rejected");
+    banner.remove();
+  });
+}
+
 function setupLanguageModal() {
   const modal = document.getElementById("langModal");
   const openBtn = document.getElementById("langBtn");
@@ -1107,11 +1204,14 @@ function setupLanguageModal() {
       setLang(button.dataset.lang);
       applyTranslations();
       renderLegalPage();
+      renderCookieBanner();
       modal.classList.remove("active");
     });
   });
 }
 
+syncStoredConsent();
 applyTranslations();
 renderLegalPage();
+renderCookieBanner();
 setupLanguageModal();

@@ -29,7 +29,7 @@ This means:
 - Android landing page is live
 - `/krallik` admin route was preserved
 - footer year updated to `2026`
-- Instagram and TikTok links point to `eliteloopapp`
+- Instagram points to `eliteloop.app` and TikTok points to `eliteloopapp`
 
 #### Website SEO
 - Homepage `title` and `meta description` updated

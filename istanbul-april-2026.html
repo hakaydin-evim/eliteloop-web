@@ -74,17 +74,19 @@
     }
     .topbar a { color: var(--text); text-decoration: none; }
     .topbar .brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 600; font-size: 0.92rem; }
-    .topbar .brand img { width: 26px; border-radius: 6px; }
+    .topbar .brand img { width: 36px; height: 36px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); display: block; }
     .topbar__right { display: flex; align-items: center; gap: 1.2rem; }
     .topbar__link { font-size: 0.78rem; color: rgba(245,240,232,0.5); letter-spacing: 0.04em; transition: color 0.2s; }
     .topbar__link:hover { color: var(--gold); }
     .topbar__cta {
-      background: var(--gold); color: #060610;
+      background: linear-gradient(135deg, #b88919 0%, #ebcf79 50%, #b88919 100%);
+      color: #060610;
       font-size: 0.78rem; font-weight: 700;
       padding: 0.45rem 1.1rem; border-radius: 0.4rem;
-      transition: background 0.2s;
+      transition: opacity 0.2s;
+      box-shadow: 0 8px 24px rgba(201,160,47,0.25);
     }
-    .topbar__cta:hover { background: #dba96a; }
+    .topbar__cta:hover { opacity: 0.85; }
 
     /* Article Hero */
     .article-hero {

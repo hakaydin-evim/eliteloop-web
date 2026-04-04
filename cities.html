@@ -62,14 +62,26 @@
       font-family: 'Inter', sans-serif; font-size: 0.95rem;
       color: #f6f1e7;
     }
-    .cities-topbar .brand img { width: 28px; border-radius: 6px; }
+    .cities-topbar .brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 0;
+      display: block;
+    }
     .cities-topbar__cta {
-      background: #c9a02f; color: #121317;
+      background: linear-gradient(135deg, #b88919 0%, #ebcf79 50%, #b88919 100%);
+      color: #121317;
       font-size: 0.8rem; font-weight: 700;
       padding: 0.5rem 1.2rem; border-radius: 0.4rem;
-      text-decoration: none; transition: background 0.2s;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      box-shadow: 0 8px 24px rgba(201,160,47,0.25);
     }
-    .cities-topbar__cta:hover { background: #ebcf79; }
+    .cities-topbar__cta:hover { opacity: 0.85; }
 
     .cities-hero {
       text-align: center;

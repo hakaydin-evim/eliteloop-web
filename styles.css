@@ -115,6 +115,10 @@ a {
   font-weight: 600;
 }
 
+.nav-city-link.mobile-only {
+  display: none;
+}
+
 .nav-city-link:hover {
   color: #fff !important;
 }
@@ -986,6 +990,16 @@ body.rtl .android-card ul {
 
   .nav {
     display: none;
+  }
+
+  .nav-city-link.mobile-only {
+    display: inline-flex !important;
+    gap: 4px;
+    font-size: 0.8rem;
+  }
+  .nav-city-link.mobile-only .nav-new-badge {
+    padding: 1px 5px;
+    font-size: 0.52rem;
   }
 
   .map-shell {

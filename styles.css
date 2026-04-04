@@ -106,6 +106,39 @@ a {
   color: var(--text);
 }
 
+/* ── City nav link + NEW badge ─────────────────── */
+.nav-city-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gold-soft) !important;
+  font-weight: 600;
+}
+
+.nav-city-link:hover {
+  color: #fff !important;
+}
+
+.nav-new-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #b88919, #ebcf79);
+  color: #121317;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: badgePulse 2.4s ease-in-out infinite;
+  will-change: box-shadow, opacity;
+}
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,160,47,0.55); opacity: 1; }
+  50%       { box-shadow: 0 0 0 5px rgba(201,160,47,0);  opacity: 0.85; }
+}
+
 .topbar-meta {
   display: flex;
   align-items: center;

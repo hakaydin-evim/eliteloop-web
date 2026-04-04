@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliteLoop Cities — Elite Networking & Exclusive Events Worldwide</title>
+  <meta name="description" content="Discover EliteLoop's city guides. Elite networking, exclusive events and private social discovery in Istanbul, Dubai, London, Paris, Tokyo, Moscow, Shanghai and worldwide.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://eliteloop.app/cities">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EliteLoop Cities — Elite Networking Worldwide">
+  <meta property="og:description" content="Exclusive events and private social discovery in Istanbul, Dubai, London, Paris, Tokyo, Moscow and Shanghai.">
+  <meta property="og:url" content="https://eliteloop.app/cities">
+  <meta property="og:image" content="https://eliteloop.app/istanbul-hero.jpg">
+  <meta property="og:site_name" content="EliteLoop">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "EliteLoop Cities — Elite Networking Worldwide",
+    "description": "City guides for elite networking and exclusive events in Istanbul, Dubai, London, Paris, Tokyo, Moscow and Shanghai.",
+    "url": "https://eliteloop.app/cities",
+    "publisher": {
+      "@type": "Organization",
+      "name": "EliteLoop",
+      "url": "https://eliteloop.app",
+      "logo": "https://eliteloop.app/apple-touch-icon.png"
+    }
+  }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KWG02QGBR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6KWG02QGBR');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .cities-topbar {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.1rem 2rem;
+      background: rgba(7,16,31,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .cities-topbar .brand {
+      display: flex; align-items: center; gap: 0.6rem;
+      text-decoration: none; font-weight: 700;
+      font-family: 'Inter', sans-serif; font-size: 0.95rem;
+      color: #f6f1e7;
+    }
+    .cities-topbar .brand img { width: 28px; border-radius: 6px; }
+    .cities-topbar__cta {
+      background: #c9a02f; color: #121317;
+      font-size: 0.8rem; font-weight: 700;
+      padding: 0.5rem 1.2rem; border-radius: 0.4rem;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .cities-topbar__cta:hover { background: #ebcf79; }
+
+    .cities-hero {
+      text-align: center;
+      padding: 5rem 2rem 3rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .cities-eyebrow {
+      display: inline-block;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #ebcf79;
+      margin-bottom: 1.2rem;
+    }
+    .cities-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 600; line-height: 1.1;
+      color: #f6f1e7; margin: 0 0 1rem;
+    }
+    .cities-hero p {
+      font-size: 1rem; line-height: 1.75;
+      color: rgba(246,241,231,0.6); font-weight: 300;
+      margin: 0;
+    }
+
+    .cities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 3rem auto 5rem;
+      padding: 0 2rem;
+    }
+
+    .city-card {
+      position: relative;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 1.25rem;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.25s, transform 0.25s;
+      background: rgba(255,255,255,0.02);
+    }
+    .city-card:hover {
+      border-color: rgba(201,160,47,0.4);
+      transform: translateY(-4px);
+    }
+    .city-card--soon {
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    .city-card--soon:hover { transform: none; }
+
+    .city-card__img {
+      width: 100%; height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    .city-card__img-placeholder {
+      width: 100%; height: 180px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+    }
+
+    .city-card__body { padding: 1.4rem 1.5rem 1.5rem; }
+
+    .city-card__status {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; margin-bottom: 0.6rem;
+    }
+    .city-card__status--live { color: #44d39f; }
+    .city-card__status--soon { color: rgba(246,241,231,0.35); }
+
+    .city-card__name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; font-weight: 600;
+      color: #f6f1e7; margin: 0 0 0.4rem;
+      line-height: 1.1;
+    }
+    .city-card__country {
+      font-size: 0.75rem; color: rgba(246,241,231,0.4);
+      margin-bottom: 0.75rem; letter-spacing: 0.05em;
+    }
+    .city-card__desc {
+      font-size: 0.82rem; line-height: 1.7;
+      color: rgba(246,241,231,0.55); margin: 0 0 1rem;
+    }
+    .city-card__cta {
+      font-size: 0.75rem; color: #c9a02f;
+      letter-spacing: 0.06em;
+    }
+
+    /* Latest reports strip */
+    .reports-strip {
+      max-width: 1100px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+    .reports-strip__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem; color: #f6f1e7;
+      margin: 0 0 1.5rem;
+    }
+    .reports-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .report-item {
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 1rem; padding: 1.25rem 1.5rem;
+      text-decoration: none;
+      transition: border-color 0.2s;
+      display: block;
+    }
+    .report-item:hover { border-color: rgba(201,160,47,0.35); }
+    .report-item__tag {
+      font-size: 0.62rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: #c9a02f; margin-bottom: 0.5rem;
+    }
+    .report-item__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; color: #f6f1e7; line-height: 1.3;
+    }
+    .report-item__meta {
+      font-size: 0.72rem; color: rgba(246,241,231,0.35);
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body style="background:#07101f; color:#f6f1e7; font-family:'Inter',sans-serif; margin:0;">
+
+  <!-- Topbar -->
+  <nav class="cities-topbar">
+    <a href="index.html" class="brand">
+      <img src="apple-touch-icon.png" alt="EliteLoop">
+      <span>EliteLoop</span>
+    </a>
+    <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969"
+       class="cities-topbar__cta" target="_blank" rel="noreferrer">Download App</a>
+  </nav>
+
+  <!-- Hero -->
+  <div class="cities-hero">
+    <span class="cities-eyebrow">🌍 Global Scene</span>
+    <h1>Elite social discovery,<br>city by city.</h1>
+    <p>Monthly scene reports, exclusive event guides, and private social discovery
+       for EliteLoop members — from Istanbul to Tokyo.</p>
+  </div>
+
+  <!-- City Grid -->
+  <div class="cities-grid">
+
+    <!-- Istanbul — LIVE -->
+    <a href="istanbul.html" class="city-card">
+      <img src="istanbul-hero.jpg" alt="Istanbul elite social scene" class="city-card__img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="city-card__img-placeholder" style="display:none;">🌙</div>
+      <div class="city-card__body">
+        <div class="city-card__status city-card__status--live">🟢 Live</div>
+        <div class="city-card__name">Istanbul</div>
+        <div class="city-card__country">Turkey · Bosphorus</div>
+        <p class="city-card__desc">Where two continents meet — exclusive Bosphorus events, Sónar Istanbul, and the city's elite social spring season.</p>
+        <span class="city-card__cta">Explore Istanbul →</span>
+      </div>
+    </a>
+
+    <!-- Dubai — Coming -->
+    <div class="city-card city-card--soon">
+      <div class="city-card__img-placeholder">🌅</div>
+      <div class="city-card__body">
+        <div class="city-card__status city-card__status--soon">Coming this week</div>
+        <div class="city-card__name">Dubai</div>
+        <div class="city-card__country">UAE · Gulf</div>
+        <p class="city-card__desc">Rooftop networking, luxury hospitality events, and the Gulf's most exclusive social calendar.</p>
+      </div>
+    </div>
+
+    <!-- London — Coming -->
+    <div class="city-card city-card--soon">
+      <div class="city-card__img-placeholder">🎩</div>
+      <div class="city-card__body">
+        <div class="city-card__status city-card__status--soon">Coming soon</div>
+        <div class="city-card__name">London</div>
+        <div class="city-card__country">UK · West End</div>
+        <p class="city-card__desc">Private member clubs, gallery openings, and the understated elite social scene of Britain's capital.</p>
+      </div>
+    </div>
+
+    <!-- Paris — Coming -->
+    <div class="city-card city-card--soon">
+      <div class="city-card__img-placeholder">🗼</div>
+      <div class="city-card__body">
+        <div class="city-card__status city-card__status--soon">Coming soon</div>
+        <div class="city-card__name">Paris</div>
+        <div class="city-card__country">France · 8ème</div>
+        <p class="city-card__desc">Quiet luxury and the city's most curated social circles — from Saint-Germain salons to Marais dinners.</p>
+      </div>
+    </div>
+
+    <!-- Tokyo — Coming -->
+    <div class="city-card city-card--soon">
+      <div class="city-card__img-placeholder">🏯</div>
+      <div class="city-card__body">
+        <div class="city-card__status city-card__status--soon">Coming soon</div>
+        <div class="city-card__name">Tokyo</div>
+        <div class="city-card__country">Japan · Minato</div>
+        <p class="city-card__desc">Omakase networking, Roppongi Hills events, and the considered social culture of Japan's elite.</p>
+      </div>
+    </div>
+
+    <!-- Moscow — Coming -->
+    <div class="city-card city-card--soon">
+      <div class="city-card__img-placeholder">❄️</div>
+      <div class="city-card__body">
+        <div class="city-card__status city-card__status--soon">Coming soon</div>
+        <div class="city-card__name">Moscow</div>
+        <div class="city-card__country">Russia · Centre</div>
+        <p class="city-card__desc">The city's cultural patrons, private art evenings, and the elite social layer of the Russian capital.</p>
+      </div>
+    </div>
+
+    <!-- Shanghai — Coming -->
+    <div class="city-card city-card--soon">
+      <div class="city-card__img-placeholder">🌃</div>
+      <div class="city-card__body">
+        <div class="city-card__status city-card__status--soon">Coming soon</div>
+        <div class="city-card__name">Shanghai</div>
+        <div class="city-card__country">China · The Bund</div>
+        <p class="city-card__desc">Bund-view networking dinners, Xintiandi social scenes, and Greater China's most exclusive social layer.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Latest Scene Reports -->
+  <div class="reports-strip">
+    <div class="reports-strip__title">Latest Scene Reports</div>
+    <div class="reports-list">
+
+      <a href="istanbul-april-2026.html" class="report-item">
+        <div class="report-item__tag">Istanbul · April 2026</div>
+        <div class="report-item__title">Istanbul's Spring Social Season: The Bosphorus Returns</div>
+        <div class="report-item__meta">April 4, 2026 · 5 min read</div>
+      </a>
+
+      <!-- Placeholders for future reports -->
+      <div class="report-item" style="opacity:0.35; pointer-events:none;">
+        <div class="report-item__tag">Dubai · April 2026</div>
+        <div class="report-item__title">Dubai After Art Week: The Gulf's Social Season Opens</div>
+        <div class="report-item__meta">Coming Tuesday</div>
+      </div>
+
+      <div class="report-item" style="opacity:0.25; pointer-events:none;">
+        <div class="report-item__tag">London · April 2026</div>
+        <div class="report-item__title">London Spring: Private Members & the Chelsea Season</div>
+        <div class="report-item__meta">Coming Monday</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="border-top:1px solid rgba(255,255,255,0.06);padding:2rem;text-align:center;">
+    <p style="font-size:0.72rem;color:rgba(246,241,231,0.3);">
+      <a href="index.html" style="color:rgba(201,160,47,0.6);text-decoration:none;">EliteLoop</a>
+      · Cities · Private Social Discovery Worldwide
+    </p>
+  </footer>
+
+</body>
+</html>

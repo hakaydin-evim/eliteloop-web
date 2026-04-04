@@ -62,8 +62,9 @@
   <style>
     /* ── City Hub Overrides ─────────────────────────────── */
     :root {
-      --city-accent: #c8965a;       /* Istanbul: warm copper-gold */
-      --city-accent-soft: rgba(200,150,90,0.12);
+      --city-accent: #c9a02f;           /* Brand gold */
+      --city-accent-soft: rgba(201,160,47,0.12);
+      --city-accent-text: #ebcf79;      /* Brand gold-soft for text */
     }
 
     .city-hero {
@@ -106,8 +107,8 @@
       align-items: center;
       gap: 0.5rem;
       background: var(--city-accent-soft);
-      border: 1px solid rgba(200,150,90,0.3);
-      color: var(--city-accent);
+      border: 1px solid rgba(201,160,47,0.3);
+      color: var(--city-accent-text);
       font-size: 0.7rem;
       font-weight: 600;
       letter-spacing: 0.18em;
@@ -126,7 +127,7 @@
     }
     .city-hero h1 em {
       font-style: italic;
-      color: var(--city-accent);
+      color: var(--city-accent-text);
     }
     .city-hero__subtitle {
       font-size: 1.1rem;
@@ -145,7 +146,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
-      background: var(--city-accent);
+      background: linear-gradient(135deg, #b88919 0%, #ebcf79 50%, #b88919 100%);
       color: #060610;
       font-weight: 700;
       font-size: 0.88rem;
@@ -153,23 +154,24 @@
       padding: 0.85rem 1.8rem;
       border-radius: 0.5rem;
       text-decoration: none;
-      transition: all 0.25s;
+      transition: opacity 0.25s, transform 0.25s;
+      box-shadow: 0 8px 28px rgba(201,160,47,0.28);
     }
-    .btn-city:hover { background: #dba96a; transform: translateY(-2px); }
+    .btn-city:hover { opacity: 0.9; transform: translateY(-2px); }
     .btn-city-ghost {
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
       background: transparent;
-      color: rgba(245,240,232,0.85);
-      border: 1px solid rgba(245,240,232,0.25);
+      color: rgba(245,240,232,0.75);
+      border: 1px solid rgba(245,240,232,0.2);
       font-size: 0.88rem;
       padding: 0.85rem 1.8rem;
       border-radius: 0.5rem;
       text-decoration: none;
       transition: all 0.25s;
     }
-    .btn-city-ghost:hover { border-color: var(--city-accent); color: var(--city-accent); }
+    .btn-city-ghost:hover { border-color: rgba(201,160,47,0.6); color: var(--city-accent-text); }
 
     /* Events Strip */
     .events-strip {
@@ -187,7 +189,7 @@
       font-size: 0.65rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--city-accent);
+      color: var(--city-accent-text);
       font-weight: 600;
       margin-bottom: 1.5rem;
     }
@@ -205,14 +207,14 @@
       cursor: default;
     }
     .event-card:hover {
-      border-color: rgba(200,150,90,0.35);
+      border-color: rgba(201,160,47,0.35);
       transform: translateY(-3px);
     }
     .event-card__badge {
       font-size: 0.62rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--city-accent);
+      color: var(--city-accent-text);
       margin-bottom: 0.75rem;
     }
     .event-card__title {
@@ -232,7 +234,7 @@
       gap: 0.35rem;
       margin-top: 0.85rem;
       font-size: 0.72rem;
-      color: rgba(200,150,90,0.7);
+      color: rgba(201,160,47,0.7);
     }
 
     /* Scene Report Section */
@@ -257,7 +259,7 @@
     }
     .scene-section__all {
       font-size: 0.8rem;
-      color: var(--city-accent);
+      color: var(--city-accent-text);
       text-decoration: none;
       letter-spacing: 0.08em;
     }
@@ -273,13 +275,13 @@
       transition: border-color 0.25s;
       text-decoration: none;
     }
-    .scene-card:hover { border-color: rgba(200,150,90,0.4); }
+    .scene-card:hover { border-color: rgba(201,160,47,0.4); }
     @media (max-width: 700px) { .scene-card { grid-template-columns: 1fr; } }
     .scene-card__tag {
       font-size: 0.62rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--city-accent);
+      color: var(--city-accent-text);
       margin-bottom: 1rem;
     }
     .scene-card__title {
@@ -300,7 +302,7 @@
       gap: 0.5rem;
       margin-top: 1.5rem;
       font-size: 0.8rem;
-      color: var(--city-accent);
+      color: var(--city-accent-text);
       letter-spacing: 0.06em;
     }
     .scene-card__meta {
@@ -309,13 +311,13 @@
       gap: 1rem;
     }
     .scene-stat {
-      border-left: 2px solid rgba(200,150,90,0.25);
+      border-left: 2px solid rgba(201,160,47,0.25);
       padding-left: 1rem;
     }
     .scene-stat__num {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.2rem;
-      color: var(--city-accent);
+      color: var(--city-accent-text);
       line-height: 1;
     }
     .scene-stat__label {
@@ -340,7 +342,7 @@
     .city-features__eyebrow {
       font-size: 0.65rem;
       letter-spacing: 0.2em;
-      color: var(--city-accent);
+      color: var(--city-accent-text);
       text-transform: uppercase;
       font-weight: 600;
       margin-bottom: 1rem;
@@ -356,7 +358,6 @@
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 2rem;
     }
-    .city-feature-item { }
     .city-feature-item__icon {
       font-size: 1.5rem;
       margin-bottom: 0.75rem;
@@ -423,7 +424,7 @@
       text-decoration: none; letter-spacing: 0.06em;
       transition: color 0.2s;
     }
-    .city-topbar__back:hover { color: var(--city-accent); }
+    .city-topbar__back:hover { color: var(--city-accent-text); }
     .city-topbar__cta {
       background: linear-gradient(135deg, #b88919 0%, #ebcf79 50%, #b88919 100%);
       color: #060610;
@@ -603,13 +604,42 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer style="border-top:1px solid rgba(255,255,255,0.06); padding:2rem; text-align:center;">
-    <p style="font-size:0.75rem; color:rgba(245,240,232,0.3);">
-      <a href="index.html" style="color:rgba(200,150,90,0.7); text-decoration:none;">EliteLoop</a>
-      · Istanbul · Private Social Discovery ·
-      <a href="privacy.html" style="color:rgba(245,240,232,0.3); text-decoration:none;">Privacy</a>
-    </p>
+  <!-- Footer — matches main site standard -->
+  <footer class="footer" style="margin-top:0;">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand footer-brand">
+          <img src="apple-touch-icon.png" alt="EliteLoop">
+          <span>EliteLoop</span>
+        </a>
+        <p style="color:rgba(246,241,231,0.55); line-height:1.75; margin-top:0.75rem;">Private social discovery for distinguished individuals. Badge-gated exclusive events worldwide.</p>
+      </div>
+      <div>
+        <h4>Cities</h4>
+        <a href="cities.html">All Cities</a>
+        <a href="istanbul.html">Istanbul</a>
+        <a href="istanbul-april-2026.html">Istanbul April 2026</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="gdpr.html">GDPR</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="support.html">Support</a>
+        <a href="mailto:info@eliteloop.app">info@eliteloop.app</a>
+      </div>
+      <div>
+        <h4>Socials</h4>
+        <a href="https://www.instagram.com/eliteloop.app/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://x.com/eliteloop" target="_blank" rel="noreferrer">X (Twitter)</a>
+        <a href="https://www.linkedin.com/company/112529988/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://www.tiktok.com/@eliteloop.app" target="_blank" rel="noreferrer">TikTok</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 EliteLoop. All rights reserved.</div>
   </footer>
 
 </body>

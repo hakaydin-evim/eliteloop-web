@@ -3,27 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EliteLoop - Android</title>
-  <meta name="description" content="Follow the EliteLoop Android rollout, including Google Maps parity, Google Sign-In, badge-aware access, and premium social discovery features.">
+  <title>EliteLoop for Android — Now on Google Play</title>
+  <meta name="description" content="EliteLoop is now live on Google Play. Download the premium social discovery app for Android — Google Maps, Google Sign-In, badge system and exclusive events.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://eliteloop.app/android.html">
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="EliteLoop Android">
-  <meta property="og:description" content="Follow the EliteLoop Android rollout, including Google Maps parity, Google Sign-In, badge-aware access, and premium social discovery features.">
+  <meta property="og:title" content="EliteLoop for Android — Now on Google Play">
+  <meta property="og:description" content="EliteLoop is now live on Google Play. Premium social discovery with Google Maps, Google Sign-In, and badge-gated exclusive events.">
   <meta property="og:url" content="https://eliteloop.app/android.html">
   <meta property="og:site_name" content="EliteLoop">
   <meta property="og:image" content="https://eliteloop.app/apple-touch-icon.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="EliteLoop Android">
-  <meta name="twitter:description" content="Follow the EliteLoop Android rollout, including Google Maps parity, Google Sign-In, badge-aware access, and premium social discovery features.">
+  <meta name="twitter:title" content="EliteLoop for Android — Now on Google Play">
+  <meta name="twitter:description" content="EliteLoop is now live on Google Play. Download for Android now.">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KWG02QGBR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-6KWG02QGBR');
+    // Android kullanıcılarını doğrudan Play Store'a yönlendir
+    if (/android/i.test(navigator.userAgent)) {
+      window.location.href = 'https://play.google.com/store/apps/details?id=com.eliteloop.app';
+    }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,10 +71,23 @@
 
   <main class="legal-page">
     <section class="legal-hero">
-      <div class="eyebrow" data-i18n="android.badge">Android track</div>
-      <h1 data-i18n="android.title">Android built with the same EliteLoop standards</h1>
-      <p data-i18n="android.subtitle">Follow the Android rollout, feature parity, and premium map-led experience as EliteLoop expands across both platforms.</p>
-      <div class="legal-meta" data-i18n="android.meta">Closed testing, Google Maps parity, badge-aware access, and the same core social rules.</div>
+      <div class="eyebrow">🟢 Live on Google Play</div>
+      <h1>EliteLoop is now available on Android</h1>
+      <p>Download EliteLoop from Google Play and experience premium social discovery with Google Maps, Google Sign-In, and badge-gated exclusive events — the same product, built for Android.</p>
+      <div class="legal-meta">Available worldwide · Google Maps · Google Sign-In · Badge system · Exclusive events</div>
+      <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+        <a href="https://play.google.com/store/apps/details?id=com.eliteloop.app"
+           class="btn btn-gold"
+           target="_blank" rel="noreferrer noopener"
+           style="font-size: 1.1rem; padding: 0.9rem 2rem;">
+          ▶ Download on Google Play
+        </a>
+        <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969"
+           class="btn btn-ghost"
+           target="_blank" rel="noreferrer noopener">
+          Download on App Store
+        </a>
+      </div>
     </section>
     <section class="legal-content" id="legalContent"></section>
   </main>

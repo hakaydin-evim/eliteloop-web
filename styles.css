@@ -815,6 +815,9 @@ body.rtl .legal-section ul {
 }
 
 .footer-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
   grid-template-columns: 1.2fr 0.7fr 0.7fr 0.7fr 0.7fr;
 }
 
@@ -830,8 +833,9 @@ body.rtl .legal-section ul {
 }
 
 .footer-bottom {
-  margin-top: 20px;
-  padding-top: 20px;
+  max-width: 1100px;
+  margin: 20px auto 0;
+  padding: 20px 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--muted);
   font-size: 0.92rem;

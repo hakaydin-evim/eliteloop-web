@@ -96,4 +96,16 @@
     <priority>0.8</priority>
     <lastmod>2026-04-08</lastmod>
   </url>
+  <url>
+    <loc>https://eliteloop.app/moscow</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/moscow-april-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
 </urlset>

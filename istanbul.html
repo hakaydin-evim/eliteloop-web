@@ -263,6 +263,19 @@
       text-decoration: none;
       letter-spacing: 0.08em;
     }
+
+    .new-alert-badge {
+      display: inline-block; margin-left: 10px; padding: 2px 7px;
+      background: rgba(201,160,47,0.15); color: #ebcf79;
+      border: 1px solid rgba(201,160,47,0.4); border-radius: 4px;
+      font-weight: 800; font-size: 0.55rem; letter-spacing: 0.1em;
+      text-transform: uppercase; vertical-align: middle;
+      animation: badgePulse 2s infinite;
+    }
+    @keyframes badgePulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201,160,47,0.4); opacity: 1; }
+      50% { box-shadow: 0 0 0 4px rgba(201,160,47,0); opacity: 0.8; }
+    }
     .scene-card {
       background: rgba(255,255,255,0.02);
       border: 1px solid rgba(255,255,255,0.07);
@@ -529,9 +542,9 @@
       <a href="#" class="scene-section__all">All reports →</a>
     </div>
 
-    <a href="istanbul-april-2026.html" class="scene-card">
+    <a href="istanbul-april-2026.html" class="scene-card" style="border-color: rgba(201,160,47,0.35);">
       <div class="scene-card__content">
-        <div class="scene-card__tag">April 2026 · Scene Report</div>
+        <div class="scene-card__tag">April 2026 · Scene Report <span class="new-alert-badge">NEW</span></div>
         <div class="scene-card__title">Istanbul's Spring Social Season:<br>The Bosphorus Returns</div>
         <div class="scene-card__excerpt">
           As April transforms Istanbul's skyline, the city's elite social scene

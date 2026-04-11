@@ -172,7 +172,78 @@
     .scene-card__meta { display: flex; flex-direction: column; gap: 1rem; }
     .scene-stat { border-left: 2px solid rgba(201,160,47,0.25); padding-left: 1rem; }
     .scene-stat__num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--city-accent-text); line-height: 1; }
-    .scene-stat__label { font-size: 0.7rem; color: rgba(245,240,232,0.4); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.25rem; }
+    .scene-stat__label {
+      font-size: 0.7rem; color: rgba(245,240,232,0.4);
+      letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.25rem;
+    }
+
+    .new-alert-badge {
+      display: inline-block; margin-left: 10px; padding: 2px 7px;
+      background: rgba(201,160,47,0.15); color: #ebcf79;
+      border: 1px solid rgba(201,160,47,0.4); border-radius: 4px;
+      font-weight: 800; font-size: 0.55rem; letter-spacing: 0.1em;
+      text-transform: uppercase; vertical-align: middle;
+      animation: badgePulse 2s infinite;
+    }
+    @keyframes badgePulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201,160,47,0.4); opacity: 1; }
+      50% { box-shadow: 0 0 0 4px rgba(201,160,47,0); opacity: 0.8; }
+    }
+
+    /* Scene Archive Grid */
+    .scene-archive {
+      padding-top: 0;
+      margin-top: -3rem;
+    }
+    .reports-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .mini-report-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-decoration: none;
+      transition: all 0.25s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 200px;
+    }
+    .mini-report-card:hover {
+      border-color: rgba(201,160,47,0.3);
+      background: rgba(255,255,255,0.035);
+      transform: translateY(-3px);
+    }
+    .mini-report-card__tag {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--city-accent-text);
+      margin-bottom: 0.8rem;
+    }
+    .mini-report-card__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      color: #f5f0e8;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+    .mini-report-card__meta {
+      font-size: 0.75rem;
+      color: rgba(245,240,232,0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+    .read-badge {
+      font-weight: 700;
+      color: var(--city-accent-text);
+    }
 
     /* City Features */
     .city-features { background: rgba(255,255,255,0.015); border-top: 1px solid rgba(255,255,255,0.05); padding: 5rem 0; }
@@ -327,6 +398,17 @@
         </div>
       </div>
     </a>
+  </section>
+
+  <!-- Scene Archive -->
+  <section class="scene-section scene-archive">
+    <div class="scene-section__header">
+      <div class="scene-section__title">Previous Reports</div>
+    </div>
+    <div class="reports-grid">
+      <!-- To be populated as new reports are published -->
+      <div style="color: rgba(245,240,232,0.3); font-size: 0.85rem; padding: 1rem 0;">No previous reports for this season yet.</div>
+    </div>
   </section>
 
   <!-- City Features -->

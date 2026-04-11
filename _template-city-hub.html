@@ -16,32 +16,42 @@
   {{CITY_SLUG}}       → url adı, küçük harf (dubai, london, paris)
   {{CITY_NAME}}       → Görünen şehir adı (Dubai, London, Paris)
   {{CITY_SUBTITLE}}   → Hero tag metni (Dubai · Private Social Discovery)
-  {{CITY_HEADLINE_1}} → H1 ilk satır (Where the desert meets)
+  {{CITY_HEADLINE_1}} → H1 ana gövde (4–8 kelime)
   {{CITY_HEADLINE_EM}} → H1 italik vurgulu kelime (its elite)
-  {{CITY_HEADLINE_2}} → H1 ikinci satır (isteğe bağlı)
-  {{CITY_HERO_DESC}}  → Hero açıklama paragrafı
+  {{CITY_HEADLINE_2}} → Kullanma; boş bırakılacak
+  {{CITY_HERO_DESC}}  → Hero açıklama paragrafı (140–220 karakter)
   {{HERO_IMAGE}}      → Hero görsel dosyası (dubai-hero.jpg)
   {{CITY_COUNTRY}}    → Ülke ve bölge (UAE · Gulf)
   {{CITY_EMOJI}}      → Hero tag emojisi (🌅)
-  {{EVENT_1_*}}       → Birinci etkinlik bilgileri
+  {{EVENT_1_*}}       → Birinci etkinlik bilgileri (badge: 1–2 kelime, title: 2–5 kelime, desc: 70–120 karakter)
   {{EVENT_2_*}}       → İkinci etkinlik bilgileri
   {{EVENT_3_*}}       → Üçüncü etkinlik bilgileri
   {{SCENE_MONTH}}     → Makale ayı (April 2026)
-  {{SCENE_ARTICLE_SLUG}} → Makale url'i (dubai-april-2026.html)
-  {{SCENE_TITLE}}     → Scene report başlığı
-  {{SCENE_EXCERPT}}   → Scene report özeti
+  {{SCENE_ARTICLE_SLUG}} → Public slug (dubai-april-2026) — .html yazma
+  {{SCENE_TITLE}}     → Scene report başlığı (6–12 kelime)
+  {{SCENE_EXCERPT}}   → Scene report özeti (140–190 karakter)
   {{STAT_1_NUM}}      → İstatistik 1 rakamı (12+)
-  {{STAT_1_LABEL}}    → İstatistik 1 label (Elite events this month)
+  {{STAT_1_LABEL}}    → İstatistik 1 label (2–4 kelime)
   {{STAT_2_NUM}}      → İstatistik 2 rakamı
-  {{STAT_2_LABEL}}    → İstatistik 2 label
+  {{STAT_2_LABEL}}    → İstatistik 2 label (2–4 kelime)
+  {{STAT_3_NUM}}      → İstatistik 3 rakamı
+  {{STAT_3_LABEL}}    → İstatistik 3 label (2–4 kelime)
   {{WHY_TITLE}}       → "Why Istanbul on EliteLoop" → şehire göre
-  {{WHY_SUBTITLE}}    → Features bölüm başlığı
+  {{WHY_SUBTITLE}}    → Features bölüm başlığı (6–10 kelime)
   {{FEAT_1_ICON}}     → Feature 1 emoji ikonu
-  {{FEAT_1_TITLE}}    → Feature 1 başlık
-  {{FEAT_1_DESC}}     → Feature 1 açıklama
+  {{FEAT_1_TITLE}}    → Feature 1 başlık (2–4 kelime)
+  {{FEAT_1_DESC}}     → Feature 1 açıklama (80–130 karakter)
   → (2,3,4 için aynı şekilde)
-  {{DOWNLOAD_TITLE}}  → CTA başlığı
-  {{DOWNLOAD_SUB}}    → CTA alt yazı
+  {{DOWNLOAD_TITLE}}  → CTA başlığı (6–10 kelime)
+  {{DOWNLOAD_SUB}}    → CTA alt yazı (110–170 karakter)
+
+  ZORUNLU CONTENT CONTRACT:
+  - Sayfada tam olarak şu bloklar kalır: Hero, 3 event card, 1 latest scene report card, 4 feature, 1 CTA, standard footer
+  - "Previous Reports", "coming soon", boş placeholder veya # link bırakılmaz
+  - "First 3 days free" dili kullanılmaz
+  - "Verified" kelimesi sadece ürün gerçeği olarak gerekliyse geçer; genel slogan olarak kullanılmaz
+  - Tüm linkler public clean path formatında olur: /dubai, /dubai-april-2026
+  - Tasarım dengesini korumak için event başlığı, scene başlığı ve CTA kopyası kısa tutulur
 ===========================================
 -->
 <html lang="en">
@@ -318,12 +328,12 @@
 
   <!-- Topbar -->
   <nav class="city-topbar">
-    <a href="index.html" class="brand">
+    <a href="/" class="brand">
       <img src="apple-touch-icon.png" alt="EliteLoop">
       <span>EliteLoop</span>
     </a>
     <div class="city-topbar__right">
-      <a href="cities.html" class="city-topbar__back">← All Cities</a>
+      <a href="/cities" class="city-topbar__back">← All Cities</a>
       <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969"
          class="city-topbar__cta" target="_blank" rel="noreferrer">Download App</a>
     </div>
@@ -338,7 +348,7 @@
         <span>{{CITY_EMOJI}}</span>
         {{CITY_SUBTITLE}}
       </div>
-      <h1>{{CITY_HEADLINE_1}} <em>{{CITY_HEADLINE_EM}}</em><br>{{CITY_HEADLINE_2}}</h1>
+      <h1>{{CITY_HEADLINE_1}} <em>{{CITY_HEADLINE_EM}}</em></h1>
       <p class="city-hero__subtitle">{{CITY_HERO_DESC}}</p>
       <div class="city-hero__cta">
         <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969"
@@ -384,10 +394,10 @@
   <section class="scene-section">
     <div class="scene-section__header">
       <div class="scene-section__title">{{CITY_NAME}} Scene Report</div>
-      <a href="cities.html" class="scene-section__all">All reports →</a>
+      <a href="/cities" class="scene-section__all">All reports →</a>
     </div>
 
-    <a href="{{SCENE_ARTICLE_SLUG}}" class="scene-card">
+    <a href="/{{SCENE_ARTICLE_SLUG}}" class="scene-card">
       <div class="scene-card__content">
         <div class="scene-card__tag">{{SCENE_MONTH}} · Scene Report</div>
         <div class="scene-card__title">{{SCENE_TITLE}}</div>
@@ -404,8 +414,8 @@
           <div class="scene-stat__label">{{STAT_2_LABEL}}</div>
         </div>
         <div class="scene-stat">
-          <div class="scene-stat__num">🥇</div>
-          <div class="scene-stat__label">Peak social season</div>
+          <div class="scene-stat__num">{{STAT_3_NUM}}</div>
+          <div class="scene-stat__label">{{STAT_3_LABEL}}</div>
         </div>
       </div>
     </a>
@@ -453,11 +463,10 @@
     </div>
   </section>
 
-  <!-- Footer — standard, değiştirme -->
   <footer class="footer" style="margin-top:0;">
     <div class="footer-grid">
       <div>
-        <a href="index.html" class="brand footer-brand">
+        <a href="/" class="brand footer-brand">
           <img src="apple-touch-icon.png" alt="EliteLoop">
           <span>EliteLoop</span>
         </a>
@@ -465,20 +474,18 @@
       </div>
       <div>
         <h4>Cities</h4>
-        <a href="cities.html">All Cities</a>
-        <a href="istanbul.html">Istanbul</a>
-        <!-- Yeni şehirler eklendikçe buraya ekle -->
-        <a href="{{CITY_SLUG}}.html">{{CITY_NAME}}</a>
+        <a href="/cities">All Cities</a>
+        <a href="/{{CITY_SLUG}}">{{CITY_NAME}}</a>
       </div>
       <div>
         <h4>Legal</h4>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="gdpr.html">GDPR</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/gdpr">GDPR</a>
       </div>
       <div>
         <h4>Contact</h4>
-        <a href="support.html">Support</a>
+        <a href="/support">Support</a>
         <a href="mailto:info@eliteloop.app">info@eliteloop.app</a>
       </div>
       <div>

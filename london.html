@@ -1,49 +1,4 @@
 <!DOCTYPE html>
-<!--
-===========================================
-  ELITELOOP — CITY HUB PAGE TEMPLATE
-  Versiyon: 1.0 | Nisan 2026
-===========================================
-
-  NASIL KULLANILIR:
-  1. Bu dosyayı kopyala → [sehir].html yap (örn: dubai.html)
-  2. Aşağıdaki tüm {{PLACEHOLDER}} değerlerini doldur
-  3. cities.html'de şehri "Coming soon" → "Live" yap
-  4. sitemap.xml'e yeni URL'i ekle
-  5. Google Search Console'da URL'i submit et
-
-  PLACEHOLDER LİSTESİ:
-  london       → url adı, küçük harf (dubai, london, paris)
-  London       → Görünen şehir adı (Dubai, London, Paris)
-  London · Private Social Discovery   → Hero tag metni (Dubai · Private Social Discovery)
-  Where heritage meets → H1 ilk satır (Where the desert meets)
-  off-market elite. → H1 italik vurgulu kelime (its elite)
-   → H1 ikinci satır (isteğe bağlı)
-  London's most distinguished social circle, unlisted receptions in Mayfair, and exclusive finance networks.  → Hero açıklama paragrafı
-  london-hero.jpg      → Hero görsel dosyası (dubai-hero.jpg)
-  UK    → Ülke ve bölge (UAE · Gulf)
-  🇬🇧      → Hero tag emojisi (🌅)
-  {{EVENT_1_*}}       → Birinci etkinlik bilgileri
-  {{EVENT_2_*}}       → İkinci etkinlik bilgileri
-  {{EVENT_3_*}}       → Üçüncü etkinlik bilgileri
-  {{SCENE_MONTH}}     → Makale ayı (April 2026)
-  {{SCENE_ARTICLE_SLUG}} → Makale url'i (dubai-april-2026.html)
-  London's Elite Season: Beyond the Summits     → Scene report başlığı
-  The term sheet wasn't signed at a crowded conference. It was finalized over quiet drinks in Mayfair.   → Scene report özeti
-  {{STAT_1_NUM}}      → İstatistik 1 rakamı (12+)
-  {{STAT_1_LABEL}}    → İstatistik 1 label (Elite events this month)
-  {{STAT_2_NUM}}      → İstatistik 2 rakamı
-  {{STAT_2_LABEL}}    → İstatistik 2 label
-  {{WHY_TITLE}}       → "Why Istanbul on EliteLoop" → şehire göre
-  {{WHY_SUBTITLE}}    → Features bölüm başlığı
-  {{FEAT_1_ICON}}     → Feature 1 emoji ikonu
-  Discover Mayfair    → Feature 1 başlık
-  Access unlisted clubs and receptions hidden from public maps.     → Feature 1 açıklama
-  → (2,3,4 için aynı şekilde)
-  Command the room in London.  → CTA başlığı
-  Available on iOS and Android. Unlock your elite social network today.    → CTA alt yazı
-===========================================
--->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -386,12 +341,12 @@
 
   <!-- Topbar -->
   <nav class="city-topbar">
-    <a href="index.html" class="brand">
+    <a href="/" class="brand">
       <img src="apple-touch-icon.png" alt="EliteLoop">
       <span>EliteLoop</span>
     </a>
     <div class="city-topbar__right">
-      <a href="cities.html" class="city-topbar__back">← All Cities</a>
+      <a href="/cities" class="city-topbar__back">← All Cities</a>
       <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969"
          class="city-topbar__cta" target="_blank" rel="noreferrer">Download App</a>
     </div>
@@ -452,10 +407,10 @@
   <section class="scene-section">
     <div class="scene-section__header">
       <div class="scene-section__title">London Scene Report</div>
-      <a href="cities.html" class="scene-section__all">All reports →</a>
+      <a href="/cities" class="scene-section__all">All reports →</a>
     </div>
 
-    <a href="london-april-2026.html" class="scene-card">
+    <a href="/london-april-2026" class="scene-card">
       <div class="scene-card__content">
         <div class="scene-card__tag">April 2026 · Scene Report</div>
         <div class="scene-card__title">London's Elite Season: Beyond the Summits</div>
@@ -479,42 +434,31 @@
     </a>
   </section>
 
-  <!-- Scene Archive -->
-  <section class="scene-section scene-archive">
-    <div class="scene-section__header">
-      <div class="scene-section__title">Previous Reports</div>
-    </div>
-    <div class="reports-grid">
-      <!-- To be populated as new reports are published -->
-      <div style="color: rgba(245,240,232,0.3); font-size: 0.85rem; padding: 1rem 0;">No previous reports for this season yet.</div>
-    </div>
-  </section>
-
   <!-- City Features -->
   <section class="city-features">
     <div class="city-features__inner">
       <div class="city-features__eyebrow">Why London on EliteLoop</div>
-      <div class="city-features__title">The ultimate financial and cultural decryptor.</div>
+      <div class="city-features__title">A city of rooms, codes, and off-calendar access.</div>
       <div class="city-features__grid">
         <div class="city-feature-item">
           <div class="city-feature-item__icon">🏛️</div>
-          <div class="city-feature-item__title">Discover Mayfair</div>
-          <div class="city-feature-item__desc">Access unlisted clubs and receptions hidden from public maps.</div>
+          <div class="city-feature-item__title">Mayfair Social Signal</div>
+          <div class="city-feature-item__desc">Track the private clubs, dinners, and receptions where London's most relevant introductions happen away from public calendars.</div>
         </div>
         <div class="city-feature-item">
-          <div class="city-feature-item__icon">🛡️</div>
-          <div class="city-feature-item__title">Elite Validation</div>
-          <div class="city-feature-item__desc">Only verified finance directors and tech founders.</div>
+          <div class="city-feature-item__icon">💼</div>
+          <div class="city-feature-item__title">Finance x Culture Crossover</div>
+          <div class="city-feature-item__desc">Move between allocators, operators, and cultural hosts without being trapped in one noisy networking lane.</div>
         </div>
         <div class="city-feature-item">
           <div class="city-feature-item__icon">📡</div>
-          <div class="city-feature-item__title">Off-market Radar</div>
-          <div class="city-feature-item__desc">The heatmap shifts to where actual decision-makers gather.</div>
+          <div class="city-feature-item__title">Off-Market Radar</div>
+          <div class="city-feature-item__desc">See where genuine decision-makers cluster, from discreet breakfast tables to late-night Mayfair rooms.</div>
         </div>
         <div class="city-feature-item">
-          <div class="city-feature-item__icon">🤫</div>
-          <div class="city-feature-item__title">Absolute Privacy</div>
-          <div class="city-feature-item__desc">No noisy connections. Discretion is guaranteed.</div>
+          <div class="city-feature-item__icon">🏅</div>
+          <div class="city-feature-item__title">Badge-Based Discovery</div>
+          <div class="city-feature-item__desc">Use badge layers to keep London's social map selective, relevant, and closer to the rooms that actually matter.</div>
         </div>
       </div>
     </div>
@@ -522,8 +466,8 @@
 
   <!-- Download CTA -->
   <section class="city-download">
-    <div class="city-download__title">Command the room in London.</div>
-    <p class="city-download__sub">Available on iOS and Android. Unlock your elite social network today.</p>
+    <div class="city-download__title">Ready to move through London's private rooms?</div>
+    <p class="city-download__sub">Download EliteLoop to discover curated events in London, meet higher-signal members, and navigate the city with more relevance and less noise.</p>
     <div class="city-download__btns">
       <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969"
          class="btn-city" target="_blank" rel="noreferrer">📱 Download on App Store</a>
@@ -532,11 +476,10 @@
     </div>
   </section>
 
-  <!-- Footer — standard, değiştirme -->
   <footer class="footer" style="margin-top:0;">
     <div class="footer-grid">
       <div>
-        <a href="index.html" class="brand footer-brand">
+        <a href="/" class="brand footer-brand">
           <img src="apple-touch-icon.png" alt="EliteLoop">
           <span>EliteLoop</span>
         </a>
@@ -544,20 +487,20 @@
       </div>
       <div>
         <h4>Cities</h4>
-        <a href="cities.html">All Cities</a>
-        <a href="istanbul.html">Istanbul</a>
-        <!-- Yeni şehirler eklendikçe buraya ekle -->
-        <a href="london.html">London</a>
+        <a href="/cities">All Cities</a>
+        <a href="/london">London</a>
+        <a href="/paris">Paris</a>
+        <a href="/dubai">Dubai</a>
       </div>
       <div>
         <h4>Legal</h4>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="gdpr.html">GDPR</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/gdpr">GDPR</a>
       </div>
       <div>
         <h4>Contact</h4>
-        <a href="support.html">Support</a>
+        <a href="/support">Support</a>
         <a href="mailto:info@eliteloop.app">info@eliteloop.app</a>
       </div>
       <div>

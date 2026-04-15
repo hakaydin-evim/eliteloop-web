@@ -159,13 +159,23 @@
     .city-card__status--live { color: #44d39f; }
     .city-card__status--soon { color: rgba(246,241,231,0.35); }
 
-    .new-alert-badge {
-      display: inline-block; margin-left: 8px; padding: 2px 6px;
-      background: rgba(201,160,47,0.15); color: #ebcf79;
-      border: 1px solid rgba(201,160,47,0.4); border-radius: 4px;
+    .city-update-badge {
+      display: inline-block; margin-left: 8px; padding: 2px 7px;
+      border-radius: 999px;
       font-weight: 800; font-size: 0.55rem; letter-spacing: 0.1em;
       text-transform: uppercase; vertical-align: middle;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .city-update-badge--new {
+      background: rgba(201,160,47,0.15); color: #ebcf79;
+      border-color: rgba(201,160,47,0.4);
       animation: badgePulse 2s infinite;
+    }
+    .city-update-badge--updated {
+      background: rgba(255,255,255,0.06);
+      color: rgba(246,241,231,0.7);
+      border-color: rgba(255,255,255,0.14);
     }
     @keyframes badgePulse {
       0%, 100% { box-shadow: 0 0 0 0 rgba(201,160,47,0.4); opacity: 1; }
@@ -256,10 +266,10 @@
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       <div class="city-card__img-placeholder" style="display:none;">🇰🇷</div>
       <div class="city-card__body">
-        <div class="city-card__status city-card__status--live">🟢 Live <span class="new-alert-badge">NEW REPORT</span></div>
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
         <div class="city-card__name">Seoul</div>
         <div class="city-card__country">South Korea · APAC</div>
-        <p class="city-card__desc">Unlisted tables in Cheongdam, fast tech capital, and deeply selective networks.</p>
+        <p class="city-card__desc">Cheongdam dinners, founder tables, and Seoul's higher-trust social rooms where context matters more than visibility.</p>
         <span class="city-card__cta">Explore Seoul →</span>
       </div>
     </a>
@@ -270,7 +280,7 @@
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       <div class="city-card__img-placeholder" style="display:none;">🌙</div>
       <div class="city-card__body">
-        <div class="city-card__status city-card__status--live">🟢 Live <span class="new-alert-badge">NEW REPORT</span></div>
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
         <div class="city-card__name">Istanbul</div>
         <div class="city-card__country">Turkey · Bosphorus</div>
         <p class="city-card__desc">Where two continents meet — exclusive Bosphorus events, Sónar Istanbul, and the city's elite social spring season.</p>
@@ -298,7 +308,7 @@
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       <div class="city-card__img-placeholder" style="display:none;">🎩</div>
       <div class="city-card__body">
-        <div class="city-card__status city-card__status--live">🟢 Live <span class="new-alert-badge">NEW REPORT</span></div>
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
         <div class="city-card__name">London</div>
         <div class="city-card__country">UK · West End</div>
         <p class="city-card__desc">Private member clubs, gallery openings, and the understated elite social scene of Britain's capital.</p>
@@ -312,7 +322,7 @@
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       <div class="city-card__img-placeholder" style="display:none;">🗼</div>
       <div class="city-card__body">
-        <div class="city-card__status city-card__status--live">🟢 Live <span class="new-alert-badge">NEW REPORT</span></div>
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
         <div class="city-card__name">Paris</div>
         <div class="city-card__country">France · 8ème</div>
         <p class="city-card__desc">Quiet luxury and the city's most curated social circles — from Saint-Germain salons to Marais dinners.</p>
@@ -326,7 +336,7 @@
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       <div class="city-card__img-placeholder" style="display:none;">⛩️</div>
       <div class="city-card__body">
-        <div class="city-card__status city-card__status--live">🟢 Live <span class="new-alert-badge">NEW REPORT</span></div>
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
         <div class="city-card__name">Tokyo</div>
         <div class="city-card__country">Japan · APAC</div>
         <p class="city-card__desc">Deep tech networking, Web3 circles, and the most exclusive private omakase rooms in Ginza.</p>
@@ -340,7 +350,7 @@
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <div class="city-card__img-placeholder" style="display:none;">🦁</div>
       <div class="city-card__body">
-        <div class="city-card__status city-card__status--live">🟢 Live <span class="new-alert-badge">NEW REPORT</span></div>
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
         <div class="city-card__name">Singapore</div>
         <div class="city-card__country">Singapore · Marina Bay</div>
         <p class="city-card__desc">Asia's financial gateway — private wealth circles, regulated asset networking, and the continent's most curated business social scene.</p>
@@ -349,12 +359,12 @@
     </a>
 
     <!-- Milano — LIVE -->
-    <a href="milano.html" class="city-card">
+    <a href="/milano" class="city-card">
       <img src="milano-hero.jpg" alt="Milano elite social scene" class="city-card__img"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <div class="city-card__img-placeholder" style="display:none;">🇮🇹</div>
       <div class="city-card__body">
-        <div class="city-card__status city-card__status--live">🟢 Live <span class="new-alert-badge">NEW</span></div>
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
         <div class="city-card__name">Milano</div>
         <div class="city-card__country">Italy · Brera</div>
         <p class="city-card__desc">Fashion capital meets private equity — Brera district dinners, design week networking, and Europe's most stylish business social layer.</p>
@@ -368,7 +378,7 @@
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <div class="city-card__img-placeholder" style="display:none;">🇨🇭</div>
       <div class="city-card__body">
-        <div class="city-card__status city-card__status--live">🟢 Live <span class="new-alert-badge">NEW REPORT</span></div>
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
         <div class="city-card__name">Zurich</div>
         <div class="city-card__country">Switzerland · Bahnhofstrasse</div>
         <p class="city-card__desc">Private banking dinners, Crypto Valley breakfasts, and the quietest high-trust social capital in Europe.</p>
@@ -382,6 +392,12 @@
   <div class="reports-strip" style="padding-top:0; margin-top:-2rem;">
     <div class="reports-strip__title" style="font-size:1.3rem; color:rgba(246,241,231,0.5);">Latest Scene Reports</div>
     <div class="reports-list">
+      <a href="/seoul-april-2026" class="report-item" style="border-color: rgba(201,160,47,0.3);">
+        <div class="report-item__tag">Seoul · April 2026 <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
+        <div class="report-item__title">Seoul's Quiet Capital Season: Access Before Visibility</div>
+        <div class="report-item__meta">April 15, 2026 · 6 min read</div>
+      </a>
+
       <a href="/istanbul-april-2026" class="report-item">
         <div class="report-item__tag">Istanbul · April 2026</div>
         <div class="report-item__title">Istanbul's Spring Code: Where the Bosphorus Talks First</div>
@@ -418,16 +434,16 @@
         <div class="report-item__meta">April 11, 2026</div>
       </a>
 
-      <a href="milano-april-2026.html" class="report-item" style="border-color: rgba(201,160,47,0.3);">
-        <div class="report-item__tag">Milano · April 2026 <span class="new-alert-badge">NEW</span></div>
+      <a href="/milano-april-2026" class="report-item">
+        <div class="report-item__tag">Milano · April 2026</div>
         <div class="report-item__title">Fuorisalone's Hidden Rooms: Where Milan's Elite Actually Meet</div>
         <div class="report-item__meta">April 12, 2026 · 6 min read</div>
       </a>
 
-      <a href="/zurich-april-2026" class="report-item">
-        <div class="report-item__tag">Zurich · April 2026</div>
+      <a href="/zurich-april-2026" class="report-item" style="border-color: rgba(201,160,47,0.3);">
+        <div class="report-item__tag">Zurich · April 2026 <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
         <div class="report-item__title">Zurich's Quiet Ledger: Where Private Capital Socializes</div>
-        <div class="report-item__meta">April 11, 2026</div>
+        <div class="report-item__meta">April 15, 2026 · 5 min read</div>
       </a>
 
     </div>

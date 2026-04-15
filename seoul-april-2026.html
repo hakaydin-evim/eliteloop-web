@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!--
+===========================================
+  ELITELOOP — SCENE REPORT ARTICLE TEMPLATE
+  Versiyon: 1.0 | Nisan 2026
+===========================================
+
+  NASIL KULLANILIR:
+  1. Bu dosyayı kopyala → [sehir]-[ay]-[yil].html (örn: dubai-april-2026.html)
+  2. Tüm {{PLACEHOLDER}} değerlerini doldur
+  3. cities.html "Latest Scene Reports" bölümüne kartı ekle
+  4. [sehir].html hub sayfasındaki scene card'ı bu makaleye bağla
+  5. sitemap.xml'e ekle + GSC submit
+
+  PLACEHOLDER LİSTESİ:
+  Seoul         → Dubai
+  {{CITY_SLUG}}         → dubai
+  {{CITY_HUB_SLUG}}     → dubai (public slug, .html yazma)
+  {{MONTH_YEAR}}        → April 2026
+  {{MONTH_YEAR_SHORT}}  → Apr 2026
+  {{ARTICLE_SLUG}}      → dubai-april-2026
+  seoul-hero.jpg        → dubai-hero.jpg (hub sayfasıyla aynı kullanılabilir)
+  {{ARTICLE_TITLE}}     → Dubai's Golden Season: Rooftops, Art Week & Elite Circles (6–14 kelime)
+  {{ARTICLE_SUBTITLE}}  → Hero subtitle tek cümle (120–180 karakter)
+  {{READ_TIME}}         → 6 min read
+  {{PUB_DATE_ISO}}      → 2026-04-08 (ISO format, schema için)
+  {{PUB_DATE_DISPLAY}}  → April 8, 2026
+  {{AUTHOR}}            → EliteLoop Editorial
+
+  İÇERİK BÖLÜMLER (makale gövdesi):
+  {{INTRO_P1}}          → Giriş paragrafı 1 (70–110 kelime)
+  {{INTRO_P2}}          → Giriş paragrafı 2 (70–110 kelime)
+  {{SECTION_1_TITLE}}   → Bölüm 1 başlığı (4–8 kelime)
+  {{SECTION_1_BODY}}    → Bölüm 1 içeriği (120–220 kelime)
+  {{SECTION_2_TITLE}}   → Bölüm 2 başlığı (4–8 kelime)
+  {{SECTION_2_BODY}}    → Bölüm 2 içeriği (120–220 kelime)
+  {{SECTION_3_TITLE}}   → Bölüm 3 başlığı (4–8 kelime)
+  {{SECTION_3_BODY}}    → Bölüm 3 içeriği (120–220 kelime)
+  {{HIGHLIGHT_BOX_TEXT}} → Highlight kutusu (100–180 karakter)
+  {{BLOCKQUOTE}}        → Kısa vurucu alıntı (70–140 karakter)
+  {{CLOSING_P}}         → Kapanış paragrafı (70–120 kelime)
+  {{CTA_HEADLINE}}      → CTA başlığı (6–10 kelime)
+  {{CTA_SUB}}           → CTA alt yazı (110–170 karakter)
+
+  ZORUNLU CONTENT CONTRACT:
+  - Makale toplamı 800–1.200 kelime arasında kalır
+  - Yapı sabit kalır: hero + 2 intro paragraf + 3 H2 bölüm + 1 highlight box + 1 blockquote + closing + CTA
+  - Madde listesi, aşırı kısa tek cümle blokları ve boş alt başlık bırakılmaz
+  - CTA ve hero kopyası hub sayfasıyla tutarlı olur; "First 3 days free" dili kullanılmaz
+  - Tüm iç linkler clean path olur: /dubai, /cities
+===========================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ARTICLE_TITLE}} | EliteLoop Seoul</title>
+  <meta name="description" content="{{ARTICLE_SUBTITLE}} EliteLoop's monthly scene report on elite networking and exclusive events in Seoul.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://eliteloop.app/{{ARTICLE_SLUG}}">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ARTICLE_TITLE}}">
+  <meta property="og:description" content="{{ARTICLE_SUBTITLE}}">
+  <meta property="og:url" content="https://eliteloop.app/{{ARTICLE_SLUG}}">
+  <meta property="og:image" content="https://eliteloop.app/seoul-hero.jpg">
+  <meta property="og:site_name" content="EliteLoop">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ARTICLE_TITLE}}">
+  <meta name="twitter:description" content="{{ARTICLE_SUBTITLE}}">
+  <meta name="twitter:image" content="https://eliteloop.app/seoul-hero.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ARTICLE_TITLE}}",
+    "description": "{{ARTICLE_SUBTITLE}}",
+    "image": "https://eliteloop.app/seoul-hero.jpg",
+    "datePublished": "{{PUB_DATE_ISO}}",
+    "dateModified": "{{PUB_DATE_ISO}}",
+    "author": { "@type": "Organization", "name": "{{AUTHOR}}" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EliteLoop",
+      "logo": { "@type": "ImageObject", "url": "https://eliteloop.app/apple-touch-icon.png" }
+    },
+    "mainEntityOfPage": "https://eliteloop.app/{{ARTICLE_SLUG}}",
+    "about": { "@type": "City", "name": "Seoul" },
+    "keywords": "elite networking Seoul, exclusive events Seoul, private social discovery, EliteLoop"
+  }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KWG02QGBR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6KWG02QGBR');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #c9a02f;
+      --gold-soft: #ebcf79;
+      --bg: #060610;
+      --text: #f5f0e8;
+    }
+
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; }
+
+    /* ── Topbar ── */
+    .topbar {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(6,6,16,0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .topbar a { color: var(--text); text-decoration: none; }
+    .topbar .brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 600; font-size: 0.92rem; }
+    .topbar .brand img {
+      width: 36px; height: 36px; border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04); display: block;
+    }
+    .topbar__right { display: flex; align-items: center; gap: 1.2rem; }
+    .topbar__link { font-size: 0.78rem; color: rgba(245,240,232,0.5); letter-spacing: 0.04em; transition: color 0.2s; }
+    .topbar__link:hover { color: var(--gold-soft); }
+    .topbar__cta {
+      background: linear-gradient(135deg, #b88919 0%, #ebcf79 50%, #b88919 100%);
+      color: #060610; font-size: 0.78rem; font-weight: 700;
+      padding: 0.45rem 1.1rem; border-radius: 0.4rem;
+      transition: opacity 0.2s;
+      box-shadow: 0 8px 24px rgba(201,160,47,0.28);
+    }
+    .topbar__cta:hover { opacity: 0.85; }
+
+    /* ── Article Hero ── */
+    .article-hero {
+      position: relative; min-height: 72vh;
+      display: flex; align-items: flex-end; overflow: hidden;
+    }
+    .article-hero__bg {
+      position: absolute; inset: 0;
+      background-image: url('seoul-hero.jpg');
+      background-size: cover; background-position: center 35%;
+    }
+    .article-hero__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top,
+        rgba(6,6,16,1) 0%, rgba(6,6,16,0.7) 40%, rgba(6,6,16,0.2) 100%);
+    }
+    .article-hero__content {
+      position: relative; z-index: 2;
+      max-width: 860px; padding: 0 2rem 4rem; margin: 0 auto; width: 100%;
+    }
+    .article-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(201,160,47,0.12);
+      border: 1px solid rgba(201,160,47,0.3);
+      color: var(--gold-soft); font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 0.35rem 0.9rem; border-radius: 2rem; margin-bottom: 1.2rem;
+    }
+    .article-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 600; line-height: 1.12; color: var(--text); margin-bottom: 1rem;
+    }
+    .article-hero__sub {
+      font-size: 1rem; color: rgba(245,240,232,0.65);
+      line-height: 1.7; max-width: 600px; font-weight: 300;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 1.5rem;
+      margin-top: 1.5rem; font-size: 0.75rem;
+      color: rgba(245,240,232,0.4); letter-spacing: 0.05em;
+      flex-wrap: wrap;
+    }
+    .article-meta__dot { opacity: 0.4; }
+
+    /* ── Article Body ── */
+    .article-body {
+      max-width: 720px; margin: 0 auto; padding: 4rem 2rem;
+    }
+    .article-body p {
+      font-size: 1rem; line-height: 1.85; color: rgba(245,240,232,0.8);
+      margin-bottom: 1.5rem; font-weight: 300;
+    }
+    .article-body h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem; color: var(--text); font-weight: 600;
+      margin: 2.5rem 0 1rem;
+    }
+    .article-body h3 {
+      font-size: 1rem; font-weight: 600;
+      color: var(--gold-soft); letter-spacing: 0.08em;
+      text-transform: uppercase; margin: 2rem 0 0.75rem;
+    }
+    .article-body strong { color: var(--text); font-weight: 600; }
+    .article-body blockquote {
+      border-left: 3px solid rgba(201,160,47,0.4);
+      padding-left: 1.5rem; margin: 2rem 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; font-style: italic;
+      color: rgba(245,240,232,0.7); line-height: 1.5;
+    }
+
+    /* ── Highlight Box ── */
+    .article-highlight {
+      background: rgba(201,160,47,0.06);
+      border: 1px solid rgba(201,160,47,0.18);
+      border-radius: 1rem; padding: 1.5rem 2rem; margin: 2rem 0;
+    }
+    .article-highlight__label {
+      font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold-soft); font-weight: 700; margin-bottom: 0.75rem;
+    }
+    .article-highlight p {
+      font-size: 0.88rem; color: rgba(245,240,232,0.65);
+      margin-bottom: 0; line-height: 1.7;
+    }
+
+    /* ── Divider ── */
+    .article-divider {
+      border: none; border-top: 1px solid rgba(255,255,255,0.06);
+      margin: 3rem 0;
+    }
+
+    /* ── Download CTA ── */
+    .article-cta {
+      text-align: center; padding: 4rem 2rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      max-width: 640px; margin: 0 auto;
+    }
+    .article-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--text); margin-bottom: 0.75rem;
+    }
+    .article-cta p { font-size: 0.9rem; color: rgba(245,240,232,0.5); margin-bottom: 2rem; line-height: 1.7; }
+    .article-cta__btns { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold {
+      background: linear-gradient(135deg, #b88919 0%, #ebcf79 50%, #b88919 100%);
+      color: #060610; font-size: 0.82rem; font-weight: 700;
+      padding: 0.75rem 1.5rem; border-radius: 0.4rem;
+      text-decoration: none; transition: opacity 0.2s;
+      box-shadow: 0 8px 24px rgba(201,160,47,0.28);
+    }
+    .btn-gold:hover { opacity: 0.88; }
+    .btn-outline {
+      background: transparent; color: rgba(245,240,232,0.7);
+      border: 1px solid rgba(245,240,232,0.18);
+      font-size: 0.82rem; font-weight: 500;
+      padding: 0.75rem 1.5rem; border-radius: 0.4rem;
+      text-decoration: none; transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: rgba(201,160,47,0.6); color: var(--gold-soft); }
+
+    /* ── Internal nav ── */
+    .article-nav {
+      display: flex; justify-content: space-between;
+      padding: 1.5rem 2rem; border-top: 1px solid rgba(255,255,255,0.06);
+      max-width: 720px; margin: 0 auto;
+      font-size: 0.78rem; color: rgba(245,240,232,0.4);
+    }
+    .article-nav a { color: rgba(201,160,47,0.7); text-decoration: none; transition: color 0.2s; }
+    .article-nav a:hover { color: var(--gold-soft); }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <nav class="topbar">
+    <a href="/" class="brand">
+      <img src="apple-touch-icon.png" alt="EliteLoop">
+      <span>EliteLoop</span>
+    </a>
+    <div class="topbar__right">
+      <a href="/{{CITY_HUB_SLUG}}" class="topbar__link">← Seoul</a>
+      <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969"
+         class="topbar__cta" target="_blank" rel="noreferrer">Download App</a>
+    </div>
+  </nav>
+
+  <!-- Article Hero -->
+  <header class="article-hero">
+    <div class="article-hero__bg"></div>
+    <div class="article-hero__overlay"></div>
+    <div class="article-hero__content">
+      <div class="article-tag">{{MONTH_YEAR}} · Scene Report · Seoul</div>
+      <h1>{{ARTICLE_TITLE}}</h1>
+      <p class="article-hero__sub">{{ARTICLE_SUBTITLE}}</p>
+      <div class="article-meta">
+        <span>{{PUB_DATE_DISPLAY}}</span>
+        <span class="article-meta__dot">·</span>
+        <span>{{READ_TIME}}</span>
+        <span class="article-meta__dot">·</span>
+        <span>{{AUTHOR}}</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Body -->
+  <article class="article-body">
+
+    <p>{{INTRO_P1}}</p>
+    <p>{{INTRO_P2}}</p>
+
+    <hr class="article-divider">
+
+    <h2>{{SECTION_1_TITLE}}</h2>
+    <p>{{SECTION_1_BODY}}</p>
+
+    <!-- Highlight box örneği — içeriğe göre doldur veya sil -->
+    <div class="article-highlight">
+      <div class="article-highlight__label">🏅 EliteLoop Insider</div>
+      <p>{{HIGHLIGHT_BOX_TEXT}}</p>
+    </div>
+
+    <h2>{{SECTION_2_TITLE}}</h2>
+    <p>{{SECTION_2_BODY}}</p>
+
+    <blockquote>{{BLOCKQUOTE}}</blockquote>
+
+    <h2>{{SECTION_3_TITLE}}</h2>
+    <p>{{SECTION_3_BODY}}</p>
+
+    <hr class="article-divider">
+
+    <p>{{CLOSING_P}}</p>
+
+  </article>
+
+  <!-- Download CTA -->
+  <section class="article-cta">
+    <h2>{{CTA_HEADLINE}}</h2>
+    <p>{{CTA_SUB}}</p>
+    <div class="article-cta__btns">
+      <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969"
+         class="btn-gold" target="_blank" rel="noreferrer">📱 Download on App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.eliteloop.app"
+         class="btn-outline" target="_blank" rel="noreferrer">▶ Google Play</a>
+    </div>
+  </section>
+
+  <!-- Internal Nav -->
+  <nav class="article-nav">
+    <a href="/{{CITY_HUB_SLUG}}">← Seoul Hub</a>
+    <a href="/cities">All Cities →</a>
+    <a href="/">EliteLoop Home →</a>
+  </nav>
+
+  <footer class="footer" style="margin-top:0;">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="brand footer-brand">
+          <img src="apple-touch-icon.png" alt="EliteLoop">
+          <span>EliteLoop</span>
+        </a>
+        <p style="color:rgba(246,241,231,0.55); line-height:1.75; margin-top:0.75rem;">Private social discovery for distinguished individuals. Badge-gated exclusive events worldwide.</p>
+      </div>
+      <div>
+        <h4>Cities</h4>
+        <a href="/cities">All Cities</a>
+        <a href="/{{CITY_HUB_SLUG}}">Seoul</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/gdpr">GDPR</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="/support">Support</a>
+        <a href="mailto:info@eliteloop.app">info@eliteloop.app</a>
+      </div>
+      <div>
+        <h4>Socials</h4>
+        <a href="https://www.instagram.com/eliteloop.app/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://x.com/eliteloop" target="_blank" rel="noreferrer">X (Twitter)</a>
+        <a href="https://www.linkedin.com/company/112529988/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://www.tiktok.com/@eliteloop.app" target="_blank" rel="noreferrer">TikTok</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 EliteLoop. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

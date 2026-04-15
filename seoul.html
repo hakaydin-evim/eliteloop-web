@@ -284,25 +284,39 @@
       color: var(--city-accent-text); letter-spacing: 0.06em;
     }
     .scene-card__meta { display: flex; flex-direction: column; gap: 1rem; }
-    .report-library {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem; margin-top: 1rem;
+    .report-archive-list {
+      display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.5rem;
     }
-    .report-mini {
-      display: block; padding: 1.25rem; border-radius: 0.9rem;
-      background: rgba(255,255,255,0.018); border: 1px solid rgba(255,255,255,0.07);
-      text-decoration: none; transition: border-color 0.2s ease, transform 0.2s ease;
+    .report-archive-item {
+      display: flex; align-items: flex-start; gap: 1.5rem;
+      padding: 1.25rem 1.75rem; border-radius: 1rem;
+      background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.05);
+      text-decoration: none; transition: border-color 0.2s, transform 0.2s;
     }
-    .report-mini:hover { border-color: rgba(201,160,47,0.34); transform: translateY(-2px); }
-    .report-mini__tag {
-      font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--city-accent-text); margin-bottom: 0.65rem;
+    .report-archive-item:hover { border-color: rgba(201,160,47,0.34); transform: translateY(-2px); }
+    
+    @media (max-width: 600px) {
+      .report-archive-item { flex-direction: column; gap: 0.75rem; padding: 1.25rem; }
     }
-    .report-mini__title {
-      font-family: 'Cormorant Garamond', serif; font-size: 1.25rem;
-      color: #f5f0e8; line-height: 1.2; margin-bottom: 0.5rem;
+
+    .report-archive__meta {
+      flex-shrink: 0; width: 130px;
+      padding-top: 0.25rem;
     }
-    .report-mini__excerpt { font-size: 0.78rem; color: rgba(245,240,232,0.5); line-height: 1.65; }
+    .report-archive__date {
+      display: block; font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; color: var(--city-accent-text); font-weight: 600;
+    }
+    .report-archive__tag {
+      display: inline-block; font-size: 0.58rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: rgba(246,241,231,0.4); margin-top: 0.4rem;
+    }
+    .report-archive__content { flex-grow: 1; }
+    .report-archive__title {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.3rem;
+      color: #f5f0e8; line-height: 1.25; margin-bottom: 0.4rem;
+    }
+    .report-archive__excerpt { font-size: 0.8rem; color: rgba(245,240,232,0.5); line-height: 1.6; }
     .scene-stat { border-left: 2px solid rgba(201,160,47,0.25); padding-left: 1rem; }
     .scene-stat__num {
       font-family: 'Cormorant Garamond', serif;
@@ -440,16 +454,27 @@
         </div>
       </div>
     </a>
-    <div class="report-library" aria-label="Seoul report library">
-      <a href="/seoul-march-2026" class="report-mini">
-        <div class="report-mini__tag">SEOUL · MARCH 2026</div>
-        <div class="report-mini__title">The Shift from Itaewon to Cheongdam</div>
-        <div class="report-mini__excerpt">Tracking the migration of elite networking spaces in post-2025 Seoul.</div>
+    <div class="report-archive-list" aria-label="Seoul report library">
+      <a href="/seoul-march-2026" class="report-archive-item">
+        <div class="report-archive__meta">
+          <time datetime="2026-03" class="report-archive__date">March 2026</time>
+          <span class="report-archive__tag">REAL ESTATE</span>
+        </div>
+        <div class="report-archive__content">
+          <div class="report-archive__title">The Shift from Itaewon to Cheongdam</div>
+          <div class="report-archive__excerpt">Tracking the migration of elite networking spaces and allocation deals in post-2025 Seoul.</div>
+        </div>
       </a>
-      <a href="/seoul-february-2026" class="report-mini">
-        <div class="report-mini__tag">SEOUL · FEBRUARY 2026</div>
-        <div class="report-mini__title">Han River Tech Breakfasts</div>
-        <div class="report-mini__excerpt">Why morning networking is replacing late-night soju deals.</div>
+      
+      <a href="/seoul-february-2026" class="report-archive-item">
+        <div class="report-archive__meta">
+          <time datetime="2026-02" class="report-archive__date">Feb 2026</time>
+          <span class="report-archive__tag">TECH ROUNDTABLES</span>
+        </div>
+        <div class="report-archive__content">
+          <div class="report-archive__title">Han River Tech Breakfasts</div>
+          <div class="report-archive__excerpt">Why morning networking and quiet breakfast allocations are replacing late-night soju deals.</div>
+        </div>
       </a>
     </div>
   </section>

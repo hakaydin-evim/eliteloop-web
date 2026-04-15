@@ -190,7 +190,16 @@
     }
     .city-card__country {
       font-size: 0.75rem; color: rgba(246,241,231,0.4);
-      margin-bottom: 0.75rem; letter-spacing: 0.05em;
+      margin-bottom: 0.6rem; letter-spacing: 0.05em;
+    }
+    .city-card__meta-bar {
+      margin-bottom: 0.8rem;
+    }
+    .city-card__count {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: rgba(201,160,47,0.08); border: 1px solid rgba(201,160,47,0.25);
+      color: #ebcf79; padding: 0.2rem 0.6rem; border-radius: 0.4rem;
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em;
     }
     .city-card__desc {
       font-size: 0.82rem; line-height: 1.7;
@@ -269,6 +278,7 @@
         <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
         <div class="city-card__name">Seoul</div>
         <div class="city-card__country">South Korea · APAC</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 1 Scene Report</span></div>
         <p class="city-card__desc">Cheongdam dinners, founder tables, and Seoul's higher-trust social rooms where context matters more than visibility.</p>
         <span class="city-card__cta">Explore Seoul →</span>
       </div>
@@ -283,6 +293,7 @@
         <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
         <div class="city-card__name">Istanbul</div>
         <div class="city-card__country">Turkey · Bosphorus</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 2 Scene Reports</span></div>
         <p class="city-card__desc">Where two continents meet — exclusive Bosphorus events, Sónar Istanbul, and the city's elite social spring season.</p>
         <span class="city-card__cta">Explore Istanbul →</span>
       </div>
@@ -297,6 +308,7 @@
         <div class="city-card__status city-card__status--live">🟢 Live</div>
         <div class="city-card__name">Dubai</div>
         <div class="city-card__country">UAE · Gulf</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 1 Scene Report</span></div>
         <p class="city-card__desc">Rooftop networking, luxury hospitality events, and the Gulf's most exclusive social calendar.</p>
         <span class="city-card__cta">Explore Dubai →</span>
       </div>
@@ -311,6 +323,7 @@
         <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
         <div class="city-card__name">London</div>
         <div class="city-card__country">UK · West End</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 3 Scene Reports</span></div>
         <p class="city-card__desc">Private member clubs, gallery openings, and the understated elite social scene of Britain's capital.</p>
         <span class="city-card__cta">Explore London →</span>
       </div>
@@ -325,6 +338,7 @@
         <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
         <div class="city-card__name">Paris</div>
         <div class="city-card__country">France · 8ème</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 2 Scene Reports</span></div>
         <p class="city-card__desc">Quiet luxury and the city's most curated social circles — from Saint-Germain salons to Marais dinners.</p>
         <span class="city-card__cta">Explore Paris →</span>
       </div>
@@ -339,6 +353,7 @@
         <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
         <div class="city-card__name">Tokyo</div>
         <div class="city-card__country">Japan · APAC</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 2 Scene Reports</span></div>
         <p class="city-card__desc">Deep tech networking, Web3 circles, and the most exclusive private omakase rooms in Ginza.</p>
         <span class="city-card__cta">Explore Tokyo →</span>
       </div>
@@ -353,6 +368,7 @@
         <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
         <div class="city-card__name">Singapore</div>
         <div class="city-card__country">Singapore · Marina Bay</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 2 Scene Reports</span></div>
         <p class="city-card__desc">Asia's financial gateway — private wealth circles, regulated asset networking, and the continent's most curated business social scene.</p>
         <span class="city-card__cta">Explore Singapore →</span>
       </div>
@@ -367,6 +383,7 @@
         <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
         <div class="city-card__name">Milano</div>
         <div class="city-card__country">Italy · Brera</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 1 Scene Report</span></div>
         <p class="city-card__desc">Fashion capital meets private equity — Brera district dinners, design week networking, and Europe's most stylish business social layer.</p>
         <span class="city-card__cta">Explore Milano →</span>
       </div>
@@ -381,6 +398,7 @@
         <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
         <div class="city-card__name">Zurich</div>
         <div class="city-card__country">Switzerland · Bahnhofstrasse</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 2 Scene Reports</span></div>
         <p class="city-card__desc">Private banking dinners, Crypto Valley breakfasts, and the quietest high-trust social capital in Europe.</p>
         <span class="city-card__cta">Explore Zurich →</span>
       </div>
@@ -395,55 +413,55 @@
       <a href="/seoul-april-2026" class="report-item" style="border-color: rgba(201,160,47,0.3);">
         <div class="report-item__tag">Seoul · April 2026 <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
         <div class="report-item__title">Seoul's Quiet Capital Season: Access Before Visibility</div>
-        <div class="report-item__meta">April 15, 2026 · 6 min read</div>
+        <div class="report-item__meta"><time datetime="2026-04-15">April 15, 2026</time> · 6 min read</div>
       </a>
 
       <a href="/istanbul-april-2026" class="report-item">
         <div class="report-item__tag">Istanbul · April 2026</div>
         <div class="report-item__title">Istanbul's Spring Code: Where the Bosphorus Talks First</div>
-        <div class="report-item__meta">April 4, 2026</div>
+        <div class="report-item__meta"><time datetime="2026-04-04">April 4, 2026</time></div>
       </a>
 
       <a href="/dubai-april-2026" class="report-item">
         <div class="report-item__tag">Dubai · April 2026</div>
         <div class="report-item__title">Dubai Marina: The Quiet Deals</div>
-        <div class="report-item__meta">April 7, 2026</div>
+        <div class="report-item__meta"><time datetime="2026-04-07">April 7, 2026</time></div>
       </a>
 
       <a href="/london-april-2026" class="report-item">
         <div class="report-item__tag">London · April 2026</div>
         <div class="report-item__title">London After Mayfair: The Rooms Behind the Calendar</div>
-        <div class="report-item__meta">April 6, 2026</div>
+        <div class="report-item__meta"><time datetime="2026-04-06">April 6, 2026</time></div>
       </a>
 
       <a href="/paris-april-2026" class="report-item">
         <div class="report-item__tag">Paris · April 2026</div>
         <div class="report-item__title">Paris Golden Season: Art Fairs, Web3 & Elite Circles</div>
-        <div class="report-item__meta">April 5, 2026</div>
+        <div class="report-item__meta"><time datetime="2026-04-05">April 5, 2026</time></div>
       </a>
 
       <a href="/tokyo-april-2026" class="report-item">
         <div class="report-item__tag">Tokyo · April 2026</div>
         <div class="report-item__title">Tokyo's Quiet Table: Where Access Starts Before the Pitch</div>
-        <div class="report-item__meta">April 8, 2026</div>
+        <div class="report-item__meta"><time datetime="2026-04-08">April 8, 2026</time></div>
       </a>
 
       <a href="/singapore-april-2026" class="report-item">
         <div class="report-item__tag">Singapore · April 2026</div>
         <div class="report-item__title">Singapore After Hours: Quiet Capital, Real Access</div>
-        <div class="report-item__meta">April 11, 2026</div>
+        <div class="report-item__meta"><time datetime="2026-04-11">April 11, 2026</time></div>
       </a>
 
       <a href="/milano-april-2026" class="report-item">
         <div class="report-item__tag">Milano · April 2026</div>
         <div class="report-item__title">Fuorisalone's Hidden Rooms: Where Milan's Elite Actually Meet</div>
-        <div class="report-item__meta">April 12, 2026 · 6 min read</div>
+        <div class="report-item__meta"><time datetime="2026-04-12">April 12, 2026</time> · 6 min read</div>
       </a>
 
       <a href="/zurich-april-2026" class="report-item" style="border-color: rgba(201,160,47,0.3);">
         <div class="report-item__tag">Zurich · April 2026 <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
         <div class="report-item__title">Zurich's Quiet Ledger: Where Private Capital Socializes</div>
-        <div class="report-item__meta">April 15, 2026 · 5 min read</div>
+        <div class="report-item__meta"><time datetime="2026-04-15">April 15, 2026</time> · 5 min read</div>
       </a>
 
     </div>

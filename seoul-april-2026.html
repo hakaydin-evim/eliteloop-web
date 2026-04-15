@@ -267,15 +267,27 @@
     }
     .btn-outline:hover { border-color: rgba(201,160,47,0.6); color: var(--gold-soft); }
 
+    
+    /* ── Internal nav ── */
+    
     /* ── Internal nav ── */
     .article-nav {
-      display: flex; justify-content: space-between;
+      display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center;
       padding: 1.5rem 2rem; border-top: 1px solid rgba(255,255,255,0.06);
-      max-width: 720px; margin: 0 auto;
-      font-size: 0.78rem; color: rgba(245,240,232,0.4);
+      max-width: 860px; margin: 0 auto;
+      font-size: 0.8rem; color: rgba(245,240,232,0.6);
     }
-    .article-nav a { color: rgba(201,160,47,0.7); text-decoration: none; transition: color 0.2s; }
-    .article-nav a:hover { color: var(--gold-soft); }
+    @media (max-width: 600px) {
+      .article-nav { display: flex; flex-direction: column; gap: 1rem; text-align: center; }
+    }
+    .article-nav a { color: rgba(201,160,47,0.7); text-decoration: none; transition: color 0.2s; font-weight: 500; }
+    .article-nav a:hover { color: #ebcf79; }
+    .article-nav__prev { justify-self: start; }
+    .article-nav__hub { justify-self: center; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(245,240,232,0.4) !important; }
+    .article-nav__hub:hover { color: rgba(245,240,232,0.8) !important; }
+    .article-nav__next { justify-self: end; text-align: right; }
+
+
   </style>
 </head>
 <body>
@@ -354,11 +366,11 @@
     </div>
   </section>
 
-  <!-- Internal Nav -->
-  <nav class="article-nav">
-    <a href="/{{CITY_HUB_SLUG}}">← Seoul Hub</a>
-    <a href="/cities">All Cities →</a>
-    <a href="/">EliteLoop Home →</a>
+    <!-- Internal Nav -->
+  <nav class="article-nav" aria-label="Article navigation">
+    <a href="#" class="article-nav__prev" style="display:none;">&larr; Previous Report</a>
+    <a href="/seoul" class="article-nav__hub">&uarr; Seoul Hub</a>
+    <a href="#" class="article-nav__next" style="display:none;">Next Report &rarr;</a>
   </nav>
 
   <footer class="footer" style="margin-top:0;">

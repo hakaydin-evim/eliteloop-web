@@ -170,6 +170,40 @@
     .scene-card__excerpt { font-size: 0.88rem; color: rgba(245,240,232,0.55); line-height: 1.8; }
     .scene-card__read { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem; font-size: 0.8rem; color: var(--city-accent-text); letter-spacing: 0.06em; }
     .scene-card__meta { display: flex; flex-direction: column; gap: 1rem; }
+
+    .report-archive-list {
+      display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.5rem;
+    }
+    .report-archive-item {
+      display: flex; align-items: flex-start; gap: 1.5rem;
+      padding: 1.25rem 1.75rem; border-radius: 1rem;
+      background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.05);
+      text-decoration: none; transition: border-color 0.2s, transform 0.2s;
+    }
+    .report-archive-item:hover { border-color: rgba(201,160,47,0.34); transform: translateY(-2px); }
+    
+    @media (max-width: 600px) {
+      .report-archive-item { flex-direction: column; gap: 0.75rem; padding: 1.25rem; }
+    }
+
+    .report-archive__meta {
+      flex-shrink: 0; width: 130px;
+      padding-top: 0.25rem;
+    }
+    .report-archive__date {
+      display: block; font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; color: #ebcf79; font-weight: 600;
+    }
+    .report-archive__tag {
+      display: inline-block; font-size: 0.58rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: rgba(246,241,231,0.4); margin-top: 0.4rem;
+    }
+    .report-archive__content { flex-grow: 1; }
+    .report-archive__title {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.3rem;
+      color: #f5f0e8; line-height: 1.25; margin-bottom: 0.4rem;
+    }
+    .report-archive__excerpt { font-size: 0.8rem; color: rgba(245,240,232,0.5); line-height: 1.6; }
     .scene-stat { border-left: 2px solid rgba(201,160,47,0.25); padding-left: 1rem; }
     .scene-stat__num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--city-accent-text); line-height: 1; }
     .scene-stat__label {

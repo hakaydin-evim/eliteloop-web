@@ -182,6 +182,15 @@
       50% { box-shadow: 0 0 0 4px rgba(201,160,47,0); opacity: 0.8; }
     }
 
+    .city-card__dispatch-today {
+      position: absolute; top: 1rem; right: 1rem; z-index: 10;
+      background: rgba(201,160,47,0.15); color: #ebcf79;
+      border: 1px solid rgba(201,160,47,0.4); border-radius: 0.4rem;
+      padding: 0.35rem 0.65rem; font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(201,160,47,0.25);
+      backdrop-filter: blur(8px); animation: badgePulse 2s infinite;
+    }
+
     .city-card__name {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.6rem; font-weight: 600;
@@ -281,6 +290,22 @@
         <div class="city-card__meta-bar"><span class="city-card__count">📚 1 Scene Report</span></div>
         <p class="city-card__desc">Cheongdam dinners, founder tables, and Seoul's higher-trust social rooms where context matters more than visibility.</p>
         <span class="city-card__cta">Explore Seoul →</span>
+      </div>
+    </a>
+
+    <!-- New York City — LIVE -->
+    <a href="/nyc" class="city-card">
+      <div class="city-card__dispatch-today">🗓️ Today's Dispatch</div>
+      <img src="nyc-hero.jpg" alt="New York elite social scene" class="city-card__img" 
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="city-card__img-placeholder" style="display:none;">🇺🇸</div>
+      <div class="city-card__body">
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
+        <div class="city-card__name">New York City</div>
+        <div class="city-card__country">USA · SoHo</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 1 Scene Report</span></div>
+        <p class="city-card__desc">Financial elite, private dining, and unlisted high-trust social networking in SoHo and Tribeca.</p>
+        <span class="city-card__cta">Explore New York →</span>
       </div>
     </a>
 
@@ -410,10 +435,16 @@
   <div class="reports-strip" style="padding-top:0; margin-top:-2rem;">
     <div class="reports-strip__title" style="font-size:1.3rem; color:rgba(246,241,231,0.5);">Latest Scene Reports</div>
     <div class="reports-list">
-      <a href="/seoul-april-2026" class="report-item" style="border-color: rgba(201,160,47,0.3);">
+      <a href="/nyc-april-2026" class="report-item" style="border-color: rgba(201,160,47,0.3);">
+        <div class="report-item__tag">New York City · April 2026 <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
+        <div class="report-item__title">NYC's Elite Season: Wall Street & Unlisted Rooms</div>
+        <div class="report-item__meta"><time datetime="2026-04-16">April 16, 2026</time> · 5 min read</div>
+      </a>
+
+      <a href="/seoul-april-2026" class="report-item">
         <div class="report-item__tag">Seoul · April 2026 <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
         <div class="report-item__title">Seoul's Quiet Capital Season: Access Before Visibility</div>
-        <div class="report-item__meta"><time datetime="2026-04-15">April 15, 2026</time> · 6 min read</div>
+        <div class="report-item__meta"><time datetime="2026-04-15">April 15, 2026</time></div>
       </a>
 
       <a href="/istanbul-april-2026" class="report-item">

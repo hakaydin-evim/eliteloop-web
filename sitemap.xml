@@ -84,18 +84,6 @@
     <ns0:lastmod>2026-04-15</ns0:lastmod>
   </ns0:url>
   <ns0:url>
-    <ns0:loc>https://eliteloop.app/milano-april-2026</ns0:loc>
-    <ns0:changefreq>monthly</ns0:changefreq>
-    <ns0:priority>0.6</ns0:priority>
-    <ns0:lastmod>2026-04-15</ns0:lastmod>
-  </ns0:url>
-  <ns0:url>
-    <ns0:loc>https://eliteloop.app/milano</ns0:loc>
-    <ns0:changefreq>weekly</ns0:changefreq>
-    <ns0:priority>0.9</ns0:priority>
-    <ns0:lastmod>2026-04-15</ns0:lastmod>
-  </ns0:url>
-  <ns0:url>
     <ns0:loc>https://eliteloop.app/nyc</ns0:loc>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
@@ -117,12 +105,6 @@
     <ns0:loc>https://eliteloop.app/london-late-april-2026</ns0:loc>
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.8</ns0:priority>
-    <ns0:lastmod>2026-04-20</ns0:lastmod>
-  </ns0:url>
-  <ns0:url>
-    <ns0:loc>https://eliteloop.app/london</ns0:loc>
-    <ns0:changefreq>weekly</ns0:changefreq>
-    <ns0:priority>0.9</ns0:priority>
     <ns0:lastmod>2026-04-20</ns0:lastmod>
   </ns0:url>
   <ns0:url>
@@ -163,18 +145,6 @@
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://eliteloop.app/seoul-april-2026</ns0:loc>
-    <ns0:changefreq>monthly</ns0:changefreq>
-    <ns0:priority>0.6</ns0:priority>
-    <ns0:lastmod>2026-04-15</ns0:lastmod>
-  </ns0:url>
-  <ns0:url>
-    <ns0:loc>https://eliteloop.app/seoul-february-2026</ns0:loc>
-    <ns0:changefreq>monthly</ns0:changefreq>
-    <ns0:priority>0.6</ns0:priority>
-    <ns0:lastmod>2026-04-15</ns0:lastmod>
-  </ns0:url>
-  <ns0:url>
-    <ns0:loc>https://eliteloop.app/seoul-march-2026</ns0:loc>
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.6</ns0:priority>
     <ns0:lastmod>2026-04-15</ns0:lastmod>
@@ -251,4 +221,4 @@
     <ns0:priority>0.9</ns0:priority>
     <ns0:lastmod>2026-04-15</ns0:lastmod>
   </ns0:url>
-<ns0:url><ns0:loc>https://eliteloop.app/nyc</ns0:loc><ns0:lastmod>2026-04-16</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq></ns0:url><ns0:url><ns0:loc>https://eliteloop.app/nyc-april-2026</ns0:loc><ns0:lastmod>2026-04-16</ns0:lastmod><ns0:changefreq>monthly</ns0:changefreq></ns0:url></ns0:urlset>
+</ns0:urlset>

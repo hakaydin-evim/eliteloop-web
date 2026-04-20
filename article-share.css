@@ -1,0 +1,112 @@
+.article-share {
+  margin: 2.5rem 0 0;
+  padding: 1.25rem 1.35rem;
+  border: 1px solid rgba(201, 160, 47, 0.18);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(201, 160, 47, 0.08), rgba(201, 160, 47, 0.03));
+}
+
+.article-share__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-soft, #ebcf79);
+}
+
+.article-share .article-share__title {
+  margin: 0 0 0.45rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  font-weight: 600;
+  color: var(--text, #f5f0e8);
+}
+
+.article-share .article-share__text {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(245, 240, 232, 0.64);
+}
+
+.article-share__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.article-share__button,
+.article-share__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 160, 47, 0.24);
+  background: rgba(255, 255, 255, 0.02);
+  color: rgba(245, 240, 232, 0.82);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.article-share__button:hover,
+.article-share__link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(201, 160, 47, 0.52);
+  background: rgba(201, 160, 47, 0.08);
+  color: var(--gold-soft, #ebcf79);
+}
+
+.article-share__button {
+  appearance: none;
+}
+
+.article-share__button--primary {
+  background: linear-gradient(135deg, #b88919 0%, #ebcf79 50%, #b88919 100%);
+  border-color: transparent;
+  color: #060610;
+  box-shadow: 0 8px 24px rgba(201, 160, 47, 0.22);
+}
+
+.article-share__button--primary:hover {
+  background: linear-gradient(135deg, #c59724 0%, #f1da93 50%, #c59724 100%);
+  color: #060610;
+}
+
+.article-share .article-share__status {
+  margin-top: 0.8rem;
+  min-height: 1.1rem;
+  font-size: 0.76rem;
+  color: rgba(245, 240, 232, 0.45);
+}
+
+.article-share__status.is-success {
+  color: #8fd6a4;
+}
+
+@media (max-width: 640px) {
+  .article-share {
+    padding: 1.1rem 1rem;
+  }
+
+  .article-share__actions {
+    gap: 0.55rem;
+  }
+
+  .article-share__button,
+  .article-share__link {
+    flex: 1 1 calc(50% - 0.55rem);
+    min-width: 0;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}

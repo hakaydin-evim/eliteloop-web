@@ -391,22 +391,26 @@
     </div>
   </section>
 
+  <!-- Featured City Guides -->
+  <section
+    id="featured-cities"
+    style="max-width:1100px; margin:0 auto 1.6rem; padding:0 2rem;"
+    aria-label="Featured city guides and scene reports"
+  >
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.1rem; flex-wrap:wrap; gap:0.75rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap;">
+        <span style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:600; color:#f6f1e7;">Featured City Guides</span>
+        <span style="display:inline-flex; align-items:center; gap:0.35rem; background:rgba(201,160,47,0.1); border:1px solid rgba(201,160,47,0.3); color:#ebcf79; font-size:0.6rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; padding:0.25rem 0.65rem; border-radius:2rem;">
+          City Reports
+        </span>
+      </div>
+      <a href="#latest-city-scene-reports" style="font-size:0.78rem; color:#ebcf79; text-decoration:none; font-weight:500; letter-spacing:0.04em;">Latest city reports →</a>
+    </div>
+    <p style="font-size:0.85rem; color:rgba(246,241,231,0.5); line-height:1.7; max-width:760px; margin:0; font-weight:300;">Global Pulse is EliteLoop's worldwide editorial signal layer. Featured City Guides are location-specific hubs built around private social discovery, scene reports, and app download intent in each city.</p>
+  </section>
+
   <!-- City Grid -->
   <div class="cities-grid">
-    <a href="/seoul" class="city-card">
-      <img src="seoul-hero.jpg" alt="Seoul" class="city-card__img" 
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-      <div class="city-card__img-placeholder" style="display:none;">🇰🇷</div>
-      <div class="city-card__body">
-        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
-        <div class="city-card__name">Seoul</div>
-        <div class="city-card__country">South Korea · APAC</div>
-        <div class="city-card__meta-bar"><span class="city-card__count">📚 1 Scene Report</span></div>
-        <p class="city-card__desc">Cheongdam dinners, founder tables, and Seoul's higher-trust social rooms where context matters more than visibility.</p>
-        <span class="city-card__cta">Explore Seoul →</span>
-      </div>
-    </a>
-
     <!-- New York City — LIVE -->
     <a href="/nyc" class="city-card">
       <img src="nyc-hero.jpg" alt="New York elite social scene" class="city-card__img" 
@@ -422,36 +426,6 @@
       </div>
     </a>
 
-    <!-- Istanbul — LIVE -->
-    <a href="/istanbul" class="city-card">
-      <img src="istanbul-hero.jpg" alt="Istanbul elite social scene" class="city-card__img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-      <div class="city-card__img-placeholder" style="display:none;">🌙</div>
-      <div class="city-card__body">
-        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
-        <div class="city-card__name">Istanbul</div>
-        <div class="city-card__country">Turkey · Bosphorus</div>
-        <div class="city-card__meta-bar"><span class="city-card__count">📚 2 Scene Reports</span></div>
-        <p class="city-card__desc">Where two continents meet — exclusive Bosphorus events, Sónar Istanbul, and the city's elite social spring season.</p>
-        <span class="city-card__cta">Explore Istanbul →</span>
-      </div>
-    </a>
-
-    <!-- Dubai — LIVE -->
-    <a href="/dubai" class="city-card">
-      <img src="dubai-hero.jpg" alt="Dubai elite social scene" class="city-card__img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-      <div class="city-card__img-placeholder" style="display:none;">🌅</div>
-      <div class="city-card__body">
-        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
-        <div class="city-card__name">Dubai</div>
-        <div class="city-card__country">UAE · Gulf</div>
-        <div class="city-card__meta-bar"><span class="city-card__count">📚 2 Scene Reports</span></div>
-        <p class="city-card__desc">Rooftop networking, luxury hospitality events, and the Gulf's most exclusive social calendar.</p>
-        <span class="city-card__cta">Explore Dubai →</span>
-      </div>
-    </a>
-
     <!-- London — LIVE -->
     <a href="/london" class="city-card">
       <img src="london-hero.jpg" alt="London elite social scene" class="city-card__img" 
@@ -464,21 +438,6 @@
         <div class="city-card__meta-bar"><span class="city-card__count">📚 4 Scene Reports</span></div>
         <p class="city-card__desc">Mayfair spring circuit, 5 Hertford Street, Annabel's residency, and the private rooms behind the gallery season.</p>
         <span class="city-card__cta">Explore London →</span>
-      </div>
-    </a>
-
-    <!-- Paris — LIVE -->
-    <a href="/paris" class="city-card">
-      <img src="paris-hero.jpg" alt="Paris elite social scene" class="city-card__img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-      <div class="city-card__img-placeholder" style="display:none;">🗼</div>
-      <div class="city-card__body">
-        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
-        <div class="city-card__name">Paris</div>
-        <div class="city-card__country">France · 8ème</div>
-        <div class="city-card__meta-bar"><span class="city-card__count">📚 2 Scene Reports</span></div>
-        <p class="city-card__desc">Quiet luxury and the city's most curated social circles — from Saint-Germain salons to Marais dinners.</p>
-        <span class="city-card__cta">Explore Paris →</span>
       </div>
     </a>
 
@@ -513,6 +472,36 @@
       </div>
     </a>
 
+    <!-- Istanbul — LIVE -->
+    <a href="/istanbul" class="city-card">
+      <img src="istanbul-hero.jpg" alt="Istanbul elite social scene" class="city-card__img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="city-card__img-placeholder" style="display:none;">🌙</div>
+      <div class="city-card__body">
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
+        <div class="city-card__name">Istanbul</div>
+        <div class="city-card__country">Turkey · Bosphorus</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 2 Scene Reports</span></div>
+        <p class="city-card__desc">Where two continents meet — exclusive Bosphorus events, Sónar Istanbul, and the city's elite social spring season.</p>
+        <span class="city-card__cta">Explore Istanbul →</span>
+      </div>
+    </a>
+
+    <!-- Dubai — LIVE -->
+    <a href="/dubai" class="city-card">
+      <img src="dubai-hero.jpg" alt="Dubai elite social scene" class="city-card__img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="city-card__img-placeholder" style="display:none;">🌅</div>
+      <div class="city-card__body">
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
+        <div class="city-card__name">Dubai</div>
+        <div class="city-card__country">UAE · Gulf</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 2 Scene Reports</span></div>
+        <p class="city-card__desc">Rooftop networking, luxury hospitality events, and the Gulf's most exclusive social calendar.</p>
+        <span class="city-card__cta">Explore Dubai →</span>
+      </div>
+    </a>
+
     <!-- Milan — LIVE -->
     <a href="/milan" class="city-card">
       <img src="milan-hero.jpg" alt="Milan elite social scene" class="city-card__img"
@@ -525,6 +514,35 @@
         <div class="city-card__meta-bar"><span class="city-card__count">📚 2 Scene Reports</span></div>
         <p class="city-card__desc">Fashion capital meets private equity — Brera district dinners, design week networking, and Europe's most stylish business social layer.</p>
         <span class="city-card__cta">Explore Milan →</span>
+      </div>
+    </a>
+
+    <!-- Paris — LIVE -->
+    <a href="/paris" class="city-card">
+      <img src="paris-hero.jpg" alt="Paris elite social scene" class="city-card__img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="city-card__img-placeholder" style="display:none;">🗼</div>
+      <div class="city-card__body">
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--updated">UPDATED</span></div>
+        <div class="city-card__name">Paris</div>
+        <div class="city-card__country">France · 8ème</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 2 Scene Reports</span></div>
+        <p class="city-card__desc">Quiet luxury and the city's most curated social circles — from Saint-Germain salons to Marais dinners.</p>
+        <span class="city-card__cta">Explore Paris →</span>
+      </div>
+    </a>
+
+    <a href="/seoul" class="city-card">
+      <img src="seoul-hero.jpg" alt="Seoul" class="city-card__img" 
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="city-card__img-placeholder" style="display:none;">🇰🇷</div>
+      <div class="city-card__body">
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
+        <div class="city-card__name">Seoul</div>
+        <div class="city-card__country">South Korea · APAC</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 1 Scene Report</span></div>
+        <p class="city-card__desc">Cheongdam dinners, founder tables, and Seoul's higher-trust social rooms where context matters more than visibility.</p>
+        <span class="city-card__cta">Explore Seoul →</span>
       </div>
     </a>
 
@@ -545,9 +563,9 @@
 
   </div>
 
-  <!-- Latest Scene Reports -->
-  <div class="reports-strip" style="padding-top:0; margin-top:-1rem;">
-    <div class="reports-strip__title" style="font-size:1.3rem; color:rgba(246,241,231,0.5);">Latest Scene Reports</div>
+  <!-- Latest City Scene Reports -->
+  <div id="latest-city-scene-reports" class="reports-strip" style="padding-top:0; margin-top:-1rem;">
+    <div class="reports-strip__title" style="font-size:1.3rem; color:rgba(246,241,231,0.5);">Latest City Scene Reports</div>
     <div class="reports-list">
       <a href="/tokyo-late-april-2026" class="report-item" style="border-color: rgba(201,160,47,0.3);">
         <div class="report-item__tag">Tokyo · Late April 2026 <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>

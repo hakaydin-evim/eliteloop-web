@@ -1054,7 +1054,7 @@ body.rtl .android-card ul {
   }
 
   .platform-summary {
-    margin-top: 0;
+    margin-top: 18px;
   }
 
   .nav {
@@ -1106,7 +1106,25 @@ body.rtl .android-card ul {
 
   .topbar-meta {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    gap: 10px;
+  }
+
+  .topbar-meta .nav-city-link.mobile-only,
+  .topbar-meta .lang-btn,
+  .topbar-meta .mini-cta {
+    width: 100%;
+    min-width: 0;
     justify-content: center;
+    min-height: 52px;
+    padding: 0 10px;
+    white-space: nowrap;
+  }
+
+  .topbar-meta .mini-cta {
+    font-size: 0.92rem;
   }
 
   .hero-actions {
@@ -1150,6 +1168,16 @@ body.rtl .android-card ul {
 
   .download-shell {
     padding: 22px 18px;
+  }
+
+  .hero-stats,
+  .platform-summary {
+    gap: 18px;
+  }
+
+  .stat-card,
+  .platform-box {
+    width: 100%;
   }
 
   .video-section {

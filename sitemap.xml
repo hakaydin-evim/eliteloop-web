@@ -108,6 +108,12 @@
     <ns0:lastmod>2026-04-20</ns0:lastmod>
   </ns0:url>
   <ns0:url>
+    <ns0:loc>https://eliteloop.app/global-pulse-23-april-2026</ns0:loc>
+    <ns0:changefreq>monthly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+    <ns0:lastmod>2026-04-23</ns0:lastmod>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://eliteloop.app/global-pulse-22-april-2026</ns0:loc>
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
@@ -180,10 +186,16 @@
     <ns0:lastmod>2026-04-15</ns0:lastmod>
   </ns0:url>
   <ns0:url>
+    <ns0:loc>https://eliteloop.app/singapore-april-2026-gtm</ns0:loc>
+    <ns0:changefreq>monthly</ns0:changefreq>
+    <ns0:priority>0.8</ns0:priority>
+    <ns0:lastmod>2026-04-16</ns0:lastmod>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://eliteloop.app/singapore-april-2026</ns0:loc>
     <ns0:changefreq>monthly</ns0:changefreq>
-    <ns0:priority>0.6</ns0:priority>
-    <ns0:lastmod>2026-04-16</ns0:lastmod>
+    <ns0:priority>0.8</ns0:priority>
+    <ns0:lastmod>2026-04-23</ns0:lastmod>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://eliteloop.app/singapore-march-2026</ns0:loc>

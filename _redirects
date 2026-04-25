@@ -17,6 +17,9 @@
 /zurich.html /zurich 301
 /new-york.html /new-york 301
 
+# Milan short alias -> /milan (canonical)
+/milano /milan 301
+
 # NYC short aliases → /new-york (canonical)
 /nyc /new-york 301
 /newyork /new-york 301
@@ -30,6 +33,7 @@
 /tokyo-april-2026.html /tokyo-april-2026 301
 /singapore-april-2026.html /singapore-april-2026 301
 /milan-april-2026.html /milan-april-2026 301
+/milano-april-2026 /milan-april-2026 301
 /zurich-april-2026.html /zurich-april-2026 301
 /nyc-april-2026.html /nyc-april-2026 301
 

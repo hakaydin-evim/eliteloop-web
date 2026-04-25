@@ -85,6 +85,7 @@ const translations = {
         "pricing.gold.f2": "See all nearby users + profile photos",
         "pricing.gold.f3": "Direct messaging to anyone",
         "pricing.gold.f4": "2 free monthly event boosts",
+        "pricing.gold.f5": "Gold-only Make My Plan suggestions",
 
         // FAQ
         "faq.badge": "FAQ",
@@ -93,7 +94,7 @@ const translations = {
         "faq.q1": "What is EliteLoop?",
         "faq.a1": "EliteLoop is an activity matching platform designed for distinguished individuals. It allows you to meet people with shared interests, plan exclusive events, and create unforgettable moments. With our privacy-focused approach, your identity is protected while you build quality connections.",
         "faq.q2": "How does the badge system work?",
-        "faq.a2": "EliteLoop has 3 badge levels: Bronze, Silver, and Gold. Bronze is free and provides access to basic features. Silver and Gold badges offer premium features like more event access, event creation rights, and increased profile visibility.",
+        "faq.a2": "EliteLoop has 3 badge levels: Bronze, Silver, and Gold. Bronze is free and provides access to basic features. Silver and Gold badges offer premium features like more event access, event creation rights, increased profile visibility, and Gold-only Make My Plan suggestions.",
         "faq.q3": "How is privacy ensured?",
         "faq.a3": "Your location is approximate, not exact. Your personal information is protected with Apple or Google Sign-In. Only your badge level and information you choose to share is visible. You can use \"invisible mode\" anytime.",
         "faq.q4": "How can I cancel my subscription?",
@@ -199,6 +200,7 @@ const translations = {
         "pricing.gold.f2": "Tüm yakın kullanıcılar + fotoğrafları",
         "pricing.gold.f3": "Herkese doğrudan mesaj gönderme",
         "pricing.gold.f4": "Ayda 2 ücretsiz etkinlik öne çıkarma",
+        "pricing.gold.f5": "Gold'a özel Make My Plan önerileri",
 
         // FAQ
         "faq.badge": "SSS",
@@ -207,7 +209,7 @@ const translations = {
         "faq.q1": "EliteLoop nedir?",
         "faq.a1": "EliteLoop, seçkin bireyler için tasarlanmış bir aktivite eşleştirme platformudur. Ortak ilgi alanlarına sahip kişilerle tanışmanızı, özel etkinlikler planlamanızı ve unutulmaz anlar yaşamanızı sağlar. Gizlilik odaklı yaklaşımımız sayesinde kimliğiniz korunurken kaliteli bağlantılar kurarsınız.",
         "faq.q2": "Rozet sistemi nasıl çalışır?",
-        "faq.a2": "EliteLoop'ta Bronze, Silver ve Gold olmak üzere 3 rozet seviyesi bulunur. Bronze ücretsizdir ve temel özelliklere erişim sağlar. Silver ve Gold rozetler, daha fazla etkinlik erişimi, etkinlik oluşturma hakkı ve artırılmış profil görünürlüğü gibi premium özellikler sunar.",
+        "faq.a2": "EliteLoop'ta Bronze, Silver ve Gold olmak üzere 3 rozet seviyesi bulunur. Bronze ücretsizdir ve temel özelliklere erişim sağlar. Silver ve Gold rozetler, daha fazla etkinlik erişimi, etkinlik oluşturma hakkı, artırılmış profil görünürlüğü ve Gold'a özel Make My Plan önerileri gibi premium özellikler sunar.",
         "faq.q3": "Gizlilik nasıl sağlanıyor?",
         "faq.a3": "Konum bilgileriniz fuzzy (yaklaşık) olarak gösterilir, tam konumunuz paylaşılmaz. Kişisel bilgileriniz Apple veya Google Sign-In ile korunur. Sadece rozet seviyeniz ve paylaşmayı seçtiğiniz bilgiler görünür. İstediğiniz zaman \"görünmez mod\"u kullanabilirsiniz.",
         "faq.q4": "Aboneliği nasıl iptal edebilirim?",
@@ -313,6 +315,7 @@ const translations = {
         "pricing.gold.f2": "Все ближайшие пользователи + фото",
         "pricing.gold.f3": "Прямые сообщения кому угодно",
         "pricing.gold.f4": "2 бесплатных продвижения в месяц",
+        "pricing.gold.f5": "Gold-подборки Make My Plan",
 
         // FAQ
         "faq.badge": "FAQ",
@@ -321,7 +324,7 @@ const translations = {
         "faq.q1": "Что такое EliteLoop?",
         "faq.a1": "EliteLoop — платформа для знакомств и планирования мероприятий с избранными людьми. Приватность и качество связей превыше всего.",
         "faq.q2": "Как работает система значков?",
-        "faq.a2": "3 уровня: Bronze (бесплатно), Silver и Gold с расширенными возможностями.",
+        "faq.a2": "3 уровня: Bronze (бесплатно), Silver и Gold с расширенными возможностями, включая Gold-подборки Make My Plan.",
         "faq.q3": "Как обеспечивается приватность?",
         "faq.a3": "Ваше местоположение отображается приблизительно, а не точно. Ваша личная информация защищена с помощью Apple или Google Sign-In. Видны только ваш уровень значка и информация, которой вы решите поделиться. Вы можете использовать «невидимый режим» в любое время.",
         "faq.q4": "Как отменить подписку?",
@@ -427,6 +430,7 @@ const translations = {
         "pricing.gold.f2": "جميع المستخدمين القريبين + الصور",
         "pricing.gold.f3": "إرسال رسائل مباشرة لأي شخص",
         "pricing.gold.f4": "ترويجان مجانيان شهرياً",
+        "pricing.gold.f5": "اقتراحات Make My Plan الحصرية لـ Gold",
 
         // FAQ
         "faq.badge": "الأسئلة الشائعة",
@@ -435,7 +439,7 @@ const translations = {
         "faq.q1": "ما هو EliteLoop؟",
         "faq.a1": "EliteLoop منصة لمطابقة الأنشطة مصممة للأفراد المميزين. تتيح لك التعرف على أشخاص بنفس الاهتمامات وتخطيط فعاليات حصرية.",
         "faq.q2": "كيف يعمل نظام الشارات؟",
-        "faq.a2": "3 مستويات: Bronze (مجاني)، Silver وGold مع مميزات متقدمة.",
+        "faq.a2": "3 مستويات: Bronze (مجاني)، Silver وGold مع مميزات متقدمة، بما في ذلك اقتراحات Make My Plan الحصرية لـ Gold.",
         "faq.q3": "كيف يتم ضمان الخصوصية؟",
         "faq.a3": "موقعك تقريبي وليس دقيقاً. معلوماتك الشخصية محمية باستخدام Apple أو Google Sign-In. يظهر فقط مستوى شارتك والمعلومات التي تختار مشاركتها. يمكنك استخدام \"الوضع الخفي\" في أي وقت.",
         "faq.q4": "كيف يمكنني إلغاء الاشتراك؟",
@@ -541,6 +545,7 @@ const translations = {
         "pricing.gold.f2": "所有附近用户+照片",
         "pricing.gold.f3": "向任何人发送私信",
         "pricing.gold.f4": "每月2次免费推广",
+        "pricing.gold.f5": "Gold 专属 Make My Plan 建议",
 
         // FAQ
         "faq.badge": "常见问题",
@@ -549,7 +554,7 @@ const translations = {
         "faq.q1": "什么是EliteLoop？",
         "faq.a1": "EliteLoop是为精英人士设计的活动匹配平台。让您与志趣相投的人相识，策划专属活动，创造难忘时刻。",
         "faq.q2": "徽章系统如何运作？",
-        "faq.a2": "3个级别：Bronze（免费）、Silver和Gold，提供高级功能。",
+        "faq.a2": "3个级别：Bronze（免费）、Silver和Gold，提供高级功能，包括 Gold 专属 Make My Plan 建议。",
         "faq.q3": "如何确保隐私？",
         "faq.a3": "您的位置显示的是大概范围，而非精确位置。您的个人信息通过 Apple 或 Google 登录受到保护。只有您的等级勋章和您选择分享的信息才会被他人看到。您可以随时开启“隐身模式”。",
         "faq.q4": "如何取消订阅？",

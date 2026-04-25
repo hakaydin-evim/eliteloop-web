@@ -5,20 +5,53 @@
 /terms.html /terms 301
 /gdpr.html /gdpr 301
 /support.html /support 301
+
+# ── City Hubs ──────────────────────────────────────────
 /istanbul.html /istanbul 301
-/istanbul-april-2026.html /istanbul-april-2026 301
 /dubai.html /dubai 301
-/dubai-april-2026.html /dubai-april-2026 301
 /london.html /london 301
-/london-april-2026.html /london-april-2026 301
 /paris.html /paris 301
-/paris-april-2026.html /paris-april-2026 301
 /tokyo.html /tokyo 301
-/tokyo-april-2026.html /tokyo-april-2026 301
 /singapore.html /singapore 301
-/singapore-april-2026.html /singapore-april-2026 301
 /milan.html /milan 301
-/milan-april-2026.html /milan-april-2026 301
 /zurich.html /zurich 301
+/new-york.html /new-york 301
+
+# NYC short aliases → /new-york (canonical)
+/nyc /new-york 301
+/newyork /new-york 301
+/new-york-city /new-york 301
+
+# ── Scene Reports — clean URLs ──────────────────────────
+/istanbul-april-2026.html /istanbul-april-2026 301
+/dubai-april-2026.html /dubai-april-2026 301
+/london-april-2026.html /london-april-2026 301
+/paris-april-2026.html /paris-april-2026 301
+/tokyo-april-2026.html /tokyo-april-2026 301
+/singapore-april-2026.html /singapore-april-2026 301
+/milan-april-2026.html /milan-april-2026 301
 /zurich-april-2026.html /zurich-april-2026 301
 /nyc-april-2026.html /nyc-april-2026 301
+
+# Late-April & new reports
+/istanbul-25-april-2026.html /istanbul-25-april-2026 301
+/istanbul-mid-april-2026.html /istanbul-mid-april-2026 301
+/dubai-24-april-2026.html /dubai-24-april-2026 301
+/dubai-mid-april-2026.html /dubai-mid-april-2026 301
+/london-late-april-2026.html /london-late-april-2026 301
+/tokyo-late-april-2026.html /tokyo-late-april-2026 301
+/singapore-late-april-2026.html /singapore-late-april-2026 301
+/new-york-late-april-2026.html /new-york-late-april-2026 301
+
+# NYC scene report short aliases
+/nyc-late-april-2026 /new-york-late-april-2026 301
+/nyc-april-2026 /new-york-late-april-2026 301
+
+# ── Global Pulse — clean URLs ───────────────────────────
+/global-pulse-26-april-2026.html /global-pulse-26-april-2026 301
+/global-pulse-25-april-2026.html /global-pulse-25-april-2026 301
+/global-pulse-24-april-2026.html /global-pulse-24-april-2026 301
+/global-pulse-23-april-2026.html /global-pulse-23-april-2026 301
+/global-pulse-20-april-2026.html /global-pulse-20-april-2026 301
+/global-pulse-19-april-2026.html /global-pulse-19-april-2026 301
+

@@ -1,5 +1,5 @@
 [build]
-  command = "node scripts/build-articles-json.js"
+  command = "node scripts/build-articles-json.js && node scripts/build-sitemap.js"
   publish = "."
 
 [[headers]]

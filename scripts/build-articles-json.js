@@ -16,9 +16,91 @@ const excludeFiles = [
     'android.html'
 ];
 
+const CITY_RULES = [
+    { aliases: ['new-york', 'nyc', 'newyork'], canonicalSlug: 'new-york', name: 'New York' },
+    { aliases: ['singapore'], canonicalSlug: 'singapore', name: 'Singapore' },
+    { aliases: ['istanbul'], canonicalSlug: 'istanbul', name: 'Istanbul' },
+    { aliases: ['london'], canonicalSlug: 'london', name: 'London' },
+    { aliases: ['tokyo'], canonicalSlug: 'tokyo', name: 'Tokyo' },
+    { aliases: ['paris'], canonicalSlug: 'paris', name: 'Paris' },
+    { aliases: ['dubai'], canonicalSlug: 'dubai', name: 'Dubai' },
+    { aliases: ['seoul'], canonicalSlug: 'seoul', name: 'Seoul' },
+    { aliases: ['zurich'], canonicalSlug: 'zurich', name: 'Zurich' },
+    { aliases: ['milan', 'milano'], canonicalSlug: 'milan', name: 'Milan' },
+];
+
+const MONTH_MAP = {
+    january: '01',
+    february: '02',
+    march: '03',
+    april: '04',
+    may: '05',
+    june: '06',
+    july: '07',
+    august: '08',
+    september: '09',
+    october: '10',
+    november: '11',
+    december: '12'
+};
+
 function extractTag(content, regex) {
     const match = content.match(regex);
     return match ? match[1].trim() : '';
+}
+
+function inferCityMeta(slug, type) {
+    if (type === 'Global Pulse') {
+        return {
+            citySlug: null,
+            cityName: 'Global',
+            canonicalCitySlug: null,
+            isLegacyAlias: false,
+            issueFlags: []
+        };
+    }
+
+    const loweredSlug = slug.toLowerCase();
+
+    for (const rule of CITY_RULES) {
+        for (const alias of rule.aliases) {
+            if (loweredSlug === alias || loweredSlug.startsWith(`${alias}-`)) {
+                const isLegacyAlias = alias !== rule.canonicalSlug;
+                return {
+                    citySlug: alias,
+                    cityName: rule.name,
+                    canonicalCitySlug: rule.canonicalSlug,
+                    isLegacyAlias,
+                    issueFlags: isLegacyAlias ? ['legacy-city-alias'] : []
+                };
+            }
+        }
+    }
+
+    return {
+        citySlug: null,
+        cityName: 'Unknown',
+        canonicalCitySlug: null,
+        isLegacyAlias: false,
+        issueFlags: ['unmapped-city']
+    };
+}
+
+function inferDateFromSlug(slug) {
+    const exactDateMatch = slug.match(/-(\d{1,2})-(january|february|march|april|may|june|july|august|september|october|november|december)-(\d{4})$/i);
+    if (exactDateMatch) {
+        const [, day, month, year] = exactDateMatch;
+        return `${year}-${MONTH_MAP[month.toLowerCase()]}-${String(day).padStart(2, '0')}`;
+    }
+
+    const monthYearMatch = slug.match(/-(late|mid)?-?(january|february|march|april|may|june|july|august|september|october|november|december)-(\d{4})$/i);
+    if (monthYearMatch) {
+        const [, qualifier, month, year] = monthYearMatch;
+        const day = qualifier === 'late' ? '25' : qualifier === 'mid' ? '15' : '01';
+        return `${year}-${MONTH_MAP[month.toLowerCase()]}-${day}`;
+    }
+
+    return null;
 }
 
 function buildJson() {
@@ -52,14 +134,23 @@ function buildJson() {
                 type = 'City Hub';
             }
 
+            const cityMeta = inferCityMeta(slug, type);
+            const resolvedDate = timeDate || inferDateFromSlug(slug);
+
             articles.push({
                 title: title || slug,
                 description: description,
                 slug: slug,
                 url: `https://eliteloop.app/${slug}`,
-                date: timeDate || null,
+                date: resolvedDate,
                 type: type,
-                filename: file
+                filename: file,
+                citySlug: cityMeta.citySlug,
+                cityName: cityMeta.cityName,
+                canonicalCitySlug: cityMeta.canonicalCitySlug,
+                canonicalCityUrl: cityMeta.canonicalCitySlug ? `https://eliteloop.app/${cityMeta.canonicalCitySlug}` : null,
+                isLegacyAlias: cityMeta.isLegacyAlias,
+                issueFlags: cityMeta.issueFlags
             });
         }
     });

@@ -101,6 +101,18 @@
     .scene-stat { border-left:2px solid rgba(201,160,47,0.25); padding-left:1rem; }
     .scene-stat__num { font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:var(--city-accent-text); line-height:1; }
     .scene-stat__label { font-size:0.7rem; color:rgba(245,240,232,0.4); letter-spacing:0.1em; text-transform:uppercase; margin-top:0.25rem; }
+    .new-alert-badge {
+      display:inline-block; margin-left:10px; padding:2px 7px;
+      background:rgba(201,160,47,0.15); color:#ebcf79;
+      border:1px solid rgba(201,160,47,0.4); border-radius:4px;
+      font-weight:800; font-size:0.55rem; letter-spacing:0.1em;
+      text-transform:uppercase; vertical-align:middle;
+      animation:badgePulse 2s infinite;
+    }
+    @keyframes badgePulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201,160,47,0.4); opacity: 1; }
+      50% { box-shadow: 0 0 0 4px rgba(201,160,47,0); opacity: 0.8; }
+    }
     .report-archive-list { display:flex; flex-direction:column; gap:0.85rem; margin-top:1.5rem; }
     .report-archive-item { display:flex; align-items:flex-start; gap:1.5rem; padding:1.25rem 1.75rem; border-radius:1rem; background:rgba(255,255,255,0.015); border:1px solid rgba(255,255,255,0.05); text-decoration:none; transition:border-color 0.2s, transform 0.2s; }
     .report-archive-item:hover { border-color:rgba(201,160,47,0.34); transform:translateY(-2px); }
@@ -179,8 +191,8 @@
       <a href="/cities" class="scene-section__all">All reports →</a>
     </div>
     <a href="/new-york-late-april-2026" class="scene-card">
-      <div>
-        <div class="scene-card__tag">Late April 2026 · Scene Report</div>
+      <div class="scene-card__content">
+        <div class="scene-card__tag">April 25, 2026 · Scene Report <span class="new-alert-badge">New</span></div>
         <div class="scene-card__title">New York's Unlisted Rooms: Where Late April 2026's Real Decisions Are Made</div>
         <div class="scene-card__excerpt">While the public rooftops fill with familiar faces, New York's most consequential conversations are happening in unlisted SoHo lofts and private Tribeca dinners. A report on the city's invisible access layer this April.</div>
         <div class="scene-card__read">Read full report →</div>
@@ -192,20 +204,10 @@
       </div>
     </a>
     <div class="report-archive-list" aria-label="New York report archive">
-      <a href="/new-york-late-april-2026" class="report-archive-item">
-        <div class="report-archive__meta">
-          <time datetime="2026-04-25" class="report-archive__date">Apr 25, 2026</time>
-          <span class="report-archive__tag">SUNDAY CIRCLE</span>
-        </div>
-        <div class="report-archive__content">
-          <div class="report-archive__title">The Sunday Circle That Closed in Six Weeks</div>
-          <div class="report-archive__excerpt">18 months, 31 meetings, 0 commits — until an unlisted NoHo dinner changed the access architecture entirely.</div>
-        </div>
-      </a>
       <a href="/new-york-mid-april-2026" class="report-archive-item">
         <div class="report-archive__meta">
           <time datetime="2026-04-15" class="report-archive__date">Apr 15, 2026</time>
-          <span class="report-archive__tag">UNLISTED HANDSHAKE</span>
+          <span class="report-archive__tag">SCENE REPORT</span>
         </div>
         <div class="report-archive__content">
           <div class="report-archive__title">A $12M Handshake at an Unlisted SoHo Loft Dinner</div>
@@ -215,31 +217,31 @@
       <a href="/new-york-april-2026" class="report-archive-item">
         <div class="report-archive__meta">
           <time datetime="2026-04-01" class="report-archive__date">Apr 01, 2026</time>
-          <span class="report-archive__tag">SPRING AWAKENING</span>
+          <span class="report-archive__tag">SCENE REPORT</span>
         </div>
         <div class="report-archive__content">
-          <div class="report-archive__title">New York City After SoHo: The Rooms Behind the Calendar</div>
-          <div class="report-archive__excerpt">Why the most relevant private conversations are moving away from traditional member clubs this April.</div>
+          <div class="report-archive__title">NYC's Elite Season: Wall Street & Unlisted Rooms</div>
+          <div class="report-archive__excerpt">How the biggest LP and family office deals in New York are being made behind closed doors this April — away from FinTech Week and the conference crowds.</div>
         </div>
       </a>
       <a href="/new-york-march-2026" class="report-archive-item">
         <div class="report-archive__meta">
           <time datetime="2026-03-01" class="report-archive__date">Mar 01, 2026</time>
-          <span class="report-archive__tag">MEMBER CLUBS</span>
+          <span class="report-archive__tag">SCENE REPORT</span>
         </div>
         <div class="report-archive__content">
-          <div class="report-archive__title">SoHo Member Adjustments</div>
+          <div class="report-archive__title">Soho Member Adjustments — Elite Networking in NYC</div>
           <div class="report-archive__excerpt">A detailed look at the shift in membership filtering across Soho's most established circles.</div>
         </div>
       </a>
       <a href="/new-york-february-2026" class="report-archive-item">
         <div class="report-archive__meta">
           <time datetime="2026-02-01" class="report-archive__date">Feb 01, 2026</time>
-          <span class="report-archive__tag">PRIVATE CREDIT</span>
+          <span class="report-archive__tag">SCENE REPORT</span>
         </div>
         <div class="report-archive__content">
-          <div class="report-archive__title">The Winter Rooms Before the Spring Reset</div>
-          <div class="report-archive__excerpt">A February snapshot of the Upper East Side and SoHo rooms that quietly set New York's Q2 social hierarchy.</div>
+          <div class="report-archive__title">The New Gallery Networking — Elite Networking in NYC</div>
+          <div class="report-archive__excerpt">How private views in independent SoHo galleries quietly became the highest-signal events of Q1.</div>
         </div>
       </a>
     </div>

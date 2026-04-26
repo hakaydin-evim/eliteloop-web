@@ -35,7 +35,10 @@
 /milan-april-2026.html /milan-april-2026 301
 /milano-april-2026 /milan-april-2026 301
 /zurich-april-2026.html /zurich-april-2026 301
-/nyc-april-2026.html /nyc-april-2026 301
+/nyc-april-2026.html /new-york-april-2026 301
+/nyc-mid-april-2026.html /new-york-mid-april-2026 301
+/nyc-march-2026.html /new-york-march-2026 301
+/nyc-february-2026.html /new-york-february-2026 301
 
 # Late-April & new reports
 /istanbul-25-april-2026.html /istanbul-25-april-2026 301
@@ -46,10 +49,17 @@
 /tokyo-late-april-2026.html /tokyo-late-april-2026 301
 /singapore-late-april-2026.html /singapore-late-april-2026 301
 /new-york-late-april-2026.html /new-york-late-april-2026 301
+/new-york-mid-april-2026.html /new-york-mid-april-2026 301
+/new-york-april-2026.html /new-york-april-2026 301
+/new-york-march-2026.html /new-york-march-2026 301
+/new-york-february-2026.html /new-york-february-2026 301
 
 # NYC scene report short aliases
 /nyc-late-april-2026 /new-york-late-april-2026 301
-/nyc-april-2026 /new-york-late-april-2026 301
+/nyc-april-2026 /new-york-april-2026 301
+/nyc-mid-april-2026 /new-york-mid-april-2026 301
+/nyc-march-2026 /new-york-march-2026 301
+/nyc-february-2026 /new-york-february-2026 301
 
 # ── Global Pulse — clean URLs ───────────────────────────
 /global-pulse-26-april-2026.html /global-pulse-26-april-2026 301
@@ -58,4 +68,3 @@
 /global-pulse-23-april-2026.html /global-pulse-23-april-2026 301
 /global-pulse-20-april-2026.html /global-pulse-20-april-2026 301
 /global-pulse-19-april-2026.html /global-pulse-19-april-2026 301
-

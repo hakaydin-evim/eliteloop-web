@@ -44,6 +44,13 @@ const MONTH_MAP = {
     december: '12'
 };
 
+const LEGACY_CANONICAL_OVERRIDES = new Map([
+    ['nyc-april-2026', 'new-york-april-2026'],
+    ['nyc-mid-april-2026', 'new-york-mid-april-2026'],
+    ['nyc-march-2026', 'new-york-march-2026'],
+    ['nyc-february-2026', 'new-york-february-2026']
+]);
+
 function extractTag(content, regex) {
     const match = content.match(regex);
     return match ? match[1].trim() : '';
@@ -103,8 +110,15 @@ function inferDateFromSlug(slug) {
     return null;
 }
 
+function shouldSkipLegacyAlias(slug, knownFiles) {
+    const canonicalSlug = LEGACY_CANONICAL_OVERRIDES.get(slug);
+    if (!canonicalSlug) return false;
+    return knownFiles.has(`${canonicalSlug}.html`);
+}
+
 function buildJson() {
     const files = fs.readdirSync(webDir);
+    const knownFiles = new Set(files);
     const articles = [];
 
     files.forEach(file => {
@@ -121,6 +135,9 @@ function buildJson() {
             const description = extractTag(content, /<meta name="description" content="(.*?)">/i);
             const timeDate = extractTag(content, /<time datetime="([^"]+)"/i);
             const slug = file.replace('.html', '');
+            if (shouldSkipLegacyAlias(slug, knownFiles)) {
+                return;
+            }
             
             // Kategori belirle
             let type = 'Scene Report';

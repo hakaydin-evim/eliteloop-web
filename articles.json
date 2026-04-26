@@ -75,6 +75,21 @@
     "issueFlags": []
   },
   {
+    "title": "New York City Elite Networking &amp; Exclusive Events — EliteLoop",
+    "description": "Discover New York City's private social layer with EliteLoop. Zero Bond, The Core Club, SoHo supper clubs, and curated badge-based access across Manhattan's most selective circles.",
+    "slug": "new-york",
+    "url": "https://eliteloop.app/new-york",
+    "date": "2026-04-25",
+    "type": "City Hub",
+    "filename": "new-york.html",
+    "citySlug": "new-york",
+    "cityName": "New York",
+    "canonicalCitySlug": "new-york",
+    "canonicalCityUrl": "https://eliteloop.app/new-york",
+    "isLegacyAlias": false,
+    "issueFlags": []
+  },
+  {
     "title": "Tokyo Late April 2026: The Ginza Counter That 8 Months of Trying Couldn't Reach | EliteLoop",
     "description": "How a Gold Badge activation unlocked the Ginza omakase counter David had been trying to reach for 8 months — and how Tokyo's shokai system actually works in late April 2026.",
     "slug": "tokyo-late-april-2026",
@@ -82,6 +97,21 @@
     "date": "2026-04-25",
     "type": "Scene Report",
     "filename": "tokyo-late-april-2026.html",
+    "citySlug": "tokyo",
+    "cityName": "Tokyo",
+    "canonicalCitySlug": "tokyo",
+    "canonicalCityUrl": "https://eliteloop.app/tokyo",
+    "isLegacyAlias": false,
+    "issueFlags": []
+  },
+  {
+    "title": "EliteLoop Tokyo | Private Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore private social discovery in Tokyo with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "tokyo",
+    "url": "https://eliteloop.app/tokyo",
+    "date": "2026-04-25",
+    "type": "City Hub",
+    "filename": "tokyo.html",
     "citySlug": "tokyo",
     "cityName": "Tokyo",
     "canonicalCitySlug": "tokyo",
@@ -150,21 +180,6 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Tokyo | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Tokyo with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
-    "slug": "tokyo",
-    "url": "https://eliteloop.app/tokyo",
-    "date": "2026-04-22",
-    "type": "City Hub",
-    "filename": "tokyo.html",
-    "citySlug": "tokyo",
-    "cityName": "Tokyo",
-    "canonicalCitySlug": "tokyo",
-    "canonicalCityUrl": "https://eliteloop.app/tokyo",
-    "isLegacyAlias": false,
-    "issueFlags": []
-  },
-  {
     "title": "Why the Right Room Chooses You — Access Psychology in 2026 | EliteLoop Global Pulse",
     "description": "In 2026, elite social access operates on a logic that most people never encounter: the room selects before you arrive. A Global Pulse dispatch on access psychology, private circles, and why visibility is the only currency that moves the door.",
     "slug": "global-pulse-21-april-2026",
@@ -206,21 +221,6 @@
     "cityName": "Global",
     "canonicalCitySlug": null,
     "canonicalCityUrl": null,
-    "isLegacyAlias": false,
-    "issueFlags": []
-  },
-  {
-    "title": "New York City Elite Networking &amp; Exclusive Events — EliteLoop",
-    "description": "Discover New York City's private social layer with EliteLoop. Zero Bond, The Core Club, SoHo supper clubs, and curated badge-based access across Manhattan's most selective circles.",
-    "slug": "new-york",
-    "url": "https://eliteloop.app/new-york",
-    "date": "2026-04-19",
-    "type": "City Hub",
-    "filename": "new-york.html",
-    "citySlug": "new-york",
-    "cityName": "New York",
-    "canonicalCitySlug": "new-york",
-    "canonicalCityUrl": "https://eliteloop.app/new-york",
     "isLegacyAlias": false,
     "issueFlags": []
   },
@@ -270,21 +270,6 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Singapore | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Singapore with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
-    "slug": "singapore",
-    "url": "https://eliteloop.app/singapore",
-    "date": "2026-04-16",
-    "type": "City Hub",
-    "filename": "singapore.html",
-    "citySlug": "singapore",
-    "cityName": "Singapore",
-    "canonicalCitySlug": "singapore",
-    "canonicalCityUrl": "https://eliteloop.app/singapore",
-    "isLegacyAlias": false,
-    "issueFlags": []
-  },
-  {
     "title": "No Pitch Decks: The $8M Handshake Above DIFC | EliteLoop Dubai",
     "description": "How one European founder bypassed the noisy summits to close a seed round in an unlisted room. EliteLoop's monthly scene report on elite networking and exclusive events in Dubai.",
     "slug": "dubai-mid-april-2026",
@@ -317,19 +302,17 @@
   {
     "title": "A $12M Handshake at an Unlisted SoHo Loft Dinner",
     "description": "How a London hedge-fund manager turned a chaotic Midtown Summit into a quietly negotiated Series B in SoHo. EliteLoop's monthly NYC scene report.",
-    "slug": "nyc-mid-april-2026",
-    "url": "https://eliteloop.app/nyc-mid-april-2026",
+    "slug": "new-york-mid-april-2026",
+    "url": "https://eliteloop.app/new-york-mid-april-2026",
     "date": "2026-04-15",
     "type": "Scene Report",
-    "filename": "nyc-mid-april-2026.html",
-    "citySlug": "nyc",
+    "filename": "new-york-mid-april-2026.html",
+    "citySlug": "new-york",
     "cityName": "New York",
     "canonicalCitySlug": "new-york",
     "canonicalCityUrl": "https://eliteloop.app/new-york",
-    "isLegacyAlias": true,
-    "issueFlags": [
-      "legacy-city-alias"
-    ]
+    "isLegacyAlias": false,
+    "issueFlags": []
   },
   {
     "title": "The €3M Room That Wasn't on Any Event Site | EliteLoop Paris",
@@ -469,19 +452,17 @@
   {
     "title": "NYC's Elite Season: Wall Street & Unlisted Rooms | EliteLoop New York",
     "description": "How the biggest LP and family office deals in New York are being made behind closed doors this April — away from FinTech Week and the conference crowds.",
-    "slug": "nyc-april-2026",
-    "url": "https://eliteloop.app/nyc-april-2026",
+    "slug": "new-york-april-2026",
+    "url": "https://eliteloop.app/new-york-april-2026",
     "date": "2026-04-01",
     "type": "Scene Report",
-    "filename": "nyc-april-2026.html",
-    "citySlug": "nyc",
+    "filename": "new-york-april-2026.html",
+    "citySlug": "new-york",
     "cityName": "New York",
     "canonicalCitySlug": "new-york",
     "canonicalCityUrl": "https://eliteloop.app/new-york",
-    "isLegacyAlias": true,
-    "issueFlags": [
-      "legacy-city-alias"
-    ]
+    "isLegacyAlias": false,
+    "issueFlags": []
   },
   {
     "title": "Paris Golden Season: Art Fairs, Web3 & Elite Circles | EliteLoop Paris",
@@ -521,6 +502,21 @@
     "date": "2026-04-01",
     "type": "Scene Report",
     "filename": "singapore-april-2026.html",
+    "citySlug": "singapore",
+    "cityName": "Singapore",
+    "canonicalCitySlug": "singapore",
+    "canonicalCityUrl": "https://eliteloop.app/singapore",
+    "isLegacyAlias": false,
+    "issueFlags": []
+  },
+  {
+    "title": "EliteLoop Singapore | Private Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore private social discovery in Singapore with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "singapore",
+    "url": "https://eliteloop.app/singapore",
+    "date": "2026-04-01",
+    "type": "City Hub",
+    "filename": "singapore.html",
     "citySlug": "singapore",
     "cityName": "Singapore",
     "canonicalCitySlug": "singapore",
@@ -576,19 +572,17 @@
   {
     "title": "Soho Member Adjustments — Elite Networking in NYC",
     "description": "A detailed look at the shift in membership filtering across Soho's most established circles.",
-    "slug": "nyc-march-2026",
-    "url": "https://eliteloop.app/nyc-march-2026",
+    "slug": "new-york-march-2026",
+    "url": "https://eliteloop.app/new-york-march-2026",
     "date": "2026-03-01",
     "type": "Scene Report",
-    "filename": "nyc-march-2026.html",
-    "citySlug": "nyc",
+    "filename": "new-york-march-2026.html",
+    "citySlug": "new-york",
     "cityName": "New York",
     "canonicalCitySlug": "new-york",
     "canonicalCityUrl": "https://eliteloop.app/new-york",
-    "isLegacyAlias": true,
-    "issueFlags": [
-      "legacy-city-alias"
-    ]
+    "isLegacyAlias": false,
+    "issueFlags": []
   },
   {
     "title": "Marais Dinners and Private Salons | EliteLoop Paris",
@@ -668,19 +662,17 @@
   {
     "title": "The New Gallery Networking — Elite Networking in NYC",
     "description": "How private views in independent SoHo galleries quietly became the highest-signal events of Q1.",
-    "slug": "nyc-february-2026",
-    "url": "https://eliteloop.app/nyc-february-2026",
+    "slug": "new-york-february-2026",
+    "url": "https://eliteloop.app/new-york-february-2026",
     "date": "2026-02-01",
     "type": "Scene Report",
-    "filename": "nyc-february-2026.html",
-    "citySlug": "nyc",
+    "filename": "new-york-february-2026.html",
+    "citySlug": "new-york",
     "cityName": "New York",
     "canonicalCitySlug": "new-york",
     "canonicalCityUrl": "https://eliteloop.app/new-york",
-    "isLegacyAlias": true,
-    "issueFlags": [
-      "legacy-city-alias"
-    ]
+    "isLegacyAlias": false,
+    "issueFlags": []
   },
   {
     "title": "Han River Tech Breakfasts | EliteLoop Seoul",

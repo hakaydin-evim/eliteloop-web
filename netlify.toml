@@ -1,0 +1,8 @@
+[build]
+  command = "node scripts/build-articles-json.js"
+  publish = "."
+
+[[headers]]
+  for = "/articles.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"

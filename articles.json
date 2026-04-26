@@ -1,0 +1,434 @@
+[
+  {
+    "title": "EliteLoop Tokyo | Private Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore private social discovery in Tokyo with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "tokyo",
+    "url": "https://eliteloop.app/tokyo",
+    "date": "2026-04-22",
+    "type": "City Hub",
+    "filename": "tokyo.html"
+  },
+  {
+    "title": "New York City Elite Networking &amp; Exclusive Events — EliteLoop",
+    "description": "Discover New York City's private social layer with EliteLoop. Zero Bond, The Core Club, SoHo supper clubs, and curated badge-based access across Manhattan's most selective circles.",
+    "slug": "new-york",
+    "url": "https://eliteloop.app/new-york",
+    "date": "2026-04-19",
+    "type": "City Hub",
+    "filename": "new-york.html"
+  },
+  {
+    "title": "EliteLoop Paris | Private Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore private social discovery in Paris with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "paris",
+    "url": "https://eliteloop.app/paris",
+    "date": "2026-04-19",
+    "type": "City Hub",
+    "filename": "paris.html"
+  },
+  {
+    "title": "EliteLoop Istanbul — Private Social Discovery & Exclusive Events in Istanbul",
+    "description": "Discover Istanbul's private social layer with EliteLoop. Explore Bosphorus dinners, cultural gala nights, founder rooms, and curated events across the city's most selective circles.",
+    "slug": "istanbul",
+    "url": "https://eliteloop.app/istanbul",
+    "date": "2026-04-18",
+    "type": "City Hub",
+    "filename": "istanbul.html"
+  },
+  {
+    "title": "EliteLoop Dubai | Private Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore private social discovery in Dubai with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "dubai",
+    "url": "https://eliteloop.app/dubai",
+    "date": "2026-04-17",
+    "type": "City Hub",
+    "filename": "dubai.html"
+  },
+  {
+    "title": "EliteLoop Singapore | Private Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore private social discovery in Singapore with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "singapore",
+    "url": "https://eliteloop.app/singapore",
+    "date": "2026-04-16",
+    "type": "City Hub",
+    "filename": "singapore.html"
+  },
+  {
+    "title": "EliteLoop Seoul | Private Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore private social discovery in Seoul with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "seoul",
+    "url": "https://eliteloop.app/seoul",
+    "date": "2026-04-15",
+    "type": "City Hub",
+    "filename": "seoul.html"
+  },
+  {
+    "title": "EliteLoop Zurich | Private Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore private social discovery in Zurich with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "zurich",
+    "url": "https://eliteloop.app/zurich",
+    "date": "2026-04-12",
+    "type": "City Hub",
+    "filename": "zurich.html"
+  },
+  {
+    "title": "EliteLoop Milano | Private Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore private social discovery in Milano with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "milan",
+    "url": "https://eliteloop.app/milan",
+    "date": "2026-04-11",
+    "type": "City Hub",
+    "filename": "milan.html"
+  },
+  {
+    "title": "EliteLoop London | Private Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore private social discovery in London with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "london",
+    "url": "https://eliteloop.app/london",
+    "date": "2026-04-06",
+    "type": "City Hub",
+    "filename": "london.html"
+  },
+  {
+    "title": "Dubai Elite Networking April 2026 — Exclusive Events & Deals | EliteLoop Dubai",
+    "description": "Dubai's golden season. Read EliteLoop's monthly scene report on elite networking, DIFC dinners, and off-plan real estate allocations in April 2026.",
+    "slug": "dubai-24-april-2026",
+    "url": "https://eliteloop.app/dubai-24-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "dubai-24-april-2026.html"
+  },
+  {
+    "title": "Dubai Marina: The Quiet Deals | EliteLoop Dubai",
+    "description": "Why the biggest terms are signed away from the noisy summits this April. EliteLoop's monthly scene report on elite networking and exclusive events in Dubai.",
+    "slug": "dubai-april-2026",
+    "url": "https://eliteloop.app/dubai-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "dubai-april-2026.html"
+  },
+  {
+    "title": "No Pitch Decks: The $8M Handshake Above DIFC | EliteLoop Dubai",
+    "description": "How one European founder bypassed the noisy summits to close a seed round in an unlisted room. EliteLoop's monthly scene report on elite networking and exclusive events in Dubai.",
+    "slug": "dubai-mid-april-2026",
+    "url": "https://eliteloop.app/dubai-mid-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "dubai-mid-april-2026.html"
+  },
+  {
+    "title": "This Week in Private Social Discovery: What Moved Worldwide — EliteLoop Global Pulse",
+    "description": "A weekly read on the cities, conversations, and access patterns that shaped private social discovery worldwide between April 13–19, 2026.",
+    "slug": "global-pulse-19-april-2026",
+    "url": "https://eliteloop.app/global-pulse-19-april-2026",
+    "date": null,
+    "type": "Global Pulse",
+    "filename": "global-pulse-19-april-2026.html"
+  },
+  {
+    "title": "What Your Social Circle Says About You in 2026 — EliteLoop Global",
+    "description": "The badge is no longer a credential — it's an identity signal. In 2026, the social circles you belong to communicate who you are before you say a word. EliteLoop Global Pulse, April 20.",
+    "slug": "global-pulse-20-april-2026",
+    "url": "https://eliteloop.app/global-pulse-20-april-2026",
+    "date": null,
+    "type": "Global Pulse",
+    "filename": "global-pulse-20-april-2026.html"
+  },
+  {
+    "title": "Why the Right Room Chooses You — Access Psychology in 2026 | EliteLoop Global Pulse",
+    "description": "In 2026, elite social access operates on a logic that most people never encounter: the room selects before you arrive. A Global Pulse dispatch on access psychology, private circles, and why visibility is the only currency that moves the door.",
+    "slug": "global-pulse-21-april-2026",
+    "url": "https://eliteloop.app/global-pulse-21-april-2026",
+    "date": null,
+    "type": "Global Pulse",
+    "filename": "global-pulse-21-april-2026.html"
+  },
+  {
+    "title": "The Invisible Credential: How Your Social Circle Became Your Most Powerful Asset — EliteLoop Global",
+    "description": "In 2026, luxury networking trends show your social circle is your strongest credential. Elite social circle guide — how recognition replaced the guest list globally.",
+    "slug": "global-pulse-22-april-2026",
+    "url": "https://eliteloop.app/global-pulse-22-april-2026",
+    "date": null,
+    "type": "Global Pulse",
+    "filename": "global-pulse-22-april-2026.html"
+  },
+  {
+    "title": "The Asymmetry of Access: Why the Best Opportunities Never Reach the Open Market — EliteLoop Global",
+    "description": "In 2026, opportunity is asymmetric. If it reached the public market, the private layer already passed on it. Discover the mechanics of elite access.",
+    "slug": "global-pulse-23-april-2026",
+    "url": "https://eliteloop.app/global-pulse-23-april-2026",
+    "date": null,
+    "type": "Global Pulse",
+    "filename": "global-pulse-23-april-2026.html"
+  },
+  {
+    "title": "How HNWI Social Circles Really Work — EliteLoop Global Pulse",
+    "description": "Why is capital no longer the ultimate filter? Discover how ultra-high-net-worth (HNWI) social circles operate behind closed doors in 2026.",
+    "slug": "global-pulse-24-april-2026",
+    "url": "https://eliteloop.app/global-pulse-24-april-2026",
+    "date": null,
+    "type": "Global Pulse",
+    "filename": "global-pulse-24-april-2026.html"
+  },
+  {
+    "title": "The Geography of Trust — Saturday Rituals | EliteLoop Global Pulse",
+    "description": "Why the dinner that matters never makes the event calendar. An inside look into the geography of trust in elite networking for April 2026.",
+    "slug": "global-pulse-25-april-2026",
+    "url": "https://eliteloop.app/global-pulse-25-april-2026",
+    "date": null,
+    "type": "Global Pulse",
+    "filename": "global-pulse-25-april-2026.html"
+  },
+  {
+    "title": "7 Cities. 7 Elite Signals. This Week in Private Social Discovery — EliteLoop Global",
+    "description": "This week across 7 cities — London, Tokyo, Zurich, Singapore, Dubai, Istanbul, New York — a global read on elite social trends, access patterns, and the signals that matter. EliteLoop Global Pulse, April 26, 2026.",
+    "slug": "global-pulse-26-april-2026",
+    "url": "https://eliteloop.app/global-pulse-26-april-2026",
+    "date": null,
+    "type": "Global Pulse",
+    "filename": "global-pulse-26-april-2026.html"
+  },
+  {
+    "title": "Global Pulse | Private Social Discovery Trends & City Signals | EliteLoop",
+    "description": "Daily intelligence on private social discovery, premium city signals, access psychology, and scene momentum worldwide. Updated every day by EliteLoop.",
+    "slug": "global-pulse",
+    "url": "https://eliteloop.app/global-pulse",
+    "date": null,
+    "type": "Global Pulse",
+    "filename": "global-pulse.html"
+  },
+  {
+    "title": "Istanbul Elite Networking April 2026 — The Yeniköy Protocols | EliteLoop Istanbul",
+    "description": "A report on how unlisted historical mansions in Istanbul serve as the real deal-making venues in April 2026.",
+    "slug": "istanbul-25-april-2026",
+    "url": "https://eliteloop.app/istanbul-25-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "istanbul-25-april-2026.html"
+  },
+  {
+    "title": "Istanbul Elite Scene — April 2026 | EliteLoop",
+    "description": "Istanbul's elite social season opens in April 2026. Sónar Istanbul turns 10, the Film Festival returns to its historic venues, and the Bosphorus terrace season begins. The inside guide for EliteLoop members.",
+    "slug": "istanbul-april-2026",
+    "url": "https://eliteloop.app/istanbul-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "istanbul-april-2026.html"
+  },
+  {
+    "title": "A €4.2M Handshake at an Unlisted Bebek Dinner | EliteLoop Istanbul",
+    "description": "How a Gulf LP quietly closed a seed round at an 8-seat Bosphorus table — while Istanbul's festival crowd looked the other way. EliteLoop's April 2026 Istanbul scene report.",
+    "slug": "istanbul-mid-april-2026",
+    "url": "https://eliteloop.app/istanbul-mid-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "istanbul-mid-april-2026.html"
+  },
+  {
+    "title": "London's Elite Season: Mayfair & Unlisted Networks | EliteLoop London",
+    "description": "Why the biggest private credit and hedge fund deals are shifting completely off the market this April. EliteLoop's monthly scene report on elite networking and exclusive events in London.",
+    "slug": "london-april-2026",
+    "url": "https://eliteloop.app/london-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "london-april-2026.html"
+  },
+  {
+    "title": "The New Gallery Networking | EliteLoop London",
+    "description": "Why the biggest private credit and hedge fund deals are shifting completely off the market this April. EliteLoop's monthly scene report on elite networking and exclusive events in London.",
+    "slug": "london-february-2026",
+    "url": "https://eliteloop.app/london-february-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "london-february-2026.html"
+  },
+  {
+    "title": "The Mayfair Door That Fourteen Months of Trying Couldn't Open | EliteLoop London",
+    "description": "James spent 14 months and 23 introductions trying to reach a London private equity partner. One EliteLoop Gold Badge activation surfaced an unlisted Mayfair dinner. The partner was at the table. EliteLoop London — late April 2026.",
+    "slug": "london-late-april-2026",
+    "url": "https://eliteloop.app/london-late-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "london-late-april-2026.html"
+  },
+  {
+    "title": "Soho Member Adjustments | EliteLoop London",
+    "description": "Why the biggest private credit and hedge fund deals are shifting completely off the market this April. EliteLoop's monthly scene report on elite networking and exclusive events in London.",
+    "slug": "london-march-2026",
+    "url": "https://eliteloop.app/london-march-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "london-march-2026.html"
+  },
+  {
+    "title": "Fuorisalone's Hidden Rooms: Where Milan's Elite Actually Meet | EliteLoop Milano",
+    "description": "While 1,400 events fill the public Fuorisalone programme, Milano's elite networking unfolds in private Brera palazzo courtyards with no listing and no press. EliteLoop's April 2026 Milano scene report.",
+    "slug": "milan-april-2026",
+    "url": "https://eliteloop.app/milan-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "milan-april-2026.html"
+  },
+  {
+    "title": "New York's Unlisted Rooms: Where Late April 2026's Real Decisions Are Made — EliteLoop",
+    "description": "While public rooftops fill with familiar faces, New York's most consequential conversations happen in unlisted SoHo lofts and private Tribeca dinners. EliteLoop's NYC scene report, April 2026.",
+    "slug": "new-york-late-april-2026",
+    "url": "https://eliteloop.app/new-york-late-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "new-york-late-april-2026.html"
+  },
+  {
+    "title": "NYC's Elite Season: Wall Street & Unlisted Rooms | EliteLoop New York",
+    "description": "How the biggest LP and family office deals in New York are being made behind closed doors this April — away from FinTech Week and the conference crowds.",
+    "slug": "nyc-april-2026",
+    "url": "https://eliteloop.app/nyc-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "nyc-april-2026.html"
+  },
+  {
+    "title": "The New Gallery Networking — Elite Networking in NYC",
+    "description": "How private views in independent SoHo galleries quietly became the highest-signal events of Q1.",
+    "slug": "nyc-february-2026",
+    "url": "https://eliteloop.app/nyc-february-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "nyc-february-2026.html"
+  },
+  {
+    "title": "Soho Member Adjustments — Elite Networking in NYC",
+    "description": "A detailed look at the shift in membership filtering across Soho's most established circles.",
+    "slug": "nyc-march-2026",
+    "url": "https://eliteloop.app/nyc-march-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "nyc-march-2026.html"
+  },
+  {
+    "title": "A $12M Handshake at an Unlisted SoHo Loft Dinner",
+    "description": "How a London hedge-fund manager turned a chaotic Midtown Summit into a quietly negotiated Series B in SoHo. EliteLoop's monthly NYC scene report.",
+    "slug": "nyc-mid-april-2026",
+    "url": "https://eliteloop.app/nyc-mid-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "nyc-mid-april-2026.html"
+  },
+  {
+    "title": "Paris Golden Season: Art Fairs, Web3 & Elite Circles | EliteLoop Paris",
+    "description": "As spring awakens the Seine, the Parisian networking season shifts into high gear across culture and tech. EliteLoop's monthly scene report on elite networking and exclusive events in Paris.",
+    "slug": "paris-april-2026",
+    "url": "https://eliteloop.app/paris-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "paris-april-2026.html"
+  },
+  {
+    "title": "Marais Dinners and Private Salons | EliteLoop Paris",
+    "description": "As spring awakens the Seine, the Parisian networking season shifts into high gear across culture and tech. EliteLoop's monthly scene report on elite networking and exclusive events in Paris.",
+    "slug": "paris-march-2026",
+    "url": "https://eliteloop.app/paris-march-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "paris-march-2026.html"
+  },
+  {
+    "title": "The €3M Room That Wasn't on Any Event Site | EliteLoop Paris",
+    "description": "How a London creative director closed a two-year introduction gap at an unlisted 14-seat dinner in the 8th Arrondissement — while Paris lit its monuments for two million. EliteLoop's mid-April 2026 Paris scene report.",
+    "slug": "paris-mid-april-2026",
+    "url": "https://eliteloop.app/paris-mid-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "paris-mid-april-2026.html"
+  },
+  {
+    "title": "Seoul's Quiet Capital Season: Access Before Visibility | EliteLoop Seoul",
+    "description": "Cheongdam dinners, founder tables, and Seoul's private capital rooms are outperforming public summit culture this April. EliteLoop's Seoul scene report maps the city's highest-signal social layer.",
+    "slug": "seoul-april-2026",
+    "url": "https://eliteloop.app/seoul-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "seoul-april-2026.html"
+  },
+  {
+    "title": "Han River Tech Breakfasts | EliteLoop Seoul",
+    "description": "{{ARTICLE_SUBTITLE}} EliteLoop's monthly scene report on elite networking and exclusive events in Seoul.",
+    "slug": "seoul-february-2026",
+    "url": "https://eliteloop.app/seoul-february-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "seoul-february-2026.html"
+  },
+  {
+    "title": "The Shift from Itaewon to Cheongdam | EliteLoop Seoul",
+    "description": "{{ARTICLE_SUBTITLE}} EliteLoop's monthly scene report on elite networking and exclusive events in Seoul.",
+    "slug": "seoul-march-2026",
+    "url": "https://eliteloop.app/seoul-march-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "seoul-march-2026.html"
+  },
+  {
+    "title": "Singapore's Silent Allocation: Beyond the Marina Bay Noise | EliteLoop Singapore",
+    "description": "Why the most significant tech and finance allocations in Singapore this April happened in unlisted rooms at Sentosa Cove, not at public expos.",
+    "slug": "singapore-april-2026",
+    "url": "https://eliteloop.app/singapore-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "singapore-april-2026.html"
+  },
+  {
+    "title": "Marina Bay Family Offices | EliteLoop Singapore",
+    "description": "Why top capital allocators skip the GTM Luxury Asia Pacific convention floor for private tables at 33Club.",
+    "slug": "singapore-march-2026",
+    "url": "https://eliteloop.app/singapore-march-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "singapore-march-2026.html"
+  },
+  {
+    "title": "Tokyo's Selective Season: Golden Week Prelude and the Rooms That Close First | EliteLoop Tokyo",
+    "description": "Tokyo elite networking April 2026 — the private social layer peaks before Golden Week. Roppongi Hills, badge access, the rooms that close first.",
+    "slug": "tokyo-april-2026",
+    "url": "https://eliteloop.app/tokyo-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "tokyo-april-2026.html"
+  },
+  {
+    "title": "Tokyo Late April 2026: The Ginza Counter That 8 Months of Trying Couldn't Reach | EliteLoop",
+    "description": "How a Gold Badge activation unlocked the Ginza omakase counter David had been trying to reach for 8 months — and how Tokyo's shokai system actually works in late April 2026.",
+    "slug": "tokyo-late-april-2026",
+    "url": "https://eliteloop.app/tokyo-late-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "tokyo-late-april-2026.html"
+  },
+  {
+    "title": "Ginza Omakase Circles | EliteLoop Tokyo",
+    "description": "Discover how Tokyo's tech elite bypass massive summits to secure deep tech deals using EliteLoop.",
+    "slug": "tokyo-march-2026",
+    "url": "https://eliteloop.app/tokyo-march-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "tokyo-march-2026.html"
+  },
+  {
+    "title": "Zurich's Quiet Ledger: Where Private Capital Socializes | EliteLoop Zurich",
+    "description": "An April 2026 scene report on elite networking in Zurich, exclusive events around private capital, and why private social discovery works best in low-noise cities.",
+    "slug": "zurich-april-2026",
+    "url": "https://eliteloop.app/zurich-april-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "zurich-april-2026.html"
+  },
+  {
+    "title": "Crypto Valley Private Roundtables | EliteLoop Zurich",
+    "description": "An April 2026 scene report on elite networking in Zurich, exclusive events around private capital, and why private social discovery works best in low-noise cities.",
+    "slug": "zurich-february-2026",
+    "url": "https://eliteloop.app/zurich-february-2026",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "zurich-february-2026.html"
+  }
+]

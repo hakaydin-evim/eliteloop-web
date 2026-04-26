@@ -152,7 +152,7 @@ function buildJson() {
             }
 
             const cityMeta = inferCityMeta(slug, type);
-            const resolvedDate = timeDate || inferDateFromSlug(slug);
+            const resolvedDate = type === 'City Hub' ? null : (timeDate || inferDateFromSlug(slug));
 
             articles.push({
                 title: title || slug,
@@ -170,6 +170,20 @@ function buildJson() {
                 issueFlags: cityMeta.issueFlags
             });
         }
+    });
+
+    const latestSceneReportByCity = new Map();
+    articles.forEach((article) => {
+        if (article.type !== 'Scene Report' || !article.canonicalCitySlug || !article.date) return;
+        const existing = latestSceneReportByCity.get(article.canonicalCitySlug);
+        if (!existing || new Date(article.date) > new Date(existing)) {
+            latestSceneReportByCity.set(article.canonicalCitySlug, article.date);
+        }
+    });
+
+    articles.forEach((article) => {
+        if (article.type !== 'City Hub' || !article.canonicalCitySlug) return;
+        article.date = latestSceneReportByCity.get(article.canonicalCitySlug) || article.date;
     });
 
     // Tarihe göre sırala (en yeni en üstte)

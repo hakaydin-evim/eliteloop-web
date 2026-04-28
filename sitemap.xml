@@ -52,7 +52,25 @@
     <loc>https://eliteloop.app/global-pulse</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-04-29</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/global-pulse-27-april-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-04-27</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/global-pulse-28-april-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-04-28</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/global-pulse-29-april-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-04-29</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/global-pulse-19-april-2026</loc>
@@ -208,7 +226,7 @@
     <loc>https://eliteloop.app/paris</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-29</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/paris-april-2026</loc>
@@ -226,7 +244,13 @@
     <loc>https://eliteloop.app/paris-mid-april-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-19</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/paris-29-april-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-04-29</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/privacy</loc>
@@ -305,6 +329,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-04-25</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/tokyo-28-april-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-04-28</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/tokyo-march-2026</loc>

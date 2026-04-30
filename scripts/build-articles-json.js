@@ -27,6 +27,7 @@ const CITY_RULES = [
     { aliases: ['seoul'], canonicalSlug: 'seoul', name: 'Seoul' },
     { aliases: ['zurich'], canonicalSlug: 'zurich', name: 'Zurich' },
     { aliases: ['milan', 'milano'], canonicalSlug: 'milan', name: 'Milan' },
+    { aliases: ['rome', 'roma'], canonicalSlug: 'rome', name: 'Rome' },
 ];
 
 const MONTH_MAP = {

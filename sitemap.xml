@@ -16,7 +16,7 @@
     <loc>https://eliteloop.app/cities</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-02</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/dubai</loc>
@@ -52,7 +52,19 @@
     <loc>https://eliteloop.app/global-pulse</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-02</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/global-pulse-2-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-02</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/global-pulse-1-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-01</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/global-pulse-30-april-2026</loc>
@@ -142,7 +154,13 @@
     <loc>https://eliteloop.app/istanbul</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-05-02</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/istanbul-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-02</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/istanbul-25-april-2026</loc>
@@ -208,7 +226,7 @@
     <loc>https://eliteloop.app/new-york</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-05-01</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/new-york-april-2026</loc>
@@ -221,6 +239,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/new-york-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-01</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/new-york-late-april-2026</loc>

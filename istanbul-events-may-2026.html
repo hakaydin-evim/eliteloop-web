@@ -107,19 +107,30 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    body { background:#060610; color:#f5f0e8; font-family:'Inter',sans-serif; margin:0; }
-    .topbar { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1.2rem 2rem; background:rgba(6,6,16,0.72); backdrop-filter:blur(14px); border-bottom:1px solid rgba(255,255,255,0.05); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --gold:#c9a02f; --gold-soft:#ebcf79; --bg:#060610; --text:#f5f0e8; }
+    body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; margin:0; }
+    .topbar { position:sticky; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1rem 2rem; background:rgba(6,6,16,0.85); backdrop-filter:blur(14px); border-bottom:1px solid rgba(255,255,255,0.05); }
     .topbar .brand { display:flex; align-items:center; gap:0.6rem; text-decoration:none; color:#f5f0e8; font-weight:600; font-size:0.95rem; }
     .topbar .brand img { width:36px; height:36px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.04); display:block; }
     .topbar__right { display:flex; align-items:center; gap:1rem; }
     .topbar__link { font-size:0.78rem; color:rgba(245,240,232,0.5); text-decoration:none; letter-spacing:0.06em; }
     .topbar__cta { background:linear-gradient(135deg,#b88919 0%,#ebcf79 50%,#b88919 100%); color:#060610; font-weight:700; text-decoration:none; font-size:0.8rem; padding:0.5rem 1.2rem; border-radius:0.4rem; }
-    .article-hero { padding:7rem 2rem 4rem; max-width:860px; margin:0 auto; }
-    .article-eyebrow { font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:#ebcf79; font-weight:600; margin-bottom:1.2rem; }
-    .article-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem,5.8vw,4.2rem); font-weight:600; line-height:1.08; color:#f5f0e8; margin:0 0 1.2rem; }
-    .article-hero__sub { font-size:1.08rem; color:rgba(245,240,232,0.65); line-height:1.75; font-weight:300; margin-bottom:1.5rem; max-width:720px; }
-    .article-meta { display:flex; gap:1.5rem; font-size:0.75rem; color:rgba(245,240,232,0.35); letter-spacing:0.06em; flex-wrap:wrap; }
-    .article-body { max-width:780px; margin:0 auto; padding:0 2rem 6rem; }
+    .article-hero { position:relative; min-height:72vh; display:flex; align-items:flex-end; overflow:hidden; }
+    .article-hero__bg { position:absolute; inset:0; background-image:url('istanbul-hero.jpg'); background-size:cover; background-position:center 45%; }
+    .article-hero__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(6,6,16,1) 0%, rgba(6,6,16,0.72) 42%, rgba(6,6,16,0.25) 100%); }
+    .article-hero__content { position:relative; z-index:2; max-width:980px; padding:0 2rem 4.5rem; margin:0 auto; width:100%; }
+    .article-tag { display:inline-flex; align-items:center; gap:0.5rem; background:rgba(201,160,47,0.12); border:1px solid rgba(201,160,47,0.3); color:var(--gold-soft); font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; padding:0.35rem 0.9rem; border-radius:2rem; margin-bottom:1.2rem; }
+    .article-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.8rem,7vw,5.4rem); font-weight:600; line-height:1.05; color:var(--text); margin:0 0 1.2rem; }
+    .article-hero__sub { font-size:1.08rem; color:rgba(245,240,232,0.68); line-height:1.75; font-weight:300; margin-bottom:1.5rem; max-width:760px; }
+    .article-meta { display:flex; align-items:center; gap:1.5rem; font-size:0.75rem; color:rgba(245,240,232,0.4); letter-spacing:0.06em; flex-wrap:wrap; }
+    .lang-toggle { display:flex; justify-content:center; gap:1rem; margin:3rem auto 1rem; max-width:720px; }
+    .lang-btn { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:rgba(245,240,232,0.6); font-family:'Inter',sans-serif; font-size:0.85rem; font-weight:600; padding:0.6rem 1.5rem; border-radius:2rem; cursor:pointer; transition:all 0.2s; }
+    .lang-btn.active { background:rgba(201,160,47,0.15); border-color:rgba(201,160,47,0.4); color:var(--gold-soft); }
+    .article-body { max-width:780px; margin:0 auto; padding:2rem 2rem 6rem; }
+    .lang-section { display:none; }
+    .lang-section.active { display:block; animation:fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
     .article-body p { font-size:1.02rem; line-height:1.85; color:rgba(245,240,232,0.78); margin-bottom:1.5rem; font-weight:300; }
     .article-body h2 { font-family:'Cormorant Garamond',serif; font-size:1.85rem; color:#f5f0e8; margin:3rem 0 1.2rem; font-weight:600; line-height:1.2; }
     .event-list { display:grid; gap:1rem; margin:1.5rem 0 2rem; }
@@ -152,19 +163,26 @@
     </div>
   </nav>
 
-  <div class="article-hero">
-    <a href="/istanbul" class="back-link">← Istanbul Hub</a>
-    <div class="article-eyebrow">Elite Events Guide · Istanbul · May 2026</div>
-    <h1>Elite Events in Istanbul May 2026</h1>
-    <p class="article-hero__sub">A field guide to Istanbul's May rooms: defence and aerospace, export diplomacy, contemporary art, marina-scale electronic music, tango culture, and carefully filtered festival settings.</p>
-    <div class="article-meta">
-      <time datetime="2026-05-01">May 01, 2026</time>
-      <span>7 verified event signals</span>
-      <span>Istanbul · Turkiye</span>
+  <header class="article-hero">
+    <div class="article-hero__bg"></div>
+    <div class="article-hero__overlay"></div>
+    <div class="article-hero__content">
+      <div class="article-tag">May 2026 · Elite Events Guide · Istanbul</div>
+      <h1>Elite Events in Istanbul May 2026</h1>
+      <p class="article-hero__sub">A field guide to Istanbul's May rooms: defence and aerospace, export diplomacy, contemporary art, marina-scale electronic music, tango culture, and carefully filtered festival settings.</p>
+      <div class="article-meta">
+        <time datetime="2026-05-01">May 01, 2026</time><span>·</span><span>7 verified event signals</span><span>·</span><span>EliteLoop Editorial</span>
+      </div>
     </div>
+  </header>
+
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="switchLang('en')">English</button>
+    <button class="lang-btn" onclick="switchLang('tr')">Türkçe</button>
   </div>
 
-  <div class="article-body">
+  <article class="article-body">
+    <div id="content-en" class="lang-section active">
     <p>Istanbul in May 2026 is unusually useful for people who care about access. The month opens with business and defence-sector rooms, moves into the contemporary art market, then turns toward curated music and culture moments that pull the city's social layer outdoors.</p>
 
     <p>The strongest signal is variety. One week may mean a formal B2B summit in a five-star hotel; the next may mean ArtContact, a marina-scale Adriatique show, or a forest festival at Life Park. The right plan is not to chase volume. It is to choose the room that matches your intent.</p>
@@ -245,7 +263,100 @@
         <a href="/istanbul" class="btn-ghost">Istanbul Hub</a>
       </div>
     </div>
-  </div>
+    </div>
+
+    <div id="content-tr" class="lang-section">
+      <p>Mayıs 2026'da İstanbul, erişim meselesini ciddiye alanlar için alışılmadık derecede verimli. Ay, iş ve savunma sanayi odalarıyla açılıyor; çağdaş sanat pazarına, ardından müzik ve kültür üzerinden daha seçili sosyal ortamlara doğru ilerliyor.</p>
+
+      <p>Buradaki doğru strateji daha fazla yere gitmek değil, niyete uygun odayı seçmek. Bir gün beş yıldızlı otelde B2B bir zirve, başka bir gün ArtContact, Ataköy Marina'da Adriatique ya da Life Park'ta daha filtreli bir festival ortamı olabilir.</p>
+
+      <h2>İstanbul Mayıs 2026 Networking & İş Etkinlikleri</h2>
+      <div class="event-list">
+        <div class="event-item">
+          <div class="event-item__meta">2-3 Mayıs · İstanbul · Business</div>
+          <div class="event-item__title">Global Business Summit Istanbul</div>
+          <div class="event-item__why">Kurumsal, akademik ve politika çevreleri için ayın başında güçlü bir tanışma zemini.</div>
+        </div>
+        <div class="event-item">
+          <div class="event-item__meta">5-9 Mayıs · İstanbul Fuar Merkezi · Defence</div>
+          <div class="event-item__title">SAHA 2026 International Defence and Aerospace Exhibition</div>
+          <div class="event-item__why">Savunma, havacılık, teknoloji, kamu ve stratejik sektör konuklarını aynı yerde toplayan ayın en güçlü B2B erişim noktalarından biri.</div>
+        </div>
+        <div class="event-item">
+          <div class="event-item__meta">7-8 Mayıs · 5 yıldızlı otel · Trade</div>
+          <div class="event-item__title">Turkiye - Arab States Business Summit and Buying Mission</div>
+          <div class="event-item__why">Arap ülkelerinden nitelikli alıcıları ve ithalatçıları Türk ihracatçılarıyla buluşturan kayıtlı bir ticaret programı.</div>
+        </div>
+      </div>
+
+      <h2>Özel Sosyal Deneyimler & Seçili Geceler</h2>
+      <div class="event-list">
+        <div class="event-item">
+          <div class="event-item__meta">9-10 Mayıs · Ataköy Marina Arena · Electronic</div>
+          <div class="event-item__title">X by Adriatique</div>
+          <div class="event-item__why">Waterfront enerji, görsel sanat ve seçici kalabalık profiliyle sıradan konserden çok yüksek sinyalli bir sosyal gece.</div>
+        </div>
+        <div class="event-item">
+          <div class="event-item__meta">23-24 Mayıs · Qubbe Bahçe, Life Park · Music</div>
+          <div class="event-item__title">Sublime Music Festival</div>
+          <div class="event-item__why">Ses, doğa, tasarım ve daha rafine bir kitle üzerine kurulu açık hava festival ortamı.</div>
+        </div>
+      </div>
+
+      <h2>Kültür & Lifestyle Sinyalleri</h2>
+      <div class="event-list">
+        <div class="event-item">
+          <div class="event-item__meta">13-17 Mayıs · Dr. Mimar Kadir Topbaş Merkezi · Art</div>
+          <div class="event-item__title">ArtContact Istanbul 2026</div>
+          <div class="event-item__why">Koleksiyonerler, galeriler, sanatçılar ve sanat profesyonelleri için İstanbul'un Mayıs ayındaki en net çağdaş sanat sinyali.</div>
+        </div>
+        <div class="event-item">
+          <div class="event-item__meta">13-17 Mayıs · İstanbul · Culture</div>
+          <div class="event-item__title">La Ventana Tango Festival Istanbul</div>
+          <div class="event-item__why">Uluslararası maestro ve DJ'lerle daha sıcak, daha yakın temaslı bir kültürel katman.</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <p>İstanbul'da public event çoğu zaman sadece açılış hamlesidir. Asıl değer, etkinlikten sonra gelen yemek, teras ya da daha küçük çevrede oluşur.</p>
+      </div>
+
+      <blockquote>
+        <p>"İstanbul'da doğru oda, çoğu zaman etkinlik takviminde değil; etkinlikten sonra oluşan çevrede görünür."</p>
+      </blockquote>
+
+      <p>Daha geniş şehir katmanı için <a href="/istanbul" class="btn-ghost" style="padding:0.15rem 0.45rem;border-radius:0.25rem;">EliteLoop İstanbul hub</a> üzerinden aylık rehbere, scene report arşivine ve özel sosyal keşif katmanına geçebilirsin.</p>
+
+      <div class="source-list">
+        <h2>Kontrol edilen kaynak sinyalleri</h2>
+        <a href="https://www.sahaexpo.com/en" target="_blank" rel="noreferrer">SAHA Expo</a>
+        <a href="https://delegations.tim.org.tr/event/turkiye-arab-states-business-summit-buying-mission-2026" target="_blank" rel="noreferrer">TIM business summit</a>
+        <a href="https://www.artcontactistanbul.com/en/" target="_blank" rel="noreferrer">ArtContact Istanbul</a>
+        <a href="https://www.laventanatangofestival.com/" target="_blank" rel="noreferrer">La Ventana Tango Festival</a>
+        <a href="https://www.sublimemusicfest.com/" target="_blank" rel="noreferrer">Sublime Music Festival</a>
+        <a href="https://www.electronicalive.com/events/TK/istanbul/x-by-adriatique-atakoy-marina-arena-2026-05-09" target="_blank" rel="noreferrer">X by Adriatique</a>
+      </div>
+
+      <div class="article-cta">
+        <h2>İstanbul'da doğru çevreyi kur.</h2>
+        <p>EliteLoop, public event keşfinden seçili planlara, doğrulanmış profillere ve badge tabanlı erişime geçişi kolaylaştırır.</p>
+        <div class="cta-btns">
+          <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969" class="btn-gold" target="_blank" rel="noreferrer">App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.eliteloop.app" class="btn-ghost" target="_blank" rel="noreferrer">Google Play</a>
+          <a href="/istanbul" class="btn-ghost">İstanbul Hub</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+    </script>
+  </article>
 
   <footer class="footer" style="margin-top:0;">
     <div class="footer-grid">

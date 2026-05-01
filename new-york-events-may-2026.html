@@ -106,19 +106,24 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    body { background:#060610; color:#f5f0e8; font-family:'Inter',sans-serif; margin:0; }
-    .topbar { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1.2rem 2rem; background:rgba(6,6,16,0.72); backdrop-filter:blur(14px); border-bottom:1px solid rgba(255,255,255,0.05); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --gold:#c9a02f; --gold-soft:#ebcf79; --bg:#060610; --text:#f5f0e8; }
+    body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; margin:0; }
+    .topbar { position:sticky; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1rem 2rem; background:rgba(6,6,16,0.85); backdrop-filter:blur(14px); border-bottom:1px solid rgba(255,255,255,0.05); }
     .topbar .brand { display:flex; align-items:center; gap:0.6rem; text-decoration:none; color:#f5f0e8; font-weight:600; font-size:0.95rem; }
     .topbar .brand img { width:36px; height:36px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.04); display:block; }
     .topbar__right { display:flex; align-items:center; gap:1rem; }
     .topbar__link { font-size:0.78rem; color:rgba(245,240,232,0.5); text-decoration:none; letter-spacing:0.06em; }
     .topbar__cta { background:linear-gradient(135deg,#b88919 0%,#ebcf79 50%,#b88919 100%); color:#060610; font-weight:700; text-decoration:none; font-size:0.8rem; padding:0.5rem 1.2rem; border-radius:0.4rem; }
-    .article-hero { padding:7rem 2rem 4rem; max-width:860px; margin:0 auto; }
-    .article-eyebrow { font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:#ebcf79; font-weight:600; margin-bottom:1.2rem; }
-    .article-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem,5.8vw,4.2rem); font-weight:600; line-height:1.08; color:#f5f0e8; margin:0 0 1.2rem; }
-    .article-hero__sub { font-size:1.08rem; color:rgba(245,240,232,0.65); line-height:1.75; font-weight:300; margin-bottom:1.5rem; max-width:720px; }
-    .article-meta { display:flex; gap:1.5rem; font-size:0.75rem; color:rgba(245,240,232,0.35); letter-spacing:0.06em; flex-wrap:wrap; }
-    .article-body { max-width:780px; margin:0 auto; padding:0 2rem 6rem; }
+    .article-hero { position:relative; min-height:72vh; display:flex; align-items:flex-end; overflow:hidden; }
+    .article-hero__bg { position:absolute; inset:0; background-image:url('nyc-hero.jpg'); background-size:cover; background-position:center 42%; }
+    .article-hero__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(6,6,16,1) 0%, rgba(6,6,16,0.72) 42%, rgba(6,6,16,0.25) 100%); }
+    .article-hero__content { position:relative; z-index:2; max-width:980px; padding:0 2rem 4.5rem; margin:0 auto; width:100%; }
+    .article-tag { display:inline-flex; align-items:center; gap:0.5rem; background:rgba(201,160,47,0.12); border:1px solid rgba(201,160,47,0.3); color:var(--gold-soft); font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; padding:0.35rem 0.9rem; border-radius:2rem; margin-bottom:1.2rem; }
+    .article-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.8rem,7vw,5.4rem); font-weight:600; line-height:1.05; color:var(--text); margin:0 0 1.2rem; }
+    .article-hero__sub { font-size:1.08rem; color:rgba(245,240,232,0.68); line-height:1.75; font-weight:300; margin-bottom:1.5rem; max-width:760px; }
+    .article-meta { display:flex; align-items:center; gap:1.5rem; font-size:0.75rem; color:rgba(245,240,232,0.4); letter-spacing:0.06em; flex-wrap:wrap; }
+    .article-body { max-width:780px; margin:0 auto; padding:3rem 2rem 6rem; }
     .article-body p { font-size:1.02rem; line-height:1.85; color:rgba(245,240,232,0.78); margin-bottom:1.5rem; font-weight:300; }
     .article-body h2 { font-family:'Cormorant Garamond',serif; font-size:1.85rem; color:#f5f0e8; margin:3rem 0 1.2rem; font-weight:600; line-height:1.2; }
     .event-list { display:grid; gap:1rem; margin:1.5rem 0 2rem; }
@@ -151,17 +156,18 @@
     </div>
   </nav>
 
-  <div class="article-hero">
-    <a href="/new-york" class="back-link">← New York City Hub</a>
-    <div class="article-eyebrow">Elite Events Guide · New York · May 2026</div>
-    <h1>Elite Events in New York May 2026</h1>
-    <p class="article-hero__sub">A field guide to New York's most useful May rooms: Met Gala week, art-world preview days, finance dinners, private wealth gatherings, and smaller cultural openings where signal matters more than noise.</p>
-    <div class="article-meta">
-      <time datetime="2026-05-01">May 01, 2026</time>
-      <span>7 verified event signals</span>
-      <span>New York City · United States</span>
+  <header class="article-hero">
+    <div class="article-hero__bg"></div>
+    <div class="article-hero__overlay"></div>
+    <div class="article-hero__content">
+      <div class="article-tag">May 2026 · Elite Events Guide · New York</div>
+      <h1>Elite Events in New York May 2026</h1>
+      <p class="article-hero__sub">A field guide to New York's most useful May rooms: Met Gala week, art-world preview days, finance dinners, private wealth gatherings, and smaller cultural openings where signal matters more than noise.</p>
+      <div class="article-meta">
+        <time datetime="2026-05-01">May 01, 2026</time><span>·</span><span>7 verified event signals</span><span>·</span><span>EliteLoop Editorial</span>
+      </div>
     </div>
-  </div>
+  </header>
 
   <div class="article-body">
     <p>New York in May is unusually dense. Fashion, finance, art, and private wealth all move through the city at once, and the public calendar only shows part of the picture. The useful layer is made of preview days, invited dinners, collector rooms, and professional events where the guest mix has already been filtered before the first handshake.</p>

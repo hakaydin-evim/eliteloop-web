@@ -121,6 +121,8 @@ function buildJson() {
     const files = fs.readdirSync(webDir);
     const knownFiles = new Set(files);
     const articles = [];
+    const today = new Date();
+    today.setHours(23, 59, 59, 999);
 
     files.forEach(file => {
         // Sadece .html dosyalarını al, template'leri ve exclude listesindekileri atla
@@ -154,6 +156,10 @@ function buildJson() {
 
             const cityMeta = inferCityMeta(slug, type);
             const resolvedDate = type === 'City Hub' ? null : (timeDate || inferDateFromSlug(slug));
+
+            if (resolvedDate && new Date(resolvedDate) > today) {
+                return;
+            }
 
             articles.push({
                 title: title || slug,

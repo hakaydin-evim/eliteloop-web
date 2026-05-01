@@ -17,6 +17,11 @@ const STATIC_PAGES = [
   { slug: 'support', changefreq: 'yearly', priority: '0.3', file: 'support.html' }
 ];
 
+const LOCALIZED_PAGES = [
+  { slug: 'tr/istanbul-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'tr/istanbul-events-may-2026.html', lastmod: '2026-05-01' },
+  { slug: 'it/rome-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'it/rome-events-may-2026.html', lastmod: '2026-05-01' }
+];
+
 function toIsoDate(value) {
   return new Date(value).toISOString().slice(0, 10);
 }
@@ -43,6 +48,17 @@ function buildStaticEntries() {
     priority: page.priority,
     lastmod: getFileLastmod(page.file)
   }));
+}
+
+function buildLocalizedEntries() {
+  return LOCALIZED_PAGES
+    .filter((page) => fs.existsSync(path.join(webDir, page.file)))
+    .map((page) => ({
+      loc: `${siteUrl}/${page.slug}`,
+      changefreq: page.changefreq,
+      priority: page.priority,
+      lastmod: page.lastmod || getFileLastmod(page.file)
+    }));
 }
 
 function buildArticleEntries() {
@@ -103,6 +119,7 @@ function buildXml(entries) {
 function main() {
   const entries = dedupeEntries([
     ...buildStaticEntries(),
+    ...buildLocalizedEntries(),
     ...buildArticleEntries()
   ]).sort((a, b) => {
     if (a.loc === `${siteUrl}/`) return -1;

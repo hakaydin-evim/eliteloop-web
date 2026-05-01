@@ -39,6 +39,10 @@
       .trim();
 
   const newBadgeHtml = '<span style="display:inline-block;margin-left:10px;padding:2px 7px;background:rgba(201,160,47,0.15);color:#ebcf79;border:1px solid rgba(201,160,47,0.4);border-radius:4px;font-weight:800;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;vertical-align:middle;">NEW</span>';
+  const isCityContent = (article) => ['Events Guide', 'Scene Report'].includes(article.type);
+  const contentLabel = (article) => article.type === 'Events Guide' ? 'Events Guide' : 'Scene Report';
+  const contentTag = (article) => article.type === 'Events Guide' ? 'EVENTS GUIDE' : 'SCENE REPORT';
+  const contentPriority = (article) => article.type === 'Events Guide' ? 0 : 1;
 
   fetch('/articles.json')
     .then((response) => {
@@ -47,14 +51,17 @@
     })
     .then((articles) => {
       const reports = articles
-        .filter((article) => article.type === 'Scene Report' && article.canonicalCitySlug === canonicalPath && article.date)
-        .sort((a, b) => new Date(`${b.date}T00:00:00Z`) - new Date(`${a.date}T00:00:00Z`));
+        .filter((article) => isCityContent(article) && article.canonicalCitySlug === canonicalPath && article.date)
+        .sort((a, b) =>
+          new Date(`${b.date}T00:00:00Z`) - new Date(`${a.date}T00:00:00Z`) ||
+          contentPriority(a) - contentPriority(b)
+        );
 
       if (!reports.length) return;
 
       const [latestReport, ...archiveReports] = reports;
       const cityName = latestReport.cityName || canonicalPath.replace(/-/g, ' ');
-      sectionTitle.textContent = `${cityName} Scene Reports`;
+      sectionTitle.textContent = `${cityName} Events Guides & Reports`;
 
       const featuredContent = featuredCard.querySelector('.scene-card__content') || featuredCard.firstElementChild;
       if (featuredContent) {
@@ -64,10 +71,10 @@
         const read = featuredContent.querySelector('.scene-card__read');
 
         featuredCard.href = `/${latestReport.slug}`;
-        if (tag) tag.innerHTML = `${formatDate(latestReport.date)} · Scene Report ${newBadgeHtml}`;
+        if (tag) tag.innerHTML = `${formatDate(latestReport.date)} · ${contentLabel(latestReport)} ${newBadgeHtml}`;
         if (title) title.textContent = cleanTitle(latestReport.title);
         if (excerpt) excerpt.textContent = cleanExcerpt(latestReport.description);
-        if (read) read.textContent = 'Read full report →';
+        if (read) read.textContent = latestReport.type === 'Events Guide' ? 'Read full guide →' : 'Read full report →';
       }
 
       archiveList.setAttribute('aria-label', `${cityName} report archive`);
@@ -77,7 +84,7 @@
       <a href="/${report.slug}" class="report-archive-item">
         <div class="report-archive__meta">
           <time datetime="${report.date}" class="report-archive__date">${formatShortDate(report.date)}</time>
-          <span class="report-archive__tag">SCENE REPORT</span>
+          <span class="report-archive__tag">${contentTag(report)}</span>
         </div>
         <div class="report-archive__content">
           <div class="report-archive__title">${cleanTitle(report.title)}</div>

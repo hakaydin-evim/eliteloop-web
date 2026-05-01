@@ -694,6 +694,10 @@
           .replace(/\s+\|\s+EliteLoop.*$/i, '')
           .trim();
 
+      const isCityContent = (article) => ['Events Guide', 'Scene Report'].includes(article.type);
+      const contentPriority = (article) => article.type === 'Events Guide' ? 0 : 1;
+      const badgeText = (article) => article.type === 'Events Guide' ? 'NEW GUIDE' : 'NEW REPORT';
+
       const latestDate = new Date('1970-01-01T00:00:00Z');
       const recentThresholdDays = 10;
 
@@ -704,8 +708,11 @@
         })
         .then((articles) => {
           const sceneReports = articles
-            .filter((article) => article.type === 'Scene Report' && article.date)
-            .sort((a, b) => new Date(`${b.date}T00:00:00Z`) - new Date(`${a.date}T00:00:00Z`));
+            .filter((article) => isCityContent(article) && article.date)
+            .sort((a, b) =>
+              new Date(`${b.date}T00:00:00Z`) - new Date(`${a.date}T00:00:00Z`) ||
+              contentPriority(a) - contentPriority(b)
+            );
 
           if (!sceneReports.length) return;
 
@@ -731,12 +738,12 @@
 
             const tag = document.createElement('div');
             tag.className = 'report-item__tag';
-            tag.textContent = `${article.cityName} · ${formatDate(article.date)}`;
+            tag.textContent = `${article.cityName} · ${formatDate(article.date)} · ${article.type}`;
 
             if (isRecent) {
               const badge = document.createElement('span');
               badge.className = 'city-update-badge city-update-badge--new';
-              badge.textContent = 'NEW REPORT';
+              badge.textContent = badgeText(article);
               tag.appendChild(document.createTextNode(' '));
               tag.appendChild(badge);
             }

@@ -117,6 +117,10 @@ function shouldSkipLegacyAlias(slug, knownFiles) {
     return knownFiles.has(`${canonicalSlug}.html`);
 }
 
+function isEventsGuideSlug(slug) {
+    return /-events-(january|february|march|april|may|june|july|august|september|october|november|december)-\d{4}$/i.test(slug);
+}
+
 function buildJson() {
     const files = fs.readdirSync(webDir);
     const knownFiles = new Set(files);
@@ -146,6 +150,8 @@ function buildJson() {
             let type = 'Scene Report';
             if (file.startsWith('global-pulse')) {
                 type = 'Global Pulse';
+            } else if (isEventsGuideSlug(slug)) {
+                type = 'Events Guide';
             } else if (!file.includes('-')) {
                 // Şehir hub'ları genelde tire içermez veya tek tire içerir ama ay/yıl içermez.
                 // Kesin ayrım için: içinde '2026' geçiyorsa report'tur.
@@ -181,7 +187,7 @@ function buildJson() {
 
     const latestSceneReportByCity = new Map();
     articles.forEach((article) => {
-        if (article.type !== 'Scene Report' || !article.canonicalCitySlug || !article.date) return;
+        if (!['Scene Report', 'Events Guide'].includes(article.type) || !article.canonicalCitySlug || !article.date) return;
         const existing = latestSceneReportByCity.get(article.canonicalCitySlug);
         if (!existing || new Date(article.date) > new Date(existing)) {
             latestSceneReportByCity.set(article.canonicalCitySlug, article.date);

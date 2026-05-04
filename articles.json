@@ -1,5 +1,35 @@
 [
   {
+    "title": "Elite Events in Tokyo May 2026",
+    "description": "Natsu Basho sumo hospitality, Web3 investor mixers in Roppongi Hills, private Ginza omakase circles, and Sanja Matsuri VIP access.",
+    "slug": "tokyo-events-may-2026",
+    "url": "https://eliteloop.app/tokyo-events-may-2026",
+    "date": "2026-05-04",
+    "type": "Elite Events Guide",
+    "filename": "tokyo-events-may-2026.html",
+    "citySlug": "tokyo",
+    "cityName": "Tokyo",
+    "canonicalCitySlug": "tokyo",
+    "canonicalCityUrl": "https://eliteloop.app/tokyo",
+    "isLegacyAlias": false,
+    "issueFlags": []
+  },
+  {
+    "title": "Why The Right Room Changes Everything",
+    "description": "In elite social circles, visibility is a liability. True access relies on trust, context, and the power of the invisible introduction.",
+    "slug": "global-pulse-04-may-2026",
+    "url": "https://eliteloop.app/global-pulse-04-may-2026",
+    "date": "2026-05-04",
+    "type": "Global Pulse",
+    "filename": "global-pulse-04-may-2026.html",
+    "citySlug": null,
+    "cityName": "Global",
+    "canonicalCitySlug": null,
+    "canonicalCityUrl": null,
+    "isLegacyAlias": false,
+    "issueFlags": []
+  },
+  {
     "title": "This Week in Elite Social: The Return of the Private Room — EliteLoop Global",
     "description": "A recap of this week's elite social networking trends across New York, London, and Paris. Why private access is replacing public visibility in 2026.",
     "slug": "global-pulse-03-may-2026",

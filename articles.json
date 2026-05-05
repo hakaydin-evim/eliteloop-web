@@ -1,11 +1,30 @@
 [
   {
-    "id": "global-pulse-05-may-2026",
-    "title": "What Your Social Circle Says About You",
-    "date": "May 5, 2026",
-    "url": "global-pulse-05-may-2026.html",
-    "tag": "Identity & Badge Culture",
-    "image": "dubai-hero.jpg"
+    "title": "What Your Social Circle Says About You — EliteLoop Global Pulse",
+    "description": "In 2026, your network is not just a list of contacts — it is your identity, your credential, and your key. Why badge culture is redefining elite access.",
+    "slug": "global-pulse-05-may-2026",
+    "url": "https://eliteloop.app/global-pulse-05-may-2026",
+    "date": "2026-05-05",
+    "type": "Global Pulse",
+    "filename": "global-pulse-05-may-2026.html",
+    "citySlug": null,
+    "cityName": null,
+    "issueFlags": []
+  },
+  {
+    "title": "Elite Events in Dubai — May 2026 | EliteLoop Dubai",
+    "description": "Gulf Family Office Summit, DIFC Web3 Gala, private yacht gatherings and off-market real estate previews. The definitive guide to Dubai elite social calendar May 2026.",
+    "slug": "dubai-events-may-2026",
+    "url": "https://eliteloop.app/dubai-events-may-2026",
+    "date": "2026-05-05",
+    "type": "Events Guide",
+    "filename": "dubai-events-may-2026.html",
+    "citySlug": "dubai",
+    "cityName": "Dubai",
+    "canonicalCitySlug": "dubai",
+    "canonicalCityUrl": "https://eliteloop.app/dubai",
+    "isLegacyAlias": false,
+    "issueFlags": []
   },
   {
     "title": "Elite Events in Tokyo May 2026",

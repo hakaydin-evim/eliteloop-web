@@ -356,15 +356,26 @@
 
     <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1rem;">
 
-      <!-- Today's article — May 5 Global Pulse: Identity & Badge Culture -->
-      <a href="/global-pulse-05-may-2026"
+      <!-- Today's article — May 6 Global Pulse: Quiet Luxury -->
+      <a href="/global-pulse-06-may-2026"
          style="border:1px solid rgba(201,160,47,0.3); border-radius:1rem; padding:1.4rem 1.5rem; text-decoration:none; display:flex; flex-direction:column; gap:0.5rem; background:rgba(201,160,47,0.04); transition:border-color 0.2s, transform 0.2s;"
          onmouseover="this.style.borderColor='rgba(201,160,47,0.6)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(201,160,47,0.3)';this.style.transform='translateY(0)'">
         <div style="display:flex; align-items:center; gap:0.5rem;">
-          <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:#ebcf79; font-weight:700;">Global Pulse · Identity &amp; Badge Culture</span>
+          <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:#ebcf79; font-weight:700;">Global Pulse · Quiet Luxury Behavior</span>
           <span style="background:rgba(201,160,47,0.15); color:#ebcf79; border:1px solid rgba(201,160,47,0.4); font-size:0.54rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; padding:2px 6px; border-radius:999px;">TODAY</span>
         </div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f6f1e7; line-height:1.3;">Quiet Luxury in 2026: Why Access Replaced Aesthetics</div>
+        <div style="font-size:0.8rem; color:rgba(246,241,231,0.55); line-height:1.65; font-weight:300;">The ultimate quiet luxury in 2026 isn't what you wear, but the rooms you can enter. Why hidden social layers are the new flex.</div>
+        <div style="font-size:0.7rem; color:rgba(246,241,231,0.3); margin-top:0.25rem;">May 6, 2026 · 4 min read</div>
+      </a>
+
+      <!-- Yesterday's article — May 5 Global Pulse: Identity & Badge Culture -->
+      <a href="/global-pulse-05-may-2026"
+         style="border:1px solid rgba(255,255,255,0.08); border-radius:1rem; padding:1.4rem 1.5rem; text-decoration:none; display:flex; flex-direction:column; gap:0.5rem; transition:border-color 0.2s, transform 0.2s;"
+         onmouseover="this.style.borderColor='rgba(201,160,47,0.4)';this.style.transform='translateY(-2px)'"
+         onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
+        <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(246,241,231,0.45); font-weight:600;">Global Pulse · Identity &amp; Badge Culture</span>
         <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f6f1e7; line-height:1.3;">What Your Social Circle Says About You</div>
         <div style="font-size:0.8rem; color:rgba(246,241,231,0.55); line-height:1.65; font-weight:300;">In 2026, your network is your identity. Why badge culture is redefining how elite rooms filter access worldwide.</div>
         <div style="font-size:0.7rem; color:rgba(246,241,231,0.3); margin-top:0.25rem;">May 5, 2026 · 4 min read</div>
@@ -471,6 +482,22 @@
 
   <!-- City Grid -->
   <div class="cities-grid">
+    <!-- Miami — LIVE — TODAY'S DISPATCH -->
+    <a href="/miami" class="city-card">
+      <div class="city-card__dispatch-today">🗓️ Today's Dispatch</div>
+      <img src="miami-hero.jpg" alt="Miami elite social scene" class="city-card__img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="city-card__img-placeholder" style="display:none;">🌴</div>
+      <div class="city-card__body">
+        <div class="city-card__status city-card__status--live">🟢 Live <span class="city-update-badge city-update-badge--new">NEW REPORT</span></div>
+        <div class="city-card__name">Miami</div>
+        <div class="city-card__country">USA · Florida</div>
+        <div class="city-card__meta-bar"><span class="city-card__count">📚 2 Scene Reports</span></div>
+        <p class="city-card__desc">From Brickell's high-finance dinners to private yacht gatherings in Biscayne Bay. Unlock the city's hidden layer.</p>
+        <span class="city-card__cta">Explore Miami →</span>
+      </div>
+    </a>
+
     <!-- Rome — LIVE -->
     <a href="/rome" class="city-card">
       <img src="rome-hero.jpg" alt="Rome elite social scene" class="city-card__img"
@@ -593,9 +620,8 @@
       </div>
     </a>
 
-    <!-- Paris — LIVE — TODAY'S DISPATCH -->
+    <!-- Paris — LIVE -->
     <a href="/paris" class="city-card">
-      <div class="city-card__dispatch-today">🗓️ Today's Dispatch</div>
       <img src="paris-hero.jpg" alt="Paris elite social scene" class="city-card__img"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       <div class="city-card__img-placeholder" style="display:none;">🗼</div>
@@ -667,6 +693,7 @@
       <div>
         <h4>Cities</h4>
         <a href="/cities">All Cities</a>
+        <a href="/miami">Miami</a>
         <a href="/istanbul">Istanbul</a>
         <a href="/dubai">Dubai</a>
         <a href="/london">London</a>

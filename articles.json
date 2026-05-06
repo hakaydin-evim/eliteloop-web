@@ -1,5 +1,47 @@
 [
   {
+    "title": "Quiet Luxury in 2026: Why Access Replaced Aesthetics — EliteLoop Global",
+    "description": "Quiet luxury in 2026 — what changed. How unbranded cashmere gave way to unlisted rooms and private social discovery.",
+    "slug": "global-pulse-06-may-2026",
+    "url": "https://eliteloop.app/global-pulse-06-may-2026",
+    "date": "2026-05-06",
+    "type": "Global Pulse",
+    "filename": "global-pulse-06-may-2026.html",
+    "citySlug": null,
+    "cityName": null,
+    "issueFlags": []
+  },
+  {
+    "title": "Elite Events in Miami May 2026 — EliteLoop",
+    "description": "From the exclusive Paddock Club aftermath to private venture capital dinners in Brickell and Design District gallery previews.",
+    "slug": "miami-events-may-2026",
+    "url": "https://eliteloop.app/miami-events-may-2026",
+    "date": "2026-05-06",
+    "type": "Events Guide",
+    "filename": "miami-events-may-2026.html",
+    "citySlug": "miami",
+    "cityName": "Miami",
+    "canonicalCitySlug": "miami",
+    "canonicalCityUrl": "https://eliteloop.app/miami",
+    "isLegacyAlias": false,
+    "issueFlags": []
+  },
+  {
+    "title": "EliteLoop Miami | Private Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore private social discovery in Miami with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "miami",
+    "url": "https://eliteloop.app/miami",
+    "date": "2026-05-06",
+    "type": "City Hub",
+    "filename": "miami.html",
+    "citySlug": "miami",
+    "cityName": "Miami",
+    "canonicalCitySlug": "miami",
+    "canonicalCityUrl": "https://eliteloop.app/miami",
+    "isLegacyAlias": false,
+    "issueFlags": []
+  },
+  {
     "title": "What Your Social Circle Says About You — EliteLoop Global Pulse",
     "description": "In 2026, your network is not just a list of contacts — it is your identity, your credential, and your key. Why badge culture is redefining elite access.",
     "slug": "global-pulse-05-may-2026",

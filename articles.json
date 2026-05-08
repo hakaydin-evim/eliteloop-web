@@ -1,5 +1,16 @@
 [
   {
+    "id": "hkg-events-may-2026",
+    "slug": "hong-kong-events-may-2026",
+    "title": "Elite Events in Hong Kong May 2026",
+    "excerpt": "Luxury industry summits, global health leadership, and French May culture in the vertical city.",
+    "date": "2026-05-08",
+    "cityName": "Hong Kong",
+    "citySlug": "hong-kong",
+    "type": "Events Guide",
+    "image": "hong-kong-hero.jpg"
+  },
+  {
     "id": "syd-events-may-2026",
     "slug": "sydney-events-may-2026",
     "title": "Elite Events in Sydney May 2026",

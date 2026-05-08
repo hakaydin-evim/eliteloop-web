@@ -1,5 +1,16 @@
 [
   {
+    "id": "yyz-events-may-2026",
+    "slug": "toronto-events-may-2026",
+    "title": "Elite Events in Toronto May 2026",
+    "excerpt": "Documentary leadership at Hot Docs, music industry galas, and Yorkville private dining in the 6ix.",
+    "date": "2026-05-08",
+    "cityName": "Toronto",
+    "citySlug": "toronto",
+    "type": "Events Guide",
+    "image": "toronto-hero.jpg"
+  },
+  {
     "id": "sf-events-may-2026",
     "slug": "san-francisco-events-may-2026",
     "title": "Elite Events in San Francisco May 2026",

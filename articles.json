@@ -1,5 +1,16 @@
 [
   {
+    "id": "syd-events-may-2026",
+    "slug": "sydney-events-may-2026",
+    "title": "Elite Events in Sydney May 2026",
+    "excerpt": "Light, music, and ideas at Vivid Sydney, luxury fashion networking at MBFWA, and harbor social circuits.",
+    "date": "2026-05-08",
+    "cityName": "Sydney",
+    "citySlug": "sydney",
+    "type": "Events Guide",
+    "image": "sydney-hero.jpg"
+  },
+  {
     "id": "yyz-events-may-2026",
     "slug": "toronto-events-may-2026",
     "title": "Elite Events in Toronto May 2026",

@@ -145,9 +145,17 @@
     .article-meta__dot { opacity: 0.4; }
 
     /* ── Article Body ── */
+    .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
+
     .article-body {
-      max-width: 720px; margin: 0 auto; padding: 4rem 2rem;
+      max-width: 720px; margin: 0 auto; padding: 2rem 2rem 4rem;
     }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     .article-body p {
       font-size: 1rem; line-height: 1.85; color: rgba(245,240,232,0.8);
       margin-bottom: 1.5rem; font-weight: 300;
@@ -281,8 +289,8 @@
 
   <!-- Article Body -->
   <article class="article-body">
-
-    <p>Madrid in May operates on two distinct layers: the highly visible corporate summits gathering global executives, and the deeply private social rituals occurring in the exclusive lounges of the Salamanca district. As Spain's commercial center, the city demands a nuanced approach to networking—where the most significant deals are closed not in conference halls, but in curated dining rooms and private members' clubs.</p>
+    <div id="content-en" class="lang-section active">
+<p>Madrid in May operates on two distinct layers: the highly visible corporate summits gathering global executives, and the deeply private social rituals occurring in the exclusive lounges of the Salamanca district. As Spain's commercial center, the city demands a nuanced approach to networking—where the most significant deals are closed not in conference halls, but in curated dining rooms and private members' clubs.</p>
     <p>This month is anchored by flagship technology and business events, bringing a surge of international capital to the city. Navigating this landscape requires understanding the quiet signals that dictate access. The public schedule is merely a starting point; true social discovery happens in the rooms adjacent to the main stage.</p>
 
     <hr class="article-divider">
@@ -343,7 +351,51 @@
       </div>
       <div class="article-share__status" aria-live="polite"></div>
     </section>
+    </div>
 
+    <div id="content-es" class="lang-section">
+<p>Madrid en mayo opera en dos niveles distintos: las cumbres corporativas altamente visibles que reúnen a ejecutivos globales y los rituales sociales profundamente privados que tienen lugar en los salones exclusivos del barrio de Salamanca. Como centro comercial de España, la ciudad exige un enfoque matizado para establecer contactos, donde los acuerdos más importantes no se cierran en salas de conferencias, sino en comedores seleccionados y clubes de miembros privados.</p>
+
+    <h2>Liderazgo Corporativo y Cumbres</h2>
+    <p>Mayo sirve como período principal de reunión para el liderazgo empresarial y la estrategia digital en Madrid.</p>
+    <ul>
+      <li><strong>SAP Sapphire Madrid</strong> (19-21 de mayo, IFEMA): Mientras las amplias salas de exposiciones están abiertas a los portadores de acreditaciones, la creación de redes estratégicas ocurre en las cenas ejecutivas exclusivas alrededor del evento.</li>
+      <li><strong>Cumbre Comercial Global</strong> (20-21 de mayo, Centro de Madrid): Un entorno altamente estructurado para establecer contactos de nivel C, centrado en la excelencia de la estrategia de mercado. Asegurar el acceso a las reuniones posteriores a la cumbre es fundamental para el desarrollo empresarial.</li>
+      <li><strong>Desayuno de Líderes Fintech</strong> (25 de mayo, Four Seasons Madrid): Una reunión matutina no cotizada que conecta a ejecutivos bancarios tradicionales con los fundadores de los disruptores fintech de más rápido crecimiento en Europa.</li>
+    </ul>
+
+    <div class="article-highlight">
+      <div class="article-highlight__label">🏅 Información de EliteLoop</div>
+      <p>En el circuito corporativo de Madrid, la acreditación de la conferencia te otorga entrada, pero las invitaciones privadas después del horario laboral te otorgan influencia. EliteLoop te ayuda a identificar las salas donde se realizan los verdaderos negocios.</p>
+    </div>
+
+    <h2>Los Rituales Sociales de Salamanca</h2>
+    <p>El barrio de Salamanca es el epicentro indiscutible de la riqueza establecida y la escena social privada de Madrid. La creación de redes aquí se basa en la confianza y la presentación.</p>
+    <ul>
+      <li><strong>Mixer Privado Salamanca</strong> (15 de mayo, Hotel Meliá Serrano): Contactos sociales de alto nivel para la élite emprendedora y de liderazgo de la ciudad. Este es un entorno seleccionado donde el capital social es la moneda principal.</li>
+      <li><strong>Muestras Culinarias Exclusivas</strong> (Fines de semana de mayo, Jorge Juan): Acceso a degustaciones previas a la apertura y experiencias gastronómicas privadas en algunos de los nuevos restaurantes más esperados del distrito. Las listas de invitados están estrictamente controladas.</li>
+      <li><strong>Exhibición Privada de Arte e Inversión</strong> (28 de mayo, Barrio de Salamanca): Una convergencia de gestión de patrimonios y mecenazgo cultural, que ofrece oportunidades de inversión fuera del mercado a un círculo altamente evaluado.</li>
+    </ul>
+
+    <blockquote>"En Madrid, los negocios pueden comenzar en la sala de juntas, pero se consolidan sobre la mesa en una sala privada en Salamanca. La verdadera red se construye sobre experiencias compartidas, no solo intereses compartidos."</blockquote>
+
+    <div class="source-list">
+      <h2>Señales de origen verificadas</h2>
+      <div>
+        <a href="https://timeout.com/madrid" target="_blank" rel="noreferrer">Time Out Madrid</a>
+        <a href="https://hola.com/lifestyle" target="_blank" rel="noreferrer">HOLA! Lifestyle</a>
+      </div>
+    </div>
+    </div>
+
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+    </script>
   </article>
 
   <!-- Download CTA -->

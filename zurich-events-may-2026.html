@@ -100,7 +100,15 @@
     .article-hero__sub { font-size: 1.1rem; color: rgba(245,240,232,0.65); line-height: 1.8; max-width: 600px; font-weight: 300; }
     .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.85rem; color: rgba(245,240,232,0.4); flex-wrap: wrap; }
 
-    .article-body { max-width: 720px; margin: 0 auto; padding: 4rem 2rem; }
+    .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
+
+    .article-body { max-width: 720px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     .article-body p { font-size: 1.1rem; line-height: 1.9; color: rgba(245,240,232,0.8); margin-bottom: 1.5rem; font-weight: 300; }
     .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--text); font-weight: 600; margin: 2.5rem 0 1rem; }
     .article-body h3 { font-size: 1.15rem; color: var(--gold-soft); font-weight: 600; margin: 2rem 0 0.75rem; }
@@ -147,8 +155,14 @@
     </div>
   </header>
 
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="switchLang('en')">English</button>
+    <button class="lang-btn" onclick="switchLang('de')">Deutsch</button>
+  </div>
+
   <article class="article-body">
-    <p>Zurich in May 2026 is defined by its role as the world's most sophisticated "neutral node"—a place where global capital meets aggressive tech innovation under a banner of absolute discretion. While the city's lakeside promenade is a public marvel, its elite social layer is hidden in plain sight: in the private dining rooms of Paradeplatz and the high-trust social plans of the lake's private estates. In 2026, the Swiss capital has evolved from a financial hub into a global "Room"—a place where participation in the private layer is the only true measure of success.</p>
+    <div id="content-en" class="lang-section active">
+<p>Zurich in May 2026 is defined by its role as the world's most sophisticated "neutral node"—a place where global capital meets aggressive tech innovation under a banner of absolute discretion. While the city's lakeside promenade is a public marvel, its elite social layer is hidden in plain sight: in the private dining rooms of Paradeplatz and the high-trust social plans of the lake's private estates. In 2026, the Swiss capital has evolved from a financial hub into a global "Room"—a place where participation in the private layer is the only true measure of success.</p>
 
     <p>Navigating Zurich's elite layer requires an understanding of the city's unique social grammar. The most critical conversations are no longer happening at the massive public forums, but at private "after-hours" summits and unlisted mixers where the city's power brokers—from banking dynasties to tech pioneers—converge under a banner of high-trust social discovery. Access to these rooms is strictly curated, often requiring a verifiable track record of both professional output and social alignment.</p>
 
@@ -215,7 +229,86 @@
       </div>
       <div class="article-share__status" aria-live="polite"></div>
     </section>
+    </div>
 
+    <div id="content-de" class="lang-section">
+<p>Zürich im Mai 2026 ist definiert durch seine Rolle als der weltweit anspruchsvollste „neutrale Knotenpunkt“ – ein Ort, an dem globales Kapital auf aggressive Tech-Innovation unter dem Banner absoluter Diskretion trifft. Während die Uferpromenade der Stadt ein öffentliches Wunder ist, bleibt ihre Elite-Sozialschicht im Verborgenen: in den privaten Speisesälen am Paradeplatz und den hochvertraulichen Sozialplänen der Privatanwesen am See. Im Jahr 2026 hat sich die Schweizer Hauptstadt von einem Finanzzentrum zu einem globalen „Raum“ entwickelt – einem Ort, an dem die Teilnahme an der privaten Ebene das einzige wahre Maß für Erfolg ist.</p>
+
+    <p>Das Navigieren in Zürichs Elite-Schicht erfordert ein Verständnis der einzigartigen sozialen Grammatik der Stadt. Die kritischsten Gespräche finden nicht mehr in den massiven öffentlichen Foren statt, sondern bei privaten „After-Hours“-Summits und nicht gelisteten Mixern, wo die Machtmakler der Stadt – von Bankendynastien bis hin zu Tech-Pionieren – unter dem Banner hochvertraulicher sozialer Entdeckungen zusammenkommen. Der Zugang zu diesen Räumen ist streng kuratiert und erfordert oft eine nachweisbare Erfolgsbilanz sowohl in beruflicher Hinsicht als auch in sozialer Ausrichtung.</p>
+
+    <p>Während der Frühlingsübergang seinen Höhepunkt erreicht, verlagert sich die soziale Energie der Stadt von den Glastürmen des CBD zu den versteckten Dachterrassen und privaten Kreativzentren, die Zürichs aufstrebende Soziallandschaft definieren. Um sich effektiv in diesen Räumen zu bewegen, muss man nicht nur einen Titel besitzen, sondern auch einen nachweisbaren Beweis für den intellektuellen und sozialen Beitrag zur Vision der Stadt für eine tech-integrierte Luxuszukunft.</p>
+
+    <h2>Networking & Hochkarätiges Business</h2>
+    <p>Der Mai sieht bedeutende Versammlungen für die Tech-, Finanz- und Wealth-Management-Elite, die Entscheidungsträger aus ganz Europa und dem Westen anzieht. Der Fokus liegt in dieser Saison auf „Kapitalsouveränität“ – wie regionales Vermögen in die nächste Generation von KI und Infrastruktur investiert wird.</p>
+    <ul>
+      <li><strong>Paradeplatz Finance Mixer</strong> (12. Mai, Privatclub): Der Flaggschiff-Sozialknotenpunkt für das Schweizer Finanz-Ökosystem. Jenseits der öffentlichen Bürogebäude findet sich das wahre soziale Signal beim exklusiven „Paradeplatz Summit“ und den privaten sozialen Ritualen, die von großen Privatbanken veranstaltet werden. Dies sind die Räume, in denen die regionale Finanz-Roadmap für die nächsten fünf Jahre ausgehandelt wird.</li>
+      <li><strong>Private Wealth Summit</strong> (19. Mai, Baur au Lac): Eine höchst diskrete, hochvertrauliche Versammlung für die weltweit bedeutendsten institutionellen Investoren und Family Offices. Dieser Summit konzentriert sich auf die Schnittstelle zwischen traditionellem Kapital und aufstrebenden Assetklassen. Der Zugang erfolgt streng auf Genehmigungsbasis und wird über private Empfehlungen verwaltet, was ihn zum stärksten sozialen Filter des Monats für die Finanzelite macht.</li>
+      <li><strong>Das „Bahnhofstrasse“ Gründer-Frühstück</strong> (dienstags, Bahnhofstrasse): Eine nicht gelistete morgendliche Sitzung, die die Tech-Unicorn-Gründer der Stadt und die traditionelle Investment-Führung zusammenbringt. Hier trifft die etablierte Finanzmacht Zürichs auf die neue Venture-Economy. Das Gespräch konzentriert sich auf regionale Souveränität und die Zukunft grenzüberschreitender Investitionen.</li>
+      <li><strong>FinTech & Social Capital Mixer</strong> (22. Mai, Finanzviertel): Eine private Versammlung von Leadern digitaler Assets und traditionellen Bankvorständen. Dieser soziale Knotenpunkt konzentriert sich auf die „praktische Anwendung von Finanzinnovationen“. Der Zugang wird nur Personen mit einem nachweisbaren Beitrag zum Finanzdiskurs gewährt.</li>
+    </ul>
+
+    <div class="article-highlight">
+      <div class="article-highlight__label">💡 Der Zürcher Code</div>
+      <p>In Zürich wird das soziale Signal an der „Diskretion“ gemessen – der Fähigkeit, von einer öffentlichen Verbindung zu einer privaten Transaktion mit minimaler Reibung überzugehen. EliteLoop hilft Ihnen, diese Lücke zu schließen, indem wir Ihr Signal verifizieren und Sie mit den hochvertraulichen Räumen verbinden, die die private Ebene der Stadt definieren, noch bevor Sie in ZRH landen.</p>
+    </div>
+
+    <h2>Exklusive Soziale & Kulturelle Rituale</h2>
+    <p>Zürichs soziale Szene ist stark kompartimentiert und arbeitet auf einem System abgestuften Vertrauens. Der Eintritt in die richtigen Kreise erfordert ein etabliertes Netzwerk oder einen verifizierten sozialen Beweis, der mit den ästhetischen und professionellen Werten der Stadt übereinstimmt.</p>
+    <ul>
+      <li><strong>Lake Zurich Private Social</strong> (22. Mai, Privatanwesen): Eine exklusive soziale Versammlung in einem minimalistischen High-End-Anwesen mit Fokus auf Tech-Luxus und globale Geschäftsexpansion. Dies ist ein transaktionaler sozialer Knotenpunkt für diejenigen, die auf den höchsten Ebenen des digital-industriellen Komplexes der Stadt agieren. Der Zugang ist streng genehmigungsbasiert und wird über das EliteLoop-Hochvertrauensprotokoll verwaltet.</li>
+      <li><strong>Bahnhofstrasse Creative Salon</strong> (Mai-Wochenenden, Bahnhofstrasse): Während die Einkaufszentren der Stadt öffentlich sind, bleiben die privaten Salons im Bahnhofstrasse-Viertel der ultimative soziale Filter für die traditionelle Elite und diplomatische Kreise der Stadt. Dies sind die Räume, in denen historische Abstammung auf moderne kreative Kraft trifft, oft veranstaltet in Privatresidenzen mit unvergleichlichem Blick auf den See.</li>
+      <li><strong>Seefeld Art Preview</strong> (Ende Mai, Seefeld): Eine Konvergenz der zeitgenössischen Kunstsammler der Stadt und aufstrebenden Lifestyle-Designer. Dieses Event erkundet das Thema „Digitale Aufrichtigkeit“. Es ist ein hochkarätiger Raum für diejenigen, die Beziehungen zu den neuen kreativen Gönnern der Stadt aufbauen möchten.</li>
+      <li><strong>Die „Unlisted“ Kaffee-Sitzung</strong> (28. Mai, versteckter Garten, Altstadt): Eine private Versammlung von Kulturphilosophen und industriellen Leadern. Diese Sitzung ist der am strengsten bewachte intellektuelle Knotenpunkt der Stadt, wo die Zukunft der europäischen Luxuskultur bei seltenen Kaffees und nicht gelisteten kulinarischen Paarungen debattiert wird.</li>
+    </ul>
+
+    <blockquote>„In Zürich findet sich das wahre Signal in der Präzision – eines Deals, eines Designs und eines Gesprächs. Es ist eine Stadt, die in Resultaten spricht, aber diese Resultate tragen das Gewicht der globalen Industrie.“</blockquote>
+
+    <h2>Elite Dining & Der Paradeplatz-Zirkel</h2>
+    <p>Essen in Zürich ist ein strukturiertes soziales Ritual, fast eine Performance von Status und Absicht. Das Restaurant, das Sie wählen, und vor allem der Tisch, den Sie sich sichern, telegrafiert Ihre Position in der Hierarchie der Stadt mit chirurgischer Präzision.</p>
+    <ul>
+      <li><strong>Die Paradeplatz Exekutiv-Tische</strong> (Den ganzen Monat): In Zürich finden sich die wertvollsten Räume in den privaten Speiseclubs am Paradeplatz. An diesen Tischen werden Fusionen diskutiert und Venture-Runden bei hyperlokaler, saisonaler Küche abgeschlossen. Die Sicherung eines Tisches während der Hauptspeisezeit erfordert langjährige Beziehungen zum Maître d' oder einen verifizierten EliteLoop-Status.</li>
+      <li><strong>Old Town Secret Dining</strong> (Wochenenden): Versteckt hinter unmarkierten Türen in den exklusivsten Vierteln der Stadt, bieten diese kulinarischen Erlebnisse extreme Privatsphäre für hochkarätige Verhandlungen und ruhiges Socializing im Bereich Wohlstand. Der Fokus liegt auf traditionellen Schweizer Aromen, neu interpretiert durch eine moderne, globale Linse.</li>
+      <li><strong>Der „See“ Social Escape</strong> (Ende Mai): Wenn es in der Stadt wärmer wird, beginnt die Elite-Schicht, für Wochenend-Socials auf die privaten Clubs rund um den Zürichsee auszuweichen. Diese Versammlungen sind der Vorbote der Sommersaison und fungieren als wichtiger soziale Filter für den inneren Zirkel der Stadt.</li>
+    </ul>
+
+    <hr class="article-divider">
+
+    <p>Zürichs Elite-Kalender für Mai 2026 ist dicht, aber die Türen sind höchst selektiv. Öffentliche RSVPs bringen Sie in einer Stadt, die Tiefe und verifizierten Ruf schätzt, nur bedingt weiter. Die Sicherung Ihres Platzes in diesen Räumen erfordert den richtigen Badge, die richtige Empfehlung und das richtige Netzwerk. EliteLoop bietet die soziale Infrastruktur, um sicherzustellen, dass Sie nicht nur in der Stadt sind, sondern in dem Raum, in dem die Zukunft entschieden wird.</p>
+
+    <div class="source-list">
+      <h2>Geprüfte Quellensignale</h2>
+      <div>
+        <a href="https://www.zurich.com/" target="_blank" rel="noreferrer">Zürich Offiziell</a>
+        <a href="https://www.bauraulac.ch/" target="_blank" rel="noreferrer">Baur au Lac Events</a>
+        <a href="https://www.tatlerasia.com/zrh" target="_blank" rel="noreferrer">Tatler Europe</a>
+        <a href="https://www.nzz.ch/lifestyle" target="_blank" rel="noreferrer">NZZ Lifestyle</a>
+        <a href="https://www.timeout.com/zurich" target="_blank" rel="noreferrer">Time Out Zürich</a>
+      </div>
+    </div>
+
+    <section class="article-share" data-article-share aria-label="Share this article">
+      <div class="article-share__eyebrow">Diesen Bericht teilen</div>
+      <h3 class="article-share__title">Senden Sie diese Story in die richtigen Räume</h3>
+      <p class="article-share__text">Teilen Sie diesen EliteLoop-Artikel in Ihrem Netzwerk, in Gruppen-Chats oder in Ihrer Timeline und verwandeln Sie jeden Szenenbericht in neuen Discovery-Traffic.</p>
+      <div class="article-share__actions">
+        <button type="button" class="article-share__button article-share__button--primary" data-share-copy>Link kopieren</button>
+        <button type="button" class="article-share__button" data-share-native>Teilen</button>
+        <a class="article-share__link" data-share-network="x" href="https://x.com/intent/tweet" target="_blank" rel="noreferrer">X</a>
+        <a class="article-share__link" data-share-network="linkedin" href="https://www.linkedin.com/sharing/share-offsite" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="article-share__link" data-share-network="whatsapp" href="https://api.whatsapp.com/send" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
+      <div class="article-share__status" aria-live="polite"></div>
+    </section>
+    </div>
+
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+    </script>
   </article>
 
   <section class="article-cta">

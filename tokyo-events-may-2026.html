@@ -101,7 +101,15 @@
     .article-hero__sub { font-size: 1.1rem; color: rgba(245,240,232,0.65); line-height: 1.8; max-width: 600px; font-weight: 300; }
     .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.85rem; color: rgba(245,240,232,0.4); flex-wrap: wrap; }
 
-    .article-body { max-width: 720px; margin: 0 auto; padding: 4rem 2rem; }
+    .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
+
+    .article-body { max-width: 720px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     .article-body p { font-size: 1.1rem; line-height: 1.9; color: rgba(245,240,232,0.8); margin-bottom: 1.5rem; font-weight: 300; }
     .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--text); font-weight: 600; margin: 2.5rem 0 1rem; }
     .article-body h3 { font-size: 1.15rem; color: var(--gold-soft); font-weight: 600; margin: 2rem 0 0.75rem; }
@@ -148,8 +156,14 @@
     </div>
   </header>
 
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="switchLang('en')">English</button>
+    <button class="lang-btn" onclick="switchLang('ja')">日本語</button>
+  </div>
+
   <article class="article-body">
-    <p>Tokyo in May 2026 is defined by its role as the world's most sophisticated "industrial node"—a place where legacy conglomerate power meets aggressive tech innovation under a banner of absolute discipline. While the city's neon-lit streets are a public spectacle, its elite social layer is hidden in plain sight: in the private dining rooms of Roppongi and the high-trust social plans of Ginza. In 2026, the Japanese capital has evolved from a financial hub into a global "Room"—a place where participation in the private layer is the only true measure of success.</p>
+    <div id="content-en" class="lang-section active">
+<p>Tokyo in May 2026 is defined by its role as the world's most sophisticated "industrial node"—a place where legacy conglomerate power meets aggressive tech innovation under a banner of absolute discipline. While the city's neon-lit streets are a public spectacle, its elite social layer is hidden in plain sight: in the private dining rooms of Roppongi and the high-trust social plans of Ginza. In 2026, the Japanese capital has evolved from a financial hub into a global "Room"—a place where participation in the private layer is the only true measure of success.</p>
 
     <p>Navigating Tokyo's elite layer requires an understanding of the city's unique social grammar. The most critical conversations are no longer happening at the massive trade show floors, but at private "after-hours" summits and unlisted mixers where the city's power brokers—from Chaebol leaders to tech pioneers—converge under a banner of high-trust social discovery. Access to these rooms is strictly curated, often requiring a verifiable track record of both professional output and social alignment.</p>
 
@@ -216,7 +230,86 @@
       </div>
       <div class="article-share__status" aria-live="polite"></div>
     </section>
+    </div>
 
+    <div id="content-ja" class="lang-section">
+<p>2026年5月の東京は、世界で最も洗練された「産業ノード」としての役割を果たしています。そこは、伝統的な企業力と、絶対的な規律のもとでのアグレッシブなテック・イノベーションが交差する場所です。ネオン輝く街並みは公のスペクタクルですが、そのエリート社交の層は、人目につかない場所に隠されています。六本木のプライベートダイニングルームや、銀座の高信頼ソーシャルプランの中です。2026年、日本の首都は金融ハブから、プライベートレイヤーへの参加が唯一の真の成功指標となるグローバルな「ルーム（部屋）」へと進化しました。</p>
+
+    <p>東京のエリート層をナビゲートするには、この街独自の社交の文法を理解する必要があります。最も重要な会話は、もはや大規模な展示会場ではなく、プライベートな「アフターアワーズ」サミットや、財閥リーダーからテック・パイオニアまでが集う非公開のミキサーで行われています。これらのルームへのアクセスは厳格にキュレーションされており、専門的な実績と社交的な整合性の両方が検証された実績を必要とすることが多々あります。</p>
+
+    <p>春の移り変わりがピークに達する中、街の社交エネルギーは中心業務地区（CBD）のガラスタワーから、東京の新興ソーシャルランドスケープを象徴する隠れたルーフトップテラスやプライベートクリエイティブハブへと移動します。これらのルームを効果的に行き来するには、単なる肩書きだけでなく、テック統合型ラグジュアリーの未来に向けた、知的かつ社交的な貢献の証明が必要となります。</p>
+
+    <h2>ネットワーキング ＆ ハイステークス・ビジネス</h2>
+    <p>5月には、アジアおよび欧米から意思決定者が集まり、テック、金融、産業のエリートによる重要な会合が開催されます。今シーズンの焦点は「サステナブル・ソブリンティ（持続可能な主権）」であり、次世代のAIやインフラにどのように地域産業が展開されているかに注目が集まっています。</p>
+    <ul>
+      <li><strong>SusHi Tech Tokyo 2026</strong> (5月8–26日、東京ビッグサイト / 有明)：アジアにおけるグローバル・テック・エコシステムの旗艦イベント。メインステージを超えて、真のソーシャルシグナルは招待制の「エグゼクティブ・サミット」や、六本木で開催される大手ベンチャーキャピタル主催のプライベート社交リチュアルの中にあります。これらは、今後5年間の地域テックロードマップが交渉されるルームです。</li>
+      <li><strong>プライベート・ファイナンス・サミット</strong> (5月20日、グランドハイアット東京、六本木ヒルズ)：世界で最も重要な機関投資家のための、極めて慎重かつ高信頼な集い。このサミットは、伝統的な資本と新興アセットクラスの交差点に焦点を当てています。アクセスは厳格な承認制で、紹介を通じて管理されており、金融エリートにとって今月最も強力なソーシャルフィルターとなっています。</li>
+      <li><strong>「六本木」ファウンダー・ブレックファスト</strong> (毎週火曜日、六本木ヒルズ)：市内のテック・ユニコーン創業者と伝統的な投資リーダーシップが一堂に会する非公開の朝食セッション。ここは、東京の確立された金融力と新しいベンチャー経済が出会う場所です。会話は地域主権とクロスボーダー投資の未来に集中しています。</li>
+      <li><strong>ディープテック ＆ ソーシャル・キャピタル・ミキサー</strong> (5月22日、港区)：AIリーダーと伝統的な産業エグゼクティブによるプライベートな集まり。このソーシャルノードは「イノベーションの実践的応用」に焦点を当てています。テック分野の議論への実証済みの貢献がある方にのみアクセスが提供されます。</li>
+    </ul>
+
+    <div class="article-highlight">
+      <div class="article-highlight__label">💡 東京コード</div>
+      <p>東京において、ソーシャルシグナルは「精度」によって測定されます。公の場での繋がりから、摩擦を最小限に抑えてプライベートな取引へと移行する能力です。EliteLoopは、成田に着陸する前から、あなたのシグナルを検証し、街のプライベートレイヤーを定義する高信頼のルームとあなたを繋ぐことで、このギャップを埋めるお手伝いをします。</p>
+    </div>
+
+    <h2>独占的なソーシャル ＆ 文化リチュアル</h2>
+    <p>東京のソーシャルシーンは高度に細分化されており、段階的な信頼システムに基づいて運営されています。適切なサークルに入るには、確立されたネットワーク、または街の美的・専門的価値観に合致する検証済みのソーシャルプルーフが必要です。</p>
+    <ul>
+      <li><strong>銀座プライベート・ミキサー</strong> (5月22日、プライベートラウンジ)：テック・ラグジュアリーとグローバルビジネスの拡大に焦点を当てた、ミニマルでハイエンドなラウンジでの独占的な社交イベント。これは、街のデジタル・産業複合体の最高レベルで活動する人々のためのトランザクショナルなソーシャルノードです。アクセスは厳格な承認制で、EliteLoopの高信頼プロトコルを介して管理されます。</li>
+      <li><strong>表参道クリエイティブ・サロン</strong> (5月中の週末、表参道)：街のモールは公のものですが、表参道のプライベートサロンは、街の伝統的なエリートや外交サークルにとって究極のソーシャルフィルターであり続けています。ここは、歴史的な血統と現代のクリエイティブな力が融合するルームであり、しばしば街の絶景を一望できる個人の邸宅で開催されます。</li>
+      <li><strong>代官山アート・プレビュー</strong> (5月末、代官山)：街の現代アートコレクターと新興ライフスタイルデザイナーの融合点。このイベントは「デジタル・シンセリティ（デジタルの誠実さ）」をテーマにしています。新しいクリエイティブパトロンとの関係構築を目指す人々にとって、非常に強力なソーシャルシグナルを持つルームです。</li>
+      <li><strong>「アンリスティド（非公開）」茶会</strong> (5月28日、谷中の隠れ家的な庭園)：文化哲学者と産業リーダーによるプライベートな集まり。このサロンは、この街で最も守られた知的ノードであり、日本のラグジュアリー文化の未来が、希少な茶と非公開の料理ペアリングとともに議論されます。</li>
+    </ul>
+
+    <blockquote>「東京において、真のシグナルは静寂の中にあります。ネオンの間、未来が放送されるずっと前に、それが囁かれるプライベートなルームの中にあります。」</blockquote>
+
+    <h2>エリート・ダイニング ＆ 港区サーキット</h2>
+    <p>東京でのダイニングは構造化されたソーシャルリチュアルであり、ステータスと意図を示す一種のパフォーマンスです。どのレストランを選ぶか、そして何よりどのテーブルを確保するかが、この街の階層内でのあなたの位置を外科的な精度で伝えます。</p>
+    <ul>
+      <li><strong>港区エグゼクティブ・テーブル</strong> (一ヶ月間)：東京で最も価値のあるルームは、港区のプライベートダイニングクラブにあります。これらのテーブルは、超地元の旬の料理を楽しみながら、合併が議論され、ベンチャーラウンドが成立する場所です。ゴールデンタイムにテーブルを確保するには、支配人との長年の関係、または検証済みのEliteLoopステータスが必要です。</li>
+      <li><strong>銀座シークレット・ダイニング</strong> (週末)：街で最も独占的な地区の表示のない扉の向こうに隠されたこれらのダイニング体験は、ハイレベルな交渉や静かな富の社交のための極限のプライバシーを提供します。焦点は、現代的かつグローバルな視点で再解釈された伝統的な日本の味にあります。</li>
+      <li><strong>「湘南」ソーシャル・エスケープ</strong> (5月末)：街が暖かくなるにつれ、エリート層は週末の社交のために湘南周辺のプライベートクラブへと移動し始めます。これらの集まりは夏のシーズンの前兆であり、街のインナーサークルにとって重要なソーシャルフィルターとして機能します。</li>
+    </ul>
+
+    <hr class="article-divider">
+
+    <p>2026年5月の東京のエリートカレンダーは濃密ですが、その扉は極めて限定的です。深みと検証済みの評判を重視するこの街では、公のRSVPは限界があります。これらのルームに席を確保するには、適切なバッジ、適切な紹介、そして適切なネットワークが必要です。EliteLoopは、あなたが単に街にいるだけでなく、未来が決定されるルームの中にいることを確実にするためのソーシャルインフラを提供します。</p>
+
+    <div class="source-list">
+      <h2>検証済みのソースシグナル</h2>
+      <div>
+        <a href="https://www.sushitech-tokyo.metro.tokyo.lg.jp/" target="_blank" rel="noreferrer">SusHi Tech Tokyo 公式</a>
+        <a href="https://www.grandhyatttokyo.com/" target="_blank" rel="noreferrer">グランドハイアット東京 イベント</a>
+        <a href="https://www.tatlerasia.com/tyo" target="_blank" rel="noreferrer">Tatler Japan</a>
+        <a href="https://www.japantimes.co.jp/lifestyle" target="_blank" rel="noreferrer">The Japan Times Lifestyle</a>
+        <a href="https://www.timeout.com/tokyo" target="_blank" rel="noreferrer">Time Out Tokyo</a>
+      </div>
+    </div>
+
+    <section class="article-share" data-article-share aria-label="Share this article">
+      <div class="article-share__eyebrow">このリポートを共有する</div>
+      <h3 class="article-share__title">このストーリーを適切なサークルに送り届ける</h3>
+      <p class="article-share__text">このEliteLoopの記事を、あなたの高信頼ネットワーク、グループチャット、またはタイムラインで共有し、各シーンリポートを新たな発見トラフィックへと変えましょう。</p>
+      <div class="article-share__actions">
+        <button type="button" class="article-share__button article-share__button--primary" data-share-copy>リンクをコピー</button>
+        <button type="button" class="article-share__button" data-share-native>共有</button>
+        <a class="article-share__link" data-share-network="x" href="https://x.com/intent/tweet" target="_blank" rel="noreferrer">X</a>
+        <a class="article-share__link" data-share-network="linkedin" href="https://www.linkedin.com/sharing/share-offsite" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="article-share__link" data-share-network="whatsapp" href="https://api.whatsapp.com/send" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
+      <div class="article-share__status" aria-live="polite"></div>
+    </section>
+    </div>
+
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+    </script>
   </article>
 
   <section class="article-cta">

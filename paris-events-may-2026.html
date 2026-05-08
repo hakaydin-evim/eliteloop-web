@@ -145,9 +145,17 @@
     .article-meta__dot { opacity: 0.4; }
 
     /* ── Article Body ── */
+    .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
+
     .article-body {
-      max-width: 720px; margin: 0 auto; padding: 4rem 2rem;
+      max-width: 720px; margin: 0 auto; padding: 2rem 2rem 4rem;
     }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     .article-body p {
       font-size: 1rem; line-height: 1.85; color: rgba(245,240,232,0.8);
       margin-bottom: 1.5rem; font-weight: 300;
@@ -281,8 +289,8 @@
 
   <!-- Article Body -->
   <article class="article-body">
-
-    <p>Paris in May is defined by its global luxury influence, its burgeoning status as Europe's premier tech hub, and the deeply entrenched social protocols of the 1st Arrondissement and Le Marais. While the city's architectural landmarks are fiercely public, its most valuable social signals are fiercely private—found in the elaborate salons of Haussmann apartments, the unlisted courtyards of the Rive Gauche, and the heavily guarded backrooms of heritage luxury houses.</p>
+    <div id="content-en" class="lang-section active">
+<p>Paris in May is defined by its global luxury influence, its burgeoning status as Europe's premier tech hub, and the deeply entrenched social protocols of the 1st Arrondissement and Le Marais. While the city's architectural landmarks are fiercely public, its most valuable social signals are fiercely private—found in the elaborate salons of Haussmann apartments, the unlisted courtyards of the Rive Gauche, and the heavily guarded backrooms of heritage luxury houses.</p>
     <p>This month, the Parisian calendar is dominated by two massive centers of gravity: the tech surge of Viva Technology and the luxury spillover from the Cannes Film Festival. Navigating the intersection of these two distinct elite layers requires more than an invitation; it requires an understanding of French social geometry, where access is granted not by what you do, but who introduces you.</p>
 
     <hr class="article-divider">
@@ -341,7 +349,54 @@
       </div>
       <div class="article-share__status" aria-live="polite"></div>
     </section>
+    </div>
 
+    <div id="content-fr" class="lang-section">
+<p>Paris en mai se définit par son influence mondiale dans le domaine du luxe, son statut naissant de premier pôle technologique d'Europe et les protocoles sociaux profondément ancrés du 1er arrondissement et du Marais. Si les monuments architecturaux de la ville sont publics, ses signaux sociaux les plus précieux sont farouchement privés : ils se trouvent dans les salons élaborés des appartements haussmanniens, les cours non répertoriées de la Rive Gauche et les arrière-salles sous haute surveillance des maisons de luxe traditionnelles.</p>
+    <p>Ce mois-ci, le calendrier parisien est dominé par deux événements majeurs : l'essor technologique de Viva Technology et les retombées luxueuses du Festival de Cannes.</p>
+
+    <h2>Réseautage et événements d'affaires</h2>
+    <p>Les affaires à Paris se font rarement dans les salles de conseil. Les transactions les plus importantes en mai ont lieu lors de rencontres sociales organisées pour tester l'alignement culturel avant tout engagement financier.</p>
+    <ul>
+      <li><strong>Viva Technology : Ouverture VIP</strong> (20 mai, Porte de Versailles) : Si VivaTech est le plus grand événement startup et tech d'Europe, le véritable signal se trouve en dehors du salon principal. Les dîners de haut niveau organisés par LVMH et d'autres grands sponsors servent de nœuds de réseautage discrets pour l'élite de la technologie et du capital-risque de la ville.</li>
+      <li><strong>Retombées de Cannes : Réseautage de luxe</strong> (12-23 mai, divers lieux) : Paris sert de base arrière logistique et sociale au Festival de Cannes. Les dirigeants du luxe qui restent dans la capitale organisent une série de soirées dans des clubs privés comme le Silencio, créant un signal social majeur pour l'industrie mondiale de la mode.</li>
+      <li><strong>Petits-déjeuners des fondateurs de Station F</strong> (En cours, 13e arr.) : Les petits-déjeuners privés organisés par les VC européens au sein de l'écosystème Station F sont l'endroit où la prochaine génération de licornes de la tech française est discrètement évaluée.</li>
+    </ul>
+
+    <div class="article-highlight">
+      <div class="article-highlight__label">🍷 EliteLoop Insider</div>
+      <p>À Paris, la vente agressive est considérée comme une erreur sociale fatale. Le protocole exige une longue phase de discussions culturelles et intellectuelles avant de mentionner les affaires.</p>
+    </div>
+
+    <h2>Expériences sociales et culturelles exclusives</h2>
+    <p>La scène sociale parisienne est notoirement impénétrable pour les étrangers. Les événements qui comptent n'ont pas de site web, et l'entrée est déterminée par le curateur de la liste d'invités.</p>
+    <ul>
+      <li><strong>Salons privés de la place Vendôme</strong> (26 mai, 1er arr.) : L'intersection ultime de la richesse patrimoniale et du capital mondial. Ces rassemblements sociaux exclusifs se concentrent sur le réseautage dans la haute joaillerie. L'accès nécessite l'approbation des directeurs VIP mondiaux de la marque.</li>
+      <li><strong>Dîners d'élite : Le circuit du Marais</strong> (En cours, Le Marais) : Les salles les plus prisées se trouvent dans les clubs gastronomiques privés de l'élite créative du Marais. Réserver une table nécessite des relations personnelles ou l'utilisation du réseau de conciergerie vérifié d'EliteLoop.</li>
+      <li><strong>Vernissages nocturnes du Palais de Tokyo</strong> (En cours, 16e arr.) : L'intersection de l'art contemporain et de la vie nocturne parisienne. Les after-parties qui suivent les grands vernissages servent de filtre social pour la jeune classe supérieure de la ville.</li>
+    </ul>
+
+    <blockquote>"À Paris, le vrai signal se trouve dans des salles que le temps lui-même semble avoir oubliées, cachées derrière des portes anonymes du 1er arrondissement."</blockquote>
+
+    <div class="source-list">
+      <h2>Signaux sources vérifiés</h2>
+      <div>
+        <a href="https://vivatechnology.com/" target="_blank" rel="noreferrer">Viva Technology Officiel</a>
+        <a href="https://www.vogue.fr/" target="_blank" rel="noreferrer">Vogue France</a>
+        <a href="https://www.lesechos.fr/" target="_blank" rel="noreferrer">Les Echos (Tech/Business)</a>
+        <a href="https://palaisdetokyo.com/" target="_blank" rel="noreferrer">Palais de Tokyo</a>
+      </div>
+    </div>
+    </div>
+
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+    </script>
   </article>
 
   <!-- Download CTA -->

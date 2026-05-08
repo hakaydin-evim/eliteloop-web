@@ -108,7 +108,15 @@
     .article-hero__sub { font-size: 1.1rem; color: rgba(245,240,232,0.65); line-height: 1.7; max-width: 600px; font-weight: 300; }
     .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.75rem; color: rgba(245,240,232,0.4); flex-wrap: wrap; }
 
-    .article-body { max-width: 750px; margin: 3rem auto; padding: 0 2rem 4rem; }
+    .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
+
+    .article-body { max-width: 750px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     .article-body p { font-size: 1.1rem; line-height: 1.95; color: rgba(245,240,232,0.8); margin-bottom: 1.8rem; font-weight: 300; }
     .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--text); font-weight: 600; margin: 3.5rem 0 1.5rem; border-bottom: 1px solid rgba(235,207,121,0.15); padding-bottom: 0.5rem; }
     .article-body h3 { font-family: 'Inter', sans-serif; font-size: 1.2rem; color: var(--gold-soft); font-weight: 600; margin: 2.5rem 0 0.75rem; }
@@ -154,8 +162,14 @@
     </div>
   </header>
 
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="switchLang('en')">English</button>
+    <button class="lang-btn" onclick="switchLang('es')">Español</button>
+  </div>
+
   <article class="article-body">
-    <p>Mexico City (CDMX) is currently undergoing a radical social transformation. Once defined by its legacy families and industrial conglomerates, the city has become the epicenter of Latin American venture capital and the preferred landing pad for the global "tech-nomad" elite. In May 2026, the real social currency of the city isn't found in the crowded bars of Condesa, but within the "protocol rooms" of Polanco and the unlisted rooftops of Roma Norte.</p>
+    <div id="content-en" class="lang-section active">
+<p>Mexico City (CDMX) is currently undergoing a radical social transformation. Once defined by its legacy families and industrial conglomerates, the city has become the epicenter of Latin American venture capital and the preferred landing pad for the global "tech-nomad" elite. In May 2026, the real social currency of the city isn't found in the crowded bars of Condesa, but within the "protocol rooms" of Polanco and the unlisted rooftops of Roma Norte.</p>
 
     <p>The "Polanco Protocol" refers to the unwritten rules of engagement among the city's highest-signal players. It is a world of private dining rooms, gated garden parties in Lomas de Chapultepec, and late-night deals closed in unmarked architectural marvels. This month, EliteLoop maps the essential social nodes for those seeking to move beyond the tourist layer and into the city's real power centers.</p>
 
@@ -199,6 +213,63 @@
     </div>
 
     <p>This May, Mexico City offers a vibrant masterclass in high-trust social discovery. For those who understand the Polanco Protocol, the city is a landscape of unprecedented opportunity. Navigating this layer requires a guide that understands the nuances of Mexican social dynamics and the importance of verified access. That is exactly the protocol <a href="/mexico-city" class="internal-link">EliteLoop Mexico City</a> provides.</p>
+    </div>
+
+    <div id="content-es" class="lang-section">
+<p>La Ciudad de México (CDMX) está experimentando actualmente una transformación social radical. Una vez definida por sus familias de legado y conglomerados industriales, la ciudad se ha convertido en el epicentro del capital de riesgo latinoamericano y en la plataforma de aterrizaje preferida para la élite global de "nómadas tecnológicos". En mayo de 2026, la verdadera moneda social de la ciudad no se encuentra en los concurridos bares de la Condesa, sino dentro de las "salas de protocolo" de Polanco y las azoteas no registradas de Roma Norte.</p>
+
+    <p>El « Protocolo de Polanco » se refiere a las reglas de compromiso no escritas entre los actores de mayor señal de la ciudad. Es un mundo de comedores privados, fiestas en jardines cerrados en Lomas de Chapultepec y acuerdos de última hora cerrados en maravillas arquitectónicas sin marcar. Este mes, EliteLoop mapea los nodos sociales esenciales para aquellos que buscan ir más allá de la capa turística y adentrarse en los verdaderos centros de poder de la ciudad.</p>
+
+    <h2>Eventos de Networking y Negocios</h2>
+    <p>El networking de negocios en la CDMX es profundamente personal. Las transacciones se construyen sobre "la confianza", que se establece a través de interacciones sociales repetidas en entornos curados. Mayo de 2026 presenta varias reuniones críticas para los asignadores de capital de la región.</p>
+    <ul>
+      <li><strong>Cumbre de Capital de Riesgo LatAm · 12-13 de Mayo :</strong> Centrada en el distrito de Polanco, cerca del Four Seasons, esta cumbre sigue siendo el nodo principal para los GP regionales y los LP visitantes. Mientras que el contenido del escenario es estándar, el « Networking Real » ocurre durante los mixers posteriores a la cumbre en suites privadas donde se discuten los próximos unicornios de LatAm.</li>
+      <li><strong>Cenas de Liderazgo Fintech Polanco · 15 de Mayo :</strong> Una serie de cenas privadas y no listadas que conectan a los fundadores de las fintechs más grandes de la CDMX con inversores europeos visitantes. El acceso está estrictamente regulado por la identidad.</li>
+      <li><strong>Mesa Redonda sobre Patrimonio Soberano Mexicano · 19 de Mayo :</strong> Una sesión informativa de alto nivel para líderes institucionales, celebrada en una suite ejecutiva privada con vistas al parque de Chapultepec. El desbordamiento social tras este evento es el nodo de mayor señal del mes para el capital legado.</li>
+    </ul>
+
+    <blockquote>« En la Ciudad de México, el trato no se hace en la oficina. Se hace con el tercer mezcal en una habitación donde todo el mundo ya ha sido avalado. »</blockquote>
+
+    <h2>Cenas Exclusivas y Experiencias Sociales Privadas</h2>
+    <p>Cenar es el principal ritual social de la élite mexicana. En la CDMX, el restaurante es un teatro de poder donde las tablas de asientos y el estado de la reserva funcionan como marcadores sociales.</p>
+    <ul>
+      <li><strong>Noche de Salón Privado en Pujol · 20 de Mayo :</strong> Mientras que el salón principal de Pujol es un destino global, el salón privado sigue siendo el sanctasanctórum para los corredores de poder de la ciudad. EliteLoop identifica las noches específicas en las que el salón pasa de la alta cocina al descubrimiento social estratégico.</li>
+      <li><strong>Mixers Ejecutivos en Azoteas de Roma Norte :</strong> Una serie de reuniones en azoteas sin marcar y sin marca en Roma Norte que atienden específicamente al conjunto de líderes tecnológicos y creativos. Estos eventos no se anuncian; son rituales sociales no registrados accesibles a través del estado verificado.</li>
+      <li><strong>Sociales Privados en Casa Gilardi :</strong> Exclusivos recorridos centrados en la arquitectura seguidos de cócteles íntimos para un grupo altamente seleccionado de élites internacionales y locales. Estas sesiones cierran la brecha entre el patrimonio cultural de la ciudad y su moderna capa social.</li>
+    </ul>
+
+    <h2>Eventos Culturales y de Estilo de Vida para el Círculo de Élite</h2>
+    <p>El calendario cultural de la CDMX sirve como filtro para la capa social de alto patrimonio neto de la ciudad. Mayo de 2026 presenta varios eventos diseñados para los círculos filantrópicos y de coleccionistas.</p>
+    <ul>
+      <li><strong>Residual de Zona Maco: Visitas de Coleccionistas Privados :</strong> Aunque la semana principal del arte ha pasado, mayo ve una serie de visitas privadas en casas organizadas por los coleccionistas más importantes de la ciudad. Estos son los principales nodos sociales para el conjunto de dinero antiguo mexicano.</li>
+      <li><strong>Museo Soumaya Después de Hora para Filántropos · 27 de Mayo :</strong> Una velada privada guiada por un curador para grandes donantes y líderes culturales visitantes. Este evento es un nodo social de alta señal para aquellos que buscan conectar con el liderazgo filantrópico de la ciudad.</li>
+      <li><strong>Fiestas en el Jardín de Lomas de Chapultepec :</strong> A medida que el clima primaveral se asienta, las fincas de Lomas acogen una serie de fiestas en el jardín no listadas que sirven como capa de networking no oficial para las familias de negocios heredadas de la ciudad.</li>
+    </ul>
+
+    <div class="article-highlight">
+      <div class="article-highlight__label">Inteligencia Social</div>
+      <p>Moverse a través de la capa social privada de la CDMX requiere más que una invitación; requiere prueba social. Utilice EliteLoop para verificar su identidad.</p>
+    </div>
+
+    <div class="source-list" aria-label="Signales de fuente verificadas CDMX Mayo 2026">
+      <h2>Fuentes verificadas</h2>
+      <a href="https://www.eluniversal.com.mx/estilos/" target="_blank" rel="noreferrer">El Universal Estilos</a>
+      <a href="https://www.reforma.com/" target="_blank" rel="noreferrer">Reforma</a>
+      <a href="https://www.timeoutmexico.mx/" target="_blank" rel="noreferrer">Time Out Mexico City</a>
+      <a href="https://www.chilango.com/" target="_blank" rel="noreferrer">Chilango</a>
+    </div>
+
+    <p>Este mayo, la Ciudad de México ofrece una vibrante clase magistral de descubrimiento social de alta confianza. Para aquellos que entienden el Protocolo de Polanco, la ciudad es un paisaje de oportunidades sin precedentes. Navegar por esta capa requiere una guía que entienda los matices de la dinámica social mexicana y la importancia del acceso verificado. Eso es exactamente el protocolo que ofrece <a href="/mexico-city" class="internal-link">EliteLoop Ciudad de México</a>.</p>
+    </div>
+
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+    </script>
   </article>
 
   <section class="article-cta">

@@ -145,9 +145,17 @@
     .article-meta__dot { opacity: 0.4; }
 
     /* ── Article Body ── */
+    .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
+
     .article-body {
-      max-width: 720px; margin: 0 auto; padding: 4rem 2rem;
+      max-width: 720px; margin: 0 auto; padding: 2rem 2rem 4rem;
     }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     .article-body p {
       font-size: 1rem; line-height: 1.85; color: rgba(245,240,232,0.8);
       margin-bottom: 1.5rem; font-weight: 300;
@@ -281,8 +289,8 @@
 
   <!-- Article Body -->
   <article class="article-body">
-
-    <p>Munich's elite scene is famously discreet. Unlike the overt displays of wealth seen in London or Dubai, the Bavarian capital operates on a strict principle of understatement. In May 2026, the city's social calendar is anchored by "Various Others," the preeminent contemporary art festival, and the residual energy of the Munich Creative Business Week (MCBW). While the galleries and public design exhibitions are open to all, the true social signal is found in the private vernissages, invite-only collector dinners, and the high-trust dining rituals that define the city's upper echelons.</p>
+    <div id="content-en" class="lang-section active">
+<p>Munich's elite scene is famously discreet. Unlike the overt displays of wealth seen in London or Dubai, the Bavarian capital operates on a strict principle of understatement. In May 2026, the city's social calendar is anchored by "Various Others," the preeminent contemporary art festival, and the residual energy of the Munich Creative Business Week (MCBW). While the galleries and public design exhibitions are open to all, the true social signal is found in the private vernissages, invite-only collector dinners, and the high-trust dining rituals that define the city's upper echelons.</p>
     <p>Navigating Munich's elite layer requires understanding its dual nature: the deep-rooted traditional wealth of the Brienner Quartier and the dynamic, international influence of the city's thriving tech and design sectors. This month, accessing the right rooms means bridging both worlds.</p>
 
     <hr class="article-divider">
@@ -341,7 +349,54 @@
       </div>
       <div class="article-share__status" aria-live="polite"></div>
     </section>
+    </div>
 
+    <div id="content-de" class="lang-section">
+<p>Münchens Elite-Szene ist für ihre Diskretion bekannt. Im Gegensatz zur offenen Zurschaustellung von Reichtum in London oder Dubai operiert die bayerische Landeshauptstadt nach einem strengen Prinzip des Understatements. Im Mai 2026 wird der gesellschaftliche Kalender der Stadt durch "Various Others", das herausragende zeitgenössische Kunstfestival, und die verbleibende Energie der Munich Creative Business Week (MCBW) geprägt.</p>
+    <p>Während die Galerien und Designausstellungen für die Öffentlichkeit zugänglich sind, findet sich das wahre soziale Signal in den privaten Vernissagen, Sammler-Dinners und den von hohem Vertrauen geprägten Dining-Ritualen, die die oberen Ränge der Stadt definieren.</p>
+
+    <h2>Networking & Business Events</h2>
+    <p>Das Geschäftsleben in München wird von langfristigen Beziehungen angetrieben. Die Networking-Events in diesem Mai spiegeln eine Mischung aus internationaler Mobilität von Führungskräften und lokaler Designführerschaft wider.</p>
+    <ul>
+      <li><strong>MCBW Design Leadership Gala</strong> (4.-10. Mai, Urban Colab): Die Abschlussgala ist ein wichtiger Knotenpunkt, an dem Führungskräfte des Industriedesigns auf Venture Capital treffen.</li>
+      <li><strong>Access MBA Munich</strong> (14. Mai, Westin Grand): Ein stark strukturiertes, strategisches Treffen für Executive Networking und ein primäres Signal für den professionellen Talentpool der Stadt.</li>
+      <li><strong>Isar Valley Tech Mixer</strong> (20. Mai, Werksviertel-Mitte): Ein nicht öffentliches Treffen für Gründer und Angel-Investoren im Münchner Deep-Tech-Ökosystem.</li>
+    </ul>
+
+    <div class="article-highlight">
+      <div class="article-highlight__label">🥨 EliteLoop Insider</div>
+      <p>In München wird der Status an dem Tisch gemessen, an dem man sitzt, nicht an dem Auto, mit dem man ankommt. Großspurige Vorstellungen stoßen oft auf höfliche Distanz. Das effektivste Protokoll besteht darin, über gemeinsame kulturelle oder industrielle Interessen eine Basis zu schaffen, bevor man geschäftliche Themen anspricht.</p>
+    </div>
+
+    <h2>Exklusive soziale Erlebnisse</h2>
+    <p>Kultur ist die wichtigste Währung für soziale Mobilität in München. Der Mai-Kalender bietet deutliche Gelegenheiten, mit den Kulturförderern der Stadt in Kontakt zu treten.</p>
+    <ul>
+      <li><strong>Various Others - Private Previews</strong> (14.-24. Mai, verschiedene Galerien): Die privaten Galerie-Previews und Eröffnungsdinner bieten Networking mit hohem Signalwert innerhalb der internationalen Kunst- und Investment-Community.</li>
+      <li><strong>Die Schwabinger Tische: Private Dining Series</strong> (Fortlaufend, Schwabing): Wenn das Wetter wärmer wird, verlagert sich das soziale Zentrum nach außen zu privaten Garten-Dinners und exklusiven Tischen in Schwabing.</li>
+      <li><strong>Bayerische Staatsoper Premium-Empfänge</strong> (Fortlaufend, Nationaltheater): Die Pausen während der Premieren der Oper bleiben ein unverzichtbarer Networking-Knotenpunkt für Münchens traditionelle Elite.</li>
+    </ul>
+
+    <blockquote>"Das wahre München findet man nicht auf der Theresienwiese, sondern in den ruhigen, baumgesäumten Innenhöfen Schwabings und den diskreten Vorstandsräumen mit Blick auf die Isar."</blockquote>
+
+    <div class="source-list">
+      <h2>Verifizierte Quellensignale</h2>
+      <div>
+        <a href="https://www.variousothers.com/" target="_blank" rel="noreferrer">Various Others Offiziell</a>
+        <a href="https://www.mcbw.de/" target="_blank" rel="noreferrer">MCBW</a>
+        <a href="https://www.sueddeutsche.de/muenchen" target="_blank" rel="noreferrer">Süddeutsche Zeitung</a>
+        <a href="https://www.staatsoper.de/" target="_blank" rel="noreferrer">Bayerische Staatsoper</a>
+      </div>
+    </div>
+    </div>
+
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+    </script>
   </article>
 
   <!-- Download CTA -->

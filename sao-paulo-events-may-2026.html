@@ -102,7 +102,15 @@
     .article-hero__sub { font-size: 1.1rem; color: rgba(245,240,232,0.65); line-height: 1.8; max-width: 600px; font-weight: 300; }
     .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.85rem; color: rgba(245,240,232,0.4); flex-wrap: wrap; }
 
-    .article-body { max-width: 720px; margin: 0 auto; padding: 4rem 2rem; }
+    .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
+
+    .article-body { max-width: 720px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     .article-body p { font-size: 1.1rem; line-height: 1.9; color: rgba(245,240,232,0.8); margin-bottom: 1.5rem; font-weight: 300; }
     .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--text); font-weight: 600; margin: 2.5rem 0 1rem; }
     .article-body h3 { font-size: 1.15rem; color: var(--gold-soft); font-weight: 600; margin: 2rem 0 0.75rem; }
@@ -149,8 +157,14 @@
     </div>
   </header>
 
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="switchLang('en')">English</button>
+    <button class="lang-btn" onclick="switchLang('pt')">Português</button>
+  </div>
+
   <article class="article-body">
-    <p>São Paulo is a city built on the concept of the "closed circuit." While its scale is overwhelming, its elite social layer is remarkably compact, focused heavily on the Jardins district and the financial corridors of Itaim Bibi and Faria Lima. In May 2026, the city's social calendar is driven by high-stakes business summits and a burgeoning cultural scene that demands a high level of social currency for entry. To understand São Paulo is to understand that the most important deals aren't signed in glass towers, but at the dinner tables of the Jardins.</p>
+    <div id="content-en" class="lang-section active">
+<p>São Paulo is a city built on the concept of the "closed circuit." While its scale is overwhelming, its elite social layer is remarkably compact, focused heavily on the Jardins district and the financial corridors of Itaim Bibi and Faria Lima. In May 2026, the city's social calendar is driven by high-stakes business summits and a burgeoning cultural scene that demands a high level of social currency for entry. To understand São Paulo is to understand that the most important deals aren't signed in glass towers, but at the dinner tables of the Jardins.</p>
 
     <p>Navigating São Paulo requires an understanding of the "Paulistano Protocol"—a blend of informal warmth and rigorous social gatekeeping. The most valuable connections this month are not made in hotel lobbies, but in the private dining rooms and high-trust social plans that operate parallel to the city's major industry events. The city values loyalty and long-term presence over transient participation, making it one of the most challenging but rewarding environments for those who gain entry to its inner circle.</p>
 
@@ -217,7 +231,86 @@
       </div>
       <div class="article-share__status" aria-live="polite"></div>
     </section>
+    </div>
 
+    <div id="content-pt" class="lang-section">
+<p>São Paulo é uma cidade construída sobre o conceito do "circuito fechado". Embora sua escala seja impressionante, sua camada social de elite é notavelmente compacta, focada intensamente no bairro dos Jardins e nos corredores financeiros do Itaim Bibi e Faria Lima. Em maio de 2026, o calendário social da cidade é impulsionado por cúpulas de negócios de alto nível e uma cena cultural crescente que exige um alto nível de capital social para entrada. Entender São Paulo é entender que os negócios mais importantes não são assinados em torres de vidro, mas nas mesas de jantar dos Jardins.</p>
+
+    <p>Navegar em São Paulo requer a compreensão do "Protocolo Paulistano"—uma mistura de calor informal e rigorosa curadoria social. As conexões mais valiosas deste mês não são feitas em lobbies de hotéis, mas nas salas de jantar privadas e nos planos sociais de alta confiança que operam paralelamente aos grandes eventos da indústria. A cidade valoriza a lealdade e a presença de longo prazo sobre a participação passageira, tornando-a um dos ambientes mais desafiadores, porém recompensadores, para quem ganha entrada em seu círculo interno.</p>
+
+    <p>À medida que o Hemisfério Sul se aproxima dos meses mais frios, a energia social da cidade torna-se mais focada e centrada em ambientes internos. Os salões privados do Itaim Bibi tornam-se os principais hubs para a elite financeira, enquanto as galerias dos Jardins hospedam uma série de previews exclusivos que atuam como um importante filtro social para o mês de maio.</p>
+
+    <h2>Networking & Negócios de Alto Nível</h2>
+    <p>O coração financeiro do Brasil bate na Faria Lima, e em maio de 2026, o networking está focado na interseção de luxo, viagens e private equity. O foco desta temporada é a "Resiliência Sustentável"—como o mercado brasileiro está se adaptando às mudanças econômicas globais, mantendo sua identidade de luxo única.</p>
+    <ul>
+      <li><strong>ILTM Latin America</strong> (4 a 7 de Maio, Fundação Bienal): O padrão ouro para a indústria de viagens de luxo. Além das reuniões de negócios individuais no icônico edifício Niemeyer, o verdadeiro sinal social é encontrado na gala de abertura apenas para convidados e nos eventos noturnos privados organizados por grandes marcas de hospitalidade. Estas são as salas onde as tendências de viagens da América Latina para os próximos cinco anos são ditadas por quem as desenha.</li>
+      <li><strong>EBS - Evento Business Show</strong> (27 e 28 de Maio, Centro de Convenções Rebouças): Um encontro crítico para o setor de MICE e networking corporativo. As sessões de "Speed Meeting" são o principal atrativo para quem busca alinhamento profissional rápido, mas os mixers executivos no bairro vizinho de Pinheiros são onde as verdadeiras parcerias estratégicas são forjadas em um ambiente de maior confiança.</li>
+      <li><strong>Mixers Privados na Faria Lima</strong> (Maio): Durante todo o mês, os clubes privados e lounges executivos ao longo da Avenida Faria Lima hospedam uma série de mixers não listados focados na interseção tecnologia-finanças. Estas salas são acessíveis apenas através de indicação direta e descoberta baseada em badges, tornando-as os nós mais eficientes para quem busca influenciar o fluxo de capital da cidade.</li>
+      <li><strong>Série de Cafés da Manhã "Itaim Executive"</strong> (Terças-feiras, Itaim Bibi): Uma série especializada de sessões matinais reunindo fundadores de venture capital e gestores de family offices tradicionais. O foco é na "Nova Economia do Brasil" e na integração da IA em setores industriais tradicionais. O acesso é concedido apenas a quem possui um score social EliteLoop verificável.</li>
+    </ul>
+
+    <div class="article-highlight">
+      <div class="article-highlight__label">💡 O Código Paulistano</div>
+      <p>Em São Paulo, "A Mesa" é a unidade social primária. Seja um almoço de negócios no Itaim ou um longo jantar nos Jardins, a capacidade de garantir uma reserva específica e hospedar um grupo de alta confiança é o sinal definitivo da sua posição na camada privada da cidade. O acesso não é comprado; é concedido através do consenso.</p>
+    </div>
+
+    <h2>Rituais Sociais & Culturais Exclusivos</h2>
+    <p>A cultura em SP é um esporte de alto contato. A elite da cidade usa a arte e a música como pano de fundo para um networking social sofisticado, e maio é um dos meses mais ativos para esses rituais de alto sinal.</p>
+    <ul>
+      <li><strong>Concertos Candlelight: Série Privada Jardins</strong> (22 de Maio, Local Secreto): Cenários musicais íntimos no coração do bairro dos Jardins. Estes concertos atraem a elite intelectual e criativa da cidade, oferecendo uma alternativa tranquila e de alto sinal aos nós sociais mais barulhentos da cidade. O local é tipicamente uma residência privada ou um espaço cultural não público, revelado apenas 24 horas antes do evento.</li>
+      <li><strong>Previews de Galerias nos Jardins</strong> (Maio): Maio marca o início de várias novas exposições nas principais galerias da cidade. As visualizações privadas nos Jardins atuam como um grande filtro social, onde a riqueza tradicional da cidade encontra a nova classe criativa. Estes são nós essenciais para quem deseja entender as forças culturais que moldam a identidade da cidade.</li>
+      <li><strong>Salão de Arte "Paulista"</strong> (15 de Maio, Próximo ao MASP): Um encontro não listado dos patronos de arte mais significativos da cidade e colecionadores globais. Este salão foca no futuro da arte contemporânea brasileira no mercado global. O acesso é estritamente baseado em aprovação e gerenciado via indicação privada.</li>
+      <li><strong>Sessões de Jazz no Rooftop</strong> (Quintas à noite, Vila Olímpia): Um nó social de alta confiança para a elite profissional mais jovem da cidade. Estas sessões oferecem uma atmosfera mais relaxada para construir capital social, enquanto desfrutam de alguns dos melhores talentos musicais da cidade em um ambiente altamente curado.</li>
+    </ul>
+
+    <blockquote>"Em São Paulo, a discrição não é apenas uma preferência; é a moeda da elite. As apresentações mais importantes são aquelas que acontecem em salas que você não encontra no mapa, e conversas que nunca chegam ao registro público."</blockquote>
+
+    <h2>Elite Dining & A Camada do Itaim</h2>
+    <p>Jantar em São Paulo é um ritual social estruturado, quase uma performance de status e intenção. O restaurante que você escolhe e, mais importante, a mesa que você garante telegrafam sua posição na hierarquia da cidade com precisão milimétrica.</p>
+    <ul>
+      <li><strong>As Salas de Jantar Privadas do Itaim Bibi</strong> (Todo o mês): Em São Paulo, as salas mais valiosas são encontradas nas áreas de jantar privadas do coração financeiro da cidade. Estas mesas são onde o futuro da cidade é debatido e onde as alianças sociais mais significativas são formadas. Garantir uma mesa durante o horário de pico do almoço requer anos de presença estabelecida ou um status EliteLoop verificado.</li>
+      <li><strong>Jantares em Jardins Secretos nos Jardins</strong> (Finais de semana): Escondidos atrás de portas sem marcação no bairro de luxo mais antigo da cidade, estas experiências culinárias oferecem privacidade extrema para negociações de alto nível e socialização de riqueza silenciosa. O foco é em ingredientes tradicionais brasileiros reimaginados através de uma lente moderna e global.</li>
+      <li><strong>O Circuito de Final de Semana em "Guarujá"</strong> (Final de maio): À medida que o mês termina, a camada de elite começa a se deslocar para as propriedades costeiras do Guarujá para encontros sociais privados de fim de semana. Estas reuniões são o precursor da temporada de férias e funcionam como um importante filtro social para o círculo interno da cidade. O acesso a esses clubes de praia privados é o sinal definitivo de integração social.</li>
+    </ul>
+
+    <hr class="article-divider">
+
+    <p>O calendário de elite de São Paulo para maio de 2026 é denso, mas as portas são altamente seletivas. RSVPs públicos só levarão você até certo ponto em uma cidade que valoriza a profundidade em vez da amplitude. Garantir seu lugar nestas salas exige o badge certo, a apresentação certa e a rede certa. O EliteLoop fornece a infraestrutura social para garantir que você não seja apenas um espectador na cidade, mas um participante nas salas que definem seu futuro.</p>
+
+    <div class="source-list">
+      <h2>Sinais de fontes verificados</h2>
+      <div>
+        <a href="https://www.iltmlatinamerica.com/" target="_blank" rel="noreferrer">ILTM Latin America</a>
+        <a href="https://www.feiraebs.com.br/" target="_blank" rel="noreferrer">EBS Business Show</a>
+        <a href="https://feverup.com/pt/sao-paulo/candlelight" target="_blank" rel="noreferrer">Candlelight São Paulo</a>
+        <a href="https://vejasp.abril.com.br/" target="_blank" rel="noreferrer">Veja São Paulo</a>
+        <a href="https://glamurama.uol.com.br/" target="_blank" rel="noreferrer">Glamurama</a>
+      </div>
+    </div>
+
+    <section class="article-share" data-article-share aria-label="Condividi questo articolo">
+      <div class="article-share__eyebrow">Compartilhar este Report</div>
+      <h3 class="article-share__title">Envie esta história para os círculos certos</h3>
+      <p class="article-share__text">Compartilhe este artigo do EliteLoop em suas redes de alta confiança e transforme cada report de cena em novo tráfego de descoberta.</p>
+      <div class="article-share__actions">
+        <button type="button" class="article-share__button article-share__button--primary" data-share-copy>Copiar Link</button>
+        <button type="button" class="article-share__button" data-share-native>Compartilhar</button>
+        <a class="article-share__link" data-share-network="x" href="https://x.com/intent/tweet" target="_blank" rel="noreferrer">X</a>
+        <a class="article-share__link" data-share-network="linkedin" href="https://www.linkedin.com/sharing/share-offsite" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="article-share__link" data-share-network="whatsapp" href="https://api.whatsapp.com/send" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
+      <div class="article-share__status" aria-live="polite"></div>
+    </section>
+    </div>
+
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+    </script>
   </article>
 
   <section class="article-cta">

@@ -101,7 +101,15 @@
     .article-hero__sub { font-size: 1.1rem; color: rgba(245,240,232,0.65); line-height: 1.8; max-width: 600px; font-weight: 300; }
     .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.85rem; color: rgba(245,240,232,0.4); flex-wrap: wrap; }
 
-    .article-body { max-width: 720px; margin: 0 auto; padding: 4rem 2rem; }
+    .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
+
+    .article-body { max-width: 720px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     .article-body p { font-size: 1.1rem; line-height: 1.9; color: rgba(245,240,232,0.8); margin-bottom: 1.5rem; font-weight: 300; }
     .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--text); font-weight: 600; margin: 2.5rem 0 1rem; }
     .article-body h3 { font-size: 1.15rem; color: var(--gold-soft); font-weight: 600; margin: 2rem 0 0.75rem; }
@@ -148,8 +156,14 @@
     </div>
   </header>
 
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="switchLang('en')">English</button>
+    <button class="lang-btn" onclick="switchLang('ar')">العربية</button>
+  </div>
+
   <article class="article-body">
-    <p>Riyadh in May 2026 is defined by its role as the world's most sophisticated "sovereign node"—a place where global capital meets aggressive tech innovation under a banner of absolute discipline. While the city's KAFD skyline is a public marvel, its elite social layer is hidden in plain sight: in the private majlises of Al Nakheel and the high-trust social plans of Diriyah. In 2026, the Saudi capital has evolved from a regional hub into a global "Room"—a place where participation in the private layer is the only true measure of success.</p>
+    <div id="content-en" class="lang-section active">
+<p>Riyadh in May 2026 is defined by its role as the world's most sophisticated "sovereign node"—a place where global capital meets aggressive tech innovation under a banner of absolute discipline. While the city's KAFD skyline is a public marvel, its elite social layer is hidden in plain sight: in the private majlises of Al Nakheel and the high-trust social plans of Diriyah. In 2026, the Saudi capital has evolved from a regional hub into a global "Room"—a place where participation in the private layer is the only true measure of success.</p>
 
     <p>Navigating Riyadh's elite layer requires an understanding of the city's unique social grammar. The most critical conversations are no longer happening at the massive trade show floors, but at private "after-hours" summits and unlisted mixers where the city's power brokers—from sovereign wealth allocators to tech pioneers—converge under a banner of high-trust social discovery. Access to these rooms is strictly curated, often requiring a verifiable track record of both professional output and social alignment.</p>
 
@@ -216,7 +230,86 @@
       </div>
       <div class="article-share__status" aria-live="polite"></div>
     </section>
+    </div>
 
+    <div id="content-ar" class="lang-section">
+<p>تتميز الرياض في مايو 2026 بدورها كأكثر "عقدة سيادية" تطوراً في العالم - مكان يلتقي فيه رأس المال العالمي مع الابتكار التقني الجريء تحت راية الانضباط المطلق. بينما يعد أفق مركز الملك عبد الله المالي أعجوبة عامة، فإن طبقتها الاجتماعية النخبة مخفية في مرأى الجميع: في المجالس الخاصة في حي النخيل والخطط الاجتماعية عالية الثقة في الدرعية. في عام 2026، تطورت العاصمة السعودية من مركز إقليمي إلى "غرفة" عالمية - مكان تعتبر فيه المشاركة في الطبقة الخاصة هي المقياس الحقيقي الوحيد للنجاح.</p>
+
+    <p>يتطلب التنقل في طبقة النخبة في الرياض فهماً للقواعد الاجتماعية الفريدة للمدينة. لم تعد أهم المحادثات تحدث في طوابق المعارض التجارية الضخمة، بل في قمم "ما بعد الساعات" الخاصة والخلاطات غير المدرجة حيث يلتقي صانعو القرار في المدينة - من مخصصي الثروة السيادية إلى رواد التقنية - تحت راية الاكتشاف الاجتماعي عالي الثقة. يتم تنسيق الوصول إلى هذه الغرف بدقة، وغالباً ما يتطلب سجلاً حافلاً يمكن التحقق منه لكل من المخرجات المهنية والمحاذاة الاجتماعية.</p>
+
+    <p>مع وصول الربيع إلى ذروته، تنتقل الطاقة الاجتماعية للمدينة من الأبراج الزجاجية في مركز الملك عبد الله المالي إلى مجالس الأفنية المخفية والمراكز الإبداعية الخاصة التي تحدد المشهد الاجتماعي الناشئ في الرياض. للتحرك بفعالية عبر هذه الغرف، يجب ألا يمتلك المرء مجرد لقب، بل إثباتاً يمكن التحقق منه للمساهمة الفكرية والاجتماعية في خريطة طريق رؤية المملكة 2030.</p>
+
+    <h2>الشبكات والأعمال عالية المخاطر</h2>
+    <p>يشهد شهر مايو تجمعات هامة لنخبة الطيران والتقنية والأمن، مما يجذب صانعي القرار من جميع أنحاء العالم إلى قلب نجد. التركيز هذا الموسم هو على "البنية التحتية السيادية" - كيف يتم نشر الصناعات الإقليمية في الجيل القادم من السفر والدفاع العالمي.</p>
+    <ul>
+      <li><strong>منتدى مستقبل الطيران 2026</strong> (20-22 مايو، الرياض): الحدث الأبرز لمنظومة الطيران العالمية. بعيداً عن أرض المعرض الرئيسية، توجد الإشارة الاجتماعية الحقيقية في "المائدة المستديرة الوزارية" المدعوة فقط والطقوس الاجتماعية الخاصة التي تستضيفها شركات الطيران الكبرى في الدرعية. هذه هي الغرف حيث يتم التفاوض على خريطة طريق الطيران العالمية للعقد القادم.</li>
+      <li><strong>قمة قيادة الأمن</strong> (24 مايو، مركز الملك عبد الله المالي): تجمع سري للغاية وعالي الثقة لأهم مستثمري الأمن المؤسسيين في العالم. تركز هذه القمة على تقاطع السيادة السيبرانية والدفاع التقليدي. الوصول حصري وبناءً على الموافقة ويتم إدارته عبر إحالة خاصة، مما يجعله أقوى فلتر اجتماعي في الشهر لنخبة الأمن.</li>
+      <li><strong>فطور مؤسسي "مركز الملك عبد الله المالي"</strong> (أيام الثلاثاء، مركز الملك عبد الله المالي): جلسة صباحية غير مدرجة تجمع بين مؤسسي الشركات التقنية المليارية (اليونيكورن) في المدينة وقيادة الاستثمار التقليدي. هذا هو المكان الذي تلتقي فيه القوة المالية الراسخة في الرياض مع اقتصاد المشاريع الجديد. يتركز الحديث على السيادة الإقليمية ومستقبل الاستثمار عبر الحدود.</li>
+      <li><strong>خلاط تقنية الفضاء ورأس المال الاجتماعي</strong> (28 مايو، الدرعية): تجمع خاص لمهندسي الفضاء ومخصصي رأس المال التقليدي. تركز هذه العقدة الاجتماعية على "التطبيق العملي للابتكار المجري". يتم توفير الوصول فقط لأولئك الذين لديهم مساهمة يمكن التحقق منها في خطاب الفضاء.</li>
+    </ul>
+
+    <div class="article-highlight">
+      <div class="article-highlight__label">💡 كود الرياض</div>
+      <p>في الرياض، يتم قياس الإشارة الاجتماعية بـ "الدقة" - القدرة على الانتقال من اتصال عام إلى معاملة خاصة بأقل قدر من الاحتكاك. يساعدك EliteLoop على سد هذه الفجوة من خلال التحقق من إشارتك وتوصيلك بالغرف عالية الثقة التي تحدد الطبقة الخاصة للمدينة قبل أن تهبط في مطار الملك خالد الدولي.</p>
+    </div>
+
+    <h2>الطقوس الاجتماعية والثقافية الحصرية</h2>
+    <p>المشهد الاجتماعي في الرياض مجزأ للغاية ويعمل بنظام الثقة المتدرجة. يتطلب الدخول إلى الدوائر الصحيحة شبكة قائمة أو إثباتاً اجتماعياً يمكن التحقق منه يتماشى مع القيم الجمالية والمهنية للمدينة.</p>
+    <ul>
+      <li><strong>طقوس المجلس الخاص</strong> (24 مايو، النخيل): تجمع اجتماعي حصري في مجلس راقٍ وبسيط يركز على الفخامة التقنية والتوسع التجاري العالمي. هذه عقدة اجتماعية معاملاتية لأولئك الذين يعملون في أعلى مستويات المجمع الرقمي الصناعي للمملكة. الوصول حصري وبناءً على الموافقة ويتم إدارته عبر بروتوكول EliteLoop عالي الثقة.</li>
+      <li><strong>صالون الدرعية الإبداعي</strong> (عطلات نهاية الأسبوع في مايو، الدرعية): بينما حدائق المدينة عامة، تظل الصالونات الخاصة في الدرعية هي الفلتر الاجتماعي النهائي لنخبة المدينة التقليدية والدوائر الدبلوماسية. هذه هي الغرف حيث تلتقي السلالة التاريخية مع القوة الإبداعية الحديثة، وغالباً ما يتم استضافتها في مساكن خاصة مع إطلالات لا مثيل لها على الموقع التراثي لليونسكو.</li>
+      <li><strong>معاينة فنون منطقة جاكس</strong> (أواخر مايو، منطقة جاكس): تقارب بين جامعي الفن المعاصر في المدينة ومصممي أسلوب الحياة الناشئين. يستكشف هذا الحدث موضوع "الإخلاص الرقمي". إنها غرفة عالية الإشارة لأولئك الذين يتطلعون إلى بناء علاقات مع رعاة الإبداع الجدد في المدينة.</li>
+      <li><strong>جلسة تذوق الطعام "غير المدرجة"</strong> (29 مايو، مطبخ مخفي، العليا): تجمع خاص للفلاسفة الثقافيين والقادة الصناعيين. هذه الجلسة هي أكثر العقد الفكرية حراسة في المدينة، حيث يتم مناقشة مستقبل ثقافة الفخامة السعودية على أنواع نادرة من القهوة وتوليفات طهي غير مدرجة.</li>
+    </ul>
+
+    <blockquote>"في الرياض، توجد الإشارة الحقيقية في العمق - للصفقة، وللتصميم، وللمحادثة. إنها مدينة تتحدث بالنتائج، لكن هذه النتائج تحمل ثقل الصناعة العالمية."</blockquote>
+
+    <h2>تناول الطعام الفاخر ودائرة مركز الملك عبد الله المالي</h2>
+    <p>تناول الطعام في الرياض هو طقس اجتماعي منظم، يكاد يكون أداءً للمكانة والقصد. المطعم الذي تختاره، والأهم من ذلك، الطاولة التي تحجزها، توضح موقعك في هرم المدينة بدقة جراحية.</p>
+    <ul>
+      <li><strong>طاولات كبار التنفيذيين في مركز الملك عبد الله المالي</strong> (طوال الشهر): في الرياض، توجد أثمن الغرف في نوادي الطعام الخاصة في مركز الملك عبد الله المالي. هذه الطاولات هي حيث تتم مناقشة عمليات الاندماج ويتم إغلاق جولات المشاريع على مأكولات موسمية محلية للغاية. يتطلب تأمين طاولة خلال ساعة العشاء الرئيسية علاقات طويلة الأمد مع مدير المطعم أو حالة EliteLoop تم التحقق منها.</li>
+      <li><strong>تناول الطعام السري في الدرعية</strong> (عطلات نهاية الأسبوع): مخبأة خلف أبواب غير مميزة في أكثر أحياء المملكة حصرياً، توفر هذه التجارب الطهوية خصوصية قصوى للمفاوضات رفيعة المستوى والتواصل الاجتماعي للثروة الهادئة. التركيز على نكهات نجد التقليدية التي أعيد تصورها من خلال عدسة عالمية حديثة.</li>
+      <li><strong>الهروب الاجتماعي "الصحراوي"</strong> (أواخر مايو): مع ارتفاع حرارة المدينة، تبدأ طبقة النخبة في الانتقال نحو المخيمات الخاصة في صحراء الثمامة لقضاء عطلات نهاية الأسبوع الاجتماعية. هذه التجمعات هي مقدمة لموسم الصيف وتعمل كفلتر اجتماعي مهم للدائرة الداخلية للمدينة.</li>
+    </ul>
+
+    <hr class="article-divider">
+
+    <p>تقويم النخبة في الرياض لشهر مايو 2026 كثيف، لكن الأبواب انتقائية للغاية. لن تأخذك الردود العامة على الدعوات إلا إلى حد معين في مدينة تقدر العمق والسمعة التي تم التحقق منها. يتطلب تأمين مكانك في هذه الغرف الشارة الصحيحة، والتعريف الصحيح، والشبكة الصحيحة. يوفر EliteLoop البنية التحتية الاجتماعية لضمان ألا تكون في المدينة فحسب، بل في الغرفة التي يتقرر فيها المستقبل.</p>
+
+    <div class="source-list">
+      <h2>إشارات المصادر التي تم فحصها</h2>
+      <div>
+        <a href="https://futureaviationforum.com/" target="_blank" rel="noreferrer">منتدى مستقبل الطيران الرسمي</a>
+        <a href="https://www.kafd.sa/" target="_blank" rel="noreferrer">فعاليات مركز الملك عبد الله المالي</a>
+        <a href="https://www.tatlerasia.com/ruh" target="_blank" rel="noreferrer">تاتلر الشرق الأوسط</a>
+        <a href="https://www.arabnews.com/lifestyle" target="_blank" rel="noreferrer">أراب نيوز أسلوب حياة</a>
+        <a href="https://www.timeoutriyadh.com/" target="_blank" rel="noreferrer">تايم أوت الرياض</a>
+      </div>
+    </div>
+
+    <section class="article-share" data-article-share aria-label="Share this article">
+      <div class="article-share__eyebrow">شارك هذا التقرير</div>
+      <h3 class="article-share__title">أرسل هذه القصة إلى الغرف الصحيحة</h3>
+      <p class="article-share__text">شارك مقال EliteLoop هذا عبر شبكتك أو دردشات المجموعة أو الجدول الزمني الخاص بك وحول كل تقرير مشهد إلى حركة اكتشاف جديدة.</p>
+      <div class="article-share__actions">
+        <button type="button" class="article-share__button article-share__button--primary" data-share-copy>نسخ الرابط</button>
+        <button type="button" class="article-share__button" data-share-native>مشاركة</button>
+        <a class="article-share__link" data-share-network="x" href="https://x.com/intent/tweet" target="_blank" rel="noreferrer">X</a>
+        <a class="article-share__link" data-share-network="linkedin" href="https://www.linkedin.com/sharing/share-offsite" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="article-share__link" data-share-network="whatsapp" href="https://api.whatsapp.com/send" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
+      <div class="article-share__status" aria-live="polite"></div>
+    </section>
+    </div>
+
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+    </script>
   </article>
 
   <section class="article-cta">

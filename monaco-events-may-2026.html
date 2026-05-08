@@ -145,9 +145,17 @@
     .article-meta__dot { opacity: 0.4; }
 
     /* ── Article Body ── */
+    .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
+
     .article-body {
-      max-width: 720px; margin: 0 auto; padding: 4rem 2rem;
+      max-width: 720px; margin: 0 auto; padding: 2rem 2rem 4rem;
     }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     .article-body p {
       font-size: 1rem; line-height: 1.85; color: rgba(245,240,232,0.8);
       margin-bottom: 1.5rem; font-weight: 300;
@@ -281,8 +289,8 @@
 
   <!-- Article Body -->
   <article class="article-body">
-
-    <p>Monaco operates on a strict layer of "sovereign trust." As the ultimate hub for Ultra-High-Net-Worth Individuals (UHNWI), the most valuable social rooms during May are entirely unlisted. The month is anchored by the Formula 1 Grand Prix, creating an intense concentration of wealth, influence, and global media—but the true networking happens far from the public grandstands, behind the closed doors of Port Hercules and the VIP terraces of Casino Square.</p>
+    <div id="content-en" class="lang-section active">
+<p>Monaco operates on a strict layer of "sovereign trust." As the ultimate hub for Ultra-High-Net-Worth Individuals (UHNWI), the most valuable social rooms during May are entirely unlisted. The month is anchored by the Formula 1 Grand Prix, creating an intense concentration of wealth, influence, and global media—but the true networking happens far from the public grandstands, behind the closed doors of Port Hercules and the VIP terraces of Casino Square.</p>
     <p>In May 2026, the Principality's social calendar is a masterclass in access gating. The visible events serve merely as a backdrop for the private intersections of tech founders, family office principals, and legacy aristocrats. Navigating this environment requires precision, verified identity, and an understanding of the unwritten rules of Monegasque society.</p>
 
     <hr class="article-divider">
@@ -344,7 +352,60 @@
       </div>
       <div class="article-share__status" aria-live="polite"></div>
     </section>
+    </div>
 
+    <div id="content-fr" class="lang-section">
+<p>Monaco fonctionne sur une couche stricte de « confiance souveraine ». En tant que plaque tournante ultime pour les individus ultra-fortunés (UHNWI), les salles sociales les plus précieuses en mai ne sont pas répertoriées. Le mois est ancré par le Grand Prix de Formule 1, créant une concentration intense de richesse et d'influence — mais le véritable réseautage a lieu loin des tribunes publiques, derrière les portes closes de Port Hercule et les terrasses VIP de la Place du Casino.</p>
+    <p>En mai 2026, le calendrier social de la Principauté est une leçon de filtrage des accès. Les événements visibles ne servent que de toile de fond aux intersections privées des fondateurs de la tech, des directeurs de family offices et de l'aristocratie héritée.</p>
+
+    <h2>Réseautage & Événements d'Affaires</h2>
+    <p>Le commerce de Monaco est la préservation de la richesse et l'alliance stratégique. Les événements d'affaires de mai sont fortement filtrés pour garantir la présence exclusive des décideurs.</p>
+    <ul>
+      <li><strong>Réseautage VIP du Grand Prix de Monaco</strong> (21-24 mai, Paddocks VIP) : Au-delà du rugissement des moteurs, le vrai signal réside dans les paddocks privés et les suites de sponsors (en particulier le Paddock Club et les charters de yachts d'élite). C'est là que convergent les fondateurs de la tech mondiale et les gestionnaires de fonds souverains.</li>
+      <li><strong>Mixers Pré-Été Superyacht Investor</strong> (18 mai, Port Hercule) : Nœuds de réseautage à haut signal pour les leaders de l'industrie maritime de Monaco et les cercles financiers de haute confiance.</li>
+      <li><strong>Sommet Philanthropie & Family Office</strong> (20 mai, Monte-Carlo Bay Hotel) : Un rassemblement très discret de représentants de family offices uniques discutant d'investissements transfrontaliers et de philanthropie stratégique. La liste des participants est strictement confidentielle.</li>
+    </ul>
+
+    <div class="article-highlight">
+      <div class="article-highlight__label">⚓ Information EliteLoop</div>
+      <p>À Monaco, la richesse visible est courante ; le signal social lisible est rare. Afficher son statut ne vous donnera pas accès aux cercles intérieurs. Commencez par établir votre présence dans des nœuds vérifiés au bord de la piste ou dans le secteur maritime, puis utilisez EliteLoop pour passer du port à la terrasse du Yacht Club.</p>
+    </div>
+
+    <h2>Expériences Sociales Privées</h2>
+    <p>Les événements sociaux à Monaco en mai sont légendaires, mais ceux qui comptent vraiment sont ceux que vous ne trouverez pas sur un calendrier public.</p>
+    <ul>
+      <li><strong>Réceptions au Yacht Club de Monaco</strong> (22 mai, YCM) : Le pilier saisonnier de l'élite maritime et aristocratique mondiale. Strictement réservé aux membres, c'est là que la richesse héritée rencontre sa couche professionnelle moderne.</li>
+      <li><strong>AMBER Lounge Monaco</strong> (23-24 mai, Le Méridien Beach Plaza) : L'événement lifestyle ultime après la course. L'accès aux tables VIP intérieures agit comme un filtre social majeur.</li>
+      <li><strong>Dîners VIP Place du Casino</strong> (En cours, Monte Carlo) : Des nœuds sociaux significatifs qui attirent la direction résidentielle de Monaco pour des nuits de dîners de luxe discrets, loin de l'afflux touristique dans des lieux comme Le Louis XV ou Cipriani.</li>
+    </ul>
+
+    <blockquote>« En Principauté, la course la plus importante se déroule en dehors de la piste. Les véritables victoires ont lieu derrière les portes non répertoriées de Port Hercule. »</blockquote>
+
+    <h2>L'Effet de Débordement de Cannes</h2>
+    <p>Le calendrier du Grand Prix de Monaco coïncide souvent avec la conclusion du Festival de Cannes juste sur la côte. Cela crée un « effet de débordement » unique fin mai.</p>
+    <ul>
+      <li><strong>Transferts en Yacht Cannes-Monaco :</strong> Alors que le festival touche à sa fin, l'énergie sociale d'élite migre vers Monaco par hélicoptère privé et superyacht. Les soirées privées sur les yachts ancrés juste à l'extérieur du port servent d'axe central aux interactions de la haute société.</li>
+    </ul>
+
+    <div class="source-list">
+      <h2>Signaux sources vérifiés</h2>
+      <div>
+        <a href="https://www.hellomonaco.com/" target="_blank" rel="noreferrer">HelloMonaco</a>
+        <a href="https://monacolife.net/" target="_blank" rel="noreferrer">Monaco Life</a>
+        <a href="https://www.monacograndprix.com/" target="_blank" rel="noreferrer">Grand Prix de Monaco Officiel</a>
+        <a href="https://yacht-club-monaco.mc/fr/accueil/" target="_blank" rel="noreferrer">Yacht Club de Monaco</a>
+      </div>
+    </div>
+    </div>
+
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+    </script>
   </article>
 
   <!-- Download CTA -->

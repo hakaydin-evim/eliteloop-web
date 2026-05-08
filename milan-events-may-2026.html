@@ -165,9 +165,17 @@
     .article-meta__dot { opacity: 0.4; }
 
     /* ── Article Body ── */
+    .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
+
     .article-body {
-      max-width: 720px; margin: 0 auto; padding: 4rem 2rem;
+      max-width: 720px; margin: 0 auto; padding: 2rem 2rem 4rem;
     }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     .article-body p {
       font-size: 1rem; line-height: 1.85; color: rgba(245,240,232,0.8);
       margin-bottom: 1.5rem; font-weight: 300;
@@ -301,8 +309,8 @@
 
   <!-- Article Body -->
   <article class="article-body">
-
-    <p>Milan in May is defined by its industrial sophistication and the high-trust social plans of the Brera and Quadrilatero districts. While the city's fashion avenues are public and constantly shifting, the real social signal is found behind closed doors—in minimalist showrooms, private member clubs, and the exclusive dining rooms of Porta Nuova. In 2026, the intersection of legacy craftsmanship and aggressive tech investment has created a new social grammar that only those within the circle can truly read.</p>
+    <div id="content-en" class="lang-section active">
+<p>Milan in May is defined by its industrial sophistication and the high-trust social plans of the Brera and Quadrilatero districts. While the city's fashion avenues are public and constantly shifting, the real social signal is found behind closed doors—in minimalist showrooms, private member clubs, and the exclusive dining rooms of Porta Nuova. In 2026, the intersection of legacy craftsmanship and aggressive tech investment has created a new social grammar that only those within the circle can truly read.</p>
     <p>This month, the city shifts its focus to high-end design, sustainable luxury packaging, and the strategic intersection of heritage brands with global venture capital. Navigating Milan's elite layer requires more than an invitation; it requires an understanding of "la bella figura"—the art of presentation—translated into modern, high-stakes networking. The most critical conversations are no longer happening on the convention floor, but at private gallery viewings in Brera and post-summit dinners where the city's power brokers converge.</p>
     <p>As the spring transition reaches its peak, the social nodes of the city move from the indoor salons of the Quadrilatero to the hidden rooftop terraces and secret courtyards that define Milanese summer. To move effectively through these rooms, one must possess not just a badge, but a verifiable proof of intellectual and social alignment with the city's vision for the future of luxury.</p>
 
@@ -367,7 +375,84 @@
       </div>
       <div class="article-share__status" aria-live="polite"></div>
     </section>
+    </div>
 
+    <div id="content-it" class="lang-section">
+<p>Milano a maggio è definita dalla sua sofisticatezza industriale e dai piani sociali basati sull'alta fiducia nei quartieri di Brera e del Quadrilatero. Mentre i viali della moda della città sono pubblici e in costante mutamento, il vero segnale sociale si trova a porte chiuse—negli showroom minimalisti, nei club privati e nelle sale da pranzo esclusive di Porta Nuova. Nel 2026, l'intersezione tra artigianato storico e investimenti tecnologici aggressivi ha creato una nuova grammatica sociale che solo chi è nel cerchio può veramente leggere.</p>
+
+    <p>Navigare il livello elitario di Milano richiede molto più di un invito; richiede la comprensione de "la bella figura" — l'arte della presentazione — tradotta nel networking moderno ad alta posta in gioco. Le conversazioni più critiche non avvengono più sul piano della conferenza, ma durante le visioni private delle gallerie a Brera e le cene post-vertice dove i mediatori di potere della città convergono.</p>
+
+    <p>Mentre la transizione primaverile raggiunge il suo apice, i nodi sociali della città si spostano dai saloni interni del Quadrilatero alle terrazze panoramiche nascoste e ai cortili segreti che definiscono l'estate milanese. Per muoversi efficacemente in queste stanze, bisogna possedere non solo un badge, ma una prova verificabile di allineamento intellettuale e sociale con la visione della città per il futuro del lusso.</p>
+
+    <h2>Networking & Affari di Alto Livello</h2>
+    <p>Maggio vede incontri significativi per l'élite del lusso, del design e della manifattura, attirando decisori da tutta Europa e dal Medio Oriente. Il focus di questa stagione è sull'"Innovazione Tattile" — come il lusso fisico interagisce con la scarsità digitale.</p>
+    <ul>
+      <li><strong>Packaging Première: Networking nel Lusso</strong> (19-21 Maggio, Allianz MiCo): Questo è il principale hub di networking per il settore del packaging di lusso, che attira CEO, direttori creativi e professionisti della sostenibilità dalle case di moda globali. Mentre l'esposizione mette in mostra il futuro del lusso tattile, il vero networking avviene nella lounge VIP e nelle cene post-evento non listate ospitate dai fornitori di alto livello. Queste sono le stanze dove si decide l'identità del brand per i prossimi tre anni.</li>
+      <li><strong>Brera Design Leadership Social</strong> (20 Maggio, Distretto di Brera): Un evento di networking discreto e ad alta fiducia per l'élite del design e dell'architettura della città. Svoltosi in un cortile non divulgato, questa sessione si concentra sul "Nuovo Minimalismo". È un hub primario per connessioni ad alto segnale nella capitale mondiale del design, dove l'ingresso è determinato dal tuo contributo al discorso architettonico piuttosto che solo dal tuo titolo professionale.</li>
+      <li><strong>Porta Nuova Finance Breakfast</strong> (22 Maggio, Porta Nuova): Ospitata in una lounge privata con vista sul Bosco Verticale, questa sessione mattutina riunisce fondatori di fintech e gestori di patrimoni tradizionali. È qui che il vecchio denaro dell'industria milanese incontra la nuova economia tecnologica. La conversazione è focalizzata sugli asset fisici tokenizzati e sul futuro dell'investimento nel lusso.</li>
+      <li><strong>La Cena di Design "Non Listata"</strong> (21 Maggio, Luogo Nascosto): Parallelamente ai vertici principali, un collettivo di designer d'avanguardia e venture capitalist ospita una cena privata. Questo è un nodo ad alto segnale per coloro che cercano di influenzare l'intersezione tra AI e design industriale. L'accesso è fornito solo tramite la verifica EliteLoop.</li>
+    </ul>
+
+    <div class="article-highlight">
+      <div class="article-highlight__label">💡 Insider EliteLoop</div>
+      <p>A Milano, "La Tavola" è l'unità sociale primaria. Che si tratti di un pranzo di lavoro a Porta Nuova o di una lunga cena a Brera, la capacità di assicurarsi un tavolo specifico e ospitare un gruppo ad alta fiducia è il segnale definitivo della tua posizione nel livello privato della città.</p>
+    </div>
+
+    <h2>Esperienze Sociali & Culturali Esclusive</h2>
+    <p>La scena sociale di Milano è altamente compartimentata e opera su un sistema di fiducia a livelli. L'ingresso nei circoli giusti richiede una rete consolidata o una prova sociale verificata che si allinei con i valori estetici e professionali della città.</p>
+    <ul>
+      <li><strong>Quadrilatero Private Mixer</strong> (25 Maggio, Quadrilatero della Moda): Un esclusivo incontro sociale in uno showroom privato e minimalista incentrato sull'heritage del lusso e sull'espansione del business globale. Questo non è un evento per la stampa; è un nodo sociale transazionale per coloro che operano ai livelli più alti del complesso industriale della moda. L'accesso è strettamente basato sull'approvazione e gestito tramite il protocollo ad alta fiducia di EliteLoop.</li>
+      <li><strong>La Scala: Ricevimenti nei Palchi Privati</strong> (Fine settimana di maggio, Teatro alla Scala): Mentre le performance sono pubbliche, i ricevimenti durante l'intervallo nei palchi aziendali privati rimangono il filtro sociale definitivo per l'élite tradizionale e i circoli diplomatici della città. Queste sono le stanze dove la discendenza storica incontra il potere aziendale moderno, e dove le presentazioni più significative vengono fatte nel silenzio tra gli atti.</li>
+      <li><strong>Navigli Rooftop Art Vernissage</strong> (Fine Maggio, Navigli): Una convergenza tra collezionisti d'arte contemporanea della città e imprenditori tecnologici. Ospitato su una terrazza privata che si affaccia sui canali, questo evento esplora il tema della "Sincerità Digitale" e il futuro del mecenatismo creativo. È una stanza ad alto segnale per coloro che cercano di costruire relazioni con la nuova classe creativa della città.</li>
+      <li><strong>Salone del Giardino Segreto</strong> (28 Maggio, Corso Como): Un incontro privato di filosofi culturali e leader industriali. Questo salone è il nodo intellettuale più protetto della città, dove il futuro della cultura del lusso europea viene dibattuto su abbinamenti culinari non listati. L'accesso è limitato a coloro che hanno un contributo verificabile al capitale culturale della città.</li>
+    </ul>
+
+    <blockquote>"A Milano, il vero segnale si trova nel dettaglio — di un design, di un capo e di una conversazione. È una città che parla a bassa voce, ma quei sussurri portano il peso dell'industria globale."</blockquote>
+
+    <h2>Elite Dining & Il Circuito di Porta Nuova</h2>
+    <p>Cenare a Milano è un rituale sociale strutturato, quasi una performance di status e intenti. Il ristorante che scegli e, cosa più importante, il tavolo che ti assicuri telegrafano la tua posizione nella gerarchia della città.</p>
+    <ul>
+      <li><strong>I Tavoli Esecutivi di Porta Nuova</strong> (Tutto il mese): A Milano, le stanze più preziose si trovano nei club privati e nei bistro di fascia alta del nuovo cuore finanziario. Questi tavoli sono il luogo in cui si discutono le fusioni e si chiudono i round di venture capital. Assicurarsi un tavolo durante l'ora di punta del pranzo richiede relazioni di lunga data con il maître o uno stato EliteLoop verificato.</li>
+      <li><strong>Cena nel Giardino Segreto di Brera</strong> (Fine settimana): Nascoste dietro porte non contrassegnate nel distretto di design più antico della città, queste esperienze culinarie offrono estrema privacy per negoziazioni di alto livello e socializzazione di ricchezza silenziosa. Il focus è su ingredienti stagionali e iper-locali serviti in un ambiente di assoluta discrezione.</li>
+      <li><strong>La Fuga d'Iseo</strong> (Fine Maggio): Mentre la città si scalda, il livello elitario inizia a spostarsi verso il Lago d'Iseo per incontri sociali privati nel fine settimana. Questi raduni sono il precursore della stagione estiva sulla costa e fungono da importante filtro sociale per il cerchio interno della città.</li>
+    </ul>
+
+    <hr class="article-divider">
+
+    <p>Il calendario d'élite di Milano per maggio 2026 è denso, ma le porte sono altamente selettive. Gli RSVP pubblici ti porteranno solo fino a un certo punto. Assicurarti il tuo posto in queste stanze richiede il badge giusto, la presentazione giusta e la rete giusta. È ora di andare oltre il cordone di velluto e nel cerchio che conta. EliteLoop fornisce l'infrastruttura sociale per assicurarti di non essere solo in città, ma nella stanza.</p>
+
+    <div class="source-list">
+      <h2>Segnali di origine verificati</h2>
+      <div>
+        <a href="https://vogue.it" target="_blank" rel="noreferrer">Vogue Italia</a>
+        <a href="https://iodonna.it" target="_blank" rel="noreferrer">IO Donna</a>
+        <a href="https://packagingpremiere.it" target="_blank" rel="noreferrer">Packaging Première</a>
+      </div>
+    </div>
+
+    <section class="article-share" data-article-share aria-label="Share this article">
+      <div class="article-share__eyebrow">Condividi questo Report</div>
+      <h3 class="article-share__title">Invia questa storia nelle stanze giuste</h3>
+      <p class="article-share__text">Condividi questo articolo di EliteLoop attraverso la tua rete, le chat di gruppo o la tua timeline e trasforma ogni report di scena in nuovo traffico di scoperta.</p>
+      <div class="article-share__actions">
+        <button type="button" class="article-share__button article-share__button--primary" data-share-copy>Copia Link</button>
+        <button type="button" class="article-share__button" data-share-native>Condividi</button>
+        <a class="article-share__link" data-share-network="x" href="https://x.com/intent/tweet" target="_blank" rel="noreferrer">X</a>
+        <a class="article-share__link" data-share-network="linkedin" href="https://www.linkedin.com/sharing/share-offsite" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="article-share__link" data-share-network="whatsapp" href="https://api.whatsapp.com/send" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
+      <div class="article-share__status" aria-live="polite"></div>
+    </section>
+    </div>
+
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+    </script>
   </article>
 
   <!-- Download CTA -->

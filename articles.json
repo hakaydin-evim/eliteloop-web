@@ -1,5 +1,16 @@
 [
   {
+    "id": "gva-events-may-2026",
+    "slug": "geneva-events-may-2026",
+    "title": "Elite Events in Geneva May 2026",
+    "excerpt": "EBACE business aviation summits, Cologny private diplomacy rooms, and Magnificent Jewels viewings.",
+    "date": "2026-05-08",
+    "cityName": "Geneva",
+    "citySlug": "geneva",
+    "type": "Events Guide",
+    "image": "geneva-hero.jpg"
+  },
+  {
     "id": "mco-events-may-2026",
     "slug": "monaco-events-may-2026",
     "title": "Elite Events in Monaco May 2026",

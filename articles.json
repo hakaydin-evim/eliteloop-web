@@ -1,5 +1,16 @@
 [
   {
+    "id": "sin-events-may-2026",
+    "slug": "singapore-events-may-2026",
+    "title": "Elite Events in Singapore May 2026",
+    "excerpt": "Creative members' clubs, business leadership sessions, and private Marina Bay dining in the Lion City.",
+    "date": "2026-05-08",
+    "cityName": "Singapore",
+    "citySlug": "singapore",
+    "type": "Events Guide",
+    "image": "singapore-hero.jpg"
+  },
+  {
     "id": "hkg-events-may-2026",
     "slug": "hong-kong-events-may-2026",
     "title": "Elite Events in Hong Kong May 2026",

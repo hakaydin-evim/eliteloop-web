@@ -4,7 +4,7 @@
     <loc>https://eliteloop.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-08</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/miami</loc>
@@ -34,7 +34,7 @@
     <loc>https://eliteloop.app/cities</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-08</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/dubai</loc>
@@ -70,7 +70,7 @@
     <loc>https://eliteloop.app/global-pulse</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-08</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/global-pulse-03-may-2026</loc>
@@ -382,7 +382,7 @@
     <loc>https://eliteloop.app/singapore</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-08</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/singapore-april-2026</loc>
@@ -502,6 +502,18 @@
   <url>
     <loc>https://eliteloop.app/it/milan-events-may-2026</loc>
     <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/global-pulse-08-may-2026</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/singapore-events-may-2026</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

@@ -1,5 +1,16 @@
 [
   {
+    "id": "lon-events-may-2026",
+    "slug": "london-events-may-2026",
+    "title": "Elite Events in London May 2026",
+    "excerpt": "Mayfair private equity networking, Annabel's exclusive receptions, and Chelsea Flower Show VIP previews.",
+    "date": "2026-05-08",
+    "cityName": "London",
+    "citySlug": "london",
+    "type": "Events Guide",
+    "image": "london-hero.jpg"
+  },
+  {
     "id": "cph-events-may-2026",
     "slug": "copenhagen-events-may-2026",
     "title": "Elite Events in Copenhagen May 2026",

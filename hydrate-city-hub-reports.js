@@ -39,10 +39,12 @@
       .trim();
 
   const newBadgeHtml = '<span style="display:inline-block;margin-left:10px;padding:2px 7px;background:rgba(201,160,47,0.15);color:#ebcf79;border:1px solid rgba(201,160,47,0.4);border-radius:4px;font-weight:800;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;vertical-align:middle;">NEW</span>';
+  
   const isCityContent = (article) => ['Events Guide', 'Scene Report'].includes(article.type);
   const contentLabel = (article) => article.type === 'Events Guide' ? 'Events Guide' : 'Scene Report';
   const contentTag = (article) => article.type === 'Events Guide' ? 'EVENTS GUIDE' : 'SCENE REPORT';
   const contentPriority = (article) => article.type === 'Events Guide' ? 0 : 1;
+  const isLocalized = (article) => article.slug.includes('/');
 
   fetch('/articles.json')
     .then((response) => {
@@ -50,18 +52,30 @@
       return response.json();
     })
     .then((articles) => {
-      const reports = articles
-        .filter((article) => isCityContent(article) && article.canonicalCitySlug === canonicalPath && article.date)
-        .sort((a, b) =>
-          new Date(`${b.date}T00:00:00Z`) - new Date(`${a.date}T00:00:00Z`) ||
-          contentPriority(a) - contentPriority(b)
-        );
+      // Filter for this city
+      const cityArticles = articles.filter((article) => isCityContent(article) && article.canonicalCitySlug === canonicalPath && article.date);
+      
+      // Separate primary (English/Root) and localized versions
+      const primaryReports = cityArticles.filter(a => !isLocalized(a)).sort((a, b) =>
+        new Date(`${b.date}T00:00:00Z`) - new Date(`${a.date}T00:00:00Z`) ||
+        contentPriority(a) - contentPriority(b)
+      );
 
-      if (!reports.length) return;
+      if (!primaryReports.length) return;
 
-      const [latestReport, ...archiveReports] = reports;
+      const [latestReport, ...archiveReports] = primaryReports;
       const cityName = latestReport.cityName || canonicalPath.replace(/-/g, ' ');
       sectionTitle.textContent = `${cityName} Events Guides & Reports`;
+
+      // Check for localized version of the latest report
+      const localVersion = cityArticles.find(a => isLocalized(a) && a.slug.endsWith(latestReport.slug));
+      let localLinkHtml = '';
+      if (localVersion) {
+        const langCode = localVersion.slug.split('/')[0];
+        const langMap = { 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'de': 'Deutsch', 'it': 'Italiano', 'tr': 'Türkçe', 'ja': '日本語' };
+        const langName = langMap[langCode] || langCode.toUpperCase();
+        localLinkHtml = `<a href="/${localVersion.slug}" class="local-edition-link" style="display:inline-flex; align-items:center; gap:0.4rem; margin-top:1.2rem; font-size:0.75rem; color:#ebcf79; text-decoration:none; border:1px solid rgba(235,207,121,0.3); padding:0.4rem 0.8rem; border-radius:0.4rem; background:rgba(201,160,47,0.05); transition:background 0.2s;"><span>🌐</span> ${langName} Edition</a>`;
+      }
 
       const featuredContent = featuredCard.querySelector('.scene-card__content') || featuredCard.firstElementChild;
       if (featuredContent) {
@@ -74,7 +88,10 @@
         if (tag) tag.innerHTML = `${formatDate(latestReport.date)} · ${contentLabel(latestReport)} ${newBadgeHtml}`;
         if (title) title.textContent = cleanTitle(latestReport.title);
         if (excerpt) excerpt.textContent = cleanExcerpt(latestReport.description);
-        if (read) read.textContent = latestReport.type === 'Events Guide' ? 'Read full guide →' : 'Read full report →';
+        if (read) {
+          const btnText = latestReport.type === 'Events Guide' ? 'Read full guide →' : 'Read full report →';
+          read.innerHTML = `<span style="display:block; margin-bottom:${localVersion ? '0.5rem' : '0'};">${btnText}</span>${localLinkHtml}`;
+        }
       }
 
       archiveList.setAttribute('aria-label', `${cityName} report archive`);

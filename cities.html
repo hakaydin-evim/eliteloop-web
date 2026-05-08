@@ -1066,6 +1066,7 @@
 
       const isCityContent = (article) => ['Events Guide', 'Scene Report'].includes(article.type);
       const contentPriority = (article) => article.type === 'Events Guide' ? 0 : 1;
+      const isLocalized = (article) => article.slug.includes('/');
       const badgeText = (article) => article.type === 'Events Guide' ? 'NEW GUIDE' : 'NEW REPORT';
 
       const latestDate = new Date('1970-01-01T00:00:00Z');
@@ -1078,7 +1079,7 @@
         })
         .then((articles) => {
           const sceneReports = articles
-            .filter((article) => isCityContent(article) && article.date)
+            .filter((article) => isCityContent(article) && article.date && !isLocalized(article))
             .sort((a, b) =>
               new Date(`${b.date}T00:00:00Z`) - new Date(`${a.date}T00:00:00Z`) ||
               contentPriority(a) - contentPriority(b)

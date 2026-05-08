@@ -182,6 +182,9 @@ function buildJson() {
             }
 
             const cityMeta = inferCityMeta(slug, type);
+            if (cityMeta.canonicalCitySlug && slug === cityMeta.canonicalCitySlug) {
+                type = 'City Hub';
+            }
             const resolvedDate = type === 'City Hub' ? null : (timeDate || inferDateFromSlug(slug));
 
             if (resolvedDate && new Date(resolvedDate) > today) {

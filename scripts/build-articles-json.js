@@ -28,6 +28,27 @@ const CITY_RULES = [
     { aliases: ['zurich'], canonicalSlug: 'zurich', name: 'Zurich' },
     { aliases: ['milan', 'milano'], canonicalSlug: 'milan', name: 'Milan' },
     { aliases: ['rome', 'roma'], canonicalSlug: 'rome', name: 'Rome' },
+    { aliases: ['abu-dhabi'], canonicalSlug: 'abu-dhabi', name: 'Abu Dhabi' },
+    { aliases: ['amsterdam'], canonicalSlug: 'amsterdam', name: 'Amsterdam' },
+    { aliases: ['barcelona'], canonicalSlug: 'barcelona', name: 'Barcelona' },
+    { aliases: ['berlin'], canonicalSlug: 'berlin', name: 'Berlin' },
+    { aliases: ['chicago'], canonicalSlug: 'chicago', name: 'Chicago' },
+    { aliases: ['geneva'], canonicalSlug: 'geneva', name: 'Geneva' },
+    { aliases: ['hong-kong'], canonicalSlug: 'hong-kong', name: 'Hong Kong' },
+    { aliases: ['lisbon'], canonicalSlug: 'lisbon', name: 'Lisbon' },
+    { aliases: ['los-angeles', 'la'], canonicalSlug: 'los-angeles', name: 'Los Angeles' },
+    { aliases: ['madrid'], canonicalSlug: 'madrid', name: 'Madrid' },
+    { aliases: ['mexico-city'], canonicalSlug: 'mexico-city', name: 'Mexico City' },
+    { aliases: ['miami'], canonicalSlug: 'miami', name: 'Miami' },
+    { aliases: ['monaco'], canonicalSlug: 'monaco', name: 'Monaco' },
+    { aliases: ['mumbai'], canonicalSlug: 'mumbai', name: 'Mumbai' },
+    { aliases: ['munich', 'munchen'], canonicalSlug: 'munich', name: 'Munich' },
+    { aliases: ['riyadh'], canonicalSlug: 'riyadh', name: 'Riyadh' },
+    { aliases: ['san-francisco', 'sf'], canonicalSlug: 'san-francisco', name: 'San Francisco' },
+    { aliases: ['sao-paulo'], canonicalSlug: 'sao-paulo', name: 'São Paulo' },
+    { aliases: ['sydney'], canonicalSlug: 'sydney', name: 'Sydney' },
+    { aliases: ['toronto'], canonicalSlug: 'toronto', name: 'Toronto' },
+    { aliases: ['vienna'], canonicalSlug: 'vienna', name: 'Vienna' }
 ];
 
 const MONTH_MAP = {

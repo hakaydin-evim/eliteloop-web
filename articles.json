@@ -1,5 +1,16 @@
 [
   {
+    "id": "vie-events-may-2026",
+    "slug": "vienna-events-may-2026",
+    "title": "Elite Events in Vienna May 2026",
+    "excerpt": "Goldenes Quartier financial networking, private Palais member nights, and exclusive Belvedere art previews.",
+    "date": "2026-05-08",
+    "cityName": "Vienna",
+    "citySlug": "vienna",
+    "type": "Events Guide",
+    "image": "vienna-hero.jpg"
+  },
+  {
     "id": "ruh-events-may-2026",
     "slug": "riyadh-events-may-2026",
     "title": "Elite Events in Riyadh May 2026",

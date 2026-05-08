@@ -26,8 +26,8 @@
     "@context": "https://schema.org",
     "@type": ["Article", "ItemList"],
     "headline": "Elite Events in Geneva May 2026",
-    "datePublished": "2026-05-08",
-    "dateModified": "2026-05-08",
+    "datePublished": "2026-05-09",
+    "dateModified": "2026-05-09",
     "author": { "@type": "Organization", "name": "EliteLoop Editorial" },
     "publisher": { "@type": "Organization", "name": "EliteLoop" },
     "about": { "@type": "City", "name": "Geneva" },
@@ -109,7 +109,15 @@
     .article-hero__sub { font-size: 1.1rem; color: rgba(245,240,232,0.65); line-height: 1.7; max-width: 600px; font-weight: 300; }
     .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.75rem; color: rgba(245,240,232,0.4); flex-wrap: wrap; }
 
-    .article-body { max-width: 750px; margin: 3rem auto; padding: 0 2rem 4rem; }
+    .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
+
+    .article-body { max-width: 750px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     .article-body p { font-size: 1.1rem; line-height: 1.95; color: rgba(245,240,232,0.8); margin-bottom: 1.8rem; font-weight: 300; }
     .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--text); font-weight: 600; margin: 3.5rem 0 1.5rem; border-bottom: 1px solid rgba(235,207,121,0.15); padding-bottom: 0.5rem; }
     .article-body h3 { font-family: 'Inter', sans-serif; font-size: 1.2rem; color: var(--gold-soft); font-weight: 600; margin: 2.5rem 0 0.75rem; }
@@ -160,56 +168,119 @@
       <h1>Elite Events in Geneva May 2026</h1>
       <p class="article-hero__sub">Wealth management summits, unlisted Cologny dinners, Geneva Art Week, and the guarded social rituals of Switzerland's UHNWI.</p>
       <div class="article-meta">
-        <time datetime="2026-05-08">May 8, 2026</time><span>·</span><span>6 verified event signals</span><span>·</span><span>EliteLoop Editorial</span>
+        <time datetime="2026-05-09">May 9, 2026</time><span>·</span><span>6 verified event signals</span><span>·</span><span>EliteLoop Editorial</span>
       </div>
     </div>
   </header>
 
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="switchLang('en')">English</button>
+    <button class="lang-btn" onclick="switchLang('fr')">Français</button>
+  </div>
+
   <article class="article-body">
-    <p>Geneva operates on a frequency that is often invisible to the casual observer. While the jet-set might frequent the shops of Rue du Rhône, the actual social gravity of the city resides in the unlisted salons of Quai des Bergues and the private, high-walled estates of Cologny. In May 2026, as the spring thaw settles over Lake Geneva, the networking scene shifts from the global policy floors to the highly curated rooms where capital is managed and legacy is preserved.</p>
+    <div id="content-en" class="lang-section active">
+      <p>Geneva operates on a frequency that is often invisible to the casual observer. While the jet-set might frequent the shops of Rue du Rhône, the actual social gravity of the city resides in the unlisted salons of Quai des Bergues and the private, high-walled estates of Cologny. In May 2026, as the spring thaw settles over Lake Geneva, the networking scene shifts from the global policy floors to the highly curated rooms where capital is managed and legacy is preserved.</p>
 
-    <p>This month, the city's pulse is driven by a series of high-signal convergences in wealth management, fine watchmaking, and contemporary art. Access to these rooms isn't a matter of purchase; it is a matter of identity. EliteLoop tracks the social undercurrents of these gatherings to ensure that when you enter the room, the trust baseline is already established.</p>
+      <p>This month, the city's pulse is driven by a series of high-signal convergences in wealth management, fine watchmaking, and contemporary art. Access to these rooms isn't a matter of purchase; it is a matter of identity. EliteLoop tracks the social undercurrents of these gatherings to ensure that when you enter the room, the trust baseline is already established.</p>
 
-    <h2>Networking & Business Events in Geneva May 2026</h2>
-    <p>The business of Geneva is the business of trust. Unlike the high-volume networking of London or New York, Geneva's corporate social layer is built on long-term relationships and discreet introductions. May 2026 sees several critical nodes for global capital allocators.</p>
-    <ul>
-      <li><strong>Geneva Wealth Management Summit (GWM) · May 14-15:</strong> Held in the diplomatic district near Place des Nations, this summit remains the central axis for family office principals and private wealth leaders. The real networking happens during the private "Chatham House" breakout sessions in adjacent hotel suites.</li>
-      <li><strong>AI in Watchmaking Roundtable · May 18:</strong> A strictly invitation-only gathering of industry titans from the Richemont and LVMH groups, discussing the intersection of heritage craftsmanship and predictive AI. The social spillover at Quai des Bergues following the event is the month's highest-signal node for luxury tech.</li>
-      <li><strong>Crypto Valley Private Breakfast · May 20:</strong> As the Zug ecosystem expands its footprint in Geneva, these breakfast sessions at the Beau-Rivage have become essential for the new digital elite and traditional family offices seeking bridge opportunities.</li>
-    </ul>
+      <h2>Networking & Business Events in Geneva May 2026</h2>
+      <p>The business of Geneva is the business of trust. Unlike the high-volume networking of London or New York, Geneva's corporate social layer is built on long-term relationships and discreet introductions. May 2026 sees several critical nodes for global capital allocators.</p>
+      <ul>
+        <li><strong>Geneva Wealth Management Summit (GWM) · May 14-15:</strong> Held in the diplomatic district near Place des Nations, this summit remains the central axis for family office principals and private wealth leaders. The real networking happens during the private "Chatham House" breakout sessions in adjacent hotel suites.</li>
+        <li><strong>AI in Watchmaking Roundtable · May 18:</strong> A strictly invitation-only gathering of industry titans from the Richemont and LVMH groups, discussing the intersection of heritage craftsmanship and predictive AI. The social spillover at Quai des Bergues following the event is the month's highest-signal node for luxury tech.</li>
+        <li><strong>Crypto Valley Private Breakfast · May 20:</strong> As the Zug ecosystem expands its footprint in Geneva, these breakfast sessions at the Beau-Rivage have become essential for the new digital elite and traditional family offices seeking bridge opportunities.</li>
+      </ul>
 
-    <blockquote>"In Geneva, the most important agreements aren't signed in the boardroom. They are finalized during the second glass of wine on a private terrace in Cologny."</blockquote>
+      <blockquote>"In Geneva, the most important agreements aren't signed in the boardroom. They are finalized during the second glass of wine on a private terrace in Cologny."</blockquote>
 
-    <h2>Exclusive Dining & Private Social Experiences in Geneva</h2>
-    <p>Dining in Geneva for the elite circle is less about the menu and more about the isolation from the public gaze. The city's most influential social intersections occur in spaces that prioritize discretion over visibility.</p>
-    <ul>
-      <li><strong>Le Lion d'Or Terrace Reopening · May 2026:</strong> The unofficial social season begins with the reopening of the terrace at Le Lion d'Or in Cologny. It remains the preferred location for "off-the-record" lunch meetings between the city's banking elite and visiting dignitaries.</li>
-      <li><strong>Cologny Executive Dinner Series · May 22:</strong> A recurring, unlisted series of private residential dinners that connect high-growth entrepreneurs with Swiss capital. These are not publicized; access is granted only to those with a verified EliteLoop Silver or Gold badge.</li>
-      <li><strong>Hotel des Bergues (Four Seasons) Rooftop Rituals:</strong> As the weather warms, the rooftop at the Four Seasons becomes the late-afternoon node for the international private equity set. The crowd is young, globally-minded, and highly vetted.</li>
-    </ul>
+      <h2>Exclusive Dining & Private Social Experiences in Geneva</h2>
+      <p>Dining in Geneva for the elite circle is less about the menu and more about the isolation from the public gaze. The city's most influential social intersections occur in spaces that prioritize discretion over visibility.</p>
+      <ul>
+        <li><strong>Le Lion d'Or Terrace Reopening · May 2026:</strong> The unofficial social season begins with the reopening of the terrace at Le Lion d'Or in Cologny. It remains the preferred location for "off-the-record" lunch meetings between the city's banking elite and visiting dignitaries.</li>
+        <li><strong>Cologny Executive Dinner Series · May 22:</strong> A recurring, unlisted series of private residential dinners that connect high-growth entrepreneurs with Swiss capital. These are not publicized; access is granted only to those with a verified EliteLoop Silver or Gold badge.</li>
+        <li><strong>Hotel des Bergues (Four Seasons) Rooftop Rituals:</strong> As the weather warms, the rooftop at the Four Seasons becomes the late-afternoon node for the international private equity set. The crowd is young, globally-minded, and highly vetted.</li>
+      </ul>
 
-    <h2>Cultural & Lifestyle Events for Geneva's Elite Circle</h2>
-    <p>Culture in Geneva is a social filter. The city's art and lifestyle calendar for May is designed to facilitate high-trust interactions among collectors and cultural leaders.</p>
-    <ul>
-      <li><strong>Geneva Art Week Private Previews · May 24-29:</strong> While the galleries in the Quartier des Bains are open to the public, the real social utility lies in the private vernissages and collector-only dinners hosted by independent gallerists.</li>
-      <li><strong>Yacht Club de Genève Spring Regatta Socials · May 16-17:</strong> The regatta serves as the backdrop for one of the city's most established social weekends. The members-only receptions at the Yacht Club are the primary intersection for Geneva's legacy families and the diplomatic corps.</li>
-      <li><strong>Patek Philippe Museum Night · May 12:</strong> An exclusive, curator-led evening tour for major collectors. This event serves as a high-signal social node for those invested in the city's heritage industries.</li>
-    </ul>
+      <h2>Cultural & Lifestyle Events for Geneva's Elite Circle</h2>
+      <p>Culture in Geneva is a social filter. The city's art and lifestyle calendar for May is designed to facilitate high-trust interactions among collectors and cultural leaders.</p>
+      <ul>
+        <li><strong>Geneva Art Week Private Previews · May 24-29:</strong> While the galleries in the Quartier des Bains are open to the public, the real social utility lies in the private vernissages and collector-only dinners hosted by independent gallerists.</li>
+        <li><strong>Yacht Club de Genève Spring Regatta Socials · May 16-17:</strong> The regatta serves as the backdrop for one of the city's most established social weekends. The members-only receptions at the Yacht Club are the primary intersection for Geneva's legacy families and the diplomatic corps.</li>
+        <li><strong>Patek Philippe Museum Night · May 12:</strong> An exclusive, curator-led evening tour for major collectors. This event serves as a high-signal social node for those invested in the city's heritage industries.</li>
+      </ul>
 
-    <div class="article-highlight">
-      <div class="article-highlight__label">Access Intelligence</div>
-      <p>Accessing Geneva's unlisted social layer requires more than capital; it requires a verified identity. Use EliteLoop to secure your seat at the Cologny dinners and bridge the gap between visiting executive and local node.</p>
+      <div class="article-highlight">
+        <div class="article-highlight__label">Access Intelligence</div>
+        <p>Accessing Geneva's unlisted social layer requires more than capital; it requires a verified identity. Use EliteLoop to secure your seat at the Cologny dinners and bridge the gap between visiting executive and local node.</p>
+      </div>
+
+      <div class="source-list" aria-label="Geneva May 2026 source signals checked">
+        <h2>Source signals checked</h2>
+        <a href="https://www.letemps.ch/" target="_blank" rel="noreferrer">Le Temps</a>
+        <a href="https://www.tdg.ch/" target="_blank" rel="noreferrer">Tribune de Genève</a>
+        <a href="https://www.bilan.ch/" target="_blank" rel="noreferrer">Bilan</a>
+        <a href="https://www.geneve-artweek.ch/" target="_blank" rel="noreferrer">Geneva Art Week</a>
+      </div>
+
+      <p>This May, Geneva offers a masterclass in the diplomacy of discretion. For those who understand the unwritten rules of its private rooms, the opportunities for social and professional alignment are significant. Navigating this landscape requires a guide that understands the difference between the noise of the street and the signal of the salon. That is exactly the protocol <a href="/geneva" class="internal-link">EliteLoop Geneva</a> provides.</p>
     </div>
 
-    <div class="source-list" aria-label="Geneva May 2026 source signals checked">
-      <h2>Source signals checked</h2>
-      <a href="https://www.letemps.ch/" target="_blank" rel="noreferrer">Le Temps</a>
-      <a href="https://www.tdg.ch/" target="_blank" rel="noreferrer">Tribune de Genève</a>
-      <a href="https://www.bilan.ch/" target="_blank" rel="noreferrer">Bilan</a>
-      <a href="https://www.geneve-artweek.ch/" target="_blank" rel="noreferrer">Geneva Art Week</a>
+    <div id="content-fr" class="lang-section">
+      <p>Genève opère sur une fréquence souvent invisible pour l'observateur occasionnel. Si le jet-set fréquente les boutiques de la Rue du Rhône, la véritable gravité sociale de la ville réside dans les salons non répertoriés du Quai des Bergues et les domaines privés aux hauts murs de Cologny. En mai 2026, alors que le dégel printanier s'installe sur le lac Léman, la scène du réseautage délaisse les étages de la politique globale pour se concentrer dans les salons hautement sélectionnés où le capital est géré et l'héritage préservé.</p>
+
+      <p>Ce mois-ci, le pouls de la ville est rythmé par une série de convergences à fort signal dans la gestion de fortune, la haute horlogerie et l'art contemporain. L'accès à ces salons n'est pas une question d'achat ; c'est une question d'identité. EliteLoop suit les courants sociaux de ces rassemblements pour s'assurer que, lorsque vous entrez dans la pièce, la base de confiance est déjà établie.</p>
+
+      <h2>Événements de réseautage et d'affaires à Genève mai 2026</h2>
+      <p>Les affaires à Genève sont les affaires de la confiance. Contrairement au réseautage à haut volume de Londres ou New York, la couche sociale d'entreprise de Genève est bâtie sur des relations à long terme et des introductions discrètes. Mai 2026 voit plusieurs nœuds critiques pour les allocateurs de capitaux mondiaux.</p>
+      <ul>
+        <li><strong>Geneva Wealth Management Summit (GWM) · 14-15 Mai :</strong> Tenu dans le quartier diplomatique près de la Place des Nations, ce sommet reste l'axe central pour les directeurs de family offices et les leaders de la fortune privée. Le véritable réseautage se fait lors des sessions privées "Chatham House" dans les suites d'hôtels adjacentes.</li>
+        <li><strong>Table Ronde IA et Haute Horlogerie · 18 Mai :</strong> Un rassemblement strictement sur invitation des titans de l'industrie des groupes Richemont et LVMH, discutant de l'intersection entre l'artisanat patrimonial et l'IA prédictive. Le débordement social au Quai des Bergues après l'événement est le nœud de signal le plus élevé du mois pour la tech de luxe.</li>
+        <li><strong>Petit-déjeuner Privé Crypto Valley · 20 Mai :</strong> Alors que l'écosystème de Zoug étend son empreinte à Genève, ces sessions de petit-déjeuner au Beau-Rivage sont devenues essentielles pour la nouvelle élite numérique et les family offices traditionnels.</li>
+      </ul>
+
+      <blockquote>« À Genève, les accords les plus importants ne sont pas signés en salle de conseil. Ils sont finalisés lors du deuxième verre de vin sur une terrasse privée à Cologny. »</blockquote>
+
+      <h2>Dîners exclusifs et expériences sociales privées à Genève</h2>
+      <p>Dîner à Genève pour le cercle d'élite est moins une question de menu que d'isolation du regard public. Les intersections sociales les plus influentes de la ville se produisent dans des espaces qui privilégient la discrétion à la visibilité.</p>
+      <ul>
+        <li><strong>Réouverture de la Terrasse du Lion d'Or · Mai 2026 :</strong> La saison sociale officieuse commence avec la réouverture de la terrasse du Lion d'Or à Cologny. Elle reste le lieu privilégié pour les déjeuners "off-the-record" entre l'élite bancaire de la ville et les dignitaires en visite.</li>
+        <li><strong>Série de Dîners Exécutifs à Cologny · 22 Mai :</strong> Une série récurrente et non répertoriée de dîners résidentiels privés qui connectent les entrepreneurs à forte croissance avec le capital suisse. L'accès est réservé à ceux qui possèdent un badge EliteLoop Argent ou Or vérifié.</li>
+        <li><strong>Rituels de Rooftop à l'Hôtel des Bergues (Four Seasons) :</strong> Avec le réchauffement du temps, le rooftop du Four Seasons devient le nœud de fin d'après-midi pour l'ensemble du private equity international. La foule est jeune, à l'esprit mondial et hautement sélectionnée.</li>
+      </ul>
+
+      <h2>Événements culturels et lifestyle pour le cercle d'élite de Genève</h2>
+      <p>La culture à Genève est un filtre social. Le calendrier art et lifestyle du mois de mai est conçu pour faciliter les interactions de haute confiance entre collectionneurs et leaders culturels.</p>
+      <ul>
+        <li><strong>Avant-premières Privées de la Geneva Art Week · 24-29 Mai :</strong> Si les galeries du Quartier des Bains sont ouvertes au public, la véritable utilité sociale réside dans les vernissages privés et les dîners réservés aux collectionneurs organisés par des galeristes indépendants.</li>
+        <li><strong>Événements Sociaux des Régates de Printemps du Yacht Club de Genève · 16-17 Mai :</strong> La régate sert de toile de fond à l'un des week-ends sociaux les plus établis de la ville. Les réceptions réservées aux membres au Yacht Club sont l'intersection principale pour les familles patrimoniales genevoises et le corps diplomatique.</li>
+        <li><strong>Nuit au Musée Patek Philippe · 12 Mai :</strong> Une visite nocturne exclusive guidée par un conservateur pour les grands collectionneurs. Cet événement sert de nœud social à fort signal pour ceux qui investissent dans les industries patrimoniales de la ville.</li>
+      </ul>
+
+      <div class="article-highlight">
+        <div class="article-highlight__label">Intelligence d'Accès</div>
+        <p>Accéder à la couche sociale non répertoriée de Genève nécessite plus que du capital ; cela nécessite une identité vérifiée. Utilisez EliteLoop pour garantir votre place aux dîners de Cologny.</p>
+      </div>
+
+      <div class="source-list" aria-label="Signaux de source vérifiés Genève Mai 2026">
+        <h2>Sources vérifiées</h2>
+        <a href="https://www.letemps.ch/" target="_blank" rel="noreferrer">Le Temps</a>
+        <a href="https://www.tdg.ch/" target="_blank" rel="noreferrer">Tribune de Genève</a>
+        <a href="https://www.bilan.ch/" target="_blank" rel="noreferrer">Bilan</a>
+        <a href="https://www.geneve-artweek.ch/" target="_blank" rel="noreferrer">Geneva Art Week</a>
+      </div>
+
+      <p>Ce mois de mai, Genève offre une leçon magistrale de diplomatie de la discrétion. Pour ceux qui comprennent les règles non écrites de ses salons privés, les opportunités d'alignement social et professionnel sont significatives. Naviguer dans ce paysage nécessite un guide qui comprend la différence entre le bruit de la rue et le signal du salon. C'est exactement le protocole qu'offre <a href="/geneva" class="internal-link">EliteLoop Genève</a>.</p>
     </div>
 
-    <p>This May, Geneva offers a masterclass in the diplomacy of discretion. For those who understand the unwritten rules of its private rooms, the opportunities for social and professional alignment are significant. Navigating this landscape requires a guide that understands the difference between the noise of the street and the signal of the salon. That is exactly the protocol <a href="/geneva" class="internal-link">EliteLoop Geneva</a> provides.</p>
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+    </script>
   </article>
 
   <section class="article-cta">

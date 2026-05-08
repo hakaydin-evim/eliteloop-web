@@ -27,7 +27,7 @@ const LOCALIZED_PAGES = [
   { slug: 'es/barcelona-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'es/barcelona-events-may-2026.html', lastmod: '2026-05-08' },
   { slug: 'es/madrid-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'es/madrid-events-may-2026.html', lastmod: '2026-05-09' },
   { slug: 'es/mexico-city-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'es/mexico-city-events-may-2026.html', lastmod: '2026-05-09' },
-  { slug: 'fr/geneva-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'fr/geneva-events-may-2026.html', lastmod: '2026-05-08' },
+  { slug: 'fr/geneva-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'fr/geneva-events-may-2026.html', lastmod: '2026-05-09' },
   { slug: 'fr/monaco-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'fr/monaco-events-may-2026.html', lastmod: '2026-05-09' },
   { slug: 'fr/paris-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'fr/paris-events-may-2026.html', lastmod: '2026-05-09' },
   { slug: 'it/milan-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'it/milan-events-may-2026.html', lastmod: '2026-05-09' },

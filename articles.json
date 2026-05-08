@@ -1,5 +1,16 @@
 [
   {
+    "id": "sf-events-may-2026",
+    "slug": "san-francisco-events-may-2026",
+    "title": "Elite Events in San Francisco May 2026",
+    "excerpt": "Cybersecurity summits at RSA, film industry galas, and Pacific Heights private dining in the Bay Area.",
+    "date": "2026-05-08",
+    "cityName": "San Francisco",
+    "citySlug": "san-francisco",
+    "type": "Events Guide",
+    "image": "san-francisco-hero.jpg"
+  },
+  {
     "id": "chi-events-may-2026",
     "slug": "chicago-events-may-2026",
     "title": "Elite Events in Chicago May 2026",

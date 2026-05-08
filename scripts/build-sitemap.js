@@ -19,12 +19,24 @@ const STATIC_PAGES = [
 
 const LOCALIZED_PAGES = [
   { slug: 'ar/abu-dhabi-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'ar/abu-dhabi-events-may-2026.html', lastmod: '2026-05-08' },
+  { slug: 'ar/riyadh-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'ar/riyadh-events-may-2026.html', lastmod: '2026-05-09' },
   { slug: 'de/berlin-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'de/berlin-events-may-2026.html', lastmod: '2026-05-08' },
+  { slug: 'de/munich-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'de/munich-events-may-2026.html', lastmod: '2026-05-09' },
+  { slug: 'de/vienna-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'de/vienna-events-may-2026.html', lastmod: '2026-05-09' },
+  { slug: 'de/zurich-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'de/zurich-events-may-2026.html', lastmod: '2026-05-09' },
   { slug: 'es/barcelona-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'es/barcelona-events-may-2026.html', lastmod: '2026-05-08' },
+  { slug: 'es/madrid-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'es/madrid-events-may-2026.html', lastmod: '2026-05-09' },
+  { slug: 'es/mexico-city-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'es/mexico-city-events-may-2026.html', lastmod: '2026-05-09' },
   { slug: 'fr/geneva-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'fr/geneva-events-may-2026.html', lastmod: '2026-05-08' },
+  { slug: 'fr/monaco-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'fr/monaco-events-may-2026.html', lastmod: '2026-05-09' },
+  { slug: 'fr/paris-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'fr/paris-events-may-2026.html', lastmod: '2026-05-09' },
+  { slug: 'it/milan-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'it/milan-events-may-2026.html', lastmod: '2026-05-09' },
+  { slug: 'it/rome-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'it/rome-events-may-2026.html', lastmod: '2026-05-09' },
+  { slug: 'ja/tokyo-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'ja/tokyo-events-may-2026.html', lastmod: '2026-05-09' },
+  { slug: 'ko/seoul-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'ko/seoul-events-may-2026.html', lastmod: '2026-05-09' },
   { slug: 'pt/lisbon-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'pt/lisbon-events-may-2026.html', lastmod: '2026-05-08' },
+  { slug: 'pt/sao-paulo-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'pt/sao-paulo-events-may-2026.html', lastmod: '2026-05-09' },
   { slug: 'tr/istanbul-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'tr/istanbul-events-may-2026.html', lastmod: '2026-05-08' },
-  { slug: 'it/rome-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'it/rome-events-may-2026.html', lastmod: '2026-05-01' }
 ];
 
 function toIsoDate(value) {

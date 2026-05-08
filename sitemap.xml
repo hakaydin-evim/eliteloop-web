@@ -43,6 +43,12 @@
     <lastmod>2026-05-08</lastmod>
   </url>
   <url>
+    <loc>https://eliteloop.app/ar/riyadh-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
     <loc>https://eliteloop.app/barcelona</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -97,6 +103,24 @@
     <lastmod>2026-05-08</lastmod>
   </url>
   <url>
+    <loc>https://eliteloop.app/de/munich-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/de/vienna-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/de/zurich-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
     <loc>https://eliteloop.app/dubai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -133,10 +157,34 @@
     <lastmod>2026-05-08</lastmod>
   </url>
   <url>
+    <loc>https://eliteloop.app/es/madrid-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/es/mexico-city-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
     <loc>https://eliteloop.app/fr/geneva-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-05-08</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/fr/monaco-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/fr/paris-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/gdpr</loc>
@@ -325,10 +373,28 @@
     <lastmod>2026-04-15</lastmod>
   </url>
   <url>
+    <loc>https://eliteloop.app/it/milan-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
     <loc>https://eliteloop.app/it/rome-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/ja/tokyo-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/ko/seoul-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/lisbon</loc>
@@ -388,55 +454,55 @@
     <loc>https://eliteloop.app/los-angeles</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/los-angeles-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/madrid</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/madrid-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/mexico-city</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/mexico-city-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/miami</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/miami-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/milan</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/milan-april-2026</loc>
@@ -448,19 +514,19 @@
     <loc>https://eliteloop.app/milan-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/monaco</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/monaco-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/mumbai</loc>
@@ -478,13 +544,13 @@
     <loc>https://eliteloop.app/munich</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/munich-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/new-york</loc>
@@ -532,7 +598,7 @@
     <loc>https://eliteloop.app/paris</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/paris-29-april-2026</loc>
@@ -550,7 +616,7 @@
     <loc>https://eliteloop.app/paris-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/paris-march-2026</loc>
@@ -577,58 +643,52 @@
     <lastmod>2026-05-08</lastmod>
   </url>
   <url>
+    <loc>https://eliteloop.app/pt/sao-paulo-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
     <loc>https://eliteloop.app/riyadh</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/riyadh-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/rome</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/rome-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-04-30</lastmod>
-  </url>
-  <url>
-    <loc>https://eliteloop.app/san-francisco</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-05-08</lastmod>
-  </url>
-  <url>
-    <loc>https://eliteloop.app/san-francisco-events-may-2026</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/sao-paulo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/sao-paulo-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/seoul</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/seoul-april-2026</loc>
@@ -640,7 +700,7 @@
     <loc>https://eliteloop.app/seoul-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/seoul-february-2026</loc>
@@ -658,19 +718,13 @@
     <loc>https://eliteloop.app/singapore</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-04-01</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/singapore-april-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-04-01</lastmod>
-  </url>
-  <url>
-    <loc>https://eliteloop.app/singapore-events-may-2026</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-05-08</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/singapore-march-2026</loc>
@@ -685,18 +739,6 @@
     <lastmod>2026-04-15</lastmod>
   </url>
   <url>
-    <loc>https://eliteloop.app/sydney</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-05-08</lastmod>
-  </url>
-  <url>
-    <loc>https://eliteloop.app/sydney-events-may-2026</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-05-08</lastmod>
-  </url>
-  <url>
     <loc>https://eliteloop.app/terms</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -706,7 +748,7 @@
     <loc>https://eliteloop.app/tokyo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/tokyo-28-april-2026</loc>
@@ -724,7 +766,7 @@
     <loc>https://eliteloop.app/tokyo-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/tokyo-late-april-2026</loc>
@@ -739,18 +781,6 @@
     <lastmod>2026-03-01</lastmod>
   </url>
   <url>
-    <loc>https://eliteloop.app/toronto</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-05-08</lastmod>
-  </url>
-  <url>
-    <loc>https://eliteloop.app/toronto-events-may-2026</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-05-08</lastmod>
-  </url>
-  <url>
     <loc>https://eliteloop.app/tr/istanbul-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -760,19 +790,19 @@
     <loc>https://eliteloop.app/vienna</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/vienna-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/zurich</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/zurich-april-2026</loc>
@@ -784,7 +814,7 @@
     <loc>https://eliteloop.app/zurich-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/zurich-february-2026</loc>

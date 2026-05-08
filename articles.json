@@ -1,5 +1,16 @@
 [
   {
+    "id": "ams-events-may-2026",
+    "slug": "amsterdam-events-may-2026",
+    "title": "Elite Events in Amsterdam May 2026",
+    "excerpt": "Historic members' clubs, creative industry galas, and private canal-side dining in the Dutch capital.",
+    "date": "2026-05-08",
+    "cityName": "Amsterdam",
+    "citySlug": "amsterdam",
+    "type": "Events Guide",
+    "image": "amsterdam-hero.jpg"
+  },
+  {
     "id": "sin-events-may-2026",
     "slug": "singapore-events-may-2026",
     "title": "Elite Events in Singapore May 2026",

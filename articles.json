@@ -1,5 +1,16 @@
 [
   {
+    "id": "chi-events-may-2026",
+    "slug": "chicago-events-may-2026",
+    "title": "Elite Events in Chicago May 2026",
+    "excerpt": "Philanthropic galas, tech leadership sessions, and Gold Coast private dining in the Windy City.",
+    "date": "2026-05-08",
+    "cityName": "Chicago",
+    "citySlug": "chicago",
+    "type": "Events Guide",
+    "image": "chicago-hero.jpg"
+  },
+  {
     "title": "Elite Events in Lisbon May 2026 — EliteLoop",
     "description": "Lisbon elite events May 2026: Design Week creative networking, ArcoLisboa art sessions, Principe Real private mixers, and Avenida luxury rituals.",
     "slug": "lisbon-events-may-2026",

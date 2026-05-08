@@ -1,5 +1,16 @@
 [
   {
+    "id": "mco-events-may-2026",
+    "slug": "monaco-events-may-2026",
+    "title": "Elite Events in Monaco May 2026",
+    "excerpt": "Grand Prix VIP paddocks, Yacht Club de Monaco exclusive receptions, and the unlisted UHNWI social landscape.",
+    "date": "2026-05-08",
+    "cityName": "Monaco",
+    "citySlug": "monaco",
+    "type": "Events Guide",
+    "image": "monaco-hero.jpg"
+  },
+  {
     "id": "lon-events-may-2026",
     "slug": "london-events-may-2026",
     "title": "Elite Events in London May 2026",

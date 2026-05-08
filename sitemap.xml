@@ -52,7 +52,7 @@
     <loc>https://eliteloop.app/barcelona-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-08</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/berlin</loc>
@@ -119,6 +119,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-04-15</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/es/barcelona-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-08</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/gdpr</loc>

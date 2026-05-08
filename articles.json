@@ -1,5 +1,16 @@
 [
   {
+    "id": "mex-events-may-2026",
+    "slug": "mexico-city-events-may-2026",
+    "title": "Elite Events in Mexico City May 2026",
+    "excerpt": "Polanco tech leadership mixers, Lomas private dining experiences, and Roma Norte art previews.",
+    "date": "2026-05-08",
+    "cityName": "Mexico City",
+    "citySlug": "mexico-city",
+    "type": "Events Guide",
+    "image": "mexico-city-hero.jpg"
+  },
+  {
     "id": "gva-events-may-2026",
     "slug": "geneva-events-may-2026",
     "title": "Elite Events in Geneva May 2026",

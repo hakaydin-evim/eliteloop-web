@@ -33,7 +33,7 @@
     "about": {
       "@type": "City",
       "name": "Seoul",
-      "containedInPlace": { "@type": "Country", "name": "South Korea · APAC" }
+      "containedInPlace": { "@type": "Country", "name": "South Korea" }
     },
     "publisher": {
       "@type": "Organization",
@@ -58,14 +58,11 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    /* ── Brand Token Override ── */
     :root {
       --city-accent:      #c9a02f;
       --city-accent-soft: rgba(201,160,47,0.12);
       --city-accent-text: #ebcf79;
     }
-
-    /* ── Topbar ── */
     .city-topbar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -98,7 +95,6 @@
     }
     .city-topbar__cta:hover { opacity: 0.85; }
 
-    /* ── Hero ── */
     .city-hero {
       position: relative; min-height: 100vh;
       display: flex; align-items: flex-end; overflow: hidden;
@@ -157,7 +153,6 @@
     }
     .btn-city-ghost:hover { border-color: rgba(201,160,47,0.6); color: var(--city-accent-text); }
 
-    /* ── Events Strip ── */
     .events-strip {
       background: rgba(255,255,255,0.02);
       border-top: 1px solid rgba(255,255,255,0.06);
@@ -167,7 +162,7 @@
     .events-strip__inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
     .events-strip__label {
       font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--city-accent-text); font-weight: 600; margin-bottom: 1.5rem;
+      color: var(--city-accent-text); font-weight: 600; margin-bottom: 1rem;
     }
     .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
     .event-card {
@@ -190,7 +185,6 @@
       margin-top: 0.85rem; font-size: 0.72rem; color: rgba(201,160,47,0.7);
     }
 
-    /* ── Scene Report ── */
     .scene-section { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; }
     .scene-section__header {
       display: flex; align-items: baseline; justify-content: space-between;
@@ -239,10 +233,6 @@
     }
     .report-archive-item:hover { border-color: rgba(201,160,47,0.34); transform: translateY(-2px); }
     
-    @media (max-width: 600px) {
-      .report-archive-item { flex-direction: column; gap: 0.75rem; padding: 1.25rem; }
-    }
-
     .report-archive__meta {
       flex-shrink: 0; width: 130px;
       padding-top: 0.25rem;
@@ -271,7 +261,6 @@
       letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.25rem;
     }
 
-    /* ── Features ── */
     .city-features {
       background: rgba(255,255,255,0.015);
       border-top: 1px solid rgba(255,255,255,0.05); padding: 5rem 0;
@@ -293,7 +282,6 @@
     .city-feature-item__title { font-size: 1rem; color: #f5f0e8; font-weight: 600; margin-bottom: 0.4rem; }
     .city-feature-item__desc { font-size: 0.82rem; color: rgba(245,240,232,0.5); line-height: 1.7; }
 
-    /* ── Download CTA ── */
     .city-download { text-align: center; padding: 6rem 2rem; max-width: 700px; margin: 0 auto; }
     .city-download__title {
       font-family: 'Cormorant Garamond', serif;
@@ -325,10 +313,10 @@
     <div class="city-hero__content">
       <div class="city-tag">
         <span>🇰🇷</span>
-        Seoul · APAC Capital Hub
+        Seoul · Private Social Discovery
       </div>
-      <h1>Enter Seoul's most exclusive <em>private rooms</em></h1>
-      <p class="city-hero__subtitle">EliteLoop Seoul is built for premium social discovery, private wealth dinners, founder rooms, and low-noise private networking.</p>
+      <h1>Where the Gangnam district meets <em>its elite.</em></h1>
+      <p class="city-hero__subtitle">EliteLoop Seoul maps the city's high-trust social layer through major art circuit networking, cybersecurity summits, and the private social rituals of Gangnam.</p>
       <div class="city-hero__cta">
         <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969"
            class="btn-city" target="_blank" rel="noreferrer">📱 Download on iOS</a>
@@ -345,68 +333,68 @@
       <div class="events-grid">
 
         <div class="event-card">
-          <div class="event-card__badge">FOUNDER CIRCLE</div>
-          <div class="event-card__title">Cheongdam Private Tech Dinner</div>
-          <div class="event-card__meta">April 20, 2026 · Cheongdam-dong, Gangnam<br>An invite-only gathering for Series B+ founders, deep tech allocators, and select web3 builders.</div>
-          <div class="event-card__lock">🔒 ELITE BADGE REQUIRED</div>
+          <div class="event-card__badge">Art</div>
+          <div class="event-card__title">Art Busan VIP Preview</div>
+          <div class="event-card__meta">May 21 · BEXCO<br>The premier networking hub for galleries, collectors, and the country's creative elite.</div>
+          <div class="event-card__lock">🔒 Gold badge minimum</div>
         </div>
 
         <div class="event-card">
-          <div class="event-card__badge">GALLERY NETWORKING</div>
-          <div class="event-card__title">Itaewon Hidden Art Salon</div>
-          <div class="event-card__meta">April 23, 2026 · Private Gallery, Itaewon<br>Fine art viewing paired with informal networking for creative directors and luxury brand executives.</div>
-          <div class="event-card__lock">🔒 VERIFIED MEMBERS ONLY</div>
+          <div class="event-card__badge">Tech</div>
+          <div class="event-card__title">TyphoonCon 2026</div>
+          <div class="event-card__meta">May 24 · Moxy Seoul<br>A specialized gathering for cybersecurity leadership and networking in the city center.</div>
+          <div class="event-card__lock">🔒 Silver badge minimum</div>
         </div>
 
         <div class="event-card">
-          <div class="event-card__badge">CRYPTO ALLOCATION</div>
-          <div class="event-card__title">Gangnam Asset Roundtable</div>
-          <div class="event-card__meta">April 28, 2026 · COEX Tower, VIP Suite<br>Closed-door roundtable on digital asset regulation and private wealth management in South Korea.</div>
-          <div class="event-card__lock">🔒 ELITE BADGE REQUIRED</div>
+          <div class="event-card__badge">Social</div>
+          <div class="event-card__title">Gangnam Private Session</div>
+          <div class="event-card__meta">May 18 · Private Venue<br>High-end social networking for the city's entrepreneur and leadership elite in Gangnam.</div>
+          <div class="event-card__lock">🔒 Approval required</div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Latest Scene Report -->
+  <!-- Latest Events Guide / Scene Report -->
   <section class="scene-section">
     <div class="scene-section__header">
-      <div class="scene-section__title">Seoul Scene Reports</div>
-      <a href="/cities" class="scene-section__all">All reports →</a>
+      <div class="scene-section__title">Seoul Events Guides & Reports</div>
+      <a href="/cities" class="scene-section__all">All guides →</a>
     </div>
 
-    <a href="/seoul-april-2026" class="scene-card">
+    <a href="/seoul-events-may-2026" class="scene-card">
       <div class="scene-card__content">
-        <div class="scene-card__tag">April 2026 · Scene Report</div>
-        <div class="scene-card__title">Seoul's Quiet Capital Season: Access Before Visibility</div>
-        <div class="scene-card__excerpt">How Cheongdam dinners and private omakase rooms have become the high-trust social layer for South Korea's most influential dealmakers.</div>
-        <div class="scene-card__read">Read full report →</div>
+        <div class="scene-card__tag">May 2026 · Events Guide</div>
+        <div class="scene-card__title">Elite Events in Seoul May 2026</div>
+        <div class="scene-card__excerpt">Art fair vernissages, cybersecurity summits, private Hannam-dong dining, and the high-end social landscape of the Korean capital.</div>
+        <div class="scene-card__read">Read full guide →</div>
       </div>
       <div class="scene-card__meta">
         <div class="scene-stat">
-          <div class="scene-stat__num">$4.2B</div>
-          <div class="scene-stat__label">ALLOCATOR CAPITAL</div>
+          <div class="scene-stat__num">4+</div>
+          <div class="scene-stat__label">Verified Events</div>
         </div>
         <div class="scene-stat">
-          <div class="scene-stat__num">15+</div>
-          <div class="scene-stat__label">PRIVATE ROOMS</div>
+          <div class="scene-stat__num">May</div>
+          <div class="scene-stat__label">Current Guide</div>
         </div>
         <div class="scene-stat">
-          <div class="scene-stat__num">92%</div>
-          <div class="scene-stat__label">VERIFIED FILTER</div>
+          <div class="scene-stat__num">19</div>
+          <div class="scene-stat__label">Member Rooms</div>
         </div>
       </div>
     </a>
     <div class="report-archive-list" aria-label="Seoul report archive">
-      <a href="/seoul-april-2026" class="report-archive-item">
+      <a href="/seoul-events-may-2026" class="report-archive-item">
         <div class="report-archive__meta">
-          <time datetime="2026-04-15" class="report-archive__date">Apr 15, 2026</time>
-          <span class="report-archive__tag">QUIET CAPITAL</span>
+          <time datetime="2026-05-21" class="report-archive__date">May 21, 2026</time>
+          <span class="report-archive__tag">Events Guide</span>
         </div>
         <div class="report-archive__content">
-          <div class="report-archive__title">Access Before Visibility</div>
-          <div class="report-archive__excerpt">A Seoul field report on the Cheongdam rooms, founder tables, and private capital conversations shaping the city's spring season.</div>
+          <div class="report-archive__title">Elite Events in Seoul May 2026</div>
+          <div class="report-archive__excerpt">Art fair vernissages, cybersecurity summits, private Hannam-dong dining, and the high-end social landscape of the Korean capital.</div>
         </div>
       </a>
     </div>
@@ -415,28 +403,28 @@
   <!-- City Features -->
   <section class="city-features">
     <div class="city-features__inner">
-      <div class="city-features__eyebrow">Why Seoul on EliteLoop</div>
-      <div class="city-features__title">Master the APAC Capital Hub</div>
+      <div class="city-features__eyebrow">Why SEL on EliteLoop</div>
+      <div class="city-features__title">A city of innovation needs a map with clear social signal.</div>
       <div class="city-features__grid">
         <div class="city-feature-item">
-          <div class="city-feature-item__icon">🇰🇷</div>
-          <div class="city-feature-item__title">High-Trust Networking</div>
-          <div class="city-feature-item__desc">Bypass the noise of public conferences. Connect directly in vetted, private environments where reputation precedes you.</div>
+          <div class="city-feature-item__icon">🏛️</div>
+          <div class="city-feature-item__title">Gangnam Social</div>
+          <div class="city-feature-item__desc">Discover the private lounges and high-trust social plans in the city's intellectual heart.</div>
         </div>
         <div class="city-feature-item">
-          <div class="city-feature-item__icon">🗝️</div>
-          <div class="city-feature-item__title">Cheongdam Access</div>
-          <div class="city-feature-item__desc">Discover the unlisted restaurants and private clubs in Gangnam where Seoul's real business actually happens.</div>
+          <div class="city-feature-item__icon">🎨</div>
+          <div class="city-feature-item__title">Art Circles</div>
+          <div class="city-feature-item__desc">Access the Art Busan VIP preview and exclusive contemporary art industry mixers.</div>
         </div>
         <div class="city-feature-item">
-          <div class="city-feature-item__icon">🤝</div>
-          <div class="city-feature-item__title">Verified Connects</div>
-          <div class="city-feature-item__desc">Every member in our Seoul rotation is manually verified to ensure you are meeting decision-makers, not tourists.</div>
+          <div class="city-feature-item__icon">🏅</div>
+          <div class="city-feature-item__title">Badge Discovery</div>
+          <div class="city-feature-item__desc">Use tiered access to move from public discovery to the city's most guarded social layers.</div>
         </div>
         <div class="city-feature-item">
-          <div class="city-feature-item__icon">📱</div>
-          <div class="city-feature-item__title">Seamless Rotations</div>
-          <div class="city-feature-item__desc">Moving around Asia? EliteLoop connects you automatically as you travel between Tokyo, Seoul, and Singapore.</div>
+          <div class="city-feature-item__icon">🍜</div>
+          <div class="city-feature-item__title">Hannam Dining</div>
+          <div class="city-feature-item__desc">Navigate the exclusive tables and private dining rooms of the city's financial elite.</div>
         </div>
       </div>
     </div>
@@ -444,8 +432,8 @@
 
   <!-- Download CTA -->
   <section class="city-download">
-    <div class="city-download__title">Access Seoul's Hidden Layer.</div>
-    <p class="city-download__sub">Join the curated network of professionals redefining social capital in South Korea. Apply for your membership today.</p>
+    <div class="city-download__title">Join the Seoul Inner Circle</div>
+    <p class="city-download__sub">Download EliteLoop to explore curated events in SEL and move through the city's private layer.</p>
     <div class="city-download__btns">
       <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969"
          class="btn-city" target="_blank" rel="noreferrer">📱 Download on App Store</a>

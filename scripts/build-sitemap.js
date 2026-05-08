@@ -19,7 +19,9 @@ const STATIC_PAGES = [
 
 const LOCALIZED_PAGES = [
   { slug: 'ar/abu-dhabi-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'ar/abu-dhabi-events-may-2026.html', lastmod: '2026-05-08' },
+  { slug: 'de/berlin-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'de/berlin-events-may-2026.html', lastmod: '2026-05-08' },
   { slug: 'es/barcelona-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'es/barcelona-events-may-2026.html', lastmod: '2026-05-08' },
+  { slug: 'fr/geneva-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'fr/geneva-events-may-2026.html', lastmod: '2026-05-08' },
   { slug: 'tr/istanbul-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'tr/istanbul-events-may-2026.html', lastmod: '2026-05-01' },
   { slug: 'it/rome-events-may-2026', changefreq: 'monthly', priority: '0.8', file: 'it/rome-events-may-2026.html', lastmod: '2026-05-01' }
 ];

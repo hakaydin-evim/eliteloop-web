@@ -64,7 +64,7 @@
     <loc>https://eliteloop.app/berlin-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-08</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/chicago</loc>
@@ -86,6 +86,12 @@
   </url>
   <url>
     <loc>https://eliteloop.app/copenhagen-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-08</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/de/berlin-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-05-08</lastmod>
@@ -122,6 +128,12 @@
   </url>
   <url>
     <loc>https://eliteloop.app/es/barcelona-events-may-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-08</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/fr/geneva-events-may-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-05-08</lastmod>

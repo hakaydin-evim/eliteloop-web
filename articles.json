@@ -1,5 +1,16 @@
 [
   {
+    "id": "ruh-events-may-2026",
+    "slug": "riyadh-events-may-2026",
+    "title": "Elite Events in Riyadh May 2026",
+    "excerpt": "KAFD financial networking, Bujairi Terrace private dining, and exclusive Diriyah art previews.",
+    "date": "2026-05-08",
+    "cityName": "Riyadh",
+    "citySlug": "riyadh",
+    "type": "Events Guide",
+    "image": "riyadh-hero.jpg"
+  },
+  {
     "title": "Elite Events in Amsterdam May 2026 — EliteLoop",
     "description": "Amsterdam elite events May 2026: Royal IGC business dinners, Soho House Bungehuis sessions, Zuidas district networking, and Amsterdam Art Week.",
     "slug": "amsterdam-events-may-2026",

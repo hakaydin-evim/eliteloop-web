@@ -72,7 +72,7 @@
       let localLinkHtml = '';
       if (localVersion) {
         const langCode = localVersion.slug.split('/')[0];
-        const langMap = { 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'de': 'Deutsch', 'it': 'Italiano', 'tr': 'Türkçe', 'ja': '日本語' };
+        const langMap = { 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'de': 'Deutsch', 'it': 'Italiano', 'tr': 'Türkçe', 'ja': '日本語', 'pt': 'Português', 'ko': '한국어' };
         const langName = langMap[langCode] || langCode.toUpperCase();
         localLinkHtml = `<a href="/${localVersion.slug}" class="local-edition-link" style="display:inline-flex; align-items:center; gap:0.4rem; margin-top:1.2rem; font-size:0.75rem; color:#ebcf79; text-decoration:none; border:1px solid rgba(235,207,121,0.3); padding:0.4rem 0.8rem; border-radius:0.4rem; background:rgba(201,160,47,0.05); transition:background 0.2s;"><span>🌐</span> ${langName} Edition</a>`;
       }

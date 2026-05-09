@@ -99,6 +99,10 @@
     .article-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(6,6,16,1) 0%, rgba(6,6,16,0.7) 40%, rgba(6,6,16,0.2) 100%); }
     .article-hero__content { position: relative; z-index: 2; max-width: 860px; padding: 0 2rem 4rem; margin: 0 auto; width: 100%; }
     .article-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(201,160,47,0.12); border: 1px solid rgba(201,160,47,0.3); color: var(--gold-soft); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 2rem; margin-bottom: 1.2rem; }
+    .article-language-switch { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+    .article-language-switch__label { color: rgba(245,240,232,0.48); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    .article-language-switch__link { display: inline-flex; align-items: center; justify-content: center; min-height: 2rem; padding: 0.42rem 0.9rem; border: 1px solid rgba(235,207,121,0.38); border-radius: 999px; background: rgba(201,160,47,0.12); color: var(--gold-soft); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.04em; text-decoration: none; box-shadow: 0 10px 24px rgba(0,0,0,0.18); }
+    .article-language-switch__link:hover { border-color: rgba(235,207,121,0.72); background: rgba(201,160,47,0.18); }
     .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 600; line-height: 1.12; color: var(--text); margin-bottom: 1rem; }
     .article-hero__sub { font-size: 1.1rem; color: rgba(245,240,232,0.65); line-height: 1.8; max-width: 600px; font-weight: 300; }
     .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.85rem; color: rgba(245,240,232,0.4); flex-wrap: wrap; }
@@ -145,6 +149,10 @@
     <div class="article-hero__overlay"></div>
     <div class="article-hero__content">
       <div class="article-tag">Maggio 2026 · Elite Events Guide · Milano</div>
+      <div class="article-language-switch" aria-label="Selettore lingua">
+        <span class="article-language-switch__label">Lingua</span>
+        <a href="/milan-events-may-2026" class="article-language-switch__link" hreflang="en" lang="en">English</a>
+      </div>
       <h1>Eventi di Elite a Milano Maggio 2026</h1>
       <p class="article-hero__sub">Networking nel lusso industriale, sessioni di design a Brera, rituai sociali privati nel Quadrilatero e il panorama dell'alta finanza a Porta Nuova.</p>
       <div class="article-meta">

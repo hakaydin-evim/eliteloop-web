@@ -158,6 +158,40 @@
       letter-spacing: 0.18em; text-transform: uppercase;
       padding: 0.35rem 0.9rem; border-radius: 2rem; margin-bottom: 1.2rem;
     }
+    .article-language-switch {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .article-language-switch__label {
+      color: rgba(245,240,232,0.48);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .article-language-switch__link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2rem;
+      padding: 0.42rem 0.9rem;
+      border: 1px solid rgba(235,207,121,0.38);
+      border-radius: 999px;
+      background: rgba(201,160,47,0.12);
+      color: var(--gold-soft);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    }
+    .article-language-switch__link:hover {
+      border-color: rgba(235,207,121,0.72);
+      background: rgba(201,160,47,0.18);
+    }
     .article-hero h1 {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2.2rem, 5vw, 4rem);
@@ -300,6 +334,10 @@
     <div class="article-hero__overlay"></div>
     <div class="article-hero__content">
       <div class="article-tag">May 2026 · Elite Events Guide · Milan</div>
+      <div class="article-language-switch" aria-label="Language switch">
+        <span class="article-language-switch__label">Language</span>
+        <a href="/it/milan-events-may-2026" class="article-language-switch__link" hreflang="it" lang="it">Italiano</a>
+      </div>
       <h1>Elite Events in Milan May 2026</h1>
       <p class="article-hero__sub">A field guide to Milan's May rooms: luxury industry networking at Packaging Première, design sessions in Brera, and the private social rituals of the Quadrilatero.</p>
       <div class="article-meta">

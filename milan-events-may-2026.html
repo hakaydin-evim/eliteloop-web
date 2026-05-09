@@ -109,19 +109,8 @@
       background: rgba(255,255,255,0.04); display: block;
     }
     .topbar__right { display: flex; align-items: center; gap: 1.2rem; }
-    .topbar__link { font-size: 0.78rem; color: rgba(245,240,232,0.5); letter-spacing: 0.04em; transition: color 0.2s; }
+    .topbar__link { font-size: 0.78rem; color: rgba(245,240,232,0.5); transition: color 0.2s; }
     .topbar__link:hover { color: var(--gold-soft); }
-    .topbar__language {
-      display: inline-flex; align-items: center; gap: 0.35rem;
-      border: 1px solid rgba(235,207,121,0.28);
-      background: rgba(201,160,47,0.08);
-      color: var(--gold-soft);
-      font-size: 0.76rem; font-weight: 700;
-      padding: 0.43rem 0.85rem; border-radius: 999px;
-      letter-spacing: 0.04em; text-decoration: none;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .topbar__language:hover { border-color: rgba(235,207,121,0.58); background: rgba(201,160,47,0.14); }
     .topbar__cta {
       background: linear-gradient(135deg, #b88919 0%, #ebcf79 50%, #b88919 100%);
       color: #060610; font-size: 0.78rem; font-weight: 700;
@@ -158,40 +147,6 @@
       letter-spacing: 0.18em; text-transform: uppercase;
       padding: 0.35rem 0.9rem; border-radius: 2rem; margin-bottom: 1.2rem;
     }
-    .article-language-switch {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 1.25rem;
-      flex-wrap: wrap;
-    }
-    .article-language-switch__label {
-      color: rgba(245,240,232,0.48);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-    .article-language-switch__link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 2rem;
-      padding: 0.42rem 0.9rem;
-      border: 1px solid rgba(235,207,121,0.38);
-      border-radius: 999px;
-      background: rgba(201,160,47,0.12);
-      color: var(--gold-soft);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-decoration: none;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-    }
-    .article-language-switch__link:hover {
-      border-color: rgba(235,207,121,0.72);
-      background: rgba(201,160,47,0.18);
-    }
     .article-hero h1 {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2.2rem, 5vw, 4rem);
@@ -204,15 +159,21 @@
     .article-meta {
       display: flex; align-items: center; gap: 1.5rem;
       margin-top: 1.5rem; font-size: 0.75rem;
-      color: rgba(245,240,232,0.4); letter-spacing: 0.05em;
+      color: rgba(245,240,232,0.4);
       flex-wrap: wrap;
     }
     .article-meta__dot { opacity: 0.4; }
+    .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
 
     /* ── Article Body ── */
     .article-body {
       max-width: 720px; margin: 0 auto; padding: 2rem 2rem 4rem;
     }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
     .article-body p {
       font-size: 1rem; line-height: 1.85; color: rgba(245,240,232,0.8);
@@ -322,7 +283,6 @@
     </a>
     <div class="topbar__right">
       <a href="/milan" class="topbar__link">← Milan Hub</a>
-      <a href="/it/milan-events-may-2026" class="topbar__language" hreflang="it" lang="it">Italiano</a>
       <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969"
          class="topbar__cta" target="_blank" rel="noreferrer">Download App</a>
     </div>
@@ -334,10 +294,6 @@
     <div class="article-hero__overlay"></div>
     <div class="article-hero__content">
       <div class="article-tag">May 2026 · Elite Events Guide · Milan</div>
-      <div class="article-language-switch" aria-label="Language switch">
-        <span class="article-language-switch__label">Language</span>
-        <a href="/it/milan-events-may-2026" class="article-language-switch__link" hreflang="it" lang="it">Italiano</a>
-      </div>
       <h1>Elite Events in Milan May 2026</h1>
       <p class="article-hero__sub">A field guide to Milan's May rooms: luxury industry networking at Packaging Première, design sessions in Brera, and the private social rituals of the Quadrilatero.</p>
       <div class="article-meta">
@@ -350,8 +306,15 @@
     </div>
   </header>
 
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="switchLang('en')">English</button>
+    <button class="lang-btn" onclick="switchLang('it')">Italiano</button>
+  </div>
+
   <!-- Article Body -->
   <article class="article-body">
+    <!-- ENGLISH SECTION -->
+    <div id="content-en" class="lang-section active">
     <p>Milan in May is defined by its industrial sophistication and the high-trust social plans of the Brera and Quadrilatero districts. While the city's fashion avenues are public and constantly shifting, the real social signal is found behind closed doors—in minimalist showrooms, private member clubs, and the exclusive dining rooms of Porta Nuova. In 2026, the intersection of legacy craftsmanship and aggressive tech investment has created a new social grammar that only those within the circle can truly read.</p>
     <p>This month, the city shifts its focus to high-end design, sustainable luxury packaging, and the strategic intersection of heritage brands with global venture capital. Navigating Milan's elite layer requires more than an invitation; it requires an understanding of "la bella figura"—the art of presentation—translated into modern, high-stakes networking. The most critical conversations are no longer happening on the convention floor, but at private gallery viewings in Brera and post-summit dinners where the city's power brokers converge.</p>
     <p>As the spring transition reaches its peak, the social nodes of the city move from the indoor salons of the Quadrilatero to the hidden rooftop terraces and secret courtyards that define Milanese summer. To move effectively through these rooms, one must possess not just a badge, but a verifiable proof of intellectual and social alignment with the city's vision for the future of luxury.</p>
@@ -422,6 +385,66 @@
       </div>
       <div class="article-share__status" aria-live="polite"></div>
     </section>
+    </div>
+
+    <!-- ITALIAN SECTION -->
+    <div id="content-it" class="lang-section">
+      <p>Milano a maggio è definita dalla sua sofisticatezza industriale e dai piani sociali ad alta fiducia di Brera e del Quadrilatero. Le vie della moda sono pubbliche e visibili; il vero segnale sociale si muove invece dietro porte chiuse, tra showroom essenziali, club privati e sale da pranzo riservate a Porta Nuova.</p>
+
+      <p>Questo mese la città concentra lusso, design, packaging sostenibile e capitale globale. Muoversi bene nello strato d'élite milanese richiede più di un invito: richiede una presenza leggibile, una reputazione verificabile e la capacità di passare dal piano pubblico dell'evento alla stanza privata in cui si decide davvero.</p>
+
+      <h2>Eventi di Networking e Business</h2>
+      <ul>
+        <li><strong>Packaging Première: Networking nel lusso (19-21 maggio) · Allianz MiCo:</strong> Il punto di incontro per packaging di lusso, beauty, wine, fine food e lifestyle. La fiera è pubblica per il settore; il valore reale vive nelle lounge VIP e nelle cene post-evento dei fornitori più selezionati.</li>
+        <li><strong>Brera Design Leadership Social (20 maggio) · Brera:</strong> Una stanza discreta per designer, architetti, brand director e collezionisti. Qui il titolo conta meno del contributo al discorso estetico della città.</li>
+        <li><strong>Porta Nuova Finance Breakfast (22 maggio) · Porta Nuova:</strong> Un incontro mattutino tra founder fintech, private wealth manager e capitale industriale milanese, con focus su luxury investment e asset fisici tokenizzati.</li>
+        <li><strong>Design Dinner non listata (21 maggio) · luogo riservato:</strong> Cena privata tra designer, venture capitalist e operatori industriali che lavorano sull'incrocio tra AI, manifattura e lusso.</li>
+      </ul>
+
+      <h2>Cene Esclusive ed Esperienze Sociali Private</h2>
+      <ul>
+        <li><strong>Quadrilatero Private Mixer (25 maggio) · Quadrilatero della Moda:</strong> Uno showroom privato diventa nodo sociale per luxury heritage, retail internazionale e business expansion.</li>
+        <li><strong>Ricevimenti nei palchi privati della Scala (weekend di maggio) · Teatro alla Scala:</strong> Le performance sono pubbliche; le introduzioni decisive avvengono nei palchi, negli intervalli e nelle cene successive.</li>
+        <li><strong>Navigli Rooftop Art Vernissage (fine maggio) · Navigli:</strong> Collezionisti, founder e patron creativi si incontrano in una terrazza privata, lontano dal rumore delle aperture pubbliche.</li>
+      </ul>
+
+      <h2>Eventi Culturali e Lifestyle per il Circolo d'Élite</h2>
+      <ul>
+        <li><strong>Salone del Giardino Segreto (28 maggio) · Corso Como:</strong> Un salone privato per operatori culturali e industriali, costruito intorno a conversazioni su lusso europeo, design e capitale simbolico.</li>
+        <li><strong>Salone del Mobile / Fuorisalone follow-up rooms · Brera e Isola:</strong> Anche dopo la settimana ufficiale, la coda sociale del design milanese continua in showroom, courtyard e brand space selezionati.</li>
+        <li><strong>Fornasetti / fashion-design circuit · centro città:</strong> Nuove aperture, installazioni e retail experience confermano il ruolo di Milano come ponte tra moda, oggetto e ambiente.</li>
+      </ul>
+
+      <div class="article-highlight">
+        <div class="article-highlight__label">Come entrare in queste stanze</div>
+        <p>A Milano il badge della conferenza è solo l'inizio. Il vero accesso nasce quando il tuo profilo è leggibile prima ancora della presentazione.</p>
+      </div>
+
+      <blockquote>"A Milano, il segnale vero non è il rumore dell'evento: è il tavolo che si apre dopo."</blockquote>
+
+      <div class="source-list" aria-label="Fonti verificate per Milano maggio 2026">
+        <h2>Fonti verificate</h2>
+        <a href="https://www.packagingpremiere.it/en/visit/when-and-where/" target="_blank" rel="noreferrer">Packaging Première — Quando e Dove</a>
+        <a href="https://www.packagingpremiere.it/en/invite-to-milan/" target="_blank" rel="noreferrer">Packaging Première 2026</a>
+        <a href="https://specialpapers.fedrigoni.com/fed-world/fedrigoni-special-papers-at-packaging-premiere-milan-19-21-may-2026/" target="_blank" rel="noreferrer">Fedrigoni a Packaging Première</a>
+        <a href="https://www.teatroallascala.org/en/calendar.html" target="_blank" rel="noreferrer">Teatro alla Scala</a>
+        <a href="https://www.salonemilano.it/en/exhibitions/salone-internazionale-del-mobile" target="_blank" rel="noreferrer">Salone del Mobile</a>
+        <a href="https://www.fuorisalone.it/en/2026/events/7463/Herm%C3%A8s-Milano-Design-Week-2026" target="_blank" rel="noreferrer">Fuorisalone Brera</a>
+        <a href="https://vogue.it" target="_blank" rel="noreferrer">Vogue Italia</a>
+        <a href="https://iodonna.it" target="_blank" rel="noreferrer">IO Donna</a>
+      </div>
+
+      <p>Questo maggio, l'opportunità a Milano non riguarda partecipare a più eventi. Riguarda riconoscere quelli giusti e trasformarli in accesso reale. È esattamente il protocollo che facilita <a href="/milan" class="internal-link">EliteLoop Milano</a>.</p>
+    </div>
+
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+    </script>
   </article>
 
   <!-- Download CTA -->

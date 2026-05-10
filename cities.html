@@ -277,6 +277,39 @@
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1rem;
     }
+    #global-pulse-list.is-collapsed > a:nth-of-type(n+4),
+    #latest-scene-reports-list.is-collapsed > .report-item:nth-of-type(n+7) {
+      display: none !important;
+    }
+    .collection-toggle-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
+    .collection-toggle {
+      appearance: none;
+      border: 1px solid rgba(201,160,47,0.32);
+      border-radius: 999px;
+      background: rgba(201,160,47,0.08);
+      color: #ebcf79;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      min-height: 44px;
+      padding: 0.72rem 1.25rem;
+      text-transform: uppercase;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    }
+    .collection-toggle:hover {
+      background: rgba(201,160,47,0.14);
+      border-color: rgba(201,160,47,0.55);
+      transform: translateY(-1px);
+    }
+    .collection-toggle[hidden] {
+      display: none !important;
+    }
     .report-item {
       border: 1px solid rgba(255,255,255,0.06);
       border-radius: 1rem; padding: 1.25rem 1.5rem;
@@ -352,6 +385,10 @@
       #global-pulse > div[style*="display:grid"] {
         grid-template-columns: 1fr !important;
       }
+      #global-pulse-list.is-collapsed > a:nth-of-type(n+3),
+      #latest-scene-reports-list.is-collapsed > .report-item:nth-of-type(n+5) {
+        display: none !important;
+      }
     }
   </style>
 </head>
@@ -395,7 +432,7 @@
     </div>
     <p style="font-size:0.85rem; color:rgba(246,241,231,0.5); line-height:1.7; max-width:680px; margin-bottom:1.5rem; font-weight:300;">Daily intelligence on private social discovery, access psychology, and premium city momentum — updated every day across EliteLoop's worldwide signal layer.</p>
 
-    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1rem;">
+    <div id="global-pulse-list" class="is-collapsed" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1rem;">
 
       <!-- Today's article — May 8 Global Pulse: Money & Social Capital -->
       <a href="/global-pulse-08-may-2026"
@@ -522,6 +559,20 @@
         <div style="font-size:0.7rem; color:rgba(246,241,231,0.3); margin-top:0.25rem;">April 19, 2026 · 7 min read</div>
       </a>
 
+    </div>
+    <div class="collection-toggle-wrap">
+      <button
+        id="global-pulse-toggle"
+        class="collection-toggle"
+        type="button"
+        data-target="global-pulse-list"
+        data-desktop-limit="3"
+        data-mobile-limit="2"
+        data-show-label="Show more Global Pulse"
+        data-hide-label="Show less Global Pulse"
+        aria-controls="global-pulse-list"
+        aria-expanded="false"
+      >Show more Global Pulse</button>
     </div>
   </section>
 
@@ -1040,6 +1091,21 @@
         </a>
       </noscript>
     </div>
+    <div class="collection-toggle-wrap">
+      <button
+        id="latest-scene-reports-toggle"
+        class="collection-toggle"
+        type="button"
+        data-target="latest-scene-reports-list"
+        data-desktop-limit="6"
+        data-mobile-limit="4"
+        data-show-label="Show more city guides"
+        data-hide-label="Show less city guides"
+        aria-controls="latest-scene-reports-list"
+        aria-expanded="false"
+        hidden
+      >Show more city guides</button>
+    </div>
   </div>
 
   <!-- Footer — main site standard -->
@@ -1088,6 +1154,62 @@
   </footer>
 
   <script>
+    (function setupCollapsibleCollections() {
+      const getVisibleLimit = (button) => {
+        const isMobile = window.matchMedia('(max-width: 720px)').matches;
+        const limit = isMobile ? button.dataset.mobileLimit : button.dataset.desktopLimit;
+        return Number(limit || button.dataset.desktopLimit || 0);
+      };
+
+      const getItems = (list) =>
+        Array.from(list.children).filter((item) => item.matches('a, .report-item'));
+
+      const refreshButton = (button) => {
+        const list = document.getElementById(button.dataset.target);
+        if (!list) return;
+
+        const items = getItems(list);
+        const limit = getVisibleLimit(button);
+        const shouldCollapse = items.length > limit;
+        button.hidden = !shouldCollapse;
+
+        if (!shouldCollapse) {
+          list.classList.remove('is-collapsed');
+          button.setAttribute('aria-expanded', 'true');
+          return;
+        }
+
+        if (!list.dataset.collapseReady) {
+          list.classList.add('is-collapsed');
+          list.dataset.collapseReady = 'true';
+        }
+
+        const expanded = !list.classList.contains('is-collapsed');
+        button.textContent = expanded ? button.dataset.hideLabel : button.dataset.showLabel;
+        button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      };
+
+      const buttons = Array.from(document.querySelectorAll('.collection-toggle[data-target]'));
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const list = document.getElementById(button.dataset.target);
+          if (!list) return;
+
+          list.classList.toggle('is-collapsed');
+          refreshButton(button);
+        });
+        refreshButton(button);
+      });
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => buttons.forEach(refreshButton), 120);
+      });
+
+      window.eliteLoopRefreshCollapsibleLists = () => buttons.forEach(refreshButton);
+    })();
+
     (function hydrateCityCards() {
       const cards = Array.from(document.querySelectorAll('.city-card[href^="/"]'));
       if (!cards.length) return;
@@ -1292,6 +1414,7 @@
             card.appendChild(meta);
             list.appendChild(card);
           });
+          window.eliteLoopRefreshCollapsibleLists?.();
         })
         .catch((error) => {
           console.error('Failed to render latest scene reports:', error);

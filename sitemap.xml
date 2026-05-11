@@ -4,7 +4,13 @@
     <loc>https://eliteloop.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://eliteloop.app/global-pulse-11-may-2026</loc>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-11</lastmod>
   </url>
   <url>
     <loc>https://eliteloop.app/abu-dhabi</loc>

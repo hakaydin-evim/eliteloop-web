@@ -12,8 +12,8 @@ const enContent = `<!DOCTYPE html>
   <link rel="alternate" hreflang="en" href="https://eliteloop.app/paris-events-may-2026">
   <link rel="alternate" hreflang="fr" href="https://eliteloop.app/fr/paris-events-may-2026">
   <link rel="alternate" hreflang="x-default" href="https://eliteloop.app/paris-events-may-2026">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=20260516b">
-  <link rel="shortcut icon" href="/favicon.ico?v=20260516b">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=20260516c">
+  <link rel="shortcut icon" href="/favicon.ico?v=20260516c">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260516b">
 
   <meta property="og:type" content="article">
@@ -97,58 +97,58 @@ const enContent = `<!DOCTYPE html>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --gold: #c9a02f; --gold-soft: #ebcf79; --bg: #060610; --text: #f5f0e8; }
+    :root { --gold: #d8a557; --gold-soft: #fae6b7; --bg: #060b14; --text: #f8efe2; }
     body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; }
 
-    .topbar { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: rgba(6,6,16,0.85); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .topbar { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: rgba(6,11,20,0.85); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.05); }
     .topbar a { color: var(--text); text-decoration: none; }
     .topbar .brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 600; font-size: 0.92rem; }
     .topbar .brand img { width: 36px; height: 36px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); display: block; }
     .topbar__right { display: flex; align-items: center; gap: 1.2rem; }
-    .topbar__link { font-size: 0.78rem; color: rgba(245,240,232,0.5); transition: color 0.2s; }
+    .topbar__link { font-size: 0.78rem; color: rgba(248,239,226,0.5); transition: color 0.2s; }
     .topbar__link:hover { color: var(--gold-soft); }
-    .topbar__cta { background: linear-gradient(135deg, #b88919 0%, #ebcf79 50%, #b88919 100%); color: #060610; font-size: 0.78rem; font-weight: 700; padding: 0.45rem 1.1rem; border-radius: 0.4rem; transition: opacity 0.2s; }
+    .topbar__cta { background: linear-gradient(135deg, #b77925 0%, #fae6b7 50%, #b77925 100%); color: #060b14; font-size: 0.78rem; font-weight: 700; padding: 0.45rem 1.1rem; border-radius: 0.4rem; transition: opacity 0.2s; }
     
     .article-hero { position: relative; min-height: 72vh; display: flex; align-items: flex-end; overflow: hidden; }
     .article-hero__bg { position: absolute; inset: 0; background-image: url('paris-hero.jpg'); background-size: cover; background-position: center 30%; }
-    .article-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(6,6,16,1) 0%, rgba(6,6,16,0.7) 40%, rgba(6,6,16,0.2) 100%); }
+    .article-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(6,11,20,1) 0%, rgba(6,11,20,0.7) 40%, rgba(6,11,20,0.2) 100%); }
     .article-hero__content { position: relative; z-index: 2; max-width: 860px; padding: 0 2rem 4rem; margin: 0 auto; width: 100%; }
-    .article-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(201,160,47,0.12); border: 1px solid rgba(201,160,47,0.3); color: var(--gold-soft); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 2rem; margin-bottom: 1.2rem; }
+    .article-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(216,165,87,0.12); border: 1px solid rgba(216,165,87,0.3); color: var(--gold-soft); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 2rem; margin-bottom: 1.2rem; }
     .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 600; line-height: 1.12; color: var(--text); margin-bottom: 1rem; }
-    .article-hero__sub { font-size: 1rem; color: rgba(245,240,232,0.65); line-height: 1.7; max-width: 600px; font-weight: 300; }
-    .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.75rem; color: rgba(245,240,232,0.4); flex-wrap: wrap; }
+    .article-hero__sub { font-size: 1rem; color: rgba(248,239,226,0.65); line-height: 1.7; max-width: 600px; font-weight: 300; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.75rem; color: rgba(248,239,226,0.4); flex-wrap: wrap; }
 
     .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
-    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
-    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(248,239,226,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: rgba(216,165,87,0.15); border-color: rgba(216,165,87,0.4); color: var(--gold-soft); }
 
     .article-body { max-width: 720px; margin: 0 auto; padding: 2rem 2rem 4rem; }
     .lang-section { display: none; }
     .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-    .article-body p { font-size: 1rem; line-height: 1.85; color: rgba(245,240,232,0.8); margin-bottom: 1.5rem; font-weight: 300; }
+    .article-body p { font-size: 1rem; line-height: 1.85; color: rgba(248,239,226,0.8); margin-bottom: 1.5rem; font-weight: 300; }
     .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; color: var(--text); font-weight: 600; margin: 2.5rem 0 1rem; }
     .article-body h3 { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--gold-soft); font-weight: 600; margin: 2rem 0 0.5rem; }
     .article-body ul { list-style: none; margin-bottom: 1.5rem; }
-    .article-body li { padding-left: 1.5rem; position: relative; margin-bottom: 1rem; color: rgba(245,240,232,0.7); line-height: 1.6; }
+    .article-body li { padding-left: 1.5rem; position: relative; margin-bottom: 1rem; color: rgba(248,239,226,0.7); line-height: 1.6; }
     .article-body li::before { content: '•'; color: var(--gold-soft); position: absolute; left: 0; font-size: 1.2rem; top: -2px; }
     
-    .article-highlight { background: rgba(201,160,47,0.06); border: 1px solid rgba(201,160,47,0.18); border-radius: 1rem; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .article-highlight { background: rgba(216,165,87,0.06); border: 1px solid rgba(216,165,87,0.18); border-radius: 1rem; padding: 1.5rem 2rem; margin: 2rem 0; }
     .article-highlight__label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-soft); font-weight: 700; margin-bottom: 0.75rem; }
-    .article-body blockquote { border-left: 3px solid rgba(201,160,47,0.4); padding-left: 1.5rem; margin: 2rem 0; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; color: rgba(245,240,232,0.7); }
+    .article-body blockquote { border-left: 3px solid rgba(216,165,87,0.4); padding-left: 1.5rem; margin: 2rem 0; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; color: rgba(248,239,226,0.7); }
     .source-list { margin: 2.5rem 0; padding: 1.25rem 1.5rem; border: 1px solid rgba(255,255,255,0.07); border-radius: 1rem; background: rgba(255,255,255,0.02); }
     .source-list h2 { font-size: 1.35rem; margin: 0 0 0.9rem; }
-    .source-list a { display: inline-flex; margin: 0.35rem 0.75rem 0.35rem 0; color: var(--gold-soft); font-size: 0.82rem; text-decoration: none; border-bottom: 1px solid rgba(235,207,121,0.25); }
+    .source-list a { display: inline-flex; margin: 0.35rem 0.75rem 0.35rem 0; color: var(--gold-soft); font-size: 0.82rem; text-decoration: none; border-bottom: 1px solid rgba(250,230,183,0.25); }
     
     .article-cta { text-align: center; padding: 4rem 2rem; border-top: 1px solid rgba(255,255,255,0.06); max-width: 640px; margin: 0 auto; }
     .article-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin-bottom: 0.75rem; }
-    .article-cta p { font-size: 0.9rem; color: rgba(245,240,232,0.5); margin-bottom: 2rem; line-height: 1.7; }
+    .article-cta p { font-size: 0.9rem; color: rgba(248,239,226,0.5); margin-bottom: 2rem; line-height: 1.7; }
     .article-cta__btns { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
-    .btn-gold { background: linear-gradient(135deg, #b88919, #ebcf79, #b88919); color: #060610; font-size: 0.82rem; font-weight: 700; padding: 0.75rem 1.5rem; border-radius: 0.4rem; text-decoration: none; }
-    .btn-outline { background: transparent; color: rgba(245,240,232,0.7); border: 1px solid rgba(245,240,232,0.18); font-size: 0.82rem; padding: 0.75rem 1.5rem; border-radius: 0.4rem; text-decoration: none; }
+    .btn-gold { background: linear-gradient(135deg, #b77925, #fae6b7, #b77925); color: #060b14; font-size: 0.82rem; font-weight: 700; padding: 0.75rem 1.5rem; border-radius: 0.4rem; text-decoration: none; }
+    .btn-outline { background: transparent; color: rgba(248,239,226,0.7); border: 1px solid rgba(248,239,226,0.18); font-size: 0.82rem; padding: 0.75rem 1.5rem; border-radius: 0.4rem; text-decoration: none; }
 
-    .internal-link { color: var(--gold-soft); text-decoration: none; border-bottom: 1px solid rgba(201,160,47,0.3); }
+    .internal-link { color: var(--gold-soft); text-decoration: none; border-bottom: 1px solid rgba(216,165,87,0.3); }
     .internal-link:hover { border-color: var(--gold-soft); }
   </style>
 </head>
@@ -237,7 +237,7 @@ const enContent = `<!DOCTYPE html>
     <div class="footer-grid">
       <div>
         <a href="/" class="brand footer-brand"><img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop"><span>EliteLoop</span></a>
-        <p style="color:rgba(246,241,231,0.55); line-height:1.75; margin-top:0.75rem;">Social discovery app for premium events, nearby plans, and badge-based access worldwide.</p>
+        <p style="color:rgba(248,239,226,0.55); line-height:1.75; margin-top:0.75rem;">Social discovery app for premium events, nearby plans, and badge-based access worldwide.</p>
       </div>
       <div><h4>Cities</h4><a href="/cities">All Cities</a><a href="/paris">Paris</a></div>
       <div><h4>Legal</h4><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/gdpr">GDPR</a></div>
@@ -261,8 +261,8 @@ const frContent = `<!DOCTYPE html>
   <link rel="alternate" hreflang="en" href="https://eliteloop.app/paris-events-may-2026">
   <link rel="alternate" hreflang="fr" href="https://eliteloop.app/fr/paris-events-may-2026">
   <link rel="alternate" hreflang="x-default" href="https://eliteloop.app/paris-events-may-2026">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=20260516b">
-  <link rel="shortcut icon" href="/favicon.ico?v=20260516b">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=20260516c">
+  <link rel="shortcut icon" href="/favicon.ico?v=20260516c">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260516b">
 
   <meta property="og:type" content="article">
@@ -346,58 +346,58 @@ const frContent = `<!DOCTYPE html>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --gold: #c9a02f; --gold-soft: #ebcf79; --bg: #060610; --text: #f5f0e8; }
+    :root { --gold: #d8a557; --gold-soft: #fae6b7; --bg: #060b14; --text: #f8efe2; }
     body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; }
 
-    .topbar { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: rgba(6,6,16,0.85); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .topbar { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: rgba(6,11,20,0.85); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.05); }
     .topbar a { color: var(--text); text-decoration: none; }
     .topbar .brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 600; font-size: 0.92rem; }
     .topbar .brand img { width: 36px; height: 36px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); display: block; }
     .topbar__right { display: flex; align-items: center; gap: 1.2rem; }
-    .topbar__link { font-size: 0.78rem; color: rgba(245,240,232,0.5); transition: color 0.2s; }
+    .topbar__link { font-size: 0.78rem; color: rgba(248,239,226,0.5); transition: color 0.2s; }
     .topbar__link:hover { color: var(--gold-soft); }
-    .topbar__cta { background: linear-gradient(135deg, #b88919 0%, #ebcf79 50%, #b88919 100%); color: #060610; font-size: 0.78rem; font-weight: 700; padding: 0.45rem 1.1rem; border-radius: 0.4rem; transition: opacity 0.2s; }
+    .topbar__cta { background: linear-gradient(135deg, #b77925 0%, #fae6b7 50%, #b77925 100%); color: #060b14; font-size: 0.78rem; font-weight: 700; padding: 0.45rem 1.1rem; border-radius: 0.4rem; transition: opacity 0.2s; }
     
     .article-hero { position: relative; min-height: 72vh; display: flex; align-items: flex-end; overflow: hidden; }
     .article-hero__bg { position: absolute; inset: 0; background-image: url('../paris-hero.jpg'); background-size: cover; background-position: center 30%; }
-    .article-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(6,6,16,1) 0%, rgba(6,6,16,0.7) 40%, rgba(6,6,16,0.2) 100%); }
+    .article-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(6,11,20,1) 0%, rgba(6,11,20,0.7) 40%, rgba(6,11,20,0.2) 100%); }
     .article-hero__content { position: relative; z-index: 2; max-width: 860px; padding: 0 2rem 4rem; margin: 0 auto; width: 100%; }
-    .article-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(201,160,47,0.12); border: 1px solid rgba(201,160,47,0.3); color: var(--gold-soft); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 2rem; margin-bottom: 1.2rem; }
+    .article-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(216,165,87,0.12); border: 1px solid rgba(216,165,87,0.3); color: var(--gold-soft); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 2rem; margin-bottom: 1.2rem; }
     .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 600; line-height: 1.12; color: var(--text); margin-bottom: 1rem; }
-    .article-hero__sub { font-size: 1rem; color: rgba(245,240,232,0.65); line-height: 1.7; max-width: 600px; font-weight: 300; }
-    .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.75rem; color: rgba(245,240,232,0.4); flex-wrap: wrap; }
+    .article-hero__sub { font-size: 1rem; color: rgba(248,239,226,0.65); line-height: 1.7; max-width: 600px; font-weight: 300; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.75rem; color: rgba(248,239,226,0.4); flex-wrap: wrap; }
 
     .lang-toggle { display: flex; justify-content: center; gap: 1rem; margin: 3rem auto 1rem; max-width: 720px; }
-    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; text-decoration: none; }
-    .lang-btn.active { background: rgba(201,160,47,0.15); border-color: rgba(201,160,47,0.4); color: var(--gold-soft); }
+    .lang-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(248,239,226,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+    .lang-btn.active { background: rgba(216,165,87,0.15); border-color: rgba(216,165,87,0.4); color: var(--gold-soft); }
 
     .article-body { max-width: 720px; margin: 0 auto; padding: 2rem 2rem 4rem; }
     .lang-section { display: none; }
     .lang-section.active { display: block; animation: fadeIn 0.4s ease forwards; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-    .article-body p { font-size: 1rem; line-height: 1.85; color: rgba(245,240,232,0.8); margin-bottom: 1.5rem; font-weight: 300; }
+    .article-body p { font-size: 1rem; line-height: 1.85; color: rgba(248,239,226,0.8); margin-bottom: 1.5rem; font-weight: 300; }
     .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; color: var(--text); font-weight: 600; margin: 2.5rem 0 1rem; }
     .article-body h3 { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--gold-soft); font-weight: 600; margin: 2rem 0 0.5rem; }
     .article-body ul { list-style: none; margin-bottom: 1.5rem; }
-    .article-body li { padding-left: 1.5rem; position: relative; margin-bottom: 1rem; color: rgba(245,240,232,0.7); line-height: 1.6; }
+    .article-body li { padding-left: 1.5rem; position: relative; margin-bottom: 1rem; color: rgba(248,239,226,0.7); line-height: 1.6; }
     .article-body li::before { content: '•'; color: var(--gold-soft); position: absolute; left: 0; font-size: 1.2rem; top: -2px; }
     
-    .article-highlight { background: rgba(201,160,47,0.06); border: 1px solid rgba(201,160,47,0.18); border-radius: 1rem; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .article-highlight { background: rgba(216,165,87,0.06); border: 1px solid rgba(216,165,87,0.18); border-radius: 1rem; padding: 1.5rem 2rem; margin: 2rem 0; }
     .article-highlight__label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-soft); font-weight: 700; margin-bottom: 0.75rem; }
-    .article-body blockquote { border-left: 3px solid rgba(201,160,47,0.4); padding-left: 1.5rem; margin: 2rem 0; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; color: rgba(245,240,232,0.7); }
+    .article-body blockquote { border-left: 3px solid rgba(216,165,87,0.4); padding-left: 1.5rem; margin: 2rem 0; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; color: rgba(248,239,226,0.7); }
     .source-list { margin: 2.5rem 0; padding: 1.25rem 1.5rem; border: 1px solid rgba(255,255,255,0.07); border-radius: 1rem; background: rgba(255,255,255,0.02); }
     .source-list h2 { font-size: 1.35rem; margin: 0 0 0.9rem; }
-    .source-list a { display: inline-flex; margin: 0.35rem 0.75rem 0.35rem 0; color: var(--gold-soft); font-size: 0.82rem; text-decoration: none; border-bottom: 1px solid rgba(235,207,121,0.25); }
+    .source-list a { display: inline-flex; margin: 0.35rem 0.75rem 0.35rem 0; color: var(--gold-soft); font-size: 0.82rem; text-decoration: none; border-bottom: 1px solid rgba(250,230,183,0.25); }
     
     .article-cta { text-align: center; padding: 4rem 2rem; border-top: 1px solid rgba(255,255,255,0.06); max-width: 640px; margin: 0 auto; }
     .article-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin-bottom: 0.75rem; }
-    .article-cta p { font-size: 0.9rem; color: rgba(245,240,232,0.5); margin-bottom: 2rem; line-height: 1.7; }
+    .article-cta p { font-size: 0.9rem; color: rgba(248,239,226,0.5); margin-bottom: 2rem; line-height: 1.7; }
     .article-cta__btns { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
-    .btn-gold { background: linear-gradient(135deg, #b88919, #ebcf79, #b88919); color: #060610; font-size: 0.82rem; font-weight: 700; padding: 0.75rem 1.5rem; border-radius: 0.4rem; text-decoration: none; }
-    .btn-outline { background: transparent; color: rgba(245,240,232,0.7); border: 1px solid rgba(245,240,232,0.18); font-size: 0.82rem; padding: 0.75rem 1.5rem; border-radius: 0.4rem; text-decoration: none; }
+    .btn-gold { background: linear-gradient(135deg, #b77925, #fae6b7, #b77925); color: #060b14; font-size: 0.82rem; font-weight: 700; padding: 0.75rem 1.5rem; border-radius: 0.4rem; text-decoration: none; }
+    .btn-outline { background: transparent; color: rgba(248,239,226,0.7); border: 1px solid rgba(248,239,226,0.18); font-size: 0.82rem; padding: 0.75rem 1.5rem; border-radius: 0.4rem; text-decoration: none; }
 
-    .internal-link { color: var(--gold-soft); text-decoration: none; border-bottom: 1px solid rgba(201,160,47,0.3); }
+    .internal-link { color: var(--gold-soft); text-decoration: none; border-bottom: 1px solid rgba(216,165,87,0.3); }
     .internal-link:hover { border-color: var(--gold-soft); }
   </style>
 </head>
@@ -486,7 +486,7 @@ const frContent = `<!DOCTYPE html>
     <div class="footer-grid">
       <div>
         <a href="/" class="brand footer-brand"><img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop"><span>EliteLoop</span></a>
-        <p style="color:rgba(246,241,231,0.55); line-height:1.75; margin-top:0.75rem;">L'application privée de découverte sociale pour les événements premium et l'accès basé sur les badges à l'échelle mondiale.</p>
+        <p style="color:rgba(248,239,226,0.55); line-height:1.75; margin-top:0.75rem;">L'application privée de découverte sociale pour les événements premium et l'accès basé sur les badges à l'échelle mondiale.</p>
       </div>
       <div><h4>Villes</h4><a href="/cities">Toutes les villes</a><a href="/paris">Paris</a></div>
       <div><h4>Légal</h4><a href="/privacy">Politique de Confidentialité</a><a href="/terms">Conditions d'Utilisation</a><a href="/gdpr">RGPD</a></div>

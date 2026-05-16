@@ -1,30 +1,30 @@
 {
     "name": "EliteLoop",
     "short_name": "EliteLoop",
-    "description": "Private social discovery app for premium events, nearby plans, and badge-based access worldwide",
+    "description": "Social discovery app for premium events, nearby plans, and badge-based access worldwide",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#030712",
     "theme_color": "#C9A02F",
     "icons": [
         {
-            "src": "assets/icon-192.png",
+            "src": "assets/icon-192.png?v=20260516b",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "assets/icon-512.png",
+            "src": "assets/icon-512.png?v=20260516b",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "assets/icon-192-maskable.png",
+            "src": "assets/icon-192-maskable.png?v=20260516b",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "assets/icon-512-maskable.png",
+            "src": "assets/icon-512-maskable.png?v=20260516b",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"

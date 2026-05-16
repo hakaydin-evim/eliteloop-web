@@ -12,8 +12,9 @@ const enContent = `<!DOCTYPE html>
   <link rel="alternate" hreflang="en" href="https://eliteloop.app/paris-events-may-2026">
   <link rel="alternate" hreflang="fr" href="https://eliteloop.app/fr/paris-events-may-2026">
   <link rel="alternate" hreflang="x-default" href="https://eliteloop.app/paris-events-may-2026">
-  <link rel="icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=20260516b">
+  <link rel="shortcut icon" href="/favicon.ico?v=20260516b">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260516b">
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="Elite Events in Paris May 2026 — EliteLoop">
@@ -154,7 +155,7 @@ const enContent = `<!DOCTYPE html>
 <body>
 
   <nav class="topbar">
-    <a href="/" class="brand"><img src="apple-touch-icon.png" alt="EliteLoop"><span>EliteLoop</span></a>
+    <a href="/" class="brand"><img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop"><span>EliteLoop</span></a>
     <div class="topbar__right">
       <a href="/paris" class="topbar__link">← Paris Hub</a>
       <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969" class="topbar__cta" target="_blank" rel="noreferrer">Download App</a>
@@ -235,8 +236,8 @@ const enContent = `<!DOCTYPE html>
   <footer class="footer" style="margin-top:0;">
     <div class="footer-grid">
       <div>
-        <a href="/" class="brand footer-brand"><img src="apple-touch-icon.png" alt="EliteLoop"><span>EliteLoop</span></a>
-        <p style="color:rgba(246,241,231,0.55); line-height:1.75; margin-top:0.75rem;">Private social discovery app for premium events, nearby plans, and badge-based access worldwide.</p>
+        <a href="/" class="brand footer-brand"><img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop"><span>EliteLoop</span></a>
+        <p style="color:rgba(246,241,231,0.55); line-height:1.75; margin-top:0.75rem;">Social discovery app for premium events, nearby plans, and badge-based access worldwide.</p>
       </div>
       <div><h4>Cities</h4><a href="/cities">All Cities</a><a href="/paris">Paris</a></div>
       <div><h4>Legal</h4><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/gdpr">GDPR</a></div>
@@ -260,8 +261,9 @@ const frContent = `<!DOCTYPE html>
   <link rel="alternate" hreflang="en" href="https://eliteloop.app/paris-events-may-2026">
   <link rel="alternate" hreflang="fr" href="https://eliteloop.app/fr/paris-events-may-2026">
   <link rel="alternate" hreflang="x-default" href="https://eliteloop.app/paris-events-may-2026">
-  <link rel="icon" href="../favicon.ico">
-  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=20260516b">
+  <link rel="shortcut icon" href="/favicon.ico?v=20260516b">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260516b">
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="Événements d'Élite à Paris Mai 2026 — EliteLoop">
@@ -402,7 +404,7 @@ const frContent = `<!DOCTYPE html>
 <body>
 
   <nav class="topbar">
-    <a href="/" class="brand"><img src="../apple-touch-icon.png" alt="EliteLoop"><span>EliteLoop</span></a>
+    <a href="/" class="brand"><img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop"><span>EliteLoop</span></a>
     <div class="topbar__right">
       <a href="/paris" class="topbar__link">← Paris Hub</a>
       <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969" class="topbar__cta" target="_blank" rel="noreferrer">Télécharger l'App</a>
@@ -483,7 +485,7 @@ const frContent = `<!DOCTYPE html>
   <footer class="footer" style="margin-top:0;">
     <div class="footer-grid">
       <div>
-        <a href="/" class="brand footer-brand"><img src="../apple-touch-icon.png" alt="EliteLoop"><span>EliteLoop</span></a>
+        <a href="/" class="brand footer-brand"><img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop"><span>EliteLoop</span></a>
         <p style="color:rgba(246,241,231,0.55); line-height:1.75; margin-top:0.75rem;">L'application privée de découverte sociale pour les événements premium et l'accès basé sur les badges à l'échelle mondiale.</p>
       </div>
       <div><h4>Villes</h4><a href="/cities">Toutes les villes</a><a href="/paris">Paris</a></div>

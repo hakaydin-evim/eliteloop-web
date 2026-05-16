@@ -370,7 +370,7 @@ Primary business KPIs:
 
 ### UAE
 Subtitle options:
-- `Private social discovery`
+- `Social discovery`
 - `Exclusive events near you`
 - `Premium people, real plans`
 
@@ -383,7 +383,7 @@ Arabic subtitle options:
 ### United States
 Subtitle options:
 - `Exclusive events & people`
-- `Private social discovery`
+- `Social discovery`
 - `Premium events near you`
 
 ### Screenshot Headline Framework
@@ -422,7 +422,7 @@ First creative angles:
 1. `Not everyone should have access to you.`
 2. `Discover premium people and events near you.`
 3. `Less swiping. Better circles.`
-4. `Private social discovery for selective people.`
+4. `Social discovery for selective people.`
 
 ### TikTok
 Use as a test channel, not the main scaling engine.
@@ -436,7 +436,7 @@ Creative style:
 ## Website Copy Rules
 
 Keep these themes consistent across ads, store, and site:
-- private social discovery
+- social discovery
 - exclusive events
 - map-led exploration
 - badge-based access

@@ -1,7 +1,7 @@
 [
   {
     "title": "The New HNWI Profile — EliteLoop Global",
-    "description": "Explore the new profile of High-Net-Worth Individuals in 2026. Discover how the modern elite prioritize private social discovery and curated access over visible status.",
+    "description": "Explore the new profile of High-Net-Worth Individuals in 2026. Discover how the modern elite prioritize social discovery and curated access over visible status.",
     "slug": "global-pulse-16-may-2026",
     "url": "https://eliteloop.app/global-pulse-16-may-2026",
     "date": "2026-05-16",
@@ -15,7 +15,7 @@
     "issueFlags": []
   },
   {
-    "title": "How Wealth Signals Changed in 2026: The Shift to Invisible Access — EliteLoop Global",
+    "title": "How Wealth Signals Changed in 2026 — EliteLoop Global",
     "description": "Wealth is no longer announced; it is recognized. Discover how the global elite shifted from visible luxury to invisible access and curated environments.",
     "slug": "global-pulse-15-may-2026",
     "url": "https://eliteloop.app/global-pulse-15-may-2026",
@@ -30,8 +30,68 @@
     "issueFlags": []
   },
   {
+    "title": "Elite Events in San Francisco May 2026 — EliteLoop",
+    "description": "San Francisco elite events May 2026: RSA Conference VIP networking, private AI summits in SoMa, Pacific Heights social rituals, and exclusive Presidio creative mixers.",
+    "slug": "san-francisco-events-may-2026",
+    "url": "https://eliteloop.app/san-francisco-events-may-2026",
+    "date": "2026-05-15",
+    "type": "Events Guide",
+    "filename": "san-francisco-events-may-2026.html",
+    "citySlug": "san-francisco",
+    "cityName": "San Francisco",
+    "canonicalCitySlug": "san-francisco",
+    "canonicalCityUrl": "https://eliteloop.app/san-francisco",
+    "isLegacyAlias": false,
+    "issueFlags": []
+  },
+  {
+    "title": "EliteLoop San Francisco | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in San Francisco with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "san-francisco",
+    "url": "https://eliteloop.app/san-francisco",
+    "date": "2026-05-15",
+    "type": "City Hub",
+    "filename": "san-francisco.html",
+    "citySlug": "san-francisco",
+    "cityName": "San Francisco",
+    "canonicalCitySlug": "san-francisco",
+    "canonicalCityUrl": "https://eliteloop.app/san-francisco",
+    "isLegacyAlias": false,
+    "issueFlags": []
+  },
+  {
+    "title": "Elite Events in Toronto May 2026 — EliteLoop",
+    "description": "Toronto elite events May 2026: SIAL Canada VIP networking, private tech summits in Yorkville, Distillery District social rituals, and exclusive King West creative mixers.",
+    "slug": "toronto-events-may-2026",
+    "url": "https://eliteloop.app/toronto-events-may-2026",
+    "date": "2026-05-15",
+    "type": "Events Guide",
+    "filename": "toronto-events-may-2026.html",
+    "citySlug": "toronto",
+    "cityName": "Toronto",
+    "canonicalCitySlug": "toronto",
+    "canonicalCityUrl": "https://eliteloop.app/toronto",
+    "isLegacyAlias": false,
+    "issueFlags": []
+  },
+  {
+    "title": "EliteLoop Toronto | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Toronto with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "toronto",
+    "url": "https://eliteloop.app/toronto",
+    "date": "2026-05-15",
+    "type": "City Hub",
+    "filename": "toronto.html",
+    "citySlug": "toronto",
+    "cityName": "Toronto",
+    "canonicalCitySlug": "toronto",
+    "canonicalCityUrl": "https://eliteloop.app/toronto",
+    "isLegacyAlias": false,
+    "issueFlags": []
+  },
+  {
     "title": "The Unlisted Opportunity — EliteLoop Global",
-    "description": "Luxury networking trends 2026: Why the most valuable social connections and unlisted opportunities happen off-radar. Private social discovery for the elite.",
+    "description": "Luxury networking trends 2026: Why the most valuable social connections and unlisted opportunities happen off-radar. Social discovery for the elite.",
     "slug": "global-pulse-14-may-2026",
     "url": "https://eliteloop.app/global-pulse-14-may-2026",
     "date": "2026-05-14",
@@ -105,8 +165,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Geneva | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Geneva with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Geneva | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Geneva with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "geneva",
     "url": "https://eliteloop.app/geneva",
     "date": "2026-05-09",
@@ -135,8 +195,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Mexico City | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Mexico City with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Mexico City | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Mexico City with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "mexico-city",
     "url": "https://eliteloop.app/mexico-city",
     "date": "2026-05-09",
@@ -165,8 +225,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Riyadh | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Riyadh with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Riyadh | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Riyadh with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "riyadh",
     "url": "https://eliteloop.app/riyadh",
     "date": "2026-05-09",
@@ -196,7 +256,7 @@
   },
   {
     "title": "Rome Elite Networking &amp; Exclusive Social Events — EliteLoop",
-    "description": "Rome elite events and private social discovery: palazzo dinners, cultural rooms, tennis hospitality, and badge-based access on EliteLoop.",
+    "description": "Rome elite events and social discovery: palazzo dinners, cultural rooms, tennis hospitality, and badge-based access on EliteLoop.",
     "slug": "rome",
     "url": "https://eliteloop.app/rome",
     "date": "2026-05-09",
@@ -225,8 +285,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop São Paulo | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in São Paulo with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop São Paulo | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in São Paulo with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "sao-paulo",
     "url": "https://eliteloop.app/sao-paulo",
     "date": "2026-05-09",
@@ -255,8 +315,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Seoul | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Seoul with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Seoul | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Seoul with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "seoul",
     "url": "https://eliteloop.app/seoul",
     "date": "2026-05-09",
@@ -285,8 +345,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Tokyo | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Tokyo with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Tokyo | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Tokyo with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "tokyo",
     "url": "https://eliteloop.app/tokyo",
     "date": "2026-05-09",
@@ -315,8 +375,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Vienna | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Vienna with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Vienna | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Vienna with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "vienna",
     "url": "https://eliteloop.app/vienna",
     "date": "2026-05-09",
@@ -345,8 +405,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Zurich | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Zurich with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Zurich | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Zurich with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "zurich",
     "url": "https://eliteloop.app/zurich",
     "date": "2026-05-09",
@@ -375,8 +435,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Abu Dhabi | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Abu Dhabi with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Abu Dhabi | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Abu Dhabi with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "abu-dhabi",
     "url": "https://eliteloop.app/abu-dhabi",
     "date": "2026-05-08",
@@ -405,8 +465,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Amsterdam | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Amsterdam with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Amsterdam | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Amsterdam with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "amsterdam",
     "url": "https://eliteloop.app/amsterdam",
     "date": "2026-05-08",
@@ -435,8 +495,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Barcelona | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Barcelona with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Barcelona | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Barcelona with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "barcelona",
     "url": "https://eliteloop.app/barcelona",
     "date": "2026-05-08",
@@ -465,8 +525,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Berlin | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Berlin with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Berlin | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Berlin with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "berlin",
     "url": "https://eliteloop.app/berlin",
     "date": "2026-05-08",
@@ -495,8 +555,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Chicago | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Chicago with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Chicago | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Chicago with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "chicago",
     "url": "https://eliteloop.app/chicago",
     "date": "2026-05-08",
@@ -557,8 +617,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Hong Kong | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Hong Kong with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Hong Kong | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Hong Kong with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "hong-kong",
     "url": "https://eliteloop.app/hong-kong",
     "date": "2026-05-08",
@@ -587,8 +647,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Istanbul — Private Social Discovery & Exclusive Events in Istanbul",
-    "description": "Istanbul elite events and private social discovery: SAHA, ArtContact, Bosphorus rooms, business summits, and badge-based access on EliteLoop.",
+    "title": "EliteLoop Istanbul — Social Discovery & Exclusive Events in Istanbul",
+    "description": "Istanbul elite events and social discovery: SAHA, ArtContact, Bosphorus rooms, business summits, and badge-based access on EliteLoop.",
     "slug": "istanbul",
     "url": "https://eliteloop.app/istanbul",
     "date": "2026-05-08",
@@ -617,8 +677,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Lisbon | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Lisbon with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Lisbon | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Lisbon with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "lisbon",
     "url": "https://eliteloop.app/lisbon",
     "date": "2026-05-08",
@@ -647,8 +707,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop London | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in London with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop London | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in London with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "london",
     "url": "https://eliteloop.app/london",
     "date": "2026-05-08",
@@ -678,7 +738,7 @@
   },
   {
     "title": "Quiet Luxury in 2026: Why Access Replaced Aesthetics — EliteLoop Global",
-    "description": "Quiet luxury in 2026 — what changed. How unbranded cashmere gave way to unlisted rooms and private social discovery.",
+    "description": "Quiet luxury in 2026 — what changed. How unbranded cashmere gave way to unlisted rooms and social discovery.",
     "slug": "global-pulse-06-may-2026",
     "url": "https://eliteloop.app/global-pulse-06-may-2026",
     "date": "2026-05-06",
@@ -707,8 +767,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Dubai | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Dubai with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Dubai | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Dubai with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "dubai",
     "url": "https://eliteloop.app/dubai",
     "date": "2026-05-05",
@@ -812,8 +872,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Los Angeles | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Los Angeles with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Los Angeles | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Los Angeles with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "los-angeles",
     "url": "https://eliteloop.app/los-angeles",
     "date": "2026-05-01",
@@ -842,8 +902,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Madrid | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Madrid with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Madrid | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Madrid with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "madrid",
     "url": "https://eliteloop.app/madrid",
     "date": "2026-05-01",
@@ -872,8 +932,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Miami | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Miami with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Miami | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Miami with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "miami",
     "url": "https://eliteloop.app/miami",
     "date": "2026-05-01",
@@ -902,8 +962,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Milan | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Milan with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Milan | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Milan with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "milan",
     "url": "https://eliteloop.app/milan",
     "date": "2026-05-01",
@@ -932,8 +992,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Monaco | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Monaco with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Monaco | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Monaco with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "monaco",
     "url": "https://eliteloop.app/monaco",
     "date": "2026-05-01",
@@ -962,8 +1022,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Mumbai | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Mumbai with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Mumbai | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Mumbai with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "mumbai",
     "url": "https://eliteloop.app/mumbai",
     "date": "2026-05-01",
@@ -992,8 +1052,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Munich | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Munich with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Munich | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Munich with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "munich",
     "url": "https://eliteloop.app/munich",
     "date": "2026-05-01",
@@ -1023,7 +1083,7 @@
   },
   {
     "title": "New York City Elite Networking &amp; Exclusive Events — EliteLoop",
-    "description": "New York elite events and private social discovery: Met Gala week, TEFAF, finance rooms, private dinners, and badge-based access on EliteLoop.",
+    "description": "New York elite events and social discovery: Met Gala week, TEFAF, finance rooms, private dinners, and badge-based access on EliteLoop.",
     "slug": "new-york",
     "url": "https://eliteloop.app/new-york",
     "date": "2026-05-01",
@@ -1052,8 +1112,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Paris | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Paris with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Paris | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Paris with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "paris",
     "url": "https://eliteloop.app/paris",
     "date": "2026-05-01",
@@ -1172,7 +1232,7 @@
     "issueFlags": []
   },
   {
-    "title": "7 Cities. 7 Elite Signals. This Week in Private Social Discovery — EliteLoop Global",
+    "title": "7 Cities. 7 Elite Signals. This Week in Social Discovery — EliteLoop Global",
     "description": "This week across 7 cities — London, Tokyo, Zurich, Singapore, Dubai, Istanbul, New York — a global read on elite social trends, access patterns, and the signals that matter. EliteLoop Global Pulse, April 26, 2026.",
     "slug": "global-pulse-26-april-2026",
     "url": "https://eliteloop.app/global-pulse-26-april-2026",
@@ -1352,8 +1412,8 @@
     "issueFlags": []
   },
   {
-    "title": "This Week in Private Social Discovery: What Moved Worldwide — EliteLoop Global Pulse",
-    "description": "A weekly read on the cities, conversations, and access patterns that shaped private social discovery worldwide between April 13–19, 2026.",
+    "title": "This Week in Social Discovery: What Moved Worldwide — EliteLoop Global Pulse",
+    "description": "A weekly read on the cities, conversations, and access patterns that shaped social discovery worldwide between April 13–19, 2026.",
     "slug": "global-pulse-19-april-2026",
     "url": "https://eliteloop.app/global-pulse-19-april-2026",
     "date": "2026-04-19",
@@ -1547,8 +1607,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Singapore | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Singapore with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Singapore | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Singapore with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "singapore",
     "url": "https://eliteloop.app/singapore",
     "date": "2026-04-01",
@@ -1578,7 +1638,7 @@
   },
   {
     "title": "Zurich's Quiet Ledger: Where Private Capital Socializes | EliteLoop Zurich",
-    "description": "An April 2026 scene report on elite networking in Zurich, exclusive events around private capital, and why private social discovery works best in low-noise cities.",
+    "description": "An April 2026 scene report on elite networking in Zurich, exclusive events around private capital, and why social discovery works best in low-noise cities.",
     "slug": "zurich-april-2026",
     "url": "https://eliteloop.app/zurich-april-2026",
     "date": "2026-04-01",
@@ -1728,7 +1788,7 @@
   },
   {
     "title": "Crypto Valley Private Roundtables | EliteLoop Zurich",
-    "description": "An April 2026 scene report on elite networking in Zurich, exclusive events around private capital, and why private social discovery works best in low-noise cities.",
+    "description": "An April 2026 scene report on elite networking in Zurich, exclusive events around private capital, and why social discovery works best in low-noise cities.",
     "slug": "zurich-february-2026",
     "url": "https://eliteloop.app/zurich-february-2026",
     "date": "2026-02-01",
@@ -1742,8 +1802,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop Copenhagen | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Copenhagen with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Copenhagen | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Copenhagen with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "copenhagen",
     "url": "https://eliteloop.app/copenhagen",
     "date": null,
@@ -1759,8 +1819,8 @@
     ]
   },
   {
-    "title": "Global Pulse | Private Social Discovery Trends & City Signals | EliteLoop",
-    "description": "Daily intelligence on private social discovery, premium city signals, access psychology, and scene momentum worldwide. Updated every day by EliteLoop.",
+    "title": "Global Pulse | Social Discovery Trends & City Signals | EliteLoop",
+    "description": "Daily intelligence on social discovery, premium city signals, access psychology, and scene momentum worldwide. Updated every day by EliteLoop.",
     "slug": "global-pulse",
     "url": "https://eliteloop.app/global-pulse",
     "date": null,
@@ -1774,23 +1834,8 @@
     "issueFlags": []
   },
   {
-    "title": "EliteLoop San Francisco | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in San Francisco with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
-    "slug": "san-francisco",
-    "url": "https://eliteloop.app/san-francisco",
-    "date": null,
-    "type": "City Hub",
-    "filename": "san-francisco.html",
-    "citySlug": "san-francisco",
-    "cityName": "San Francisco",
-    "canonicalCitySlug": "san-francisco",
-    "canonicalCityUrl": "https://eliteloop.app/san-francisco",
-    "isLegacyAlias": false,
-    "issueFlags": []
-  },
-  {
-    "title": "EliteLoop Sydney | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Sydney with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "title": "EliteLoop Sydney | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Sydney with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
     "slug": "sydney",
     "url": "https://eliteloop.app/sydney",
     "date": null,
@@ -1800,21 +1845,6 @@
     "cityName": "Sydney",
     "canonicalCitySlug": "sydney",
     "canonicalCityUrl": "https://eliteloop.app/sydney",
-    "isLegacyAlias": false,
-    "issueFlags": []
-  },
-  {
-    "title": "EliteLoop Toronto | Private Social Discovery, Premium Events &amp; Nearby Plans",
-    "description": "Explore private social discovery in Toronto with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
-    "slug": "toronto",
-    "url": "https://eliteloop.app/toronto",
-    "date": null,
-    "type": "City Hub",
-    "filename": "toronto.html",
-    "citySlug": "toronto",
-    "cityName": "Toronto",
-    "canonicalCitySlug": "toronto",
-    "canonicalCityUrl": "https://eliteloop.app/toronto",
     "isLegacyAlias": false,
     "issueFlags": []
   }

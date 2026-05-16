@@ -4,7 +4,7 @@ let hub = fs.readFileSync('london.html', 'utf8');
 
 hub = hub.replace(/\{\{CITY_SLUG\}\}/g, 'london');
 hub = hub.replace(/\{\{CITY_NAME\}\}/g, 'London');
-hub = hub.replace(/\{\{CITY_SUBTITLE\}\}/g, 'London · Private Social Discovery');
+hub = hub.replace(/\{\{CITY_SUBTITLE\}\}/g, 'London · Social Discovery');
 hub = hub.replace(/\{\{CITY_EMOJI\}\}/g, '🇬🇧');
 hub = hub.replace(/\{\{CITY_HEADLINE_1\}\}/g, 'Where heritage meets');
 hub = hub.replace(/\{\{CITY_HEADLINE_EM\}\}/g, 'off-market elite.');

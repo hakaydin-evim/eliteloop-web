@@ -27,7 +27,7 @@ More visibility. More access. Less noise.`,ctaLabel:"Get Gold",ctaUrl:"https://e
 
 The right people and the right rooms are closer than you think.
 
-Open the app to see what is happening around you tonight.`,ctaLabel:"Open EliteLoop",ctaUrl:"https://eliteloop.app"},welcome:{label:"Welcome",subject:"Welcome to EliteLoop",preheader:"Private social discovery for premium events and nearby plans.",headline:"Discover the right people, the right plans, and the right rooms.",body:`EliteLoop is a private social discovery app for premium events, nearby plans, and badge-based access worldwide.
+Open the app to see what is happening around you tonight.`,ctaLabel:"Open EliteLoop",ctaUrl:"https://eliteloop.app"},welcome:{label:"Welcome",subject:"Welcome to EliteLoop",preheader:"Social discovery for premium events and nearby plans.",headline:"Discover the right people, the right plans, and the right rooms.",body:`EliteLoop is a social discovery app for premium events, nearby plans, and badge-based access worldwide.
 
 Your profile is now active. Explore nearby events on the map, apply to ones you like, or create your own.
 

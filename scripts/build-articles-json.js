@@ -48,7 +48,8 @@ const CITY_RULES = [
     { aliases: ['sao-paulo'], canonicalSlug: 'sao-paulo', name: 'São Paulo' },
     { aliases: ['sydney'], canonicalSlug: 'sydney', name: 'Sydney' },
     { aliases: ['toronto'], canonicalSlug: 'toronto', name: 'Toronto' },
-    { aliases: ['vienna'], canonicalSlug: 'vienna', name: 'Vienna' }
+    { aliases: ['vienna'], canonicalSlug: 'vienna', name: 'Vienna' },
+    { aliases: ['copenhagen'], canonicalSlug: 'copenhagen', name: 'Copenhagen' }
 ];
 
 const MONTH_MAP = {
@@ -89,11 +90,14 @@ function inferCityMeta(slug, type) {
         };
     }
 
-    const loweredSlug = slug.toLowerCase();
+    let cleanedSlug = slug.toLowerCase();
+    if (cleanedSlug.includes('/')) {
+        cleanedSlug = cleanedSlug.split('/').slice(1).join('/');
+    }
 
     for (const rule of CITY_RULES) {
         for (const alias of rule.aliases) {
-            if (loweredSlug === alias || loweredSlug.startsWith(`${alias}-`)) {
+            if (cleanedSlug === alias || cleanedSlug.startsWith(`${alias}-`)) {
                 const isLegacyAlias = alias !== rule.canonicalSlug;
                 return {
                     citySlug: alias,
@@ -116,13 +120,17 @@ function inferCityMeta(slug, type) {
 }
 
 function inferDateFromSlug(slug) {
-    const exactDateMatch = slug.match(/-(\d{1,2})-(january|february|march|april|may|june|july|august|september|october|november|december)-(\d{4})$/i);
+    let cleanedSlug = slug;
+    if (cleanedSlug.includes('/')) {
+        cleanedSlug = cleanedSlug.split('/').slice(1).join('/');
+    }
+    const exactDateMatch = cleanedSlug.match(/-(\d{1,2})-(january|february|march|april|may|june|july|august|september|october|november|december)-(\d{4})$/i);
     if (exactDateMatch) {
         const [, day, month, year] = exactDateMatch;
         return `${year}-${MONTH_MAP[month.toLowerCase()]}-${String(day).padStart(2, '0')}`;
     }
 
-    const monthYearMatch = slug.match(/-(late|mid)?-?(january|february|march|april|may|june|july|august|september|october|november|december)-(\d{4})$/i);
+    const monthYearMatch = cleanedSlug.match(/-(late|mid)?-?(january|february|march|april|may|june|july|august|september|october|november|december)-(\d{4})$/i);
     if (monthYearMatch) {
         const [, qualifier, month, year] = monthYearMatch;
         const day = qualifier === 'late' ? '25' : qualifier === 'mid' ? '15' : '01';
@@ -135,26 +143,44 @@ function inferDateFromSlug(slug) {
 function shouldSkipLegacyAlias(slug, knownFiles) {
     const canonicalSlug = LEGACY_CANONICAL_OVERRIDES.get(slug);
     if (!canonicalSlug) return false;
-    return knownFiles.has(`${canonicalSlug}.html`);
+    return knownFiles.has(canonicalSlug);
 }
 
 function isEventsGuideSlug(slug) {
     return /-events-(january|february|march|april|may|june|july|august|september|october|november|december)-\d{4}$/i.test(slug);
 }
 
+function getHtmlFiles(dir, prefix = '') {
+    let results = [];
+    const list = fs.readdirSync(dir);
+    list.forEach(file => {
+        const fullPath = path.join(dir, file);
+        const stat = fs.statSync(fullPath);
+        if (stat.isDirectory()) {
+            const langDirs = ['ar', 'de', 'es', 'fr', 'it', 'ja', 'ko', 'pt', 'tr'];
+            if (langDirs.includes(file) && prefix === '') {
+                results = results.concat(getHtmlFiles(fullPath, file + '/'));
+            }
+        } else if (file.endsWith('.html')) {
+            results.push(prefix + file);
+        }
+    });
+    return results;
+}
+
 function buildJson() {
-    const files = fs.readdirSync(webDir);
-    const knownFiles = new Set(files);
+    const files = getHtmlFiles(webDir);
+    const rootFiles = fs.readdirSync(webDir).filter(f => f.endsWith('.html'));
+    const knownFiles = new Set(rootFiles.map(f => f.replace('.html', '')));
     const articles = [];
     const today = new Date();
     today.setHours(23, 59, 59, 999);
 
     files.forEach(file => {
-        // Sadece .html dosyalarını al, template'leri ve exclude listesindekileri atla
+        const baseName = path.basename(file);
         if (
-            file.endsWith('.html') &&
-            !file.startsWith('_template') &&
-            !excludeFiles.includes(file)
+            !baseName.startsWith('_template') &&
+            !excludeFiles.includes(baseName)
         ) {
             const content = fs.readFileSync(path.join(webDir, file), 'utf-8');
             
@@ -169,15 +195,13 @@ function buildJson() {
             
             // Kategori belirle
             let type = 'Scene Report';
-            if (file.startsWith('global-pulse')) {
+            if (baseName.startsWith('global-pulse')) {
                 type = 'Global Pulse';
             } else if (isEventsGuideSlug(slug)) {
                 type = 'Events Guide';
-            } else if (!file.includes('-')) {
-                // Şehir hub'ları genelde tire içermez veya tek tire içerir ama ay/yıl içermez.
-                // Kesin ayrım için: içinde '2026' geçiyorsa report'tur.
+            } else if (!file.includes('-') && !file.includes('/')) {
                 type = file.includes('202') ? 'Scene Report' : 'City Hub';
-            } else if (file.includes('new-york') && !file.includes('202')) {
+            } else if (file.includes('new-york') && !file.includes('202') && !file.includes('/')) {
                 type = 'City Hub';
             }
 

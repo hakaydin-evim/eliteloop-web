@@ -714,8 +714,8 @@ function getJsonLd(slug, c, isLoc = false) {
     "@type": ["Article", "ItemList"],
     "headline": "Elite Events in ${c.name} — June 2026",
     "description": "${current.metaDesc}",
-    "datePublished": "2026-06-06",
-    "dateModified": "2026-06-06",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
     "author": { "@type": "Organization", "name": "EliteLoop Editorial" },
     "publisher": { "@type": "Organization", "name": "EliteLoop" },
     "about": { "@type": "City", "name": "${c.name}" },
@@ -902,7 +902,7 @@ ${TEMPLATE_STYLE}
       <h1>Elite Events in ${c.name} June 2026</h1>
       <p class="article-hero__sub">${current.subTitle}</p>
       <div class="article-meta">
-        <time datetime="2026-06-06">June 06, 2026</time><span>·</span><span>6 verified event signals</span><span>·</span><span>EliteLoop Editorial</span>
+        <time datetime="2026-06-01">June 01, 2026</time><span>·</span><span>6 verified event signals</span><span>·</span><span>EliteLoop Editorial</span>
       </div>
     </div>
   </header>
@@ -1007,9 +1007,9 @@ Object.keys(CITIES).forEach(slug => {
           <div class="event-card__lock">🔒 Badge access inside</div>
         </div>\n`;
   });
-  newEventsGrid += `      </div>`;
+  newEventsGrid += `      </div>\n    </div>\n  </section>`;
 
-  const eventsGridRegex = /<div class="events-grid">([\s\S]*?)<\/div>/;
+  const eventsGridRegex = /<div class="events-grid">([\s\S]*?)<\/section>/;
   content = content.replace(eventsGridRegex, newEventsGrid);
 
   // B. Parse May 2026 report details from file to build archive card
@@ -1073,8 +1073,7 @@ Object.keys(CITIES).forEach(slug => {
     content = content.replace(sceneCardJuneRegex, newSceneCard);
   }
 
-  // Also replace any single links in titles or headers
-  content = content.replace(new RegExp(`/${slug}-events-may-2026`, 'g'), `/${slug}-events-june-2026`);
+  // No global replacement of may-2026 to prevent rewriting the archive section
 
   // D. Prepend May 2026 card to report-archive-list
   const archiveItemHtml = `      <a href="/${slug}-events-may-2026" class="report-archive-item">

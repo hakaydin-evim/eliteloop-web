@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliteLoop | Social Discovery App for Premium Events & Nearby Plans</title>
+  <meta name="description" content="EliteLoop is a social discovery app for premium events, nearby plans, and badge-based access worldwide. Download on iOS and Android.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#D8A557">
+  <meta name="keywords" content="elite networking app, exclusive events app, social discovery, luxury networking, badge system social, elite social app Istanbul, exclusive events Dubai, premium social network">
+  <link rel="canonical" href="https://eliteloop.app/">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=20260516c">
+  <link rel="shortcut icon" href="/favicon.ico?v=20260516c">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260516b">
+  <link rel="manifest" href="/manifest.json?v=20260516c">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EliteLoop | Social Discovery App for Premium Events & Nearby Plans">
+  <meta property="og:description" content="Social discovery for premium events, nearby plans, and badge-based access worldwide. Available on iOS and Android.">
+  <meta property="og:url" content="https://eliteloop.app/">
+  <meta property="og:site_name" content="EliteLoop">
+  <meta property="og:image" content="https://eliteloop.app/apple-touch-icon.png?v=20260516b">
+  <meta property="og:image:alt" content="EliteLoop — Elite Networking & Social Discovery App">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EliteLoop | Social Discovery App for Premium Events & Nearby Plans">
+  <meta name="twitter:description" content="Social discovery for premium events, nearby plans, and badge-based access worldwide.">
+  <meta name="twitter:image" content="https://eliteloop.app/apple-touch-icon.png?v=20260516b">
+  <meta name="apple-itunes-app" content="app-id=6756173969">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KWG02QGBR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6KWG02QGBR');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "EliteLoop",
+      "applicationCategory": "SocialNetworkingApplication",
+      "operatingSystem": "iOS, Android",
+      "url": "https://eliteloop.app/",
+      "downloadUrl": [
+        "https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969",
+        "https://play.google.com/store/apps/details?id=com.eliteloop.app"
+      ],
+      "image": "https://eliteloop.app/apple-touch-icon.png?v=20260516b",
+      "description": "EliteLoop is a social discovery app for premium events, nearby plans, and badge-based access worldwide.",
+      "offers": [
+        {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free to download with optional premium subscription"
+        }
+      ],
+      "featureList": [
+        "Badge-gated exclusive events",
+        "Privacy-first fuzzy location",
+        "Elite networking map",
+        "Social discovery",
+        "Bronze, Silver and Gold badge system"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "EliteLoop",
+        "url": "https://eliteloop.app/",
+        "sameAs": [
+          "https://www.instagram.com/eliteloop.app/",
+          "https://x.com/eliteloop",
+          "https://www.linkedin.com/company/112529988/",
+          "https://www.tiktok.com/@eliteloop.app",
+          "https://www.youtube.com/@EliteLoopapp"
+        ]
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "A Quick Look to EliteLoop - How it works?",
+      "description": "A short introduction to EliteLoop, the premium social discovery app for nearby events, map-based plans, badge access and intentional connections.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/4ZAFNhLGoTw/hqdefault.jpg"
+      ],
+      "uploadDate": "2026-04-11T13:44:15-07:00",
+      "duration": "PT1M53S",
+      "embedUrl": "https://www.youtube.com/embed/4ZAFNhLGoTw",
+      "publisher": {
+        "@type": "Organization",
+        "name": "EliteLoop",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://eliteloop.app/apple-touch-icon.png?v=20260516b"
+        }
+      }
+    }
+  </script>
+</head>
+<body data-page="home">
+  <div class="site-bg"></div>
+
+  <div class="modal-overlay" id="langModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 data-i18n="modal.selectLanguage">Select Language</h3>
+        <button class="modal-close" id="closeLangModal" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="lang-grid">
+          <button class="lang-option" data-lang="en"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></button>
+          <button class="lang-option" data-lang="tr"><span class="lang-flag">🇹🇷</span><span class="lang-name">Türkçe</span></button>
+          <button class="lang-option" data-lang="ru"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span></button>
+          <button class="lang-option" data-lang="ar"><span class="lang-flag">🇸🇦</span><span class="lang-name">العربية</span></button>
+          <button class="lang-option" data-lang="zh"><span class="lang-flag">🇨🇳</span><span class="lang-name">中文</span></button>
+          <button class="lang-option" data-lang="ja"><span class="lang-flag">🇯🇵</span><span class="lang-name">日本語</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a href="#hero" class="brand">
+      <img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop">
+      <span>EliteLoop</span>
+    </a>
+
+    <nav class="nav">
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="#how-it-works" data-i18n="nav.howItWorks">How It Works</a>
+      <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#download" data-i18n="nav.download">Download</a>
+      <a href="/cities" class="nav-city-link" id="nav-cities-link" data-i18n="nav-cities">
+        Cities <span class="nav-new-badge">NEW</span>
+      </a>
+    </nav>
+
+    <div class="topbar-meta">
+      <a href="/cities" class="nav-city-link mobile-only">
+        Cities <span class="nav-new-badge">NEW</span>
+      </a>
+      <button class="lang-btn" id="langBtn" aria-label="Change language">
+        <span class="lang-icon">🌐</span>
+        <span class="lang-text">EN</span>
+      </button>
+      <a href="#download" class="mini-cta" data-i18n="nav.download">Download</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section id="hero" class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow" data-i18n="hero.badge">Social Discovery</div>
+        <h1>
+          <span data-i18n="hero.title1">Premium events, nearby plans,</span>
+          <span class="accent" data-i18n="hero.title2">and badge-based access.</span>
+        </h1>
+        <p class="lead" data-i18n="hero.subtitle">
+          EliteLoop helps you discover the right people, the right plans, and the right rooms with more intention and less noise.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969" class="btn btn-gold">
+            <span data-i18n="hero.downloadIos">Download on App Store</span>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.eliteloop.app" class="btn btn-ghost" target="_blank" rel="noreferrer noopener">
+            <span data-i18n="hero.androidSoon">Download on Google Play</span>
+          </a>
+          <a href="#how-it-works" class="btn btn-ghost">
+            <span data-i18n="hero.learnMore">How It Works?</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-card">
+            <strong>iOS</strong>
+            <span data-i18n="hero.stats.members">App Store</span>
+          </div>
+          <div class="stat-card">
+            <strong>Android</strong>
+            <span data-i18n="hero.stats.events">Google Play</span>
+          </div>
+          <div class="stat-card">
+            <strong>3</strong>
+            <span data-i18n="hero.stats.store">Badge Levels</span>
+          </div>
+        </div>
+
+        <div class="platform-summary">
+          <div class="platform-box">
+            <div class="platform-top">
+              <span class="platform-name">iOS</span>
+              <span class="platform-state" data-i18n="platforms.iosState">Live now</span>
+            </div>
+            <p data-i18n="platforms.iosBody">The polished iPhone experience for premium events, nearby plans, and badge-based access.</p>
+          </div>
+          <div class="platform-box">
+            <div class="platform-top">
+              <span class="platform-name">Android</span>
+              <span class="platform-state" data-i18n="platforms.androidState">Live now</span>
+            </div>
+            <p data-i18n="platforms.androidBody">The Android experience with Google Maps, Google Sign-In, and the same premium discovery flow.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-stage">
+        <div class="map-shell">
+          <div class="map-layer map-land"></div>
+          <div class="map-layer map-water"></div>
+          <div class="map-layer map-grid"></div>
+
+          <div class="map-card event-card">
+            <span class="card-label" data-i18n="map.cardLabel">Exclusive event</span>
+            <h3 data-i18n="map.cardTitle">Dinner plans?</h3>
+            <p data-i18n="map.cardBody">Tonight · 3 attendees · badge-aware access</p>
+          </div>
+
+          <div class="map-card insight-card">
+            <strong data-i18n="map.insightTitle">4 people nearby</strong>
+            <span data-i18n="map.insightBody">The signal changes as you move through the map.</span>
+          </div>
+
+          <div class="map-pin pin-gold">
+            <div class="pin-aura"></div>
+            <div class="pin-ring"></div>
+            <div class="pin-core">🍷</div>
+            <div class="pin-tier">G</div>
+          </div>
+          <div class="map-pin pin-silver">
+            <div class="pin-aura"></div>
+            <div class="pin-ring"></div>
+            <div class="pin-core">🎾</div>
+            <div class="pin-tier">S</div>
+          </div>
+          <div class="map-pin pin-bronze">
+            <div class="pin-aura"></div>
+            <div class="pin-ring"></div>
+            <div class="pin-core">☕</div>
+            <div class="pin-tier">B</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-is-eliteloop" class="section video-section" aria-labelledby="what-is-eliteloop-title">
+      <div class="video-shell">
+        <div class="video-copy">
+          <div class="eyebrow" data-i18n="video.badge">What is EliteLoop?</div>
+          <h2 id="what-is-eliteloop-title" data-i18n="video.title">A quick look at how EliteLoop works</h2>
+          <p data-i18n="video.subtitle">
+            Watch the concept in under two minutes: map-based social discovery, nearby events, badge access, and intentional connections in one premium app.
+          </p>
+          <div class="video-points" aria-label="Video highlights">
+            <span data-i18n="video.point1">Map discovery</span>
+            <span data-i18n="video.point2">Badge-based access</span>
+            <span data-i18n="video.point3">Nearby events</span>
+          </div>
+        </div>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/4ZAFNhLGoTw?rel=0"
+            title="A Quick Look to EliteLoop - How it works?"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-head">
+        <div class="eyebrow" data-i18n="features.badge">Features</div>
+        <h2 data-i18n="features.title">Why EliteLoop?</h2>
+        <p data-i18n="features.subtitle">More than ordinary social media. Real connections, real moments, and controlled access around the map.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3 data-i18n="features.privacy.title">Privacy First</h3>
+          <p data-i18n="features.privacy.desc">Your location is shown approximately. Your identity is protected with the badge system.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">🏅</div>
+          <h3 data-i18n="features.badges.title">Badge System</h3>
+          <p data-i18n="features.badges.desc">Reflect your status with Bronze, Silver, and Gold badges. Access events matching your level.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">🗺️</div>
+          <h3 data-i18n="features.location.title">Location Based</h3>
+          <p data-i18n="features.location.desc">See nearby events on the map. Make plans instantly, meet right away.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3 data-i18n="features.chat.title">Instant Messaging</h3>
+          <p data-i18n="features.chat.desc">Start chatting right when the host approves. Real-time communication.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h3 data-i18n="features.events.title">Special Events</h3>
+          <p data-i18n="features.events.desc">Coffee, dinner, sports, travel... plan or join any activity you want.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3 data-i18n="features.multilang.title">Multi-language</h3>
+          <p data-i18n="features.multilang.desc">Turkish, English, Russian, Arabic, Chinese, and Japanese support. Global community.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section section-alt">
+      <div class="section-head">
+        <div class="eyebrow" data-i18n="how.badge">How It Works</div>
+        <h2 data-i18n="how.title">Get Started in 3 Steps</h2>
+        <p data-i18n="how.subtitle">Create your first event or join one within minutes.</p>
+      </div>
+
+      <div class="steps">
+        <article class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3 data-i18n="how.step1.title">Download the app</h3>
+            <p data-i18n="how.step1.desc">Download EliteLoop from the App Store or Google Play. Sign in with Apple or Google. Your personal information stays secure.</p>
+            <div class="step-preview" data-i18n="how.step1.cta">App Store · Google Play</div>
+          </div>
+        </article>
+        <article class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3 data-i18n="how.step2.title">Create your profile</h3>
+            <p data-i18n="how.step2.desc">Add your hobbies, the languages you speak, and your introduction. Choose your badge.</p>
+            <div class="badge-row">
+              <span class="badge-chip bronze">Bronze</span>
+              <span class="badge-chip silver">Silver</span>
+              <span class="badge-chip gold">Gold</span>
+            </div>
+          </div>
+        </article>
+        <article class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3 data-i18n="how.step3.title">Discover and connect</h3>
+            <p data-i18n="how.step3.desc">See events on the map, apply to ones you like, or create your own event.</p>
+            <div class="step-preview" data-i18n="how.step3.cta">Map discovery · event requests · live messaging</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="section-head">
+        <div class="eyebrow" data-i18n="pricing.badge">Pricing</div>
+        <h2 data-i18n="pricing.title">Choose your plan</h2>
+        <p data-i18n="pricing.subtitle">Try free for 3 days. Cancel anytime.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <article class="price-card bronze">
+          <div class="price-head">
+            <span class="tier-chip bronze">Bronze</span>
+            <h3 data-i18n="pricing.bronze.desc">Perfect to start</h3>
+          </div>
+          <div class="price-line" data-i18n="pricing.free">Free</div>
+          <ul>
+            <li data-i18n="pricing.bronze.f1">View Bronze events</li>
+            <li data-i18n="pricing.bronze.f2">Create events</li>
+            <li data-i18n="pricing.bronze.f3">Apply to events</li>
+            <li data-i18n="pricing.bronze.f4">Basic profile</li>
+            <li class="off" data-i18n="pricing.bronze.f5">Silver and Gold events</li>
+            <li class="off" data-i18n="pricing.bronze.f6">Direct messaging</li>
+          </ul>
+          <a href="#download" class="btn btn-ghost full" data-i18n="pricing.startFree">Start Free</a>
+        </article>
+
+        <article class="price-card featured">
+          <div class="featured-tag" data-i18n="pricing.popular">Most Popular</div>
+          <div class="price-head">
+            <span class="tier-chip silver">Silver</span>
+            <h3 data-i18n="pricing.silver.desc">For active users</h3>
+          </div>
+          <div class="price-line">$4.99 <span data-i18n="pricing.perMonth">/month</span></div>
+          <div class="price-alt">$29.99 <span data-i18n="pricing.perYear">/year</span></div>
+          <ul>
+            <li data-i18n="pricing.silver.f1">Bronze + Silver events</li>
+            <li data-i18n="pricing.silver.f2">See nearby user names and locations</li>
+            <li data-i18n="pricing.silver.f3">Direct messaging to anyone</li>
+            <li class="off" data-i18n="pricing.silver.f4">Gold events</li>
+          </ul>
+          <a href="#download" class="btn btn-gold full" data-i18n="pricing.tryFree">Try 3 Days Free</a>
+        </article>
+
+        <article class="price-card gold">
+          <div class="price-head">
+            <span class="tier-chip gold">Gold</span>
+            <h3 data-i18n="pricing.gold.desc">Premium experience</h3>
+          </div>
+          <div class="price-line">$9.99 <span data-i18n="pricing.perMonth">/month</span></div>
+          <div class="price-alt">$59.99 <span data-i18n="pricing.perYear">/year</span></div>
+          <ul>
+            <li data-i18n="pricing.gold.f1">Access all Bronze, Silver and Gold events</li>
+            <li data-i18n="pricing.gold.f2">See all nearby users and profile photos</li>
+            <li data-i18n="pricing.gold.f3">Direct messaging to anyone</li>
+            <li data-i18n="pricing.gold.f4">2 free monthly event boosts</li>
+            <li data-i18n="pricing.gold.f5">Gold-only Make My Plan suggestions</li>
+          </ul>
+          <a href="#download" class="btn btn-gold full" data-i18n="pricing.getGold">Get Gold</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="section section-alt">
+      <div class="section-head">
+        <div class="eyebrow" data-i18n="faq.badge">FAQ</div>
+        <h2 data-i18n="faq.title">Frequently asked questions</h2>
+        <p data-i18n="faq.subtitle">Everything you need to know about EliteLoop.</p>
+      </div>
+
+      <div class="faq-grid">
+        <article class="faq-card">
+          <h3 data-i18n="faq.q1">What is EliteLoop?</h3>
+          <p data-i18n="faq.a1">EliteLoop is a social discovery app for premium events, nearby plans, and badge-based access.</p>
+        </article>
+        <article class="faq-card">
+          <h3 data-i18n="faq.q2">How does the badge system work?</h3>
+          <p data-i18n="faq.a2">There are 3 badge levels: Bronze, Silver, and Gold. Bronze is free. Silver and Gold unlock more visibility, access, and messaging power.</p>
+        </article>
+        <article class="faq-card">
+          <h3 data-i18n="faq.q3">How is privacy ensured?</h3>
+          <p data-i18n="faq.a3">Your location is approximate, not exact. Personal information is protected with Apple or Google Sign-In and controlled profile sharing.</p>
+        </article>
+        <article class="faq-card">
+          <h3 data-i18n="faq.q4">How can I cancel my subscription?</h3>
+          <p data-i18n="faq.a4">You can cancel anytime from App Store settings. Premium stays active until the end of the current billing period.</p>
+        </article>
+        <article class="faq-card">
+          <h3 data-i18n="faq.q5">Which countries is it available in?</h3>
+          <p data-i18n="faq.a5">EliteLoop supports Turkish, English, Russian, Arabic, Chinese, and Japanese in its product direction and is designed for a global community.</p>
+        </article>
+        <article class="faq-card highlight">
+          <h3 data-i18n="faq.q6">Is EliteLoop available on Android?</h3>
+          <p data-i18n="faq.a6">Yes! EliteLoop is now live on both the App Store and Google Play. Download it on any iOS or Android device.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="download" class="section">
+      <div class="download-shell">
+        <div class="download-copy">
+          <div class="eyebrow" data-i18n="download.badge">Download</div>
+          <h2 data-i18n="download.title">Start social discovery</h2>
+          <p data-i18n="download.subtitle">Download EliteLoop on iOS or Android to explore premium events, nearby plans, and badge-based access worldwide.</p>
+          <div class="download-stats">
+            <span data-i18n="download.rating">iOS + Android</span>
+            <span>•</span>
+            <span data-i18n="download.downloads">Bronze, Silver and Gold access</span>
+          </div>
+        </div>
+
+        <div class="store-actions">
+          <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969" class="store-card store-ios">
+            <span class="store-label" data-i18n="download.iosLabel">Download on</span>
+            <strong>App Store</strong>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.eliteloop.app" class="store-card store-android" target="_blank" rel="noreferrer noopener">
+            <span class="store-label" data-i18n="download.androidLabel">Download on</span>
+            <strong data-i18n="download.androidTitle">Google Play</strong>
+            <small data-i18n="download.androidBody">Available now for all Android devices.</small>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <a href="#hero" class="brand footer-brand">
+            <img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop">
+            <span>EliteLoop</span>
+          </a>
+          <p data-i18n="footer.desc">Social discovery app for premium events, nearby plans, and badge-based access worldwide.</p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.product">Product</h4>
+          <a href="#features" data-i18n="nav.features">Features</a>
+          <a href="#how-it-works" data-i18n="nav.howItWorks">How It Works</a>
+          <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+        </div>
+        <div>
+          <h4 data-i18n="footer.legal">Legal</h4>
+          <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="/terms" data-i18n="footer.terms">Terms of Service</a>
+          <a href="/gdpr" data-i18n="footer.gdpr">GDPR</a>
+        </div>
+        <div>
+          <h4 data-i18n="footer.contact">Contact</h4>
+          <a href="/support" data-i18n="footer.support">Support</a>
+          <a href="mailto:info@eliteloop.app">info@eliteloop.app</a>
+        </div>
+        <div>
+          <h4 data-i18n="footer.socials">Socials</h4>
+          <a href="https://www.instagram.com/eliteloop.app/" target="_blank" rel="noreferrer noopener">Instagram</a>
+          <a href="https://x.com/eliteloop" target="_blank" rel="noreferrer noopener">X (Twitter)</a>
+          <a href="https://www.linkedin.com/company/112529988/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+          <a href="https://www.tiktok.com/@eliteloop.app" target="_blank" rel="noreferrer noopener">TikTok</a>
+          <a href="https://www.youtube.com/@EliteLoopapp" target="_blank" rel="noreferrer noopener">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 EliteLoop. <span data-i18n="footer.rights">All rights reserved.</span></div>
+    </footer>
+  </main>
+
+  <script src="/script.js?v=20260516b"></script>
+</body>
+</html>

@@ -1154,6 +1154,14 @@ function setupLanguageModal() {
   });
 }
 
-applyTranslations();
-renderLegalPage();
-setupLanguageModal();
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
+    applyTranslations();
+    renderLegalPage();
+    setupLanguageModal();
+  });
+} else {
+  applyTranslations();
+  renderLegalPage();
+  setupLanguageModal();
+}

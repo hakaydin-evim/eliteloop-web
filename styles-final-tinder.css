@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg-dark: #060b14;
+  --bg-card: #101622;
+  --border: rgba(255, 255, 255, 0.07);
+  --text-white: #ffffff;
+  --muted: rgba(255, 255, 255, 0.65);
+  
+  /* Official EliteLoop Metal Colors */
+  --gold: #d8a557;
+  --gold-grad: linear-gradient(135deg, #b77925 0%, #fae6b7 50%, #b77925 100%);
+  --silver: #c7cfde;
+  --silver-grad: linear-gradient(135deg, #8a95a5 0%, #eef2fb 50%, #8a95a5 100%);
+  --bronze: #a56918;
+  --bronze-grad: linear-gradient(135deg, #a85d28 0%, #f6cca5 50%, #a85d28 100%);
+  
+  --border-radius-pill: 999px;
+  --border-radius-card: 20px;
+  --font-sans: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Sticky Header (Tinder Style, EliteLoop Colors) ── */
+.tf-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 24px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, rgba(6, 11, 20, 0.6) 0%, transparent 100%);
+}
+
+.tf-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text-white);
+}
+
+.tf-brand img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.tf-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.tf-nav a {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-white);
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s;
+}
+
+.tf-nav a:hover {
+  opacity: 1;
+}
+
+.tf-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tf-lang-btn {
+  background: transparent;
+  color: var(--text-white);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  padding: 8px 18px;
+  border-radius: var(--border-radius-pill);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.2s;
+}
+
+.tf-lang-btn:hover {
+  border-color: var(--text-white);
+}
+
+.tf-login-btn {
+  background: var(--text-white);
+  color: #121317;
+  border: none;
+  padding: 10px 24px;
+  border-radius: var(--border-radius-pill);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.tf-login-btn:hover {
+  opacity: 0.9;
+}
+
+/* ── Tinder-style Hero ── */
+.tf-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('istanbul-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tf-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 11, 20, 0.45) 0%,
+    rgba(6, 11, 20, 0.9) 100%
+  );
+  z-index: 1;
+}
+
+.tf-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.tf-hero-content h1 {
+  font-size: clamp(3.2rem, 7vw, 6rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--text-white);
+}
+
+.btn-tf-primary {
+  background: var(--gold-grad);
+  color: #121317;
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 16px 44px;
+  border-radius: var(--border-radius-pill);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s;
+  box-shadow: 0 10px 30px rgba(216, 165, 87, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-tf-primary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(216, 165, 87, 0.45);
+}
+
+/* ── Core Value Proposition (Tinder Style) ── */
+.tf-features {
+  padding: 100px 24px;
+  background-color: var(--bg-dark);
+}
+
+.tf-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tf-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.tf-feature-card {
+  background: var(--bg-card);
+  border-radius: var(--border-radius-card);
+  padding: 48px 36px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid var(--border);
+  transition: border-color 0.3s;
+}
+
+.tf-feature-card:hover {
+  border-color: rgba(216, 165, 87, 0.3);
+}
+
+.tf-feature-icon {
+  font-size: 2.8rem;
+}
+
+.tf-feature-card h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.tf-feature-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ── Polaroid Success Stories ── */
+.tf-testimonials {
+  background: #0b101b;
+  padding: 100px 24px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.tf-section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tf-section-title h2 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.tf-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.tf-polaroid {
+  background: #ffffff;
+  color: #060b14;
+  padding: 20px 20px 40px;
+  border-radius: 4px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  transform: rotate(-1.5deg);
+  transition: transform 0.3s;
+}
+
+.tf-polaroid:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.tf-polaroid:hover {
+  transform: scale(1.02) rotate(0deg);
+}
+
+.tf-polaroid-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.tf-polaroid-quote {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.tf-polaroid-author {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* ── Tinder Subscriptions Styled Comparison Grid ── */
+.tf-pricing {
+  padding: 100px 24px;
+  background-color: var(--bg-dark);
+}
+
+.tf-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.tf-price-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-card);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.tf-price-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.tf-price-card.featured-gold {
+  border-color: rgba(216, 165, 87, 0.4);
+  box-shadow: 0 20px 50px rgba(216, 165, 87, 0.08);
+}
+
+.tf-price-card.featured-gold:hover {
+  border-color: var(--gold);
+}
+
+.tf-price-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.p-bronze .tf-price-badge { background: rgba(165, 105, 24, 0.15); color: #f6cca5; }
+.p-silver .tf-price-badge { background: rgba(199, 207, 222, 0.15); color: #eef2fb; }
+.p-gold .tf-price-badge { background: rgba(216, 165, 87, 0.15); color: #fae6b7; }
+
+.tf-price-card h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.tf-price-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.tf-price-line {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: baseline;
+}
+
+.tf-price-line span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-left: 6px;
+}
+
+.tf-price-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.tf-price-features li {
+  font-size: 0.92rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tf-price-features li::before {
+  content: "—";
+  color: var(--gold);
+}
+
+.btn-tf-select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  color: var(--text-white);
+  padding: 14px;
+  border-radius: var(--border-radius-pill);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-tf-select:hover {
+  background: var(--text-white);
+  color: #121317;
+  border-color: var(--text-white);
+}
+
+.featured-gold .btn-tf-select {
+  background: var(--gold-grad);
+  color: #121317;
+  border: none;
+  box-shadow: 0 10px 20px rgba(216, 165, 87, 0.2);
+}
+
+.featured-gold .btn-tf-select:hover {
+  opacity: 0.9;
+}
+
+/* ── Store Download CTA ── */
+.tf-download {
+  padding: 100px 24px;
+  text-align: center;
+  background-color: #0b101b;
+  border-top: 1px solid var(--border);
+}
+
+.tf-download h2 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.tf-download p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* ── Elegant Footer ── */
+.tf-footer {
+  background-color: #05080f;
+  padding: 80px 40px;
+  border-top: 1px solid var(--border);
+}
+
+.tf-footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 40px;
+}
+
+.tf-footer-col h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tf-footer-col a, .tf-footer-col p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.tf-footer-col a:hover {
+  color: var(--text-white);
+}
+
+.tf-footer-bottom {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+/* ── Mobile Layout & Touch Carousels ── */
+@media (max-width: 1024px) {
+  .tf-header {
+    padding: 18px 24px;
+  }
+  
+  .tf-nav {
+    display: none;
+  }
+  
+  .tf-features-grid, .tf-testimonials-grid, .tf-pricing-grid, .tf-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .tf-polaroid {
+    transform: none !important;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .tf-lang-btn {
+    display: none;
+  }
+  
+  .tf-login-btn {
+    padding: 8px 18px;
+    font-size: 0.8rem;
+  }
+  
+  /* Tinder/Bumble styled Horizontal scroll carousels on mobile */
+  .tf-features-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 12px 4px 24px;
+    margin: 0 -4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .tf-features-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .tf-feature-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+
+  .tf-pricing-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 12px 4px 24px;
+    margin: 0 -4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .tf-pricing-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .tf-price-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+}

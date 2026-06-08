@@ -1,0 +1,828 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap');
+
+:root {
+  --bg: #03000a;
+  --bg-card: rgba(255, 255, 255, 0.02);
+  --bg-card-hover: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.05);
+  --border-hover: rgba(216, 165, 87, 0.3);
+  --text: #f3effa;
+  --muted: rgba(243, 239, 250, 0.6);
+  
+  /* Futuristic Colors */
+  --gold: #d8a557;
+  --gold-glow: rgba(216, 165, 87, 0.25);
+  --silver-glow: rgba(199, 207, 222, 0.2);
+  --bronze-glow: rgba(165, 105, 24, 0.15);
+  
+  --font-display: "Syne", sans-serif;
+  --font-ui: "Plus Jakarta Sans", sans-serif;
+  --radius: 28px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Glowing Futuristic Grid & Background ── */
+.futuristic-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-position: center;
+  mask-image: radial-gradient(circle at 50% 30%, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 50% 30%, black 40%, transparent 80%);
+}
+
+.glowing-orb {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(140px);
+  opacity: 0.35;
+  animation: orbDrift 20s infinite alternate ease-in-out;
+}
+
+.orb-gold {
+  background: radial-gradient(circle, var(--gold) 0%, transparent 75%);
+  top: -200px;
+  left: 30%;
+}
+
+.orb-purple {
+  background: radial-gradient(circle, #6366f1 0%, transparent 75%);
+  bottom: -200px;
+  right: 10%;
+  animation-delay: -10s;
+}
+
+@keyframes orbDrift {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(50px, 40px) scale(1.1); }
+}
+
+/* ── Glassmorphic Capsule Header ── */
+.f-header-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.f-header {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(24px);
+  padding: 12px 28px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1000px, 100%);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.f-header:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.f-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: -0.03em;
+}
+
+.f-brand img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(216, 165, 87, 0.4);
+}
+
+.f-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.f-nav a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
+.f-nav a:hover {
+  color: var(--text);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.f-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-f-glow {
+  background: var(--gold);
+  color: #03000a;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 20px var(--gold-glow);
+  transition: all 0.3s;
+}
+
+.btn-f-glow:hover {
+  box-shadow: 0 0 30px rgba(216, 165, 87, 0.6);
+  transform: translateY(-1px);
+}
+
+/* ── Hero & Interactive Orbit ── */
+.f-hero {
+  min-height: 100vh;
+  padding: 140px 24px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.f-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.f-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(216, 165, 87, 0.08);
+  border: 1px solid rgba(216, 165, 87, 0.2);
+  color: var(--gold);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.f-hero-left h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 5vw, 5.2rem);
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  background: linear-gradient(180deg, #ffffff 0%, #d8a557 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.f-hero-left p {
+  color: var(--muted);
+  font-size: 1.15rem;
+  max-width: 520px;
+}
+
+.f-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-cosmic {
+  position: relative;
+  background: transparent;
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1px solid rgba(216, 165, 87, 0.4);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.btn-cosmic::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gold-grad);
+  opacity: 0.15;
+  transition: opacity 0.3s;
+}
+
+.btn-cosmic:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 25px var(--gold-glow);
+}
+
+.btn-cosmic:hover::before {
+  opacity: 0.25;
+}
+
+.btn-outline-glow {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 16px 36px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-outline-glow:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+/* ── Constellation / Constellation Simulation Visual ── */
+.f-hero-right {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+
+.constellation-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-core {
+  width: 80px;
+  height: 80px;
+  background: var(--gold-grad);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  z-index: 5;
+  box-shadow: 0 0 50px rgba(216, 165, 87, 0.6);
+  animation: corePulse 3s infinite alternate ease-in-out;
+}
+
+@keyframes corePulse {
+  0% { transform: scale(1); box-shadow: 0 0 30px rgba(216, 165, 87, 0.4); }
+  100% { transform: scale(1.08); box-shadow: 0 0 60px rgba(216, 165, 87, 0.7); }
+}
+
+.orbit-ring {
+  position: absolute;
+  border: 1px dashed rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+  animation: rotateOrbit 30s infinite linear;
+}
+
+.ring-bronze { width: 220px; height: 220px; animation-duration: 40s; }
+.ring-silver { width: 340px; height: 340px; animation-duration: 60s; animation-direction: reverse; }
+.ring-gold { width: 460px; height: 460px; animation-duration: 80s; }
+
+@keyframes rotateOrbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.orbit-node {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: #03000a;
+  font-weight: 800;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.orbit-node:hover {
+  transform: scale(1.2) !important;
+}
+
+/* Position nodes on the rings */
+.node-b1 { top: 10px; left: 50%; margin-left: -22px; background: var(--bronze-grad); box-shadow: 0 0 20px var(--bronze-glow); }
+.node-b2 { bottom: 10px; left: 50%; margin-left: -22px; background: var(--bronze-grad); }
+.node-s1 { top: 50%; right: -22px; margin-top: -22px; background: var(--silver-grad); box-shadow: 0 0 25px var(--silver-glow); }
+.node-s2 { top: 50%; left: -22px; margin-top: -22px; background: var(--silver-grad); }
+.node-g1 { top: 30px; left: 30px; background: var(--gold-grad); box-shadow: 0 0 30px var(--gold-glow); }
+.node-g2 { bottom: 30px; right: 30px; background: var(--gold-grad); }
+
+/* Constellation connecting laser line simulation */
+.laser-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(216, 165, 87, 0.8), transparent);
+  transform-origin: left center;
+  width: 220px;
+  z-index: 1;
+  animation: scanLaser 6s infinite ease-in-out;
+}
+
+@keyframes scanLaser {
+  0% { transform: rotate(0deg); opacity: 0.1; }
+  50% { opacity: 0.8; }
+  100% { transform: rotate(360deg); opacity: 0.1; }
+}
+
+/* ── Glassmorphic Constellation Section (Value Proposition) ── */
+.f-sections {
+  padding: 100px 24px;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.f-section-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.f-section-title h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.f-section-title p {
+  color: var(--muted);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Glassmorphic 3D Cards */
+.f-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.glass-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.03), transparent 60%);
+  pointer-events: none;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--border-hover);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(216, 165, 87, 0.05);
+}
+
+.glass-card-icon {
+  font-size: 2.2rem;
+}
+
+.glass-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.glass-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.card-glow-dot {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+  mix-blend-mode: screen;
+}
+
+.glass-card:hover .card-glow-dot {
+  opacity: 0.08;
+}
+
+/* ── Interactive Custom Video Section ── */
+.video-section-futuristic {
+  padding: 100px 24px;
+}
+
+.video-mockup-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 32px;
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  border: 1px solid var(--border);
+  box-shadow: 0 50px 120px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.video-mockup-screen {
+  background: #000;
+  border-radius: 26px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.video-mockup-screen iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-glow-effect {
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  pointer-events: none;
+  box-shadow: inset 0 0 40px rgba(216, 165, 87, 0.2);
+  animation: screenGlow 4s infinite alternate;
+}
+
+@keyframes screenGlow {
+  0% { box-shadow: inset 0 0 30px rgba(216, 165, 87, 0.15); }
+  100% { box-shadow: inset 0 0 50px rgba(216, 165, 87, 0.3); }
+}
+
+/* ── Advanced 3D Pricing Grid ── */
+.pricing-section-futuristic {
+  padding: 100px 24px;
+  background: radial-gradient(circle at center bottom, rgba(216, 165, 87, 0.05), transparent 60%);
+}
+
+.pricing-grid-futuristic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: stretch;
+}
+
+.price-card-futuristic {
+  background: rgba(255, 255, 255, 0.012);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.price-card-futuristic::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.02), transparent 70%);
+  pointer-events: none;
+}
+
+.price-card-futuristic.featured-gold {
+  border-color: rgba(216, 165, 87, 0.4);
+  background: rgba(216, 165, 87, 0.015);
+  box-shadow: 0 30px 60px rgba(216, 165, 87, 0.06);
+}
+
+.price-card-futuristic:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.price-card-futuristic.featured-gold:hover {
+  border-color: var(--gold);
+  box-shadow: 0 35px 80px rgba(216, 165, 87, 0.12);
+}
+
+.plan-header h3 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.plan-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.plan-price {
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: baseline;
+}
+
+.plan-price span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+.plan-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.plan-features-list li {
+  font-size: 0.95rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.plan-features-list li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--gold);
+}
+
+.btn-plan-select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  color: #fff;
+  padding: 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-plan-select:hover {
+  background: #fff;
+  color: #03000a;
+  border-color: #fff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.price-card-futuristic.featured-gold .btn-plan-select {
+  background: var(--gold-grad);
+  color: #03000a;
+  border: none;
+  box-shadow: 0 10px 25px var(--gold-glow);
+}
+
+.price-card-futuristic.featured-gold .btn-plan-select:hover {
+  box-shadow: 0 15px 35px rgba(216, 165, 87, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ── Futuristic Footer ── */
+.f-footer {
+  border-top: 1px solid var(--line);
+  padding: 80px 24px;
+  background: #010003;
+}
+
+.f-footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 48px;
+}
+
+.f-footer-grid h4 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.f-footer-grid p, .f-footer-grid a {
+  color: var(--muted);
+  font-size: 0.88rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.f-footer-grid a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.f-footer-bottom {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+/* ── Mobile Layout & Touch-native Swipe Carousels ── */
+@media (max-width: 1024px) {
+  .f-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 120px;
+    gap: 60px;
+  }
+
+  .f-hero-left {
+    align-items: center;
+  }
+
+  .f-hero-left p {
+    margin: 0 auto;
+  }
+
+  .f-hero-actions {
+    justify-content: center;
+  }
+
+  .f-grid-3, .pricing-grid-futuristic {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .f-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 720px) {
+  .f-header {
+    padding: 10px 20px;
+  }
+
+  .f-nav {
+    display: none; /* Hide navigation on mobile */
+  }
+
+  .btn-f-glow {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+  }
+
+  /* Orbit Scaled Down for Mobile */
+  .f-hero-right {
+    height: 380px;
+  }
+
+  .center-core {
+    width: 60px;
+    height: 60px;
+    font-size: 1.7rem;
+  }
+
+  .ring-bronze { width: 160px; height: 160px; }
+  .ring-silver { width: 260px; height: 260px; }
+  .ring-gold { width: 350px; height: 350px; }
+
+  .orbit-node {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+
+  .node-b1 { margin-left: -17px; }
+  .node-b2 { margin-left: -17px; }
+  .node-s1 { right: -17px; margin-top: -17px; }
+  .node-s2 { left: -17px; margin-top: -17px; }
+  .node-g1 { top: 20px; left: 20px; }
+  .node-g2 { bottom: 20px; right: 20px; }
+
+  /* Mobile horizontal swipe carousels (Tinder / Bumble styled layout) */
+  .f-grid-3 {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 12px 4px 24px;
+    margin: 0 -4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .f-grid-3::-webkit-scrollbar {
+    display: none;
+  }
+  .f-grid-3 .glass-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+
+  .pricing-grid-futuristic {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 16px 4px 28px;
+    margin: 0 -4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    align-items: stretch;
+  }
+  .pricing-grid-futuristic::-webkit-scrollbar {
+    display: none;
+  }
+  .price-card-futuristic {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+}

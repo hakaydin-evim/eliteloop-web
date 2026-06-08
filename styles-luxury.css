@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg: #090909;
+  --bg-card: #101010;
+  --border: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(197, 168, 128, 0.28);
+  --text: #f9f6f0;
+  --muted: rgba(249, 246, 240, 0.55);
+  
+  /* Matte Luxury Metals */
+  --gold: #c5a880; /* Champagne Gold */
+  --gold-soft: #ebdcc5;
+  --silver: #a5aebc; /* Platinum */
+  --bronze: #af8771; /* Matte Copper */
+  
+  --font-display: "Cormorant Garamond", serif;
+  --font-ui: "Inter", sans-serif;
+  --radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Minimal Premium Header ── */
+.l-header-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 24px;
+}
+
+.l-header {
+  width: min(1200px, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+}
+
+.l-brand {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.l-brand img {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.l-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.l-nav a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.l-nav a:hover {
+  color: #fff;
+}
+
+.btn-l-header {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-l-header:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+/* ── Editorial Hero ── */
+.l-hero {
+  min-height: 100vh;
+  padding: 160px 24px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.l-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.l-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.l-hero-left h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 5vw, 4.8rem);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.l-hero-left h1 em {
+  font-style: italic;
+  font-family: var(--font-display);
+  color: var(--gold-soft);
+}
+
+.l-hero-left p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.l-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.btn-luxury-primary {
+  background: var(--gold);
+  color: var(--bg);
+  padding: 16px 40px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-luxury-primary:hover {
+  background: var(--gold-soft);
+  transform: translateY(-2px);
+}
+
+.btn-luxury-link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-luxury-link:hover {
+  color: #fff;
+}
+
+/* Luxury Phone Mockup */
+.l-hero-right {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.l-phone-container {
+  width: 320px;
+  height: 640px;
+  background: #000;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 36px;
+  padding: 12px;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+  position: relative;
+}
+
+.l-phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #0d0d0d;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.03);
+  position: relative;
+}
+
+.l-phone-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+  filter: grayscale(10%) contrast(110%);
+}
+
+.l-phone-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0d0d0d 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+}
+
+.l-phone-overlay h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.l-phone-overlay p {
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+/* ── Access Tiers (Boutique hotel / premium card layout) ── */
+.l-tiers-section {
+  padding: 120px 24px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: #070707;
+}
+
+.l-tiers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.l-section-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.l-section-title h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+
+.l-section-title p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.l-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.l-tier-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+  transition: all 0.4s ease;
+}
+
+.l-tier-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-hover);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.l-tier-top {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.l-tier-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  width: fit-content;
+  padding-bottom: 4px;
+  border-bottom: 1px solid;
+}
+
+.m-bronze .l-tier-badge { color: var(--bronze); border-color: var(--bronze); }
+.m-silver .l-tier-badge { color: var(--silver); border-color: var(--silver); }
+.m-gold .l-tier-badge { color: var(--gold); border-color: var(--gold); }
+
+.l-tier-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.l-tier-card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.l-tier-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.l-tier-features li {
+  font-size: 0.88rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.l-tier-features li::before {
+  content: "—";
+  font-weight: 300;
+  color: var(--gold);
+}
+
+/* ── Editorial Catalog Features ── */
+.l-features-section {
+  padding: 120px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.l-feat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.l-feat-row:last-child {
+  margin-bottom: 0;
+}
+
+.l-feat-row.reversed {
+  direction: rtl;
+}
+
+.l-feat-row.reversed .l-feat-copy {
+  direction: ltr;
+}
+
+.l-feat-img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  filter: grayscale(20%);
+}
+
+.l-feat-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.l-feat-num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--gold);
+  opacity: 0.7;
+}
+
+.l-feat-copy h2 {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.l-feat-copy p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* ── Interactive City Preview (Showcase) ── */
+.l-preview-section {
+  padding: 120px 24px;
+  background: #050505;
+  border-top: 1px solid var(--border);
+}
+
+.l-preview-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.city-nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.city-tab {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.city-tab.active {
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold);
+}
+
+.city-event-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+  transition: opacity 0.5s;
+}
+
+.city-event-info h3 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.city-event-info p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.city-event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.city-event-meta span {
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.city-event-meta span strong {
+  color: var(--gold);
+}
+
+/* ── Luxury Footer ── */
+.l-footer {
+  border-top: 1px solid var(--border);
+  padding: 80px 24px;
+  background: #020202;
+}
+
+.l-footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 48px;
+}
+
+.l-footer h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+}
+
+.l-footer p, .l-footer a {
+  color: var(--muted);
+  font-size: 0.88rem;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.l-footer a:hover {
+  color: #fff;
+}
+
+.l-footer-bottom {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+/* ── Mobile Responsive ── */
+@media (max-width: 1024px) {
+  .l-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 120px;
+    gap: 60px;
+  }
+
+  .l-hero-left {
+    align-items: center;
+  }
+
+  .l-hero-left p {
+    margin: 0 auto;
+  }
+
+  .l-hero-actions {
+    justify-content: center;
+  }
+
+  .l-tiers-grid, .city-event-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .l-feat-row, .l-feat-row.reversed {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    direction: ltr;
+  }
+
+  .l-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 720px) {
+  .l-header-container {
+    padding: 16px;
+  }
+
+  .l-nav {
+    display: none; /* Hide topbar links on mobile */
+  }
+
+  .btn-l-header {
+    font-size: 0.75rem;
+    padding: 8px 16px;
+  }
+
+  /* Horizontal Tiers Carousel on mobile (Tinder/Bumble styled snap scroll) */
+  .l-tiers-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 12px 4px 24px;
+    margin: 0 -4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .l-tiers-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .l-tier-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    min-height: auto;
+  }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliteLoop | Geleceğin İnteraktif Sosyal Ağı</title>
+  <link rel="icon" type="image/png" href="/favicon-32.png?v=20260516c">
+  <link rel="stylesheet" href="styles-effects.css">
+</head>
+<body>
+
+  <!-- Dynamic Page Scroll Progress Bar -->
+  <div class="scroll-progress-wrap">
+    <div class="scroll-progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Custom Trailing Cursor Follower (Awwwards Style) -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="custom-cursor-follower" id="cursorFollower"></div>
+
+  <!-- Liquid Morphing Blob Background (WebGL Simulation) -->
+  <div class="liquid-mesh-container">
+    <div class="liquid-blob blob-1" id="blob1"></div>
+    <div class="liquid-blob blob-2" id="blob2"></div>
+  </div>
+
+  <!-- Glassmorphic Capsule Header -->
+  <div class="header-effects-wrapper">
+    <header class="header-effects">
+      <a href="#" class="brand-effects interactive-item">
+        <img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop">
+        <span>EliteLoop</span>
+      </a>
+      
+      <nav class="nav-effects">
+        <a href="#hero" class="interactive-item">Evren</a>
+        <a href="#bento" class="interactive-item">Özellikler</a>
+        <a href="/cities" class="interactive-item">Şehirler</a>
+      </nav>
+      
+      <div class="magnetic-wrap">
+        <button class="btn-f-glow btn-magnetic interactive-item" onclick="document.getElementById('bento').scrollIntoView();">Keşfet</button>
+      </div>
+    </header>
+  </div>
+
+  <!-- Main Hero Area -->
+  <main>
+    <section class="effects-hero" id="hero">
+      <div class="effects-hero-left">
+        <span class="f-eyebrow">Awwwards Etkileşim Evreni</span>
+        
+        <!-- Animated Reveal Text Masks -->
+        <h1 class="hero-title">
+          <span class="reveal-mask mask-1"><span class="reveal-text">İlk Adımı</span></span>
+          <span class="reveal-mask mask-2"><span class="reveal-text">Sen At.</span></span>
+          <span class="reveal-mask mask-3"><span class="reveal-text">Döngüye Katıl.</span></span>
+        </h1>
+        
+        <p>Klasik statik tasarımları unutun. EliteLoop'un dinamik, akışkan ve etkileşimli evreninde premium sosyal çevreler ve özel şehir planları arasında pürüzsüzce geçiş yapın.</p>
+        
+        <div class="effects-hero-actions">
+          <div class="magnetic-wrap">
+            <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969" class="btn-magnetic interactive-item" target="_blank" rel="noopener">
+              📱 Uygulamayı İndir
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Interactive 3D Parallax Card -->
+      <div class="effects-hero-right">
+        <div class="tilt-card interactive-item-text" id="tiltCard">
+          <div class="tilt-card-screen">
+            <div class="map-simulation">
+              <div class="compass-visual"></div>
+              <div class="map-node n1">🍷</div>
+              <div class="map-node n2">🎾</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Grid Section (Bento grid layout with hover animations) -->
+    <section class="bento-section" id="bento">
+      <div class="bento-container">
+        <div class="f-section-title">
+          <h2>Etkileşimli Panel</h2>
+          <p>Her kart, farenizin hareketine duyarlı özgün mikro animasyonlar ve derinlik efektleri barındırır.</p>
+        </div>
+        
+        <div class="bento-grid">
+          <!-- Bento Box 1: Dynamic Maps -->
+          <article class="bento-card bento-1 interactive-item">
+            <div class="bento-visual-bg">🗺️</div>
+            <h3>Yapay Zeka Destekli Sosyal Harita</h3>
+            <p>Konum verilerini derinlikli bir şekilde analiz ederek en yakın planları önceliklendirir. Statik sayfaların aksine, harita katmanları farenizle senkronize hareket eder.</p>
+          </article>
+          
+          <!-- Bento Box 2: Tiers (Vertical representation) -->
+          <article class="bento-card bento-2 interactive-item" style="border-color: var(--gold-glow);">
+            <div class="bento-visual-bg">🏅</div>
+            <div>
+              <h3>Premium Rozet Tiers</h3>
+              <p>Bronze, Silver ve Gold rozetler arasındaki geçişler, kartın üzerine geldiğinizde parlayan metalik renklerle belirginleşir.</p>
+            </div>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--gold);">Gold · Silver · Bronze</span>
+          </article>
+          
+          <!-- Bento Box 3: Privacy -->
+          <article class="bento-card bento-3 interactive-item">
+            <div class="bento-visual-bg">🔒</div>
+            <h3>Fuzzy Gizlilik</h3>
+            <p>Konumunuzun tam noktası gizlenerek takımyıldızında yaklaşık yörünge simülasyonu olarak gösterilir.</p>
+          </article>
+          
+          <!-- Bento Box 4: Event rooms -->
+          <article class="bento-card bento-4 interactive-item">
+            <div class="bento-visual-bg">💬</div>
+            <h3>Anlık Sohbet ve İletişim</h3>
+            <p>Buluşma onaylandığı anda sohbet odası aktif hale gelir. Mesajlar, yüksek hızlı veri akış hatları üzerinden gerçek zamanlı aktarılır.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Futuristic Footer -->
+  <footer class="f-footer" style="background: #000;">
+    <div class="f-footer-bottom" style="border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 30px; text-align: center;">
+      &copy; 2026 EliteLoop. Tüm hakları saklıdır. Awwwards interaktif arayüz çalışması.
+    </div>
+  </footer>
+
+  <!-- Advanced Interactive Scripts (Lerp trailing cursor, magnetic buttons, 3D card tilt) -->
+  <script>
+    // 1. Smooth Trailing Cursor (Lerp interpolation physics)
+    const cursor = document.getElementById('customCursor');
+    const follower = document.getElementById('cursorFollower');
+    
+    let mouseX = 0, mouseY = 0; // Target coordinates
+    let followerX = 0, followerY = 0; // Lagging follower coordinates
+    
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      
+      // Instantly position the inner core dot
+      cursor.style.left = `${mouseX}px`;
+      cursor.style.top = `${mouseY}px`;
+    });
+    
+    // Physics animation loop for follower (lerp)
+    function animateCursor() {
+      // Lerp math: currentPosition += (targetPosition - currentPosition) * speed
+      followerX += (mouseX - followerX) * 0.15;
+      followerY += (mouseY - followerY) * 0.15;
+      
+      follower.style.left = `${followerX}px`;
+      follower.style.top = `${followerY}px`;
+      
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hover detection to expand/modify cursor
+    const interactives = document.querySelectorAll('.interactive-item');
+    interactives.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        document.body.classList.add('hover-interactive');
+      });
+      item.addEventListener('mouseleave', () => {
+        document.body.classList.remove('hover-interactive');
+      });
+    });
+
+    const interactiveTexts = document.querySelectorAll('.interactive-item-text');
+    interactiveTexts.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        document.body.classList.add('hover-interactive');
+        document.body.classList.add('hover-interactive-text');
+      });
+      item.addEventListener('mouseleave', () => {
+        document.body.classList.remove('hover-interactive');
+        document.body.classList.remove('hover-interactive-text');
+      });
+    });
+
+    // 2. Magnetic Buttons Effect
+    const magneticWraps = document.querySelectorAll('.magnetic-wrap');
+    magneticWraps.forEach(wrap => {
+      const btn = wrap.querySelector('.btn-magnetic');
+      
+      wrap.addEventListener('mousemove', (e) => {
+        const rect = wrap.getBoundingClientRect();
+        // Mouse coordinates relative to wrap center
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        // Pull the button towards the cursor (magnetic threshold)
+        btn.style.transform = `translate(${x * 0.35}px, ${y * 0.35}px)`;
+      });
+      
+      wrap.addEventListener('mouseleave', () => {
+        // Smooth snap back
+        btn.style.transform = 'translate(0px, 0px)';
+      });
+    });
+
+    // 3. 3D Perspective Card Tilt (Raya / Apple style)
+    const tiltCard = document.getElementById('tiltCard');
+    
+    tiltCard.addEventListener('mousemove', (e) => {
+      const rect = tiltCard.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      // Calculate rotation angles based on mouse percentage inside the card
+      const rotateY = ((x / rect.width) - 0.5) * 30; // Max 15deg Y rotation
+      const rotateX = (((y / rect.height) - 0.5) * -30); // Max 15deg X rotation
+      
+      tiltCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    
+    tiltCard.addEventListener('mouseleave', () => {
+      // Smooth reset
+      tiltCard.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+
+    // 4. Scroll progress bar calculation
+    const progressBar = document.getElementById('progressBar');
+    window.addEventListener('scroll', () => {
+      const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = scrollTotal > 0 ? (window.pageYOffset / scrollTotal) * 100 : 0;
+      progressBar.style.width = `${scrollPercent}%`;
+    });
+  </script>
+</body>
+</html>

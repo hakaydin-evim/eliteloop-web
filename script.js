@@ -1144,13 +1144,14 @@ function setupLanguageModal() {
     if (event.target === modal) modal.classList.remove("active");
   });
 
-  document.querySelectorAll(".lang-option, .c-lang-option").forEach((button) => {
-    button.addEventListener("click", () => {
-      setLang(button.dataset.lang);
-      applyTranslations();
-      renderLegalPage();
-      modal.classList.remove("active");
-    });
+  // Use event delegation on the modal for language buttons
+  modal.addEventListener("click", (event) => {
+    const btn = event.target.closest("[data-lang]");
+    if (!btn) return;
+    setLang(btn.dataset.lang);
+    applyTranslations();
+    renderLegalPage();
+    modal.classList.remove("active");
   });
 }
 
@@ -1165,3 +1166,4 @@ if (document.readyState === "loading") {
   renderLegalPage();
   setupLanguageModal();
 }
+

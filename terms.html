@@ -6,6 +6,7 @@
   <title>EliteLoop - Terms of Service</title>
   <meta name="description" content="Review EliteLoop Terms of Service, including badge access, subscriptions, event participation, messaging rules, and platform use.">
   <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#D8A557">
   <link rel="canonical" href="https://eliteloop.app/terms">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=20260516c">
   <link rel="shortcut icon" href="/favicon.ico?v=20260516c">
@@ -28,42 +29,95 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-claude.css">
+  <style>
+  body[data-page] {
+    background: radial-gradient(ellipse at 50% 0%, rgba(216,165,87,0.04) 0%, transparent 50%), linear-gradient(180deg, #07101F 0%, #0A1628 40%, #07101F 100%);
+    background-attachment: fixed;
+    color: #F6F1E7;
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  .legal-topbar {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2rem;
+    background: rgba(7,16,31,0.85);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(246,241,231,0.06);
+  }
+  .legal-topbar .brand {
+    display: flex; align-items: center; gap: 0.6rem;
+    text-decoration: none; font-weight: 700;
+    font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    color: #F6F1E7;
+  }
+  .legal-topbar .brand img {
+    width: 36px; height: 36px; border-radius: 10px;
+    object-fit: contain; display: block;
+  }
+  .legal-topbar .mini-cta {
+    background: linear-gradient(135deg, #B77925 0%, #FAE6B7 50%, #B77925 100%);
+    color: #07101F; font-size: 0.8rem; font-weight: 700;
+    padding: 0.5rem 1.2rem; border-radius: 0.4rem;
+    text-decoration: none; transition: opacity 0.2s;
+    box-shadow: 0 8px 24px rgba(216,165,87,0.25);
+  }
+  .legal-topbar .mini-cta:hover { opacity: 0.85; }
+  .legal-hero {
+    text-align: center; padding: 5rem 2rem 3rem;
+    max-width: 700px; margin: 0 auto;
+  }
+  .legal-hero .eyebrow {
+    display: inline-block; font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-soft, #FAE6B7); margin-bottom: 1.2rem;
+  }
+  .legal-hero h1 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 400; line-height: 1.15; color: #F6F1E7;
+    margin: 0 0 1rem;
+  }
+  .legal-hero p {
+    font-size: 1rem; line-height: 1.75;
+    color: rgba(246,241,231,0.55); font-weight: 300; margin: 0;
+  }
+  .legal-meta {
+    margin-top: 1rem; font-size: 0.75rem;
+    color: rgba(246,241,231,0.35); letter-spacing: 0.05em;
+  }
+  .legal-content {
+    max-width: 800px; margin: 0 auto; padding: 0 2rem 6rem;
+    font-size: 0.92rem; line-height: 1.8; color: rgba(246,241,231,0.65);
+  }
+  .legal-content h2, .legal-content h3 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    color: #F6F1E7; font-weight: 400;
+  }
+  .legal-content h2 { font-size: 1.6rem; margin: 3rem 0 1rem; }
+  .legal-content h3 { font-size: 1.2rem; margin: 2rem 0 0.75rem; }
+  .legal-content ul { padding-left: 1.5rem; }
+  .legal-content li { margin-bottom: 0.5rem; }
+  .legal-content a { color: #D8A557; text-decoration: underline; }
+  @media (max-width: 640px) {
+    .legal-topbar { padding: 0.9rem 1rem; }
+    .legal-hero { padding: 3.5rem 1rem 2rem; }
+    .legal-hero h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+    .legal-content { padding: 0 1rem 4rem; }
+  }
+  </style>
 </head>
 <body data-page="terms">
-  <div class="site-bg"></div>
-  <div class="modal-overlay" id="langModal">
-    <div class="modal">
-      <div class="modal-header">
-        <h3 data-i18n="modal.selectLanguage">Select Language</h3>
-        <button class="modal-close" id="closeLangModal" aria-label="Close">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="lang-grid">
-          <button class="lang-option" data-lang="en"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></button>
-          <button class="lang-option" data-lang="tr"><span class="lang-flag">🇹🇷</span><span class="lang-name">Türkçe</span></button>
-          <button class="lang-option" data-lang="ru"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span></button>
-          <button class="lang-option" data-lang="ar"><span class="lang-flag">🇸🇦</span><span class="lang-name">العربية</span></button>
-          <button class="lang-option" data-lang="zh"><span class="lang-flag">🇨🇳</span><span class="lang-name">中文</span></button>
-          <button class="lang-option" data-lang="ja"><span class="lang-flag">🇯🇵</span><span class="lang-name">日本語</span></button>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <header class="topbar legal-topbar">
+  <header class="legal-topbar">
     <a href="/" class="brand">
       <img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop">
       <span>EliteLoop</span>
     </a>
-    <div class="topbar-meta">
-      <button class="lang-btn" id="langBtn" aria-label="Change language">
-        <span class="lang-icon">🌐</span>
-        <span class="lang-text">EN</span>
-      </button>
-      <a href="/" class="mini-cta" data-i18n="common.backHome">Back to home</a>
-    </div>
+    <a href="/" class="mini-cta" data-i18n="common.backHome">Back to home</a>
   </header>
 
   <main class="legal-page">

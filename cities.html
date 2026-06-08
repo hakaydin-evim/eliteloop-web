@@ -44,68 +44,51 @@
     gtag('config', 'G-6KWG02QGBR');
   </script>
 
+  <meta name="theme-color" content="#D8A557">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-claude.css">
 
   <style>
-    .cities-topbar {
-      position: sticky; top: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.1rem 2rem;
-      background: rgba(6,11,20,0.85);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+    /* ── Body override for cities page ── */
+    body[data-page="cities"] {
+      background: radial-gradient(ellipse at 50% 0%, rgba(216, 165, 87, 0.04) 0%, transparent 50%), linear-gradient(180deg, #07101F 0%, #0A1628 40%, #07101F 100%);
+      background-attachment: fixed;
+      color: #F6F1E7;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
     }
-    .cities-topbar .brand {
-      display: flex; align-items: center; gap: 0.6rem;
-      text-decoration: none; font-weight: 700;
-      font-family: 'Inter', sans-serif; font-size: 0.95rem;
-      color: #f8efe2;
-    }
-    .cities-topbar .brand img {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      object-fit: contain;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 0;
-      display: block;
-    }
-    .cities-topbar__cta {
-      background: linear-gradient(135deg, #b77925 0%, #fae6b7 50%, #b77925 100%);
-      color: #121317;
-      font-size: 0.8rem; font-weight: 700;
-      padding: 0.5rem 1.2rem; border-radius: 0.4rem;
-      text-decoration: none;
-      transition: opacity 0.2s;
-      box-shadow: 0 8px 24px rgba(216,165,87,0.25);
-    }
-    .cities-topbar__cta:hover { opacity: 0.85; }
 
     .cities-hero {
       text-align: center;
-      padding: 5rem 2rem 3rem;
+      padding: 8rem 2rem 3rem;
       max-width: 700px;
       margin: 0 auto;
     }
     .cities-eyebrow {
-      display: inline-block;
-      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em;
-      text-transform: uppercase; color: #fae6b7;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(216, 165, 87, 0.2);
+      background: rgba(216, 165, 87, 0.06);
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #FAE6B7;
       margin-bottom: 1.2rem;
     }
     .cities-hero h1 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Instrument Serif', Georgia, serif;
       font-size: clamp(2.4rem, 6vw, 4rem);
-      font-weight: 600; line-height: 1.1;
-      color: #f8efe2; margin: 0 0 1rem;
+      font-weight: 400; line-height: 1.1;
+      color: #F6F1E7; margin: 0 0 1rem;
+      letter-spacing: -0.02em;
     }
     .cities-hero p {
       font-size: 1rem; line-height: 1.75;
-      color: rgba(248,239,226,0.6); font-weight: 300;
+      color: var(--text-2, #B0A794); font-weight: 400;
       margin: 0;
     }
 
@@ -120,13 +103,14 @@
 
     .city-card {
       position: relative;
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 1.25rem;
+      border: 1px solid rgba(246,241,231,0.08);
+      border-radius: 20px;
       overflow: hidden;
       text-decoration: none;
       display: block;
       transition: border-color 0.25s, transform 0.25s;
-      background: rgba(255,255,255,0.02);
+      background: rgba(246,241,231,0.03);
+      backdrop-filter: blur(12px);
     }
     .city-card:hover {
       border-color: rgba(216,165,87,0.4);
@@ -146,7 +130,7 @@
     }
     .city-card__img-placeholder {
       width: 100%; height: 180px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      background: linear-gradient(135deg, rgba(246,241,231,0.04), rgba(246,241,231,0.01));
       display: flex; align-items: center; justify-content: center;
       font-size: 3rem;
     }
@@ -158,8 +142,8 @@
       font-size: 0.62rem; font-weight: 700; letter-spacing: 0.14em;
       text-transform: uppercase; margin-bottom: 0.6rem;
     }
-    .city-card__status--live { color: #44d39f; }
-    .city-card__status--soon { color: rgba(248,239,226,0.35); }
+    .city-card__status--live { color: #34D399; }
+    .city-card__status--soon { color: rgba(246,241,231,0.35); }
 
     .city-update-badge {
       display: inline-block; margin-left: 8px; padding: 2px 7px;
@@ -170,14 +154,14 @@
       white-space: nowrap;
     }
     .city-update-badge--new {
-      background: rgba(216,165,87,0.15); color: #fae6b7;
+      background: rgba(216,165,87,0.15); color: #FAE6B7;
       border-color: rgba(216,165,87,0.4);
       animation: badgePulse 2s infinite;
     }
     .city-update-badge--updated {
-      background: rgba(255,255,255,0.06);
-      color: rgba(248,239,226,0.7);
-      border-color: rgba(255,255,255,0.14);
+      background: rgba(246,241,231,0.06);
+      color: rgba(246,241,231,0.7);
+      border-color: rgba(246,241,231,0.14);
     }
     @keyframes badgePulse {
       0%, 100% { box-shadow: 0 0 0 0 rgba(216,165,87,0.4); opacity: 1; }
@@ -186,7 +170,7 @@
 
     .city-card__dispatch-today {
       position: absolute; top: 1rem; right: 1rem; z-index: 10;
-      background: rgba(216,165,87,0.15); color: #fae6b7;
+      background: rgba(216,165,87,0.15); color: #FAE6B7;
       border: 1px solid rgba(216,165,87,0.4); border-radius: 0.4rem;
       padding: 0.35rem 0.65rem; font-size: 0.65rem; font-weight: 700;
       letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(216,165,87,0.25);
@@ -194,13 +178,13 @@
     }
 
     .city-card__name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem; font-weight: 600;
-      color: #f8efe2; margin: 0 0 0.4rem;
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.6rem; font-weight: 400;
+      color: #F6F1E7; margin: 0 0 0.4rem;
       line-height: 1.1;
     }
     .city-card__country {
-      font-size: 0.75rem; color: rgba(248,239,226,0.4);
+      font-size: 0.75rem; color: rgba(246,241,231,0.4);
       margin-bottom: 0.6rem; letter-spacing: 0.05em;
     }
     .city-card__meta-bar {
@@ -209,15 +193,15 @@
     .city-card__count {
       display: inline-flex; align-items: center; gap: 0.35rem;
       background: rgba(216,165,87,0.08); border: 1px solid rgba(216,165,87,0.25);
-      color: #fae6b7; padding: 0.2rem 0.6rem; border-radius: 0.4rem;
+      color: #FAE6B7; padding: 0.2rem 0.6rem; border-radius: 0.4rem;
       font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em;
     }
     .city-card__desc {
       font-size: 0.82rem; line-height: 1.7;
-      color: rgba(248,239,226,0.55); margin: 0 0 1rem;
+      color: var(--text-2, #B0A794); margin: 0 0 1rem;
     }
     .city-card__cta {
-      font-size: 0.75rem; color: #fae6b7;
+      font-size: 0.75rem; color: #FAE6B7;
       letter-spacing: 0.06em;
     }
     .city-card__latest {
@@ -225,7 +209,7 @@
       margin: 0.65rem 0 0.95rem;
       padding: 0.75rem 0.85rem;
       border: 1px solid rgba(216,165,87,0.22);
-      border-radius: 0.65rem;
+      border-radius: 12px;
       background: rgba(216,165,87,0.055);
     }
     .city-card__latest-label {
@@ -239,7 +223,7 @@
     }
     .city-card__latest-title {
       display: block;
-      color: #f8efe2;
+      color: #F6F1E7;
       font-size: 0.78rem;
       line-height: 1.45;
       font-weight: 600;
@@ -247,7 +231,7 @@
     .city-card__latest-date {
       display: block;
       margin-top: 0.35rem;
-      color: rgba(248,239,226,0.42);
+      color: rgba(246,241,231,0.42);
       font-size: 0.68rem;
     }
     .city-card__latest-local {
@@ -269,8 +253,8 @@
       padding: 0 2rem;
     }
     .reports-strip__title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem; color: #f8efe2;
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.8rem; color: #F6F1E7;
       margin: 0 0 1.5rem;
     }
     .reports-list {
@@ -292,7 +276,7 @@
       border: 1px solid rgba(216,165,87,0.32);
       border-radius: 999px;
       background: rgba(216,165,87,0.08);
-      color: #fae6b7;
+      color: #FAE6B7;
       cursor: pointer;
       font-family: 'Inter', sans-serif;
       font-size: 0.78rem;
@@ -312,7 +296,7 @@
       display: none !important;
     }
     .report-item {
-      border: 1px solid rgba(255,255,255,0.06);
+      border: 1px solid rgba(246,241,231,0.06);
       border-radius: 1rem; padding: 1.25rem 1.5rem;
       text-decoration: none;
       transition: border-color 0.2s;
@@ -321,14 +305,14 @@
     .report-item:hover { border-color: rgba(216,165,87,0.35); }
     .report-item__tag {
       font-size: 0.62rem; letter-spacing: 0.15em;
-      text-transform: uppercase; color: #fae6b7; margin-bottom: 0.5rem;
+      text-transform: uppercase; color: #FAE6B7; margin-bottom: 0.5rem;
     }
     .report-item__title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem; color: #f8efe2; line-height: 1.3;
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.1rem; color: #F6F1E7; line-height: 1.3;
     }
     .report-item__meta {
-      font-size: 0.72rem; color: rgba(248,239,226,0.35);
+      font-size: 0.72rem; color: rgba(246,241,231,0.35);
       margin-top: 0.5rem;
     }
 
@@ -347,21 +331,22 @@
       align-items: center;
       gap: 1.5rem;
       border: 1px solid rgba(216,165,87,0.22);
-      border-radius: 1.1rem;
-      background: linear-gradient(135deg, rgba(216,165,87,0.1), rgba(255,255,255,0.035));
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(216,165,87,0.1), rgba(246,241,231,0.035));
       padding: 1.4rem 1.5rem;
+      backdrop-filter: blur(12px);
     }
     .cities-footer-cta h2 {
       margin: 0 0 0.45rem;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Instrument Serif', Georgia, serif;
       font-size: 1.55rem;
-      font-weight: 600;
-      color: #f8efe2;
+      font-weight: 400;
+      color: #F6F1E7;
     }
     .cities-footer-cta p {
       margin: 0;
       max-width: 620px;
-      color: rgba(248,239,226,0.58);
+      color: var(--text-2, #B0A794);
       font-size: 0.86rem;
       line-height: 1.7;
     }
@@ -380,6 +365,11 @@
       font-weight: 700;
       letter-spacing: 0.03em;
       text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .cities-footer-cta__links a:hover {
+      background: rgba(216,165,87,0.1);
+      border-color: rgba(216,165,87,0.4);
     }
     .cities-footer-cta__download {
       display: inline-flex;
@@ -387,42 +377,24 @@
       justify-content: center;
       min-height: 44px;
       white-space: nowrap;
-      border-radius: 0.45rem;
-      background: linear-gradient(135deg, #b77925 0%, #fae6b7 50%, #b77925 100%);
-      color: #121317;
-      font-size: 0.82rem;
-      font-weight: 800;
-      padding: 0 1.2rem;
-      box-shadow: 0 10px 28px rgba(216,165,87,0.22);
+      border-radius: 999px;
+      background: var(--gold, #D8A557);
+      color: #0A0A0A;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0 1.4rem;
+      box-shadow: 0 8px 32px rgba(216,165,87,0.25);
       text-decoration: none;
+      transition: all 0.3s ease;
     }
-    .footer--cities .footer-grid {
-      max-width: 1180px;
-      grid-template-columns: 1.2fr 0.72fr 0.95fr 0.72fr 0.78fr 0.78fr;
-      gap: 22px;
-    }
-    .footer--cities .footer-grid p {
-      max-width: 330px;
+    .cities-footer-cta__download:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 40px rgba(216,165,87,0.4);
     }
 
     @media (max-width: 720px) {
-      .cities-topbar {
-        padding: 0.95rem 1rem;
-        gap: 0.9rem;
-        flex-wrap: wrap;
-      }
-      .cities-topbar .brand {
-        width: 100%;
-        justify-content: center;
-      }
-      .cities-topbar__cta {
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-        min-height: 44px;
-      }
       .cities-hero {
-        padding: 3rem 1rem 2rem;
+        padding: 6rem 1rem 2rem;
       }
       .cities-hero h1 {
         font-size: clamp(2rem, 11vw, 2.9rem);
@@ -455,9 +427,6 @@
       .cities-footer-cta__download {
         width: 100%;
       }
-      .footer--cities .footer-grid {
-        grid-template-columns: 1fr;
-      }
       .city-card__dispatch-today {
         top: 0.8rem;
         right: 0.8rem;
@@ -480,23 +449,39 @@
     }
   </style>
 </head>
-<body style="background:#060b14; color:#f8efe2; font-family:'Inter',sans-serif; margin:0;">
+<body data-page="cities">
 
-  <!-- Topbar -->
-  <nav class="cities-topbar">
-    <a href="/" class="brand">
-      <img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop">
-      <span>EliteLoop</span>
-    </a>
-    <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969"
-       class="cities-topbar__cta" target="_blank" rel="noreferrer">Download App</a>
-  </nav>
+  <!-- ═══ HEADER ═══ -->
+  <header class="c-header" id="header">
+    <div class="c-header-inner">
+      <a href="/" class="c-brand">
+        <img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop">
+        <span>EliteLoop</span>
+      </a>
+
+      <nav class="c-nav">
+        <a href="/cities" class="c-nav-cities" id="nav-cities-link">
+          Cities <span class="c-nav-badge">NEW</span>
+        </a>
+        <a href="/#features">Features</a>
+        <a href="/#how-it-works">How It Works</a>
+        <a href="/#pricing">Pricing</a>
+      </nav>
+
+      <div class="c-header-actions">
+        <a href="/cities" class="c-nav-cities c-mobile-cities">
+          Cities <span class="c-nav-badge">NEW</span>
+        </a>
+        <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969" class="c-header-cta" target="_blank" rel="noreferrer noopener">Download</a>
+      </div>
+    </div>
+  </header>
 
   <!-- Hero -->
-  <div class="cities-hero">
+  <div class="cities-hero reveal">
     <span class="cities-eyebrow">🌍 Featured Cities Worldwide</span>
-    <h1>City guides, scene reports,<br>and private social signals.</h1>
-    <p>Explore EliteLoop's featured locations through scene reports, city dispatches,
+    <h1 class="reveal">City guides, scene reports,<br>and private social signals.</h1>
+    <p class="reveal">Explore EliteLoop's featured locations through scene reports, city dispatches,
        and premium social discovery signals built to lead readers from search to app download.</p>
   </div>
 
@@ -511,7 +496,7 @@
   >
     <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; flex-wrap:wrap; gap:0.75rem;">
       <div style="display:flex; align-items:center; gap:0.75rem;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:600; color:#f8efe2;">Global Pulse</span>
+        <span style="font-family:'Instrument Serif',Georgia,serif; font-size:1.6rem; font-weight:400; color:#F6F1E7;">Global Pulse</span>
         <span style="display:inline-flex; align-items:center; gap:0.35rem; background:rgba(68,211,159,0.1); border:1px solid rgba(68,211,159,0.3); color:#44d39f; font-size:0.6rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; padding:0.25rem 0.65rem; border-radius:2rem;">
           <span style="width:5px;height:5px;background:#44d39f;border-radius:50%;animation:badgePulse 2s infinite;display:inline-block;"></span> Daily
         </span>
@@ -530,7 +515,7 @@
           <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:#fae6b7; font-weight:700;">Global Pulse · Quiet Luxury &amp; Access Psychology</span>
           <span style="background:rgba(216,165,87,0.15); color:#fae6b7; border:1px solid rgba(216,165,87,0.4); font-size:0.54rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; padding:2px 6px; border-radius:999px;">TODAY</span>
         </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Summer Access Layer: How Private Circles Restructure for the High-Season</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Summer Access Layer: How Private Circles Restructure for the High-Season</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Explore how elite social networks in Paris, London, and Monaco shift from private dining rooms to exclusive seasonal estates and yacht briefings in June 2026.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">June 6, 2026 · 4 min read</div>
       </a>
@@ -541,7 +526,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Quiet Luxury &amp; Access Psychology</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The First Door: Passing the Ultimate High-Trust Filter</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The First Door: Passing the Ultimate High-Trust Filter</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Explore why elite social circles are structured with high-resistance entries and how passing the first door changes the trajectory of access in New York City.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 31, 2026 · 4 min read</div>
       </a>
@@ -554,7 +539,7 @@
         <div style="display:flex; align-items:center; gap:0.5rem;">
           <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:#fae6b7; font-weight:700;">Global Pulse · Quiet Luxury</span>
         </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Circle Closes: A Global Retrospective of the Month’s Exclusive Social Geometry</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Circle Closes: A Global Retrospective of the Month’s Exclusive Social Geometry</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Explore why elite social circles close and how access is filtered, featuring a retrospective of exclusive events across Paris, London, and Tokyo in May 2026.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 30, 2026 · 4 min read</div>
       </a>
@@ -567,7 +552,7 @@
         <div style="display:flex; align-items:center; gap:0.5rem;">
           <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:#fae6b7; font-weight:700;">Global Pulse · Quiet Luxury</span>
         </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Loudest Wealth vs. Silent Recognition: Inside the Rooms of High-Value Operators</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Loudest Wealth vs. Silent Recognition: Inside the Rooms of High-Value Operators</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Explore the psychology of access and how elite networks communicate in whispers, using the historic Starbucks 1986 seed round case study.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 29, 2026 · 4 min read</div>
       </a>
@@ -580,7 +565,7 @@
         <div style="display:flex; align-items:center; gap:0.5rem;">
           <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:#fae6b7; font-weight:700;">Global Pulse · Quiet Luxury</span>
         </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Art of Silent Recognition: How Elite Rooms Recognize their Own</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Art of Silent Recognition: How Elite Rooms Recognize their Own</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Explore the psychology of the private fit, where recognition is silent and membership is verified without saying a word.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 28, 2026 · 4 min read</div>
       </a>
@@ -593,7 +578,7 @@
         <div style="display:flex; align-items:center; gap:0.5rem;">
           <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:#fae6b7; font-weight:700;">Global Pulse · Quiet Luxury</span>
         </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Host vs. The Guest: The Unwritten Codes of Elite Hosting</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Host vs. The Guest: The Unwritten Codes of Elite Hosting</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Explore the hidden dynamics, silent orchestration, and high-gravity etiquette that separate the host from the guest in elite private rooms.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 27, 2026 · 4 min read</div>
       </a>
@@ -606,7 +591,7 @@
         <div style="display:flex; align-items:center; gap:0.5rem;">
           <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:#fae6b7; font-weight:700;">Global Pulse · Quiet Luxury</span>
         </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Language of Selective Luxury: Codes and Silent Signals</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Language of Selective Luxury: Codes and Silent Signals</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Explore the unspoken communication codes, silent signals, and cultural filters used by selective luxury networks and elite rooms in 2026.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 26, 2026 · 4 min read</div>
       </a>
@@ -619,7 +604,7 @@
         <div style="display:flex; align-items:center; gap:0.5rem;">
           <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:#fae6b7; font-weight:700;">Global Pulse · Access Psychology</span>
         </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Scent of a Room That Matters: Sensory Architecture in Private Spaces</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Scent of a Room That Matters: Sensory Architecture in Private Spaces</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Discover how elite spaces use custom scents and sensory architecture to silently gatekeep access and define private rooms in 2026.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 25, 2026 · 4 min read</div>
       </a>
@@ -630,7 +615,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Access Psychology</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Dress Code Nobody Writes Down: Decoding Elite Signals</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Dress Code Nobody Writes Down: Decoding Elite Signals</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Discover the unwritten rules of elite dress codes and how silent social signals gatekeep the world's most private rooms in 2026.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 24, 2026 · 4 min read</div>
       </a>
@@ -641,7 +626,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Access Psychology</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Geometry of Access: How Architecture Filters the Elite</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Geometry of Access: How Architecture Filters the Elite</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Discover how the flow of light, shadows, and architectural design create invisible boundaries that filter elite social circles in 2026.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 23, 2026 · 4 min read</div>
       </a>
@@ -652,7 +637,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Money &amp; Status</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Global Social Capital Index: How Elite Circles Value Access Today</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Global Social Capital Index: How Elite Circles Value Access Today</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Discover the Global Social Capital Index. Explore how elite circles measure influence, value exclusive access, and navigate private networks worldwide.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 21, 2026 · 4 min read</div>
       </a>
@@ -663,7 +648,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Money &amp; Status</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">Investing in Access: The New Luxury Allocation</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">Investing in Access: The New Luxury Allocation</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Explore why the global ultra-wealthy are shifting capital from tangible assets to private networks, selective rooms, and exclusive access systems in 2026.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 20, 2026 · 4 min read</div>
       </a>
@@ -674,7 +659,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Money &amp; Status</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Membership Economy of the Elite</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Membership Economy of the Elite</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Explore how the modern elite have shifted from ownership to membership. Discover why the most exclusive access in 2026 is curated, not purchased — and why the right badge opens more doors than any property deed.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 19, 2026 · 4 min read</div>
       </a>
@@ -685,7 +670,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Money &amp; Status</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Social ROI of the Right Event</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Social ROI of the Right Event</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Discover why the modern elite measure networking in social ROI. Learn how private events, unlisted gatherings, and vetted circles offer returns far beyond the standard pitch.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 18, 2026 · 4 min read</div>
       </a>
@@ -695,8 +680,8 @@
          style="border:1px solid rgba(255,255,255,0.06); border-radius:1rem; padding:1.2rem 1.4rem; text-decoration:none; display:flex; flex-direction:column; gap:0.4rem; background:rgba(255,255,255,0.015); transition:background 0.2s;"
          onmouseover="this.style.background='rgba(255,255,255,0.04)'"
          onmouseout="this.style.background='rgba(255,255,255,0.015)'">
-        <div style="font-size:0.55rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(248,239,226,0.4); font-weight:600;">Global Pulse · Money &amp; Status</div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:600; color:rgba(248,239,226,0.9); line-height:1.25;">Why Old Money Doesn't Announce Itself in 2026</div>
+        <div style="font-size:0.55rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(248,239,226,0.4); font-weight:400;">Global Pulse · Money &amp; Status</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.15rem; font-weight:400; color:rgba(248,239,226,0.9); line-height:1.25;">Why Old Money Doesn't Announce Itself in 2026</div>
         <div style="font-size:0.75rem; color:rgba(248,239,226,0.45); line-height:1.6; font-weight:300;">Explore why the true elite no longer announce their presence. Discover the subtle signals of old money and how private social networks filter access worldwide.</div>
         <div style="font-size:0.65rem; color:rgba(248,239,226,0.25); margin-top:0.2rem;">May 17, 2026 · 3 min read</div>
       </a>
@@ -707,7 +692,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Money &amp; Status</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The New HNWI Profile: Quiet, Curated, and Highly Selective</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The New HNWI Profile: Quiet, Curated, and Highly Selective</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Forget the outdated stereotypes of visible extravagance. The new High-Net-Worth Individual optimizes for privacy, time, and curated access to the right rooms.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 16, 2026 · 3 min read</div>
       </a>
@@ -718,7 +703,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Money &amp; Status</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">How Wealth Signals Changed in 2026: The Shift to Invisible Access</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">How Wealth Signals Changed in 2026: The Shift to Invisible Access</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Wealth is no longer announced; it is recognized. Discover how the global elite shifted from visible luxury to invisible access and curated environments.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 15, 2026 · 3 min read</div>
       </a>
@@ -729,7 +714,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Opportunity &amp; Access</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Unlisted Opportunity: Why the Best Rooms Are Invisible</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Unlisted Opportunity: Why the Best Rooms Are Invisible</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">The shift towards off-radar social filtering and hyper-private access in 2026. When an opportunity becomes public, its premium value has already been extracted.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 14, 2026 · 4 min read</div>
       </a>
@@ -740,7 +725,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Quiet Luxury</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">Quiet Luxury in 2026: Why Access Replaced Aesthetics</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">Quiet Luxury in 2026: Why Access Replaced Aesthetics</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">When anyone with a high credit limit can replicate the aesthetic, true quiet luxury moves from what you wear to where you are allowed to stand.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 13, 2026 · 5 min read</div>
       </a>
@@ -751,7 +736,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Access Psychology</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">Why the Right Room Changes Everything</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">Why the Right Room Changes Everything</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">The invitation was sent before you arrived. How elite social infrastructure selects — and why most access strategies miss the point entirely.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 11, 2026 · 5 min read</div>
       </a>
@@ -762,7 +747,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Ritual &amp; Atmosphere</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The End of the Public Reservation: Why Elite Socializing Moved Inward in 2026</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The End of the Public Reservation: Why Elite Socializing Moved Inward in 2026</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">From immersive "eatertainment" to the new "clubhouse effect", discover why the highest echelons of society are trading public dining rooms for intentional intimacy.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 10, 2026 · 5 min read</div>
       </a>
@@ -773,7 +758,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Money &amp; Social Capital</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Architecture of Access: How HNWI Social Circles Really Work in 2026</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Architecture of Access: How HNWI Social Circles Really Work in 2026</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Wealth opens the door, but trust is the only key that turns the lock. Discover the core mechanics of elite networking in 2026.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 8, 2026 · 6 min read</div>
       </a>
@@ -784,7 +769,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Opportunity &amp; Access</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Unlisted Opportunity: Why the Best Returns in 2026 Never Hit the Market</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Unlisted Opportunity: Why the Best Returns in 2026 Never Hit the Market</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">In 2026, the most valuable opportunities don't have registration links. They exist in a layer of access that only becomes visible when your signal is already known.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 7, 2026 · 5 min read</div>
       </a>
@@ -795,7 +780,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Quiet Luxury Behavior</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">Quiet Luxury in 2026: Why Access Replaced Aesthetics</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">Quiet Luxury in 2026: Why Access Replaced Aesthetics</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">The ultimate quiet luxury in 2026 isn't what you wear, but the rooms you can enter. Why hidden social layers are the new flex.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 6, 2026 · 4 min read</div>
       </a>
@@ -806,7 +791,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Identity &amp; Badge Culture</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">What Your Social Circle Says About You</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">What Your Social Circle Says About You</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">In 2026, your network is your identity. Why badge culture is redefining how elite rooms filter access worldwide.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 5, 2026 · 4 min read</div>
       </a>
@@ -817,7 +802,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Global Networking Trends</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">This Week in Elite Social: The Return of the Private Room</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">This Week in Elite Social: The Return of the Private Room</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">A global recap of luxury networking trends across New York, London, and Paris. Why private access is replacing public visibility in 2026.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 3, 2026 · 4 min read</div>
       </a>
@@ -829,7 +814,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Wealth &amp; Social Capital</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">How Elite Circles Actually Work</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">How Elite Circles Actually Work</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.55); line-height:1.65; font-weight:300;">Social capital is no longer about accumulation; it is about curation. How high-net-worth individuals filter their networks in 2026.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">May 1, 2026 · 4 min read</div>
       </a>
@@ -840,7 +825,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Opportunity &amp; Access</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">The Unlisted Opportunity</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">The Unlisted Opportunity</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.45); line-height:1.65; font-weight:300;">In 2026, the most valuable opportunities don't have registration links. They exist in a layer of access that only becomes visible when your signal is already known.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">April 30, 2026 · 5 min read</div>
       </a>
@@ -851,7 +836,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Quiet Luxury Behaviour</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">Quiet Luxury in 2026: What Actually Changed</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">Quiet Luxury in 2026: What Actually Changed</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.45); line-height:1.65; font-weight:300;">Quiet luxury is no longer a trend — it is an operating system. What changed, what it means for elite social access.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">April 29, 2026 · 7 min read</div>
       </a>
@@ -862,7 +847,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Access Psychology</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">Why the Right Room Changes Everything</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">Why the Right Room Changes Everything</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.45); line-height:1.65; font-weight:300;">Elite social behavior in 2026 is governed by one principle: the room selects you before you select it. Access psychology and badge culture.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">April 27, 2026 · 6 min read</div>
       </a>
@@ -873,7 +858,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Pulse · Weekly Review</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">7 Cities. 7 Elite Signals.</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">7 Cities. 7 Elite Signals.</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.45); line-height:1.65; font-weight:300;">This week across London, Tokyo, Zurich, Singapore, Dubai, Istanbul, and New York — a global read on the access signals that matter.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">April 26, 2026 · 5 min read</div>
       </a>
@@ -884,7 +869,7 @@
          onmouseover="this.style.borderColor='rgba(216,165,87,0.4)';this.style.transform='translateY(-2px)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
         <span style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(248,239,226,0.45); font-weight:600;">Global Week in Review · Apr 19</span>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#f8efe2; line-height:1.3;">This Week in Social Discovery: What Moved Worldwide</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:#f8efe2; line-height:1.3;">This Week in Social Discovery: What Moved Worldwide</div>
         <div style="font-size:0.8rem; color:rgba(248,239,226,0.45); line-height:1.65; font-weight:300;">A weekly read on the cities, rooms, and momentum shaping premium social discovery right now.</div>
         <div style="font-size:0.7rem; color:rgba(248,239,226,0.3); margin-top:0.25rem;">April 19, 2026 · 7 min read</div>
       </a>
@@ -914,7 +899,7 @@
   >
     <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.1rem; flex-wrap:wrap; gap:0.75rem;">
       <div style="display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:600; color:#f8efe2;">Featured City Guides</span>
+        <span style="font-family:'Instrument Serif',Georgia,serif; font-size:1.6rem; font-weight:400; color:#F6F1E7;">Featured City Guides</span>
         <span style="display:inline-flex; align-items:center; gap:0.35rem; background:rgba(216,165,87,0.1); border:1px solid rgba(216,165,87,0.3); color:#fae6b7; font-size:0.6rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; padding:0.25rem 0.65rem; border-radius:2rem;">
           City Reports
         </span>
@@ -1461,55 +1446,91 @@
     </div>
   </section>
 
-  <!-- Footer — main site standard -->
-  <footer class="footer footer--cities" style="margin-top:0;">
-    <div class="footer-grid">
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="c-footer">
+    <div class="c-footer-grid">
       <div>
-        <a href="/" class="brand footer-brand">
+        <a href="/" class="c-footer-brand">
           <img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop">
           <span>EliteLoop</span>
         </a>
-        <p style="color:rgba(248,239,226,0.55); line-height:1.75; margin-top:0.75rem;">Social discovery app for premium events, nearby plans, and badge-based access worldwide.</p>
+        <p class="c-footer-desc">Social discovery app for premium events, nearby plans, and badge-based access worldwide.</p>
+        <div class="c-footer-socials">
+          <a href="https://www.tiktok.com/@eliteloop.app" target="_blank" rel="noreferrer noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@EliteLoopapp" target="_blank" rel="noreferrer noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/112529988/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/eliteloop.app/" target="_blank" rel="noreferrer noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://x.com/eliteloop" target="_blank" rel="noreferrer noopener" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.pinterest.com/eliteloopapp/" target="_blank" rel="noreferrer noopener" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641 0 12.017 0z"/></svg>
+          </a>
+        </div>
       </div>
-      <div>
+
+      <div class="c-footer-links">
         <h4>Product</h4>
         <a href="/#features">Features</a>
+        <a href="/#how-it-works">How It Works</a>
         <a href="/#pricing">Pricing</a>
-        <a href="/#download">Download</a>
-        <a href="/cities">Cities</a>
+        <a href="/#faq">FAQ</a>
       </div>
-      <div>
-        <h4>Cities</h4>
-        <a href="/cities">All Cities</a>
-        <a href="/istanbul">Istanbul</a>
-        <a href="/dubai">Dubai</a>
-        <a href="/london">London</a>
-        <a href="/paris">Paris</a>
-        <a href="/tokyo">Tokyo</a>
-        <a href="/new-york">New York</a>
-      </div>
-      <div>
+
+      <div class="c-footer-links">
         <h4>Legal</h4>
         <a href="/privacy">Privacy Policy</a>
         <a href="/terms">Terms of Service</a>
         <a href="/gdpr">GDPR</a>
       </div>
-      <div>
+
+      <div class="c-footer-links">
         <h4>Contact</h4>
         <a href="/support">Support</a>
         <a href="mailto:info@eliteloop.app">info@eliteloop.app</a>
       </div>
-      <div>
-        <h4>Socials</h4>
-        <a href="https://www.instagram.com/eliteloop.app/" target="_blank" rel="noreferrer noopener">Instagram</a>
-        <a href="https://x.com/eliteloop" target="_blank" rel="noreferrer noopener">X (Twitter)</a>
-        <a href="https://www.linkedin.com/company/112529988/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
-        <a href="https://www.tiktok.com/@eliteloop.app" target="_blank" rel="noreferrer noopener">TikTok</a>
-        <a href="https://www.youtube.com/@EliteLoopapp" target="_blank" rel="noreferrer noopener">YouTube</a>
-      </div>
     </div>
-    <div class="footer-bottom">&copy; 2026 EliteLoop. All rights reserved.</div>
+
+    <div class="c-footer-bottom">&copy; 2026 EliteLoop. All rights reserved.</div>
   </footer>
+
+  <!-- ═══ PAGE INTERACTIONS ═══ -->
+  <script>
+  // Header scroll effect
+  (function() {
+    const header = document.getElementById('header');
+    if (!header) return;
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+
+  // Scroll reveal
+  (function() {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  })();
+  </script>
 
   <script>
     (function setupCollapsibleCollections() {

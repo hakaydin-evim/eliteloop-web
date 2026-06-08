@@ -3195,6 +3195,23 @@
     "issueFlags": []
   },
   {
+    "title": "EliteLoop - FAQ",
+    "description": "Frequently asked questions about EliteLoop — social discovery app for premium events, badge system, privacy, subscriptions, and availability.",
+    "slug": "faq",
+    "url": "https://eliteloop.app/faq",
+    "date": null,
+    "type": "City Hub",
+    "filename": "faq.html",
+    "citySlug": null,
+    "cityName": "Unknown",
+    "canonicalCitySlug": null,
+    "canonicalCityUrl": null,
+    "isLegacyAlias": false,
+    "issueFlags": [
+      "unmapped-city"
+    ]
+  },
+  {
     "title": "Global Pulse | Social Discovery Trends & City Signals | EliteLoop",
     "description": "Daily intelligence on social discovery, premium city signals, access psychology, and scene momentum worldwide. Updated every day by EliteLoop.",
     "slug": "global-pulse",
@@ -3208,5 +3225,73 @@
     "canonicalCityUrl": null,
     "isLegacyAlias": false,
     "issueFlags": []
+  },
+  {
+    "title": "EliteLoop | Geleceğin İnteraktif Sosyal Ağı",
+    "description": "",
+    "slug": "index-effects",
+    "url": "https://eliteloop.app/index-effects",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "index-effects.html",
+    "citySlug": null,
+    "cityName": "Unknown",
+    "canonicalCitySlug": null,
+    "canonicalCityUrl": null,
+    "isLegacyAlias": false,
+    "issueFlags": [
+      "unmapped-city"
+    ]
+  },
+  {
+    "title": "EliteLoop | Social Discovery App for Premium Events & Nearby Plans",
+    "description": "EliteLoop is a social discovery app for premium events, nearby plans, and badge-based access worldwide. Download on iOS and Android.",
+    "slug": "index-old-backup",
+    "url": "https://eliteloop.app/index-old-backup",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "index-old-backup.html",
+    "citySlug": null,
+    "cityName": "Unknown",
+    "canonicalCitySlug": null,
+    "canonicalCityUrl": null,
+    "isLegacyAlias": false,
+    "issueFlags": [
+      "unmapped-city"
+    ]
+  },
+  {
+    "title": "EliteLoop | Premium Social Discovery & Exclusive Events",
+    "description": "EliteLoop is a social discovery app for premium events, nearby plans, and badge-based access worldwide. Download on iOS and Android.",
+    "slug": "index-premium",
+    "url": "https://eliteloop.app/index-premium",
+    "date": null,
+    "type": "Scene Report",
+    "filename": "index-premium.html",
+    "citySlug": null,
+    "cityName": "Unknown",
+    "canonicalCitySlug": null,
+    "canonicalCityUrl": null,
+    "isLegacyAlias": false,
+    "issueFlags": [
+      "unmapped-city"
+    ]
+  },
+  {
+    "title": "EliteLoop | Social Discovery App for Premium Events & Nearby Plans",
+    "description": "EliteLoop is a social discovery app for premium events, nearby plans, and badge-based access worldwide. Download on iOS and Android.",
+    "slug": "indexclaude",
+    "url": "https://eliteloop.app/indexclaude",
+    "date": null,
+    "type": "City Hub",
+    "filename": "indexclaude.html",
+    "citySlug": null,
+    "cityName": "Unknown",
+    "canonicalCitySlug": null,
+    "canonicalCityUrl": null,
+    "isLegacyAlias": false,
+    "issueFlags": [
+      "unmapped-city"
+    ]
   }
 ]

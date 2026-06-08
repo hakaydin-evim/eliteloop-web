@@ -1098,7 +1098,7 @@ function applyTranslations() {
   const langText = document.querySelector(".lang-text");
   if (langText) langText.textContent = lang.toUpperCase();
 
-  document.querySelectorAll(".lang-option").forEach((button) => {
+  document.querySelectorAll(".lang-option, .c-lang-option").forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === lang);
   });
 }
@@ -1144,7 +1144,7 @@ function setupLanguageModal() {
     if (event.target === modal) modal.classList.remove("active");
   });
 
-  document.querySelectorAll(".lang-option").forEach((button) => {
+  document.querySelectorAll(".lang-option, .c-lang-option").forEach((button) => {
     button.addEventListener("click", () => {
       setLang(button.dataset.lang);
       applyTranslations();

@@ -66,12 +66,15 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Solid fallback so overscroll/bounce and slow paints never flash white */
+  background-color: var(--surface-0);
 }
 
 body {
   font-family: var(--font-body);
   color: var(--text-1);
-  background:
+  background-color: var(--surface-0);
+  background-image:
     radial-gradient(ellipse at 50% 0%, rgba(var(--gold-rgb), 0.04) 0%, transparent 50%),
     linear-gradient(180deg, #07101F 0%, #0A1628 40%, #07101F 100%);
   background-attachment: fixed;

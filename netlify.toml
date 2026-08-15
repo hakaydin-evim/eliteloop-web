@@ -6,3 +6,19 @@
   for = "/articles.json"
   [headers.values]
     Access-Control-Allow-Origin = "*"
+
+# eliteloop.app/krallik tek, kalıcı admin paneli adresi — gerçek panel
+# eliteloop-admin-panel.netlify.app'te ayrı bir repodan sürekli deploy ediliyor.
+# Statik bir kopya gömmek yerine şeffaf proxy kullanılıyor ki bu URL hiçbir zaman
+# eskimesin (bkz. 15 Ağustos 2026, aylarca donmuş bir kopyaya bakılmış olması sorunu).
+[[redirects]]
+  from = "/krallik/*"
+  to = "https://eliteloop-admin-panel.netlify.app/krallik/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/krallik"
+  to = "https://eliteloop-admin-panel.netlify.app/krallik"
+  status = 200
+  force = true

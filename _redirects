@@ -1,3 +1,12 @@
+# ── Admin paneli ───────────────────────────────────────
+# eliteloop.app/krallik tek ve kalıcı panel adresi. Gerçek panel ayrı bir
+# repodan eliteloop-admin-panel.netlify.app'e deploy ediliyor; buraya statik
+# kopya gömmek yerine şeffaf proxy kullanılıyor (bir kez aylarca donmuş bir
+# kopyaya bakılmıştı). Kural netlify.toml'da da yazılıydı ama bu sitede toml
+# redirect'leri uygulanmıyor — çalışan yer burası.
+/krallik      https://eliteloop-admin-panel.netlify.app/krallik      200
+/krallik/*    https://eliteloop-admin-panel.netlify.app/krallik/:splat 200
+
 /index.html / 301
 /cities.html /cities 301
 

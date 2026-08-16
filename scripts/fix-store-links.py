@@ -15,7 +15,7 @@ import re, sys, os, pathlib
 ROOT = pathlib.Path("/Users/hakanaydin/Desktop/eliteloop/eliteloop-web")
 APP_ID = "6756173969"
 PKG = "com.eliteloop.app"
-APPLE_PT = ""  # App Store Connect > App Analytics > Campaigns'ten alınınca doldurulur
+APPLE_PT = "128074878"  # App Store Connect > App Analytics > Campaigns
 
 CITIES = {
     "abu-dhabi","amsterdam","barcelona","berlin","chicago","copenhagen","dubai",
@@ -26,6 +26,7 @@ CITIES = {
 }
 
 OLD_APPLE = "https://apps.apple.com/tr/app/eliteloop-meet-connect/id" + APP_ID
+PREV_APPLE_RE = re.compile(r"https://apps\.apple\.com/app/(?:apple-store/)?id" + APP_ID + r"\?[^\"\']*")
 OLD_PLAY = "https://play.google.com/store/apps/details?id=" + PKG
 
 
@@ -45,11 +46,18 @@ def classify(path: pathlib.Path):
     return "web", "eliteloop://"
 
 
+COARSE = {"city": "web-city", "guide": "web-guide", "pulse": "web-pulse"}
+
+
+def coarse_ct(ct):
+    return COARSE.get(ct.split("-")[0], "web-other")
+
+
 def apple_url(ct, amp):
-    params = [f"ct={ct}"]
+    params = [f"ct={coarse_ct(ct)}", "mt=8"]
     if APPLE_PT:
         params.insert(0, f"pt={APPLE_PT}")
-    return f"https://apps.apple.com/app/id{APP_ID}?" + amp.join(params)
+    return f"https://apps.apple.com/app/apple-store/id{APP_ID}?" + amp.join(params)
 
 
 def play_url(ct, amp):
@@ -78,6 +86,16 @@ def process(path: pathlib.Path, apply: bool):
         p_old, p_new = quote + OLD_PLAY + quote, quote + play_url(ct, amp) + quote
         stats["play"] += out.count(p_old)
         out = out.replace(p_old, p_new)
+
+    # Önceki turda yazılmış Apple linklerini güncelle (idempotent)
+    for quote in ('"', "'"):
+        amp = "&amp;" if quote == '"' else "&"
+        def _sub(m, amp=amp):
+            return apple_url(ct, amp)
+        new = PREV_APPLE_RE.sub(lambda m: _sub(m), out)
+        if new != out:
+            stats["apple"] += len(PREV_APPLE_RE.findall(out))
+            out = new
 
     # Smart App Banner
     banner = f'<meta name="apple-itunes-app" content="app-id={APP_ID}, app-argument={deeplink}">'

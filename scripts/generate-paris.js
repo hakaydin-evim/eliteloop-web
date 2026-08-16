@@ -158,7 +158,7 @@ const enContent = `<!DOCTYPE html>
     <a href="/" class="brand"><img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop"><span>EliteLoop</span></a>
     <div class="topbar__right">
       <a href="/paris" class="topbar__link">← Paris Hub</a>
-      <a href="https://apps.apple.com/app/id6756173969?ct=guide-paris" class="topbar__cta" target="_blank" rel="noreferrer">Download App</a>
+      <a href="https://apps.apple.com/app/apple-store/id6756173969?pt=128074878&amp;ct=web-guide&amp;mt=8" class="topbar__cta" target="_blank" rel="noreferrer">Download App</a>
     </div>
   </nav>
 
@@ -228,7 +228,7 @@ const enContent = `<!DOCTYPE html>
     <h2>Access Paris's invisible rooms.</h2>
     <p>Join EliteLoop and move through the private layer of Paris's elite social calendar.</p>
     <div class="article-cta__btns">
-      <a href="https://apps.apple.com/app/id6756173969?ct=guide-paris" class="btn-gold" target="_blank" rel="noreferrer">📱 Download on App Store</a>
+      <a href="https://apps.apple.com/app/apple-store/id6756173969?pt=128074878&amp;ct=web-guide&amp;mt=8" class="btn-gold" target="_blank" rel="noreferrer">📱 Download on App Store</a>
       <a href="https://play.google.com/store/apps/details?id=com.eliteloop.app&amp;referrer=utm_source%3Deliteloop.app%26utm_medium%3Dweb%26utm_campaign%3Dguide-paris" class="btn-outline" target="_blank" rel="noreferrer">▶ Google Play</a>
     </div>
   </section>
@@ -407,7 +407,7 @@ const frContent = `<!DOCTYPE html>
     <a href="/" class="brand"><img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop"><span>EliteLoop</span></a>
     <div class="topbar__right">
       <a href="/paris" class="topbar__link">← Paris Hub</a>
-      <a href="https://apps.apple.com/app/id6756173969?ct=guide-paris" class="topbar__cta" target="_blank" rel="noreferrer">Télécharger l'App</a>
+      <a href="https://apps.apple.com/app/apple-store/id6756173969?pt=128074878&amp;ct=web-guide&amp;mt=8" class="topbar__cta" target="_blank" rel="noreferrer">Télécharger l'App</a>
     </div>
   </nav>
 
@@ -477,7 +477,7 @@ const frContent = `<!DOCTYPE html>
     <h2>Accédez aux espaces invisibles de Paris.</h2>
     <p>Rejoignez EliteLoop et évoluez dans la sphère privée de l'agenda social de l'élite parisienne.</p>
     <div class="article-cta__btns">
-      <a href="https://apps.apple.com/app/id6756173969?ct=guide-paris" class="btn-gold" target="_blank" rel="noreferrer">📱 Télécharger sur l'App Store</a>
+      <a href="https://apps.apple.com/app/apple-store/id6756173969?pt=128074878&amp;ct=web-guide&amp;mt=8" class="btn-gold" target="_blank" rel="noreferrer">📱 Télécharger sur l'App Store</a>
       <a href="https://play.google.com/store/apps/details?id=com.eliteloop.app&amp;referrer=utm_source%3Deliteloop.app%26utm_medium%3Dweb%26utm_campaign%3Dguide-paris" class="btn-outline" target="_blank" rel="noreferrer">▶ Google Play</a>
     </div>
   </section>

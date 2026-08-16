@@ -860,7 +860,7 @@ ${getHreflangs(slug, c, isLoc)}
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=20260516c">
   <link rel="shortcut icon" href="/favicon.ico?v=20260516c">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260516b">
-  <meta name="apple-itunes-app" content="app-id=6756173969">
+  <meta name="apple-itunes-app" content="app-id=6756173969, app-argument=eliteloop://city/${slug}">
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="${isLoc ? 'Eventi Elite' : 'Elite Events'} in ${c.name} July 2026 — EliteLoop">
@@ -890,7 +890,7 @@ ${TEMPLATE_STYLE}
     <a href="/" class="brand"><img src="/apple-touch-icon.png?v=20260516b" alt="EliteLoop"><span>EliteLoop</span></a>
     <div class="topbar__right">
       <a href="${topbarBackLink}" class="topbar__link">${topbarBackText}</a>
-      <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969" class="topbar__cta" target="_blank" rel="noreferrer">Download App</a>
+      <a href="https://apps.apple.com/app/id6756173969?ct=guide-${slug}" class="topbar__cta" target="_blank" rel="noreferrer">Download App</a>
     </div>
   </nav>
 
@@ -931,8 +931,8 @@ ${sourcesHtml}
       <h2>${ctaHeadline}</h2>
       <p>${ctaSub}</p>
       <div class="cta-btns">
-        <a href="https://apps.apple.com/tr/app/eliteloop-meet-connect/id6756173969" class="btn-gold" target="_blank" rel="noreferrer">Download on iOS</a>
-        <a href="https://play.google.com/store/apps/details?id=com.eliteloop.app" class="btn-ghost" target="_blank" rel="noreferrer">Get it on Google Play</a>
+        <a href="https://apps.apple.com/app/id6756173969?ct=guide-${slug}" class="btn-gold" target="_blank" rel="noreferrer">Download on iOS</a>
+        <a href="https://play.google.com/store/apps/details?id=com.eliteloop.app&amp;referrer=utm_source%3Deliteloop.app%26utm_medium%3Dweb%26utm_campaign%3Dguide-${slug}" class="btn-ghost" target="_blank" rel="noreferrer">Get it on Google Play</a>
         <a href="/${slug}" class="btn-ghost">${c.name} Hub</a>
       </div>
     </div>

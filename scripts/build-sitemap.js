@@ -17,6 +17,18 @@ const STATIC_PAGES = [
   { slug: 'support', changefreq: 'yearly', priority: '0.3', file: 'support.html' }
 ];
 
+// Kökteki ana sayfa varyantları ve şablonlar sitemap'e girmemeli. Bu fonksiyon
+// kökteki HER .html dosyasını basıyordu; sonuç: Google'a /index, /index-v2,
+// /index-premium, /index-effects, /index-test, /index-old-backup ve /indexclaude
+// diye 7 adet birbirinin kopyası ana sayfa gönderiliyordu (asıl ana sayfa zaten
+// STATIC_PAGES içinde "/" olarak var). Dil klasörlerindeki index.html'ler gerçek
+// yerelleştirilmiş ana sayfalar — onlara dokunulmuyor, eleme yalnızca kökte.
+const ROOT_ONLY_EXCLUDES = [
+  /^index(-.*)?\.html$/i,
+  /^index[a-z]+\.html$/i,
+  /^_/
+];
+
 function getLocalizedHtmlFiles(dir, prefix = '') {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -29,6 +41,7 @@ function getLocalizedHtmlFiles(dir, prefix = '') {
         results = results.concat(getLocalizedHtmlFiles(fullPath, file + '/'));
       }
     } else if (file.endsWith('.html')) {
+      if (prefix === '' && ROOT_ONLY_EXCLUDES.some((re) => re.test(file))) return;
       results.push(prefix + file);
     }
   });

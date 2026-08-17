@@ -1,10 +1,14 @@
 User-agent: *
 Allow: /
 
-# Site tarafından tüketilen veri dosyaları — arama sonucunda görünmelerinin
-# bir anlamı yok, tarama bütçesini boşa harcıyorlar (Search Console bunları
-# "Tarandı, dizine eklenmemiş" olarak raporluyordu).
-Disallow: /articles.json
-Disallow: /*.json$
+# articles.json ve diğer JSON'lar bir süre Disallow'daydı: aramada görünmelerinin
+# anlamı yoktu ve tarama bütçesi harcıyorlardı. Ama Disallow taramayı da kestiği
+# için Googlebot bunları SAYFA RENDER'I sırasında da çekemedi — cities.html'deki
+# hydrateCityCards() ve 34 şehir hub'ındaki hydrate-city-hub-reports.js
+# articles.json'a fetch atıyor, dolayısıyla Google şehir sayaçlarını ve arşiv
+# listelerini hiç görmedi (kartlarda sabit "1 Guide · 1 Report" kalıyordu).
+#
+# Doğru araç robots.txt değil, X-Robots-Tag: noindex — taramaya izin verir,
+# dizine eklemeyi engeller. Bkz. `_headers`.
 
 Sitemap: https://eliteloop.app/sitemap.xml

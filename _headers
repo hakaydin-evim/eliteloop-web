@@ -1,0 +1,34 @@
+# Netlify header kuralları.
+#
+# Neden burada, netlify.toml'da değil: bu sitede toml redirect'leri uygulanmıyor
+# (bkz. _redirects başındaki not), o yüzden aynı riski header'larda da almıyoruz —
+# _redirects nasıl çalışan yerse, _headers de öyle.
+#
+# JSON veri dosyaları taranabilir ama dizine eklenmez. robots.txt'teki Disallow
+# taramayı da kestiği için Googlebot bunları render sırasında çekemiyordu ve
+# şehir sayaçları / arşiv listeleri arama motoru için hiç dolmuyordu.
+
+/articles.json
+  X-Robots-Tag: noindex
+  Access-Control-Allow-Origin: *
+
+/*.json
+  X-Robots-Tag: noindex
+
+# Ölü ana sayfa kopyaları — sitemap'ten çıkarıldı, ayrıca dizinden de uzak dursun.
+/index-v2.html
+  X-Robots-Tag: noindex
+/index-premium.html
+  X-Robots-Tag: noindex
+/index-effects.html
+  X-Robots-Tag: noindex
+/index-test.html
+  X-Robots-Tag: noindex
+/index-old-backup.html
+  X-Robots-Tag: noindex
+/indexclaude.html
+  X-Robots-Tag: noindex
+/_template-city-hub.html
+  X-Robots-Tag: noindex
+/_template-scene-report.html
+  X-Robots-Tag: noindex

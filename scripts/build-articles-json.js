@@ -6,15 +6,28 @@ const outputFile = path.join(webDir, 'articles.json');
 
 const excludeFiles = [
     'cities.html',
-    'index.html',
-    'index-v2.html',
-    'index-test.html',
     'support.html',
     'terms.html',
     'privacy.html',
     'gdpr.html',
-    'android.html'
+    'android.html',
+    'faq.html',
+    'invite.html'
 ];
+
+// Ana sayfa varyantları ve şablonlar hiçbir zaman makale değildir. Bunlar elle
+// tutulan bir listeyle eleniyordu ve liste geride kaldı: index-premium,
+// index-effects, index-old-backup ve indexclaude articles.json'a "Scene Report"
+// olarak sızıp sitemap'e girdi — Google'a 7 adet birbirinin kopyası ana sayfa
+// gönderilmiş oldu. Desen kullanmak yeni varyant eklendiğinde de korur.
+const excludePatterns = [
+    /^index(-.*)?\.html$/i,   // index.html, index-v2, index-premium, index-effects, …
+    /^index[a-z]+\.html$/i,   // indexclaude.html
+    /^_/                      // _template-city-hub.html, _template-scene-report.html
+];
+
+const isExcluded = (baseName) =>
+    excludeFiles.includes(baseName) || excludePatterns.some((re) => re.test(baseName));
 
 const CITY_RULES = [
     { aliases: ['new-york', 'nyc', 'newyork'], canonicalSlug: 'new-york', name: 'New York' },
@@ -178,10 +191,7 @@ function buildJson() {
 
     files.forEach(file => {
         const baseName = path.basename(file);
-        if (
-            !baseName.startsWith('_template') &&
-            !excludeFiles.includes(baseName)
-        ) {
+        if (!isExcluded(baseName)) {
             const content = fs.readFileSync(path.join(webDir, file), 'utf-8');
             
             const title = extractTag(content, /<title>(.*?)<\/title>/i) || 

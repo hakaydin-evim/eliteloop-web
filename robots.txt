@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Site tarafından tüketilen veri dosyaları — arama sonucunda görünmelerinin
+# bir anlamı yok, tarama bütçesini boşa harcıyorlar (Search Console bunları
+# "Tarandı, dizine eklenmemiş" olarak raporluyordu).
+Disallow: /articles.json
+Disallow: /*.json$
+
 Sitemap: https://eliteloop.app/sitemap.xml

@@ -85,7 +85,11 @@ function main() {
     const baked = render(sections);
     if (m[2].trim() === baked.trim()) { console.log(`  ${page.padEnd(9)} zaten güncel`); continue; }
 
-    const out = html.replace(re, `$1${baked}$3`);
+    // Fonksiyonlu replace sart: metin yerine string verilince JS '$2' gibi
+    // dizileri yakalama grubu geri referansi sayiyor. Abonelik bolumundeki
+    // '$29.99' tam da bunu tetikledi: '$2' eski icerikle degistirilip geriye
+    // '9.99' kaldi, bolumler mukerrer basildi ve fiyat kayboldu.
+    const out = html.replace(re, (_m, open_, _inner, close) => open_ + baked + close);
     if (commit) fs.writeFileSync(file, out);
     changed++;
     console.log(`  ${page.padEnd(9)} ${sections.length} bölüm gömüldü (${baked.length} karakter)`);

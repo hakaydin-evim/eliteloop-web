@@ -4800,6 +4800,21 @@
     "issueFlags": []
   },
   {
+    "title": "EliteLoop Bangkok | Social Discovery, Premium Events &amp; Nearby Plans",
+    "description": "Explore social discovery in Bangkok with EliteLoop. Discover premium events, nearby plans, and badge-based access on iOS and Android.",
+    "slug": "bangkok",
+    "url": "https://eliteloop.app/bangkok",
+    "date": null,
+    "type": "City Hub",
+    "filename": "bangkok.html",
+    "citySlug": "bangkok",
+    "cityName": "Bangkok",
+    "canonicalCitySlug": "bangkok",
+    "canonicalCityUrl": "https://eliteloop.app/bangkok",
+    "isLegacyAlias": false,
+    "issueFlags": []
+  },
+  {
     "title": "Global Pulse | Social Discovery Trends & City Signals | EliteLoop",
     "description": "Daily intelligence on social discovery, premium city signals, access psychology, and scene momentum worldwide. Updated every day by EliteLoop.",
     "slug": "global-pulse",

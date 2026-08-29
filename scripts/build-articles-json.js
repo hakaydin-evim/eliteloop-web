@@ -63,7 +63,8 @@ const CITY_RULES = [
     { aliases: ['sydney'], canonicalSlug: 'sydney', name: 'Sydney' },
     { aliases: ['toronto'], canonicalSlug: 'toronto', name: 'Toronto' },
     { aliases: ['vienna'], canonicalSlug: 'vienna', name: 'Vienna' },
-    { aliases: ['copenhagen'], canonicalSlug: 'copenhagen', name: 'Copenhagen' }
+    { aliases: ['copenhagen'], canonicalSlug: 'copenhagen', name: 'Copenhagen' },
+    { aliases: ['bangkok'], canonicalSlug: 'bangkok', name: 'Bangkok' }
 ];
 
 const MONTH_MAP = {

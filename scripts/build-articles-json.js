@@ -12,7 +12,8 @@ const excludeFiles = [
     'gdpr.html',
     'android.html',
     'faq.html',
-    'invite.html'
+    'invite.html',
+    'bkk.html'
 ];
 
 // Ana sayfa varyantları ve şablonlar hiçbir zaman makale değildir. Bunlar elle

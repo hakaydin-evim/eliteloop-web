@@ -26,7 +26,8 @@ const STATIC_PAGES = [
 const ROOT_ONLY_EXCLUDES = [
   /^index(-.*)?\.html$/i,
   /^index[a-z]+\.html$/i,
-  /^_/
+  /^_/,
+  /^bkk\.html$/i, // QR-only campaign landing page, deliberately noindex
 ];
 
 function getLocalizedHtmlFiles(dir, prefix = '') {
